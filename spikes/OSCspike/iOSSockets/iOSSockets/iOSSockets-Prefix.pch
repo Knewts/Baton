@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'iOSSockets' target in the 'iOSSockets' project
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif

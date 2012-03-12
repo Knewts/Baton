@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		630BB20714F57D7A008E05A9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630BB20614F57D7A008E05A9 /* UIKit.framework */; };
+		630BB20914F57D7A008E05A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630BB20814F57D7A008E05A9 /* Foundation.framework */; };
+		630BB20B14F57D7A008E05A9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630BB20A14F57D7A008E05A9 /* CoreGraphics.framework */; };
+		630BB21114F57D7A008E05A9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 630BB20F14F57D7A008E05A9 /* InfoPlist.strings */; };
+		630BB21314F57D7A008E05A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 630BB21214F57D7A008E05A9 /* main.m */; };
+		630BB21714F57D7A008E05A9 /* OSCspikeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 630BB21614F57D7A008E05A9 /* OSCspikeAppDelegate.m */; };
+		630BB21B14F57D7A008E05A9 /* OSCspikeAppDelegate_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 630BB21A14F57D7A008E05A9 /* OSCspikeAppDelegate_iPhone.m */; };
+		630BB21E14F57D7A008E05A9 /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 630BB21C14F57D7A008E05A9 /* MainWindow_iPhone.xib */; };
+		630BB22214F57D7A008E05A9 /* OSCspikeAppDelegate_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 630BB22114F57D7A008E05A9 /* OSCspikeAppDelegate_iPad.m */; };
+		630BB22514F57D7A008E05A9 /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 630BB22314F57D7A008E05A9 /* MainWindow_iPad.xib */; };
+		630BB22D14F57D7B008E05A9 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630BB22C14F57D7B008E05A9 /* SenTestingKit.framework */; };
+		630BB22E14F57D7B008E05A9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630BB20614F57D7A008E05A9 /* UIKit.framework */; };
+		630BB22F14F57D7B008E05A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630BB20814F57D7A008E05A9 /* Foundation.framework */; };
+		630BB23014F57D7B008E05A9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 630BB20A14F57D7A008E05A9 /* CoreGraphics.framework */; };
+		630BB23814F57D7B008E05A9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 630BB23614F57D7B008E05A9 /* InfoPlist.strings */; };
+		630BB23A14F57D7B008E05A9 /* OSCspikeTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 630BB23914F57D7B008E05A9 /* OSCspikeTests.h */; };
+		630BB23C14F57D7B008E05A9 /* OSCspikeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 630BB23B14F57D7B008E05A9 /* OSCspikeTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		630BB23114F57D7B008E05A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 630BB1F914F57D7A008E05A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 630BB20114F57D7A008E05A9;
+			remoteInfo = OSCspike;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		630BB20214F57D7A008E05A9 /* OSCspike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OSCspike.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		630BB20614F57D7A008E05A9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		630BB20814F57D7A008E05A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		630BB20A14F57D7A008E05A9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		630BB20E14F57D7A008E05A9 /* OSCspike-Info.plist */ = {isa = PBXFileReference; path = "OSCspike-Info.plist"; sourceTree = "<group>"; };
+		630BB21014F57D7A008E05A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		630BB21214F57D7A008E05A9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		630BB21414F57D7A008E05A9 /* OSCspike-Prefix.pch */ = {isa = PBXFileReference; path = "OSCspike-Prefix.pch"; sourceTree = "<group>"; };
+		630BB21514F57D7A008E05A9 /* OSCspikeAppDelegate.h */ = {isa = PBXFileReference; path = OSCspikeAppDelegate.h; sourceTree = "<group>"; };
+		630BB21614F57D7A008E05A9 /* OSCspikeAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSCspikeAppDelegate.m; sourceTree = "<group>"; };
+		630BB21914F57D7A008E05A9 /* OSCspikeAppDelegate_iPhone.h */ = {isa = PBXFileReference; name = OSCspikeAppDelegate_iPhone.h; path = iPhone/OSCspikeAppDelegate_iPhone.h; sourceTree = "<group>"; };
+		630BB21A14F57D7A008E05A9 /* OSCspikeAppDelegate_iPhone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = OSCspikeAppDelegate_iPhone.m; path = iPhone/OSCspikeAppDelegate_iPhone.m; sourceTree = "<group>"; };
+		630BB21D14F57D7A008E05A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPhone/en.lproj/MainWindow_iPhone.xib; sourceTree = "<group>"; };
+		630BB22014F57D7A008E05A9 /* OSCspikeAppDelegate_iPad.h */ = {isa = PBXFileReference; name = OSCspikeAppDelegate_iPad.h; path = iPad/OSCspikeAppDelegate_iPad.h; sourceTree = "<group>"; };
+		630BB22114F57D7A008E05A9 /* OSCspikeAppDelegate_iPad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = OSCspikeAppDelegate_iPad.m; path = iPad/OSCspikeAppDelegate_iPad.m; sourceTree = "<group>"; };
+		630BB22414F57D7A008E05A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = iPad/en.lproj/MainWindow_iPad.xib; sourceTree = "<group>"; };
+		630BB22B14F57D7B008E05A9 /* OSCspikeTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSCspikeTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		630BB22C14F57D7B008E05A9 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		630BB23514F57D7B008E05A9 /* OSCspikeTests-Info.plist */ = {isa = PBXFileReference; path = "OSCspikeTests-Info.plist"; sourceTree = "<group>"; };
+		630BB23714F57D7B008E05A9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		630BB23914F57D7B008E05A9 /* OSCspikeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSCspikeTests.h; sourceTree = "<group>"; };
+		630BB23B14F57D7B008E05A9 /* OSCspikeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSCspikeTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		630BB1FF14F57D7A008E05A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				630BB20714F57D7A008E05A9 /* UIKit.framework in Frameworks */,
+				630BB20914F57D7A008E05A9 /* Foundation.framework in Frameworks */,
+				630BB20B14F57D7A008E05A9 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		630BB22714F57D7B008E05A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				630BB22D14F57D7B008E05A9 /* SenTestingKit.framework in Frameworks */,
+				630BB22E14F57D7B008E05A9 /* UIKit.framework in Frameworks */,
+				630BB22F14F57D7B008E05A9 /* Foundation.framework in Frameworks */,
+				630BB23014F57D7B008E05A9 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		630BB1F714F57D7A008E05A9 = {
+			isa = PBXGroup;
+			children = (
+				630BB20C14F57D7A008E05A9 /* OSCspike */,
+				630BB23314F57D7B008E05A9 /* OSCspikeTests */,
+				630BB20514F57D7A008E05A9 /* Frameworks */,
+				630BB20314F57D7A008E05A9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		630BB20314F57D7A008E05A9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				630BB20214F57D7A008E05A9 /* OSCspike.app */,
+				630BB22B14F57D7B008E05A9 /* OSCspikeTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		630BB20514F57D7A008E05A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				630BB20614F57D7A008E05A9 /* UIKit.framework */,
+				630BB20814F57D7A008E05A9 /* Foundation.framework */,
+				630BB20A14F57D7A008E05A9 /* CoreGraphics.framework */,
+				630BB22C14F57D7B008E05A9 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		630BB20C14F57D7A008E05A9 /* OSCspike */ = {
+			isa = PBXGroup;
+			children = (
+				630BB21514F57D7A008E05A9 /* OSCspikeAppDelegate.h */,
+				630BB21614F57D7A008E05A9 /* OSCspikeAppDelegate.m */,
+				630BB21814F57D7A008E05A9 /* iPhone */,
+				630BB21F14F57D7A008E05A9 /* iPad */,
+				630BB20D14F57D7A008E05A9 /* Supporting Files */,
+			);
+			path = OSCspike;
+			sourceTree = "<group>";
+		};
+		630BB20D14F57D7A008E05A9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				630BB20E14F57D7A008E05A9 /* OSCspike-Info.plist */,
+				630BB20F14F57D7A008E05A9 /* InfoPlist.strings */,
+				630BB21214F57D7A008E05A9 /* main.m */,
+				630BB21414F57D7A008E05A9 /* OSCspike-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		630BB21814F57D7A008E05A9 /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				630BB21914F57D7A008E05A9 /* OSCspikeAppDelegate_iPhone.h */,
+				630BB21A14F57D7A008E05A9 /* OSCspikeAppDelegate_iPhone.m */,
+				630BB21C14F57D7A008E05A9 /* MainWindow_iPhone.xib */,
+			);
+			name = iPhone;
+			sourceTree = "<group>";
+		};
+		630BB21F14F57D7A008E05A9 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				630BB22014F57D7A008E05A9 /* OSCspikeAppDelegate_iPad.h */,
+				630BB22114F57D7A008E05A9 /* OSCspikeAppDelegate_iPad.m */,
+				630BB22314F57D7A008E05A9 /* MainWindow_iPad.xib */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+		630BB23314F57D7B008E05A9 /* OSCspikeTests */ = {
+			isa = PBXGroup;
+			children = (
+				630BB23914F57D7B008E05A9 /* OSCspikeTests.h */,
+				630BB23B14F57D7B008E05A9 /* OSCspikeTests.m */,
+				630BB23414F57D7B008E05A9 /* Supporting Files */,
+			);
+			path = OSCspikeTests;
+			sourceTree = "<group>";
+		};
+		630BB23414F57D7B008E05A9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				630BB23514F57D7B008E05A9 /* OSCspikeTests-Info.plist */,
+				630BB23614F57D7B008E05A9 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		630BB20114F57D7A008E05A9 /* OSCspike */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 630BB23F14F57D7B008E05A9 /* Build configuration list for PBXNativeTarget "OSCspike" */;
+			buildPhases = (
+				630BB1FE14F57D7A008E05A9 /* Sources */,
+				630BB1FF14F57D7A008E05A9 /* Frameworks */,
+				630BB20014F57D7A008E05A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OSCspike;
+			productName = OSCspike;
+			productReference = 630BB20214F57D7A008E05A9 /* OSCspike.app */;
+			productType = "com.apple.product-type.application";
+		};
+		630BB22A14F57D7B008E05A9 /* OSCspikeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 630BB24214F57D7B008E05A9 /* Build configuration list for PBXNativeTarget "OSCspikeTests" */;
+			buildPhases = (
+				630BB22614F57D7B008E05A9 /* Sources */,
+				630BB22714F57D7B008E05A9 /* Frameworks */,
+				630BB22814F57D7B008E05A9 /* Resources */,
+				630BB22914F57D7B008E05A9 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				630BB23214F57D7B008E05A9 /* PBXTargetDependency */,
+			);
+			name = OSCspikeTests;
+			productName = OSCspikeTests;
+			productReference = 630BB22B14F57D7B008E05A9 /* OSCspikeTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		630BB1F914F57D7A008E05A9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Western Michigan University";
+			};
+			buildConfigurationList = 630BB1FC14F57D7A008E05A9 /* Build configuration list for PBXProject "OSCspike" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 630BB1F714F57D7A008E05A9;
+			productRefGroup = 630BB20314F57D7A008E05A9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				630BB20114F57D7A008E05A9 /* OSCspike */,
+				630BB22A14F57D7B008E05A9 /* OSCspikeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		630BB20014F57D7A008E05A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				630BB21114F57D7A008E05A9 /* InfoPlist.strings in Resources */,
+				630BB21E14F57D7A008E05A9 /* MainWindow_iPhone.xib in Resources */,
+				630BB22514F57D7A008E05A9 /* MainWindow_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		630BB22814F57D7B008E05A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				630BB23814F57D7B008E05A9 /* InfoPlist.strings in Resources */,
+				630BB23A14F57D7B008E05A9 /* OSCspikeTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		630BB22914F57D7B008E05A9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		630BB1FE14F57D7A008E05A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				630BB21314F57D7A008E05A9 /* main.m in Sources */,
+				630BB21714F57D7A008E05A9 /* OSCspikeAppDelegate.m in Sources */,
+				630BB21B14F57D7A008E05A9 /* OSCspikeAppDelegate_iPhone.m in Sources */,
+				630BB22214F57D7A008E05A9 /* OSCspikeAppDelegate_iPad.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		630BB22614F57D7B008E05A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				630BB23C14F57D7B008E05A9 /* OSCspikeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		630BB23214F57D7B008E05A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 630BB20114F57D7A008E05A9 /* OSCspike */;
+			targetProxy = 630BB23114F57D7B008E05A9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		630BB20F14F57D7A008E05A9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				630BB21014F57D7A008E05A9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		630BB21C14F57D7A008E05A9 /* MainWindow_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				630BB21D14F57D7A008E05A9 /* en */,
+			);
+			name = MainWindow_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		630BB22314F57D7A008E05A9 /* MainWindow_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				630BB22414F57D7A008E05A9 /* en */,
+			);
+			name = MainWindow_iPad.xib;
+			sourceTree = "<group>";
+		};
+		630BB23614F57D7B008E05A9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				630BB23714F57D7B008E05A9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		630BB23D14F57D7B008E05A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		630BB23E14F57D7B008E05A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		630BB24014F57D7B008E05A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OSCspike/OSCspike-Prefix.pch";
+				INFOPLIST_FILE = "OSCspike/OSCspike-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		630BB24114F57D7B008E05A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OSCspike/OSCspike-Prefix.pch";
+				INFOPLIST_FILE = "OSCspike/OSCspike-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		630BB24314F57D7B008E05A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OSCspike.app/OSCspike";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OSCspike/OSCspike-Prefix.pch";
+				INFOPLIST_FILE = "OSCspikeTests/OSCspikeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		630BB24414F57D7B008E05A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OSCspike.app/OSCspike";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OSCspike/OSCspike-Prefix.pch";
+				INFOPLIST_FILE = "OSCspikeTests/OSCspikeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		630BB1FC14F57D7A008E05A9 /* Build configuration list for PBXProject "OSCspike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				630BB23D14F57D7B008E05A9 /* Debug */,
+				630BB23E14F57D7B008E05A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		630BB23F14F57D7B008E05A9 /* Build configuration list for PBXNativeTarget "OSCspike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				630BB24014F57D7B008E05A9 /* Debug */,
+				630BB24114F57D7B008E05A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		630BB24214F57D7B008E05A9 /* Build configuration list for PBXNativeTarget "OSCspikeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				630BB24314F57D7B008E05A9 /* Debug */,
+				630BB24414F57D7B008E05A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 630BB1F914F57D7A008E05A9 /* Project object */;
+}

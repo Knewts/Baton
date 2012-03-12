@@ -1,0 +1,245 @@
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/!svn/ver/155/trunk/VVBasics/src
+END
+VVCrashReporter.xib
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/103/trunk/VVBasics/src/VVCrashReporter.xib
+END
+VVStopwatch.m
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/125/trunk/VVBasics/src/VVStopwatch.m
+END
+VVCrashReporter.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/127/trunk/VVBasics/src/VVCrashReporter.h
+END
+VVSpriteGLView.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/125/trunk/VVBasics/src/VVSpriteGLView.h
+END
+VVCrashReporter.m
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/132/trunk/VVBasics/src/VVCrashReporter.m
+END
+VVSpriteGLView.m
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/129/trunk/VVBasics/src/VVSpriteGLView.m
+END
+VVCrashReporterDescriptionField.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/32/trunk/VVBasics/src/VVCrashReporterDescriptionField.h
+END
+VVCrashReporterDescriptionField.m
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/125/trunk/VVBasics/src/VVCrashReporterDescriptionField.m
+END
+MutLockArray.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/134/trunk/VVBasics/src/MutLockArray.h
+END
+VVSpriteManager.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/155/trunk/VVBasics/src/VVSpriteManager.h
+END
+VVSpriteView.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/138/trunk/VVBasics/src/VVSpriteView.h
+END
+VVAssertionHandler.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/151/trunk/VVBasics/src/VVAssertionHandler.h
+END
+VVSprite.h
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/117/trunk/VVBasics/src/VVSprite.h
+END
+VVSpriteManager.m
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/155/trunk/VVBasics/src/VVSpriteManager.m
+END
+MutLockArray.m
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/135/trunk/VVBasics/src/MutLockArray.m
+END
+VVSpriteView.m
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/138/trunk/VVBasics/src/VVSpriteView.m
+END
+MutNRLockDict.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/56/trunk/VVBasics/src/MutNRLockDict.h
+END
+VVSpriteControl.h
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/138/trunk/VVBasics/src/VVSpriteControl.h
+END
+VVAssertionHandler.m
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/151/trunk/VVBasics/src/VVAssertionHandler.m
+END
+MutNRLockDict.m
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/!svn/ver/132/trunk/VVBasics/src/MutNRLockDict.m
+END
+VVSprite.m
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/86/trunk/VVBasics/src/VVSprite.m
+END
+VVSpriteControl.m
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/138/trunk/VVBasics/src/VVSpriteControl.m
+END
+VVCURLDL.h
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/56/trunk/VVBasics/src/VVCURLDL.h
+END
+VVBasicMacros.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/36/trunk/VVBasics/src/VVBasicMacros.h
+END
+ObjectHolder.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/146/trunk/VVBasics/src/ObjectHolder.h
+END
+VVCURLDL.m
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/131/trunk/VVBasics/src/VVCURLDL.m
+END
+ObjectHolder.m
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/146/trunk/VVBasics/src/ObjectHolder.m
+END
+VVCrashReporterEmailField.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/125/trunk/VVBasics/src/VVCrashReporterEmailField.h
+END
+VVThreadLoop.h
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/148/trunk/VVBasics/src/VVThreadLoop.h
+END
+MutNRLockArray.h
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/103/trunk/VVBasics/src/MutNRLockArray.h
+END
+VVCrashReporterEmailField.m
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/132/trunk/VVBasics/src/VVCrashReporterEmailField.m
+END
+VVThreadLoop.m
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/151/trunk/VVBasics/src/VVThreadLoop.m
+END
+MutNRLockArray.m
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/145/trunk/VVBasics/src/MutNRLockArray.m
+END
+MutLockDict.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/149/trunk/VVBasics/src/MutLockDict.h
+END
+NamedMutLockArray.h
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/56/trunk/VVBasics/src/NamedMutLockArray.h
+END
+VVSpriteControlCell.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/88/trunk/VVBasics/src/VVSpriteControlCell.h
+END
+NamedMutLockArray.m
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/132/trunk/VVBasics/src/NamedMutLockArray.m
+END
+MutLockDict.m
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/149/trunk/VVBasics/src/MutLockDict.m
+END
+VVSpriteControlCell.m
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/88/trunk/VVBasics/src/VVSpriteControlCell.m
+END
+VVStopwatch.h
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/125/trunk/VVBasics/src/VVStopwatch.h
+END

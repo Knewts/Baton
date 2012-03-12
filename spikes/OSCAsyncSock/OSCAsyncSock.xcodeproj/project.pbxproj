@@ -1,0 +1,459 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		63A1730A150EBDBD00747F6F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A17309150EBDBD00747F6F /* UIKit.framework */; };
+		63A1730C150EBDBD00747F6F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A1730B150EBDBD00747F6F /* Foundation.framework */; };
+		63A1730E150EBDBD00747F6F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A1730D150EBDBD00747F6F /* CoreGraphics.framework */; };
+		63A17314150EBDBD00747F6F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 63A17312150EBDBD00747F6F /* InfoPlist.strings */; };
+		63A17316150EBDBD00747F6F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A17315150EBDBD00747F6F /* main.m */; };
+		63A1731A150EBDBD00747F6F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A17319150EBDBD00747F6F /* AppDelegate.m */; };
+		63A1731D150EBDBD00747F6F /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63A1731B150EBDBD00747F6F /* MainStoryboard_iPhone.storyboard */; };
+		63A17320150EBDBD00747F6F /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63A1731E150EBDBD00747F6F /* MainStoryboard_iPad.storyboard */; };
+		63A17323150EBDBD00747F6F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A17322150EBDBD00747F6F /* ViewController.m */; };
+		63A1732B150EBDBD00747F6F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A1732A150EBDBD00747F6F /* SenTestingKit.framework */; };
+		63A1732C150EBDBD00747F6F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A17309150EBDBD00747F6F /* UIKit.framework */; };
+		63A1732D150EBDBD00747F6F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A1730B150EBDBD00747F6F /* Foundation.framework */; };
+		63A17335150EBDBD00747F6F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 63A17333150EBDBD00747F6F /* InfoPlist.strings */; };
+		63A17338150EBDBD00747F6F /* OSCAsyncSockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A17337150EBDBD00747F6F /* OSCAsyncSockTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		63A1732E150EBDBD00747F6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63A172FC150EBDBC00747F6F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63A17304150EBDBD00747F6F;
+			remoteInfo = OSCAsyncSock;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		63A17305150EBDBD00747F6F /* OSCAsyncSock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OSCAsyncSock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		63A17309150EBDBD00747F6F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		63A1730B150EBDBD00747F6F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		63A1730D150EBDBD00747F6F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		63A17311150EBDBD00747F6F /* OSCAsyncSock-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OSCAsyncSock-Info.plist"; sourceTree = "<group>"; };
+		63A17313150EBDBD00747F6F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		63A17315150EBDBD00747F6F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		63A17317150EBDBD00747F6F /* OSCAsyncSock-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OSCAsyncSock-Prefix.pch"; sourceTree = "<group>"; };
+		63A17318150EBDBD00747F6F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		63A17319150EBDBD00747F6F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		63A1731C150EBDBD00747F6F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		63A1731F150EBDBD00747F6F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		63A17321150EBDBD00747F6F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		63A17322150EBDBD00747F6F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		63A17329150EBDBD00747F6F /* OSCAsyncSockTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OSCAsyncSockTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		63A1732A150EBDBD00747F6F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		63A17332150EBDBD00747F6F /* OSCAsyncSockTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OSCAsyncSockTests-Info.plist"; sourceTree = "<group>"; };
+		63A17334150EBDBD00747F6F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		63A17336150EBDBD00747F6F /* OSCAsyncSockTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSCAsyncSockTests.h; sourceTree = "<group>"; };
+		63A17337150EBDBD00747F6F /* OSCAsyncSockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSCAsyncSockTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		63A17302150EBDBD00747F6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63A1730A150EBDBD00747F6F /* UIKit.framework in Frameworks */,
+				63A1730C150EBDBD00747F6F /* Foundation.framework in Frameworks */,
+				63A1730E150EBDBD00747F6F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63A17325150EBDBD00747F6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63A1732B150EBDBD00747F6F /* SenTestingKit.framework in Frameworks */,
+				63A1732C150EBDBD00747F6F /* UIKit.framework in Frameworks */,
+				63A1732D150EBDBD00747F6F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		63A172FA150EBDBC00747F6F = {
+			isa = PBXGroup;
+			children = (
+				63A1730F150EBDBD00747F6F /* OSCAsyncSock */,
+				63A17330150EBDBD00747F6F /* OSCAsyncSockTests */,
+				63A17308150EBDBD00747F6F /* Frameworks */,
+				63A17306150EBDBD00747F6F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		63A17306150EBDBD00747F6F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63A17305150EBDBD00747F6F /* OSCAsyncSock.app */,
+				63A17329150EBDBD00747F6F /* OSCAsyncSockTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		63A17308150EBDBD00747F6F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				63A17309150EBDBD00747F6F /* UIKit.framework */,
+				63A1730B150EBDBD00747F6F /* Foundation.framework */,
+				63A1730D150EBDBD00747F6F /* CoreGraphics.framework */,
+				63A1732A150EBDBD00747F6F /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63A1730F150EBDBD00747F6F /* OSCAsyncSock */ = {
+			isa = PBXGroup;
+			children = (
+				63A17318150EBDBD00747F6F /* AppDelegate.h */,
+				63A17319150EBDBD00747F6F /* AppDelegate.m */,
+				63A1731B150EBDBD00747F6F /* MainStoryboard_iPhone.storyboard */,
+				63A1731E150EBDBD00747F6F /* MainStoryboard_iPad.storyboard */,
+				63A17321150EBDBD00747F6F /* ViewController.h */,
+				63A17322150EBDBD00747F6F /* ViewController.m */,
+				63A17310150EBDBD00747F6F /* Supporting Files */,
+			);
+			path = OSCAsyncSock;
+			sourceTree = "<group>";
+		};
+		63A17310150EBDBD00747F6F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				63A17311150EBDBD00747F6F /* OSCAsyncSock-Info.plist */,
+				63A17312150EBDBD00747F6F /* InfoPlist.strings */,
+				63A17315150EBDBD00747F6F /* main.m */,
+				63A17317150EBDBD00747F6F /* OSCAsyncSock-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		63A17330150EBDBD00747F6F /* OSCAsyncSockTests */ = {
+			isa = PBXGroup;
+			children = (
+				63A17336150EBDBD00747F6F /* OSCAsyncSockTests.h */,
+				63A17337150EBDBD00747F6F /* OSCAsyncSockTests.m */,
+				63A17331150EBDBD00747F6F /* Supporting Files */,
+			);
+			path = OSCAsyncSockTests;
+			sourceTree = "<group>";
+		};
+		63A17331150EBDBD00747F6F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				63A17332150EBDBD00747F6F /* OSCAsyncSockTests-Info.plist */,
+				63A17333150EBDBD00747F6F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		63A17304150EBDBD00747F6F /* OSCAsyncSock */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63A1733B150EBDBD00747F6F /* Build configuration list for PBXNativeTarget "OSCAsyncSock" */;
+			buildPhases = (
+				63A17301150EBDBD00747F6F /* Sources */,
+				63A17302150EBDBD00747F6F /* Frameworks */,
+				63A17303150EBDBD00747F6F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OSCAsyncSock;
+			productName = OSCAsyncSock;
+			productReference = 63A17305150EBDBD00747F6F /* OSCAsyncSock.app */;
+			productType = "com.apple.product-type.application";
+		};
+		63A17328150EBDBD00747F6F /* OSCAsyncSockTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63A1733E150EBDBD00747F6F /* Build configuration list for PBXNativeTarget "OSCAsyncSockTests" */;
+			buildPhases = (
+				63A17324150EBDBD00747F6F /* Sources */,
+				63A17325150EBDBD00747F6F /* Frameworks */,
+				63A17326150EBDBD00747F6F /* Resources */,
+				63A17327150EBDBD00747F6F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				63A1732F150EBDBD00747F6F /* PBXTargetDependency */,
+			);
+			name = OSCAsyncSockTests;
+			productName = OSCAsyncSockTests;
+			productReference = 63A17329150EBDBD00747F6F /* OSCAsyncSockTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		63A172FC150EBDBC00747F6F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Western Michigan University";
+			};
+			buildConfigurationList = 63A172FF150EBDBC00747F6F /* Build configuration list for PBXProject "OSCAsyncSock" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 63A172FA150EBDBC00747F6F;
+			productRefGroup = 63A17306150EBDBD00747F6F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				63A17304150EBDBD00747F6F /* OSCAsyncSock */,
+				63A17328150EBDBD00747F6F /* OSCAsyncSockTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		63A17303150EBDBD00747F6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63A17314150EBDBD00747F6F /* InfoPlist.strings in Resources */,
+				63A1731D150EBDBD00747F6F /* MainStoryboard_iPhone.storyboard in Resources */,
+				63A17320150EBDBD00747F6F /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63A17326150EBDBD00747F6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63A17335150EBDBD00747F6F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		63A17327150EBDBD00747F6F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		63A17301150EBDBD00747F6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63A17316150EBDBD00747F6F /* main.m in Sources */,
+				63A1731A150EBDBD00747F6F /* AppDelegate.m in Sources */,
+				63A17323150EBDBD00747F6F /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63A17324150EBDBD00747F6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63A17338150EBDBD00747F6F /* OSCAsyncSockTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		63A1732F150EBDBD00747F6F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 63A17304150EBDBD00747F6F /* OSCAsyncSock */;
+			targetProxy = 63A1732E150EBDBD00747F6F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		63A17312150EBDBD00747F6F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63A17313150EBDBD00747F6F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		63A1731B150EBDBD00747F6F /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63A1731C150EBDBD00747F6F /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		63A1731E150EBDBD00747F6F /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63A1731F150EBDBD00747F6F /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		63A17333150EBDBD00747F6F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63A17334150EBDBD00747F6F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		63A17339150EBDBD00747F6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		63A1733A150EBDBD00747F6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		63A1733C150EBDBD00747F6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OSCAsyncSock/OSCAsyncSock-Prefix.pch";
+				INFOPLIST_FILE = "OSCAsyncSock/OSCAsyncSock-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		63A1733D150EBDBD00747F6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OSCAsyncSock/OSCAsyncSock-Prefix.pch";
+				INFOPLIST_FILE = "OSCAsyncSock/OSCAsyncSock-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		63A1733F150EBDBD00747F6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OSCAsyncSock.app/OSCAsyncSock";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OSCAsyncSock/OSCAsyncSock-Prefix.pch";
+				INFOPLIST_FILE = "OSCAsyncSockTests/OSCAsyncSockTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		63A17340150EBDBD00747F6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OSCAsyncSock.app/OSCAsyncSock";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OSCAsyncSock/OSCAsyncSock-Prefix.pch";
+				INFOPLIST_FILE = "OSCAsyncSockTests/OSCAsyncSockTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		63A172FF150EBDBC00747F6F /* Build configuration list for PBXProject "OSCAsyncSock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63A17339150EBDBD00747F6F /* Debug */,
+				63A1733A150EBDBD00747F6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63A1733B150EBDBD00747F6F /* Build configuration list for PBXNativeTarget "OSCAsyncSock" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63A1733C150EBDBD00747F6F /* Debug */,
+				63A1733D150EBDBD00747F6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		63A1733E150EBDBD00747F6F /* Build configuration list for PBXNativeTarget "OSCAsyncSockTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63A1733F150EBDBD00747F6F /* Debug */,
+				63A17340150EBDBD00747F6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 63A172FC150EBDBC00747F6F /* Project object */;
+}

@@ -1,0 +1,237 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6320874414FECB9300AD9C8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6320874314FECB9300AD9C8C /* Foundation.framework */; };
+		6320874714FECB9300AD9C8C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6320874614FECB9300AD9C8C /* main.m */; };
+		6320874B14FECB9300AD9C8C /* IRBbot.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 6320874A14FECB9300AD9C8C /* IRBbot.1 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6320873D14FECB9300AD9C8C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				6320874B14FECB9300AD9C8C /* IRBbot.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6320873F14FECB9300AD9C8C /* IRBbot */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = IRBbot; sourceTree = BUILT_PRODUCTS_DIR; };
+		6320874314FECB9300AD9C8C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		6320874614FECB9300AD9C8C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6320874914FECB9300AD9C8C /* IRBbot-Prefix.pch */ = {isa = PBXFileReference; path = "IRBbot-Prefix.pch"; sourceTree = "<group>"; };
+		6320874A14FECB9300AD9C8C /* IRBbot.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = IRBbot.1; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6320873C14FECB9300AD9C8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6320874414FECB9300AD9C8C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6320873414FECB9300AD9C8C = {
+			isa = PBXGroup;
+			children = (
+				6320874514FECB9300AD9C8C /* IRBbot */,
+				6320874214FECB9300AD9C8C /* Frameworks */,
+				6320874014FECB9300AD9C8C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6320874014FECB9300AD9C8C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6320873F14FECB9300AD9C8C /* IRBbot */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6320874214FECB9300AD9C8C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6320874314FECB9300AD9C8C /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6320874514FECB9300AD9C8C /* IRBbot */ = {
+			isa = PBXGroup;
+			children = (
+				6320874614FECB9300AD9C8C /* main.m */,
+				6320874A14FECB9300AD9C8C /* IRBbot.1 */,
+				6320874814FECB9300AD9C8C /* Supporting Files */,
+			);
+			path = IRBbot;
+			sourceTree = "<group>";
+		};
+		6320874814FECB9300AD9C8C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6320874914FECB9300AD9C8C /* IRBbot-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6320873E14FECB9300AD9C8C /* IRBbot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6320874E14FECB9300AD9C8C /* Build configuration list for PBXNativeTarget "IRBbot" */;
+			buildPhases = (
+				6320873B14FECB9300AD9C8C /* Sources */,
+				6320873C14FECB9300AD9C8C /* Frameworks */,
+				6320873D14FECB9300AD9C8C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IRBbot;
+			productName = IRBbot;
+			productReference = 6320873F14FECB9300AD9C8C /* IRBbot */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6320873614FECB9300AD9C8C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Western Michigan University";
+			};
+			buildConfigurationList = 6320873914FECB9300AD9C8C /* Build configuration list for PBXProject "IRBbot" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 6320873414FECB9300AD9C8C;
+			productRefGroup = 6320874014FECB9300AD9C8C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6320873E14FECB9300AD9C8C /* IRBbot */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6320873B14FECB9300AD9C8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6320874714FECB9300AD9C8C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6320874C14FECB9300AD9C8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		6320874D14FECB9300AD9C8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		6320874F14FECB9300AD9C8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IRBbot/IRBbot-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6320875014FECB9300AD9C8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IRBbot/IRBbot-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6320873914FECB9300AD9C8C /* Build configuration list for PBXProject "IRBbot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6320874C14FECB9300AD9C8C /* Debug */,
+				6320874D14FECB9300AD9C8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6320874E14FECB9300AD9C8C /* Build configuration list for PBXNativeTarget "IRBbot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6320874F14FECB9300AD9C8C /* Debug */,
+				6320875014FECB9300AD9C8C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6320873614FECB9300AD9C8C /* Project object */;
+}
