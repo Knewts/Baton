@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A11FE04F153B2B690011B465 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11FE04E153B2B690011B465 /* UIKit.framework */; };
+		A11FE051153B2B690011B465 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11FE050153B2B690011B465 /* Foundation.framework */; };
+		A11FE053153B2B690011B465 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11FE052153B2B690011B465 /* CoreGraphics.framework */; };
+		A11FE059153B2B690011B465 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A11FE057153B2B690011B465 /* InfoPlist.strings */; };
+		A11FE05B153B2B690011B465 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A11FE05A153B2B690011B465 /* main.m */; };
+		A11FE05F153B2B690011B465 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A11FE05E153B2B690011B465 /* AppDelegate.m */; };
+		A11FE062153B2B690011B465 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A11FE061153B2B690011B465 /* ViewController.m */; };
+		A11FE065153B2B690011B465 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = A11FE063153B2B690011B465 /* ViewController_iPhone.xib */; };
+		A11FE068153B2B690011B465 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = A11FE066153B2B690011B465 /* ViewController_iPad.xib */; };
+		A11FE070153B2B690011B465 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11FE06F153B2B690011B465 /* SenTestingKit.framework */; };
+		A11FE071153B2B690011B465 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11FE04E153B2B690011B465 /* UIKit.framework */; };
+		A11FE072153B2B690011B465 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11FE050153B2B690011B465 /* Foundation.framework */; };
+		A11FE07A153B2B690011B465 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A11FE078153B2B690011B465 /* InfoPlist.strings */; };
+		A11FE07D153B2B690011B465 /* UIControlSpikeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A11FE07C153B2B690011B465 /* UIControlSpikeTests.m */; };
+		A11FE088153B75760011B465 /* Baton_UIPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = A11FE087153B75760011B465 /* Baton_UIPlane.m */; };
+		A11FE08B153B8D040011B465 /* InteractView.m in Sources */ = {isa = PBXBuildFile; fileRef = A11FE08A153B8D040011B465 /* InteractView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A11FE073153B2B690011B465 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A11FE041153B2B690011B465 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A11FE049153B2B690011B465;
+			remoteInfo = UIControlSpike;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A11FE04A153B2B690011B465 /* UIControlSpike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIControlSpike.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A11FE04E153B2B690011B465 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A11FE050153B2B690011B465 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A11FE052153B2B690011B465 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A11FE056153B2B690011B465 /* UIControlSpike-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UIControlSpike-Info.plist"; sourceTree = "<group>"; };
+		A11FE058153B2B690011B465 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A11FE05A153B2B690011B465 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A11FE05C153B2B690011B465 /* UIControlSpike-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIControlSpike-Prefix.pch"; sourceTree = "<group>"; };
+		A11FE05D153B2B690011B465 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A11FE05E153B2B690011B465 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A11FE060153B2B690011B465 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A11FE061153B2B690011B465 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A11FE064153B2B690011B465 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		A11FE067153B2B690011B465 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		A11FE06E153B2B690011B465 /* UIControlSpikeTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIControlSpikeTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A11FE06F153B2B690011B465 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		A11FE077153B2B690011B465 /* UIControlSpikeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UIControlSpikeTests-Info.plist"; sourceTree = "<group>"; };
+		A11FE079153B2B690011B465 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A11FE07B153B2B690011B465 /* UIControlSpikeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIControlSpikeTests.h; sourceTree = "<group>"; };
+		A11FE07C153B2B690011B465 /* UIControlSpikeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIControlSpikeTests.m; sourceTree = "<group>"; };
+		A11FE086153B75760011B465 /* Baton_UIPlane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Baton_UIPlane.h; sourceTree = "<group>"; };
+		A11FE087153B75760011B465 /* Baton_UIPlane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Baton_UIPlane.m; sourceTree = "<group>"; };
+		A11FE089153B8D040011B465 /* InteractView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractView.h; sourceTree = "<group>"; };
+		A11FE08A153B8D040011B465 /* InteractView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteractView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A11FE047153B2B690011B465 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A11FE04F153B2B690011B465 /* UIKit.framework in Frameworks */,
+				A11FE051153B2B690011B465 /* Foundation.framework in Frameworks */,
+				A11FE053153B2B690011B465 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A11FE06A153B2B690011B465 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A11FE070153B2B690011B465 /* SenTestingKit.framework in Frameworks */,
+				A11FE071153B2B690011B465 /* UIKit.framework in Frameworks */,
+				A11FE072153B2B690011B465 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A11FE03F153B2B690011B465 = {
+			isa = PBXGroup;
+			children = (
+				A11FE054153B2B690011B465 /* UIControlSpike */,
+				A11FE075153B2B690011B465 /* UIControlSpikeTests */,
+				A11FE04D153B2B690011B465 /* Frameworks */,
+				A11FE04B153B2B690011B465 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A11FE04B153B2B690011B465 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A11FE04A153B2B690011B465 /* UIControlSpike.app */,
+				A11FE06E153B2B690011B465 /* UIControlSpikeTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A11FE04D153B2B690011B465 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A11FE04E153B2B690011B465 /* UIKit.framework */,
+				A11FE050153B2B690011B465 /* Foundation.framework */,
+				A11FE052153B2B690011B465 /* CoreGraphics.framework */,
+				A11FE06F153B2B690011B465 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A11FE054153B2B690011B465 /* UIControlSpike */ = {
+			isa = PBXGroup;
+			children = (
+				A11FE05D153B2B690011B465 /* AppDelegate.h */,
+				A11FE05E153B2B690011B465 /* AppDelegate.m */,
+				A11FE086153B75760011B465 /* Baton_UIPlane.h */,
+				A11FE087153B75760011B465 /* Baton_UIPlane.m */,
+				A11FE060153B2B690011B465 /* ViewController.h */,
+				A11FE061153B2B690011B465 /* ViewController.m */,
+				A11FE089153B8D040011B465 /* InteractView.h */,
+				A11FE08A153B8D040011B465 /* InteractView.m */,
+				A11FE063153B2B690011B465 /* ViewController_iPhone.xib */,
+				A11FE066153B2B690011B465 /* ViewController_iPad.xib */,
+				A11FE055153B2B690011B465 /* Supporting Files */,
+			);
+			path = UIControlSpike;
+			sourceTree = "<group>";
+		};
+		A11FE055153B2B690011B465 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A11FE056153B2B690011B465 /* UIControlSpike-Info.plist */,
+				A11FE057153B2B690011B465 /* InfoPlist.strings */,
+				A11FE05A153B2B690011B465 /* main.m */,
+				A11FE05C153B2B690011B465 /* UIControlSpike-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A11FE075153B2B690011B465 /* UIControlSpikeTests */ = {
+			isa = PBXGroup;
+			children = (
+				A11FE07B153B2B690011B465 /* UIControlSpikeTests.h */,
+				A11FE07C153B2B690011B465 /* UIControlSpikeTests.m */,
+				A11FE076153B2B690011B465 /* Supporting Files */,
+			);
+			path = UIControlSpikeTests;
+			sourceTree = "<group>";
+		};
+		A11FE076153B2B690011B465 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A11FE077153B2B690011B465 /* UIControlSpikeTests-Info.plist */,
+				A11FE078153B2B690011B465 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A11FE049153B2B690011B465 /* UIControlSpike */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A11FE080153B2B690011B465 /* Build configuration list for PBXNativeTarget "UIControlSpike" */;
+			buildPhases = (
+				A11FE046153B2B690011B465 /* Sources */,
+				A11FE047153B2B690011B465 /* Frameworks */,
+				A11FE048153B2B690011B465 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UIControlSpike;
+			productName = UIControlSpike;
+			productReference = A11FE04A153B2B690011B465 /* UIControlSpike.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A11FE06D153B2B690011B465 /* UIControlSpikeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A11FE083153B2B690011B465 /* Build configuration list for PBXNativeTarget "UIControlSpikeTests" */;
+			buildPhases = (
+				A11FE069153B2B690011B465 /* Sources */,
+				A11FE06A153B2B690011B465 /* Frameworks */,
+				A11FE06B153B2B690011B465 /* Resources */,
+				A11FE06C153B2B690011B465 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A11FE074153B2B690011B465 /* PBXTargetDependency */,
+			);
+			name = UIControlSpikeTests;
+			productName = UIControlSpikeTests;
+			productReference = A11FE06E153B2B690011B465 /* UIControlSpikeTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A11FE041153B2B690011B465 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = A11FE044153B2B690011B465 /* Build configuration list for PBXProject "UIControlSpike" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A11FE03F153B2B690011B465;
+			productRefGroup = A11FE04B153B2B690011B465 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A11FE049153B2B690011B465 /* UIControlSpike */,
+				A11FE06D153B2B690011B465 /* UIControlSpikeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A11FE048153B2B690011B465 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A11FE059153B2B690011B465 /* InfoPlist.strings in Resources */,
+				A11FE065153B2B690011B465 /* ViewController_iPhone.xib in Resources */,
+				A11FE068153B2B690011B465 /* ViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A11FE06B153B2B690011B465 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A11FE07A153B2B690011B465 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A11FE06C153B2B690011B465 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A11FE046153B2B690011B465 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A11FE05B153B2B690011B465 /* main.m in Sources */,
+				A11FE05F153B2B690011B465 /* AppDelegate.m in Sources */,
+				A11FE062153B2B690011B465 /* ViewController.m in Sources */,
+				A11FE088153B75760011B465 /* Baton_UIPlane.m in Sources */,
+				A11FE08B153B8D040011B465 /* InteractView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A11FE069153B2B690011B465 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A11FE07D153B2B690011B465 /* UIControlSpikeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A11FE074153B2B690011B465 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A11FE049153B2B690011B465 /* UIControlSpike */;
+			targetProxy = A11FE073153B2B690011B465 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A11FE057153B2B690011B465 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A11FE058153B2B690011B465 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A11FE063153B2B690011B465 /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A11FE064153B2B690011B465 /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		A11FE066153B2B690011B465 /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A11FE067153B2B690011B465 /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		A11FE078153B2B690011B465 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A11FE079153B2B690011B465 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A11FE07E153B2B690011B465 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A11FE07F153B2B690011B465 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A11FE081153B2B690011B465 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UIControlSpike/UIControlSpike-Prefix.pch";
+				INFOPLIST_FILE = "UIControlSpike/UIControlSpike-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A11FE082153B2B690011B465 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UIControlSpike/UIControlSpike-Prefix.pch";
+				INFOPLIST_FILE = "UIControlSpike/UIControlSpike-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A11FE084153B2B690011B465 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/UIControlSpike.app/UIControlSpike";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UIControlSpike/UIControlSpike-Prefix.pch";
+				INFOPLIST_FILE = "UIControlSpikeTests/UIControlSpikeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		A11FE085153B2B690011B465 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/UIControlSpike.app/UIControlSpike";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UIControlSpike/UIControlSpike-Prefix.pch";
+				INFOPLIST_FILE = "UIControlSpikeTests/UIControlSpikeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A11FE044153B2B690011B465 /* Build configuration list for PBXProject "UIControlSpike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A11FE07E153B2B690011B465 /* Debug */,
+				A11FE07F153B2B690011B465 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A11FE080153B2B690011B465 /* Build configuration list for PBXNativeTarget "UIControlSpike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A11FE081153B2B690011B465 /* Debug */,
+				A11FE082153B2B690011B465 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A11FE083153B2B690011B465 /* Build configuration list for PBXNativeTarget "UIControlSpikeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A11FE084153B2B690011B465 /* Debug */,
+				A11FE085153B2B690011B465 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A11FE041153B2B690011B465 /* Project object */;
+}
