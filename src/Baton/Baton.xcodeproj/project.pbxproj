@@ -486,6 +486,7 @@
 				6396762E152F4800004DD305 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6396762F152F4800004DD305 /* Build configuration list for PBXNativeTarget "BatonTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +495,7 @@
 				63967631152F4800004DD305 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
