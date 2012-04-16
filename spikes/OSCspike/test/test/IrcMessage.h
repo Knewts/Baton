@@ -8,6 +8,23 @@
 
 #import <Foundation/Foundation.h>
 
-@interface IrcMessage : NSObject
+@interface IrcMessage : NSObject {
+    
+    NSMutableArray * junk;
+    NSError * error;
+}
+
+@property (nonatomic,retain) NSMutableArray * junk;
+
+-(IrcMessage *)initWithData:(NSData*)data;
+
+-(BOOL)parseMessage:(NSData*)data;
+-(void) printParsedData;
+
+-(NSString *) getSenderNick;
+-(NSString *) getChannel;
+-(NSString *) getCommand;
+-(NSString *) getMeat;
+
 
 @end

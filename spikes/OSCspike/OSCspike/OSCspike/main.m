@@ -11,7 +11,9 @@
 int main(int argc, char *argv[])
 {
     NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-    int retVal = UIApplicationMain(argc, argv, nil, nil);
+    int retVal;
+    retVal = UIApplicationMain(argc, argv, nil, @"OSCspikeAppDelegate");
+    
     [pool release];
     return retVal;
 }

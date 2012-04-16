@@ -1,7 +1,0 @@
-//
-// Prefix header for all source files of the 'SmallSockets' target in the 'SmallSockets' project
-//
-
-#ifdef __OBJC__
-    #import <Cocoa/Cocoa.h>
-#endif

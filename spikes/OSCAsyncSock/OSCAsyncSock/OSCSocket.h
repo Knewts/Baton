@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GCDAsyncUdpSocket.h"
+@interface OSCSocketDelegate : NSObject
+{
+    GCDAsyncUdpSocket * socket;
+    NSError * error;
+}
 
-@interface OSCSocket : NSObject
+-(OSCSocketDelegate*)init;
+-(BOOL)connectToAddress:(NSString *)addr onPort:(uint16_t)port;
 
 @end

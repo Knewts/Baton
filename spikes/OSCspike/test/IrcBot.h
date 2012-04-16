@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "IrcMessage.h"
 
-@interface IrcBot : NSObject
+@interface IrcBot : NSObject {
+    NSRegularExpression * ex;
+}
+
+-(IrcBot *)init;
+-(NSString *)respondTo:(NSData *)ircData;
 
 @end

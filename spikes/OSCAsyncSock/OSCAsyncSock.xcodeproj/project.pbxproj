@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		638B923A151126CC007C7A2C /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 638B9237151126CC007C7A2C /* GCDAsyncSocket.m */; };
+		638B923B151126CC007C7A2C /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 638B9239151126CC007C7A2C /* GCDAsyncUdpSocket.m */; };
 		63A1730A150EBDBD00747F6F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A17309150EBDBD00747F6F /* UIKit.framework */; };
 		63A1730C150EBDBD00747F6F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A1730B150EBDBD00747F6F /* Foundation.framework */; };
 		63A1730E150EBDBD00747F6F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A1730D150EBDBD00747F6F /* CoreGraphics.framework */; };
@@ -21,6 +23,7 @@
 		63A1732D150EBDBD00747F6F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63A1730B150EBDBD00747F6F /* Foundation.framework */; };
 		63A17335150EBDBD00747F6F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 63A17333150EBDBD00747F6F /* InfoPlist.strings */; };
 		63A17338150EBDBD00747F6F /* OSCAsyncSockTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A17337150EBDBD00747F6F /* OSCAsyncSockTests.m */; };
+		63A17349150EC19600747F6F /* OSCSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 63A17348150EC19600747F6F /* OSCSocket.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		638B9236151126CC007C7A2C /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		638B9237151126CC007C7A2C /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		638B9238151126CC007C7A2C /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		638B9239151126CC007C7A2C /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
 		63A17305150EBDBD00747F6F /* OSCAsyncSock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OSCAsyncSock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63A17309150EBDBD00747F6F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		63A1730B150EBDBD00747F6F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -54,6 +61,8 @@
 		63A17334150EBDBD00747F6F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		63A17336150EBDBD00747F6F /* OSCAsyncSockTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSCAsyncSockTests.h; sourceTree = "<group>"; };
 		63A17337150EBDBD00747F6F /* OSCAsyncSockTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OSCAsyncSockTests.m; sourceTree = "<group>"; };
+		63A17347150EC19600747F6F /* OSCSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCSocket.h; sourceTree = "<group>"; };
+		63A17348150EC19600747F6F /* OSCSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCSocket.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +122,13 @@
 		63A1730F150EBDBD00747F6F /* OSCAsyncSock */ = {
 			isa = PBXGroup;
 			children = (
+				638B9236151126CC007C7A2C /* GCDAsyncSocket.h */,
+				638B9237151126CC007C7A2C /* GCDAsyncSocket.m */,
+				638B9238151126CC007C7A2C /* GCDAsyncUdpSocket.h */,
+				638B9239151126CC007C7A2C /* GCDAsyncUdpSocket.m */,
 				63A17318150EBDBD00747F6F /* AppDelegate.h */,
+				63A17347150EC19600747F6F /* OSCSocket.h */,
+				63A17348150EC19600747F6F /* OSCSocket.m */,
 				63A17319150EBDBD00747F6F /* AppDelegate.m */,
 				63A1731B150EBDBD00747F6F /* MainStoryboard_iPhone.storyboard */,
 				63A1731E150EBDBD00747F6F /* MainStoryboard_iPad.storyboard */,
@@ -265,6 +280,7 @@
 				63A17316150EBDBD00747F6F /* main.m in Sources */,
 				63A1731A150EBDBD00747F6F /* AppDelegate.m in Sources */,
 				63A17323150EBDBD00747F6F /* ViewController.m in Sources */,
+				63A17349150EC19600747F6F /* OSCSocket.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +289,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				63A17338150EBDBD00747F6F /* OSCAsyncSockTests.m in Sources */,
+				638B923A151126CC007C7A2C /* GCDAsyncSocket.m in Sources */,
+				638B923B151126CC007C7A2C /* GCDAsyncUdpSocket.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +390,7 @@
 		63A1733C150EBDBD00747F6F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OSCAsyncSock/OSCAsyncSock-Prefix.pch";
 				INFOPLIST_FILE = "OSCAsyncSock/OSCAsyncSock-Info.plist";
@@ -383,6 +402,7 @@
 		63A1733D150EBDBD00747F6F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OSCAsyncSock/OSCAsyncSock-Prefix.pch";
 				INFOPLIST_FILE = "OSCAsyncSock/OSCAsyncSock-Info.plist";
@@ -395,6 +415,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OSCAsyncSock.app/OSCAsyncSock";
+				CLANG_ENABLE_OBJC_ARC = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
@@ -412,6 +433,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/OSCAsyncSock.app/OSCAsyncSock";
+				CLANG_ENABLE_OBJC_ARC = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
@@ -444,6 +466,7 @@
 				63A1733D150EBDBD00747F6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		63A1733E150EBDBD00747F6F /* Build configuration list for PBXNativeTarget "OSCAsyncSockTests" */ = {
 			isa = XCConfigurationList;
@@ -452,6 +475,7 @@
 				63A17340150EBDBD00747F6F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

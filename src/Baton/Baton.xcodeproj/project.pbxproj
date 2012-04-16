@@ -21,6 +21,10 @@
 		6396761E152F4800004DD305 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 639675FC152F4800004DD305 /* Foundation.framework */; };
 		63967626152F4800004DD305 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 63967624152F4800004DD305 /* InfoPlist.strings */; };
 		63967629152F4800004DD305 /* BatonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 63967628152F4800004DD305 /* BatonTests.m */; };
+		63967637152F48A2004DD305 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 63967634152F48A2004DD305 /* GCDAsyncSocket.m */; };
+		63967638152F48A2004DD305 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 63967636152F48A2004DD305 /* GCDAsyncUdpSocket.m */; };
+		6396763C152F48C5004DD305 /* OSCMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 6396763B152F48C5004DD305 /* OSCMessage.m */; };
+		6396763F152F48D4004DD305 /* OSCValue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6396763E152F48D4004DD305 /* OSCValue.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +58,15 @@
 		63967625152F4800004DD305 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		63967627152F4800004DD305 /* BatonTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BatonTests.h; sourceTree = "<group>"; };
 		63967628152F4800004DD305 /* BatonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BatonTests.m; sourceTree = "<group>"; };
+		63967633152F48A2004DD305 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		63967634152F48A2004DD305 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		63967635152F48A2004DD305 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		63967636152F48A2004DD305 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		6396763A152F48C5004DD305 /* OSCMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCMessage.h; sourceTree = "<group>"; };
+		6396763B152F48C5004DD305 /* OSCMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCMessage.m; sourceTree = "<group>"; };
+		6396763D152F48D4004DD305 /* OSCValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCValue.h; sourceTree = "<group>"; };
+		6396763E152F48D4004DD305 /* OSCValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCValue.m; sourceTree = "<group>"; };
+		63967640152F48E0004DD305 /* OSCConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCConstants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +126,8 @@
 		63967600152F4800004DD305 /* Baton */ = {
 			isa = PBXGroup;
 			children = (
+				63967639152F48A8004DD305 /* OSC */,
+				63967632152F486F004DD305 /* GCDSocket */,
 				63967609152F4800004DD305 /* AppDelegate.h */,
 				6396760A152F4800004DD305 /* AppDelegate.m */,
 				6396760C152F4800004DD305 /* MainStoryboard_iPhone.storyboard */,
@@ -152,6 +167,29 @@
 				63967624152F4800004DD305 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		63967632152F486F004DD305 /* GCDSocket */ = {
+			isa = PBXGroup;
+			children = (
+				63967633152F48A2004DD305 /* GCDAsyncSocket.h */,
+				63967634152F48A2004DD305 /* GCDAsyncSocket.m */,
+				63967635152F48A2004DD305 /* GCDAsyncUdpSocket.h */,
+				63967636152F48A2004DD305 /* GCDAsyncUdpSocket.m */,
+			);
+			name = GCDSocket;
+			sourceTree = "<group>";
+		};
+		63967639152F48A8004DD305 /* OSC */ = {
+			isa = PBXGroup;
+			children = (
+				63967640152F48E0004DD305 /* OSCConstants.h */,
+				6396763D152F48D4004DD305 /* OSCValue.h */,
+				6396763E152F48D4004DD305 /* OSCValue.m */,
+				6396763A152F48C5004DD305 /* OSCMessage.h */,
+				6396763B152F48C5004DD305 /* OSCMessage.m */,
+			);
+			name = OSC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +311,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				63967629152F4800004DD305 /* BatonTests.m in Sources */,
+				63967637152F48A2004DD305 /* GCDAsyncSocket.m in Sources */,
+				63967638152F48A2004DD305 /* GCDAsyncUdpSocket.m in Sources */,
+				6396763C152F48C5004DD305 /* OSCMessage.m in Sources */,
+				6396763F152F48D4004DD305 /* OSCValue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

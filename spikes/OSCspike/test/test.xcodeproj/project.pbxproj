@@ -17,6 +17,14 @@
 		6370C849150E6D2B00C54AA8 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6370C829150E6D2A00C54AA8 /* Cocoa.framework */; };
 		6370C851150E6D2B00C54AA8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6370C84F150E6D2B00C54AA8 /* InfoPlist.strings */; };
 		6370C854150E6D2B00C54AA8 /* testTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6370C853150E6D2B00C54AA8 /* testTests.m */; };
+		6370C861150E6D9600C54AA8 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 6370C85E150E6D9600C54AA8 /* GCDAsyncSocket.m */; };
+		6370C862150E6D9600C54AA8 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 6370C85E150E6D9600C54AA8 /* GCDAsyncSocket.m */; };
+		6370C863150E6D9600C54AA8 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 6370C860150E6D9600C54AA8 /* GCDAsyncUdpSocket.m */; };
+		6370C864150E6D9600C54AA8 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 6370C860150E6D9600C54AA8 /* GCDAsyncUdpSocket.m */; };
+		6370C86A150E73DF00C54AA8 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6370C869150E73DF00C54AA8 /* Security.framework */; };
+		638B924315127D5A007C7A2C /* IrcBot.m in Sources */ = {isa = PBXBuildFile; fileRef = 638B924215127D5A007C7A2C /* IrcBot.m */; };
+		63B78CD2150FA5A20021D60B /* IrcMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B78CD1150FA5A20021D60B /* IrcMessage.m */; };
+		63B78CD3150FA5A20021D60B /* IrcMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 63B78CD1150FA5A20021D60B /* IrcMessage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,20 +43,29 @@
 		6370C82C150E6D2A00C54AA8 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		6370C82D150E6D2A00C54AA8 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		6370C82E150E6D2A00C54AA8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		6370C831150E6D2A00C54AA8 /* test-Info.plist */ = {isa = PBXFileReference; path = "test-Info.plist"; sourceTree = "<group>"; };
+		6370C831150E6D2A00C54AA8 /* test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "test-Info.plist"; sourceTree = "<group>"; };
 		6370C833150E6D2A00C54AA8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6370C835150E6D2A00C54AA8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6370C837150E6D2A00C54AA8 /* test-Prefix.pch */ = {isa = PBXFileReference; path = "test-Prefix.pch"; sourceTree = "<group>"; };
+		6370C837150E6D2A00C54AA8 /* test-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "test-Prefix.pch"; sourceTree = "<group>"; };
 		6370C839150E6D2A00C54AA8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		6370C83B150E6D2A00C54AA8 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		6370C83B150E6D2A00C54AA8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6370C83C150E6D2A00C54AA8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6370C83F150E6D2B00C54AA8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		6370C846150E6D2B00C54AA8 /* testTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6370C847150E6D2B00C54AA8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		6370C84E150E6D2B00C54AA8 /* testTests-Info.plist */ = {isa = PBXFileReference; path = "testTests-Info.plist"; sourceTree = "<group>"; };
+		6370C84E150E6D2B00C54AA8 /* testTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "testTests-Info.plist"; sourceTree = "<group>"; };
 		6370C850150E6D2B00C54AA8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		6370C852150E6D2B00C54AA8 /* testTests.h */ = {isa = PBXFileReference; path = testTests.h; sourceTree = "<group>"; };
+		6370C852150E6D2B00C54AA8 /* testTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = testTests.h; sourceTree = "<group>"; };
 		6370C853150E6D2B00C54AA8 /* testTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testTests.m; sourceTree = "<group>"; };
+		6370C85D150E6D9600C54AA8 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		6370C85E150E6D9600C54AA8 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		6370C85F150E6D9600C54AA8 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		6370C860150E6D9600C54AA8 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		6370C869150E73DF00C54AA8 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		638B924115127D5A007C7A2C /* IrcBot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IrcBot.h; path = ../IrcBot.h; sourceTree = "<group>"; };
+		638B924215127D5A007C7A2C /* IrcBot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IrcBot.m; path = ../IrcBot.m; sourceTree = "<group>"; };
+		63B78CD0150FA5A20021D60B /* IrcMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IrcMessage.h; sourceTree = "<group>"; };
+		63B78CD1150FA5A20021D60B /* IrcMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IrcMessage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6370C86A150E73DF00C54AA8 /* Security.framework in Frameworks */,
 				6370C82A150E6D2A00C54AA8 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,6 +112,7 @@
 		6370C828150E6D2A00C54AA8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6370C869150E73DF00C54AA8 /* Security.framework */,
 				6370C829150E6D2A00C54AA8 /* Cocoa.framework */,
 				6370C847150E6D2B00C54AA8 /* SenTestingKit.framework */,
 				6370C82B150E6D2A00C54AA8 /* Other Frameworks */,
@@ -114,10 +133,18 @@
 		6370C82F150E6D2A00C54AA8 /* test */ = {
 			isa = PBXGroup;
 			children = (
+				638B924115127D5A007C7A2C /* IrcBot.h */,
+				638B924215127D5A007C7A2C /* IrcBot.m */,
+				6370C85D150E6D9600C54AA8 /* GCDAsyncSocket.h */,
+				6370C85E150E6D9600C54AA8 /* GCDAsyncSocket.m */,
+				6370C85F150E6D9600C54AA8 /* GCDAsyncUdpSocket.h */,
+				6370C860150E6D9600C54AA8 /* GCDAsyncUdpSocket.m */,
 				6370C83B150E6D2A00C54AA8 /* AppDelegate.h */,
 				6370C83C150E6D2A00C54AA8 /* AppDelegate.m */,
 				6370C83E150E6D2B00C54AA8 /* MainMenu.xib */,
 				6370C830150E6D2A00C54AA8 /* Supporting Files */,
+				63B78CD0150FA5A20021D60B /* IrcMessage.h */,
+				63B78CD1150FA5A20021D60B /* IrcMessage.m */,
 			);
 			path = test;
 			sourceTree = "<group>";
@@ -263,6 +290,10 @@
 			files = (
 				6370C836150E6D2A00C54AA8 /* main.m in Sources */,
 				6370C83D150E6D2A00C54AA8 /* AppDelegate.m in Sources */,
+				6370C861150E6D9600C54AA8 /* GCDAsyncSocket.m in Sources */,
+				6370C863150E6D9600C54AA8 /* GCDAsyncUdpSocket.m in Sources */,
+				63B78CD2150FA5A20021D60B /* IrcMessage.m in Sources */,
+				638B924315127D5A007C7A2C /* IrcBot.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +302,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6370C854150E6D2B00C54AA8 /* testTests.m in Sources */,
+				6370C862150E6D9600C54AA8 /* GCDAsyncSocket.m in Sources */,
+				6370C864150E6D9600C54AA8 /* GCDAsyncUdpSocket.m in Sources */,
+				63B78CD3150FA5A20021D60B /* IrcMessage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,7 +359,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -352,7 +386,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -436,6 +470,7 @@
 				6370C859150E6D2B00C54AA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6370C85A150E6D2B00C54AA8 /* Build configuration list for PBXNativeTarget "testTests" */ = {
 			isa = XCConfigurationList;
@@ -444,6 +479,7 @@
 				6370C85C150E6D2B00C54AA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -11,12 +11,33 @@
 @implementation OSCspikeAppDelegate
 
 @synthesize window = _window;
-
+@synthesize button = _button;
+@synthesize view = _view;
+@synthesize outport = _outport;
+@synthesize field = _field;
+@synthesize submit = _submit;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+
     [self.window makeKeyAndVisible];
+    
+    // Override point for customization after application launch.
+
+    osc = [[[OSCManager alloc] init] autorelease];
+    [osc setDelegate:self];
+    [osc createNewInputForPort:1338];
+    outport = [osc createNewOutputToAddress:@"169.254.78.35" atPort:1338];
+
     return YES;
+}
+- (void) receivedOSCMessage:(OSCMessage *)m	{
+	NSLog(@"%s ... %@",__func__,m);
+	//[self displayPackets];
+	
+	/*
+     OSCAddressSpace		*addressSpace = [manager addressSpace];
+     [addressSpace dispatchMessage:m];
+     */
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
@@ -44,6 +65,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
+
     /*
      Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
      */
@@ -63,5 +85,24 @@
     [_window release];
     [super dealloc];
 }
+- (IBAction)SendOSC:(id)sender
+{
+    NSLog(@"Sending stuff!");
+    OSCMessage * testMessage = [OSCMessage createWithAddress:@"/testmessage"];
+    
+    [testMessage addString:@"XYZZY"];
+    
+    [self.outport sendThisMessage:testMessage];
+}
+- (IBAction)changeAddress:(id)sender
+{
+    NSLog(@"creating port to address %@",[_field text]);
+    //[outport dealloc];
+    //outport = nil;
+    [osc removeOutput:outport];
+    outport = [osc createNewOutputToAddress:[_field text] atPort:1338];
+    
+    
 
+}
 @end
