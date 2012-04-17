@@ -1,0 +1,3 @@
+
+#ignore everything except the pbxproj file
+.xcodeproj/ !*.xcodeproj/project.pbxproj
