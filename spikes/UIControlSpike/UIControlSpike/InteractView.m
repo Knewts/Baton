@@ -24,18 +24,11 @@
 -(void)awakeFromNib
 {
     CGRect iframe = CGRectMake(4, 245, 175, 130);
-    Baton_UIPlane *X = [[Baton_UIPlane alloc] initWithFrame:iframe]; 
+    Baton_UIPlane *X = [[Baton_UIPlane alloc] initWithFrame:self.frame]; 
+    [X activateAccelerometer];
     [self addSubview:X];
     
-    
-    UIButton *myButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    myButton.frame = CGRectMake(20, 20, 200, 44); // position in the parent view and set the size of the button
-    [myButton setTitle:@"Click Me!" forState:UIControlStateNormal];
-    // add targets and actions
-    [myButton addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
-    // add to a view
-    [self addSubview:myButton];  
-    
+      
 }
 
 // Only override drawRect: if you perform custom drawing.
