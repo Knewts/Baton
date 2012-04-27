@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <WSOSCBundle.h>
+#import "WSOSCBundle.h"
 
 
 @interface WSOSCPacket : NSObject {

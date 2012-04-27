@@ -383,10 +383,12 @@
 		A11FE081153B2B690011B465 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Matthew Knewtson (7K74P45729)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIControlSpike/UIControlSpike-Prefix.pch";
 				INFOPLIST_FILE = "UIControlSpike/UIControlSpike-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "65A555E4-71CE-4C15-8D39-BDC8B0A79C2C";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -394,10 +396,12 @@
 		A11FE082153B2B690011B465 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Matthew Knewtson (7K74P45729)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIControlSpike/UIControlSpike-Prefix.pch";
 				INFOPLIST_FILE = "UIControlSpike/UIControlSpike-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "65A555E4-71CE-4C15-8D39-BDC8B0A79C2C";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -455,6 +459,7 @@
 				A11FE082153B2B690011B465 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A11FE083153B2B690011B465 /* Build configuration list for PBXNativeTarget "UIControlSpikeTests" */ = {
 			isa = XCConfigurationList;
@@ -463,6 +468,7 @@
 				A11FE085153B2B690011B465 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
