@@ -23,6 +23,7 @@
 		A11FE07D153B2B690011B465 /* UIControlSpikeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A11FE07C153B2B690011B465 /* UIControlSpikeTests.m */; };
 		A11FE088153B75760011B465 /* Baton_UIPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = A11FE087153B75760011B465 /* Baton_UIPlane.m */; };
 		A11FE08B153B8D040011B465 /* InteractView.m in Sources */ = {isa = PBXBuildFile; fileRef = A11FE08A153B8D040011B465 /* InteractView.m */; };
+		A148F0111549544D00128B1E /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A148F0101549544D00128B1E /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		A11FE087153B75760011B465 /* Baton_UIPlane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Baton_UIPlane.m; sourceTree = "<group>"; };
 		A11FE089153B8D040011B465 /* InteractView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InteractView.h; sourceTree = "<group>"; };
 		A11FE08A153B8D040011B465 /* InteractView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InteractView.m; sourceTree = "<group>"; };
+		A148F0101549544D00128B1E /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A148F0111549544D00128B1E /* CoreMotion.framework in Frameworks */,
 				A11FE04F153B2B690011B465 /* UIKit.framework in Frameworks */,
 				A11FE051153B2B690011B465 /* Foundation.framework in Frameworks */,
 				A11FE053153B2B690011B465 /* CoreGraphics.framework in Frameworks */,
@@ -89,6 +92,7 @@
 		A11FE03F153B2B690011B465 = {
 			isa = PBXGroup;
 			children = (
+				A148F0101549544D00128B1E /* CoreMotion.framework */,
 				A11FE054153B2B690011B465 /* UIControlSpike */,
 				A11FE075153B2B690011B465 /* UIControlSpikeTests */,
 				A11FE04D153B2B690011B465 /* Frameworks */,
@@ -383,12 +387,20 @@
 		A11FE081153B2B690011B465 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+<<<<<<< HEAD
 				CODE_SIGN_IDENTITY = "iPhone Developer: Matthew Knewtson (7K74P45729)";
+=======
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+>>>>>>> 169789004e2f65eae7c853e1d5bf9f735e4e2c74
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIControlSpike/UIControlSpike-Prefix.pch";
 				INFOPLIST_FILE = "UIControlSpike/UIControlSpike-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+<<<<<<< HEAD
 				PROVISIONING_PROFILE = "65A555E4-71CE-4C15-8D39-BDC8B0A79C2C";
+=======
+				PROVISIONING_PROFILE = "";
+>>>>>>> 169789004e2f65eae7c853e1d5bf9f735e4e2c74
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -396,12 +408,20 @@
 		A11FE082153B2B690011B465 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+<<<<<<< HEAD
 				CODE_SIGN_IDENTITY = "iPhone Developer: Matthew Knewtson (7K74P45729)";
+=======
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+>>>>>>> 169789004e2f65eae7c853e1d5bf9f735e4e2c74
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIControlSpike/UIControlSpike-Prefix.pch";
 				INFOPLIST_FILE = "UIControlSpike/UIControlSpike-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+<<<<<<< HEAD
 				PROVISIONING_PROFILE = "65A555E4-71CE-4C15-8D39-BDC8B0A79C2C";
+=======
+				PROVISIONING_PROFILE = "";
+>>>>>>> 169789004e2f65eae7c853e1d5bf9f735e4e2c74
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
