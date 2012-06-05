@@ -16,7 +16,11 @@
 - (XMLParser *) initXMLParser {
 	NSLog(@"Attempting Init");
 	[super init];
-	// init array of song objects 
+    
+    //irish guy
+    //app = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+	
+    // init array of song objects 
 	allSongs = [[NSMutableArray alloc] init];
 	NSLog(@"Init Done");
 	return self;
@@ -51,10 +55,8 @@
 	NSLog(@"Parser error occured %@",parseError);
 }
 
-- (void)parser:(NSXMLParser *)parser 
- didEndElement:(NSString *)elementName
-  namespaceURI:(NSString *)namespaceURI 
- qualifiedName:(NSString *)qName {
+- (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI 
+qualifiedName:(NSString *)qName {
     NSLog(@"Attmepting 1st method");
     if ([elementName isEqualToString:@"songs"]) {
         // We reached the end of the XML document

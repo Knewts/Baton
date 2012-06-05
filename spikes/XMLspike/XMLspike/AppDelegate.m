@@ -12,6 +12,8 @@
 @implementation AppDelegate
 
 @synthesize window = _window;
+
+//irish
 @synthesize listArray;
 
 - (void)dealloc
@@ -35,7 +37,8 @@
     BOOL worked = [xmlParser parse];
     
     if (worked) {
-        NSLog(@"yay");
+        NSLog(@"Amount: %lu", theParser.getSongs.count);
+        
     }
     else {
         NSLog(@"boo");

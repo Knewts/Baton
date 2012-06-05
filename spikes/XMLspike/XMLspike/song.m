@@ -9,7 +9,7 @@
 #import "song.h"
 
 @implementation song
-@synthesize trackNumber, artist, album, title;
+@synthesize trackNumber, artist, album, title, songID;
 
 -(NSInteger)getTrackNumber {
     return self.trackNumber;
@@ -25,6 +25,10 @@
 
 -(NSString*)getTitle {
 	return self.title;
+}
+
+-(NSInteger)getSongID {
+    return self.songID;
 }
 
 -(void) dealloc {

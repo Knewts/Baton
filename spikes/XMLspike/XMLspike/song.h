@@ -14,6 +14,8 @@
     NSString *artist;
     NSString *album;
     NSString *title;
+    
+    NSInteger songID;
 }
 
 @property (nonatomic, readwrite) NSInteger trackNumber;
@@ -21,9 +23,12 @@
 @property (nonatomic, retain) NSString *album;
 @property (nonatomic, retain) NSString *title;
 
+@property (nonatomic, readwrite) NSInteger songID;
+
 -(NSInteger)getTrackNumber;
 -(NSString*)getArtist;
 -(NSString*)getAlbum;
 -(NSString*)getTitle;
+-(NSInteger)getSongID;
 
 @end

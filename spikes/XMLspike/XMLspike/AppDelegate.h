@@ -12,7 +12,7 @@
 
 @property (assign) IBOutlet NSWindow *window;
 
-//irish
+//added from irish guy
 @property (strong, nonatomic) NSMutableArray *listArray;
 
 @end
