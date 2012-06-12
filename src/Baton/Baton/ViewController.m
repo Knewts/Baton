@@ -13,9 +13,15 @@
 @end
 
 @implementation ViewController
+@synthesize hostAddr;
+@synthesize portNum;
+@synthesize message;
+@synthesize sock;
 
 - (void)viewDidLoad
 {
+    
+    sock = [[GCDUDPSocketController alloc] init];
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -34,5 +40,24 @@
         return YES;
     }
 }
-
+- (IBAction)SendMessage:(id)sender
+{
+    
+    NSInteger port = 0;
+    
+    
+    if([[NSScanner scannerWithString:[portNum text]] scanInteger:&port] && port > 1024 && port < 65536)
+    {
+        OSCMessage * mess = [[OSCMessage alloc] initWithAddress:@"/foo"];
+        
+        [mess addString:[message text]];
+        
+        [sock sendMessage:mess toHost:[hostAddr text] onPort:port];
+            
+    }
+    else {
+        NSLog(@"Invalid port number: %@",portNum.text);
+    }
+    
+}
 @end

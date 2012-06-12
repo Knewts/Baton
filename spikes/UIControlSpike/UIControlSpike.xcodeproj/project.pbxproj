@@ -387,12 +387,20 @@
 		A11FE081153B2B690011B465 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+<<<<<<< HEAD
+				CODE_SIGN_IDENTITY = "iPhone Developer: Matthew Knewtson (7K74P45729)";
+=======
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+>>>>>>> 169789004e2f65eae7c853e1d5bf9f735e4e2c74
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIControlSpike/UIControlSpike-Prefix.pch";
 				INFOPLIST_FILE = "UIControlSpike/UIControlSpike-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+<<<<<<< HEAD
+				PROVISIONING_PROFILE = "65A555E4-71CE-4C15-8D39-BDC8B0A79C2C";
+=======
 				PROVISIONING_PROFILE = "";
+>>>>>>> 169789004e2f65eae7c853e1d5bf9f735e4e2c74
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -400,12 +408,20 @@
 		A11FE082153B2B690011B465 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+<<<<<<< HEAD
+				CODE_SIGN_IDENTITY = "iPhone Developer: Matthew Knewtson (7K74P45729)";
+=======
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+>>>>>>> 169789004e2f65eae7c853e1d5bf9f735e4e2c74
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UIControlSpike/UIControlSpike-Prefix.pch";
 				INFOPLIST_FILE = "UIControlSpike/UIControlSpike-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+<<<<<<< HEAD
+				PROVISIONING_PROFILE = "65A555E4-71CE-4C15-8D39-BDC8B0A79C2C";
+=======
 				PROVISIONING_PROFILE = "";
+>>>>>>> 169789004e2f65eae7c853e1d5bf9f735e4e2c74
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
