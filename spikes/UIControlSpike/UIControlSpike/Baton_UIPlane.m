@@ -117,7 +117,7 @@
 {
     
 	xData = MManager.accelerometerData.acceleration.x * self.frame.size.width/2;
-	yData = MManager.accelerometerData.acceleration.y * self.frame.size.height/2;
+	yData = -MManager.accelerometerData.acceleration.y * self.frame.size.height/2;
     [self setNeedsDisplay];
 	//z.text = [NSString stringWithFormat:@"Z is: %f", acceleration.z];
 }
