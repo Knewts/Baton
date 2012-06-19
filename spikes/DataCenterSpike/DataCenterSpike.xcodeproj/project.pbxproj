@@ -21,7 +21,7 @@
 		A11EDA1C1587B960007422EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11ED9FA1587B960007422EC /* Foundation.framework */; };
 		A11EDA241587B960007422EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A11EDA221587B960007422EC /* InfoPlist.strings */; };
 		A11EDA271587B960007422EC /* DataCenterSpikeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A11EDA261587B960007422EC /* DataCenterSpikeTests.m */; };
-		A11EDA321587B989007422EC /* DataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A11EDA311587B989007422EC /* DataCenter.m */; };
+		A11EDA321587B989007422EC /* BatonEventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A11EDA311587B989007422EC /* BatonEventHandler.m */; };
 		A11EDA39158FFDBE007422EC /* Baton_UIPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = A11EDA38158FFDBE007422EC /* Baton_UIPlane.m */; };
 		A11EDA3C158FFE1E007422EC /* Baton_UI_Element.m in Sources */ = {isa = PBXBuildFile; fileRef = A11EDA3B158FFE1E007422EC /* Baton_UI_Element.m */; };
 /* End PBXBuildFile section */
@@ -57,8 +57,8 @@
 		A11EDA231587B960007422EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A11EDA251587B960007422EC /* DataCenterSpikeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataCenterSpikeTests.h; sourceTree = "<group>"; };
 		A11EDA261587B960007422EC /* DataCenterSpikeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataCenterSpikeTests.m; sourceTree = "<group>"; };
-		A11EDA301587B989007422EC /* DataCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataCenter.h; sourceTree = "<group>"; };
-		A11EDA311587B989007422EC /* DataCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataCenter.m; sourceTree = "<group>"; };
+		A11EDA301587B989007422EC /* BatonEventHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BatonEventHandler.h; sourceTree = "<group>"; };
+		A11EDA311587B989007422EC /* BatonEventHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BatonEventHandler.m; sourceTree = "<group>"; };
 		A11EDA37158FFDBE007422EC /* Baton_UIPlane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Baton_UIPlane.h; sourceTree = "<group>"; };
 		A11EDA38158FFDBE007422EC /* Baton_UIPlane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Baton_UIPlane.m; sourceTree = "<group>"; };
 		A11EDA3A158FFE1E007422EC /* Baton_UI_Element.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Baton_UI_Element.h; sourceTree = "<group>"; };
@@ -131,8 +131,8 @@
 				A11EDA0D1587B960007422EC /* ViewController_iPhone.xib */,
 				A11EDA101587B960007422EC /* ViewController_iPad.xib */,
 				A11ED9FF1587B960007422EC /* Supporting Files */,
-				A11EDA301587B989007422EC /* DataCenter.h */,
-				A11EDA311587B989007422EC /* DataCenter.m */,
+				A11EDA301587B989007422EC /* BatonEventHandler.h */,
+				A11EDA311587B989007422EC /* BatonEventHandler.m */,
 				A11EDA3D158FFF1A007422EC /* Common.h */,
 			);
 			path = DataCenterSpike;
@@ -289,7 +289,7 @@
 				A11EDA051587B960007422EC /* main.m in Sources */,
 				A11EDA091587B960007422EC /* AppDelegate.m in Sources */,
 				A11EDA0C1587B960007422EC /* ViewController.m in Sources */,
-				A11EDA321587B989007422EC /* DataCenter.m in Sources */,
+				A11EDA321587B989007422EC /* BatonEventHandler.m in Sources */,
 				A11EDA39158FFDBE007422EC /* Baton_UIPlane.m in Sources */,
 				A11EDA3C158FFE1E007422EC /* Baton_UI_Element.m in Sources */,
 			);
