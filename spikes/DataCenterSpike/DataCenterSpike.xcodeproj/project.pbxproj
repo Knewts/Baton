@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A11ED9F91587B960007422EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11ED9F81587B960007422EC /* UIKit.framework */; };
+		A11ED9FB1587B960007422EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11ED9FA1587B960007422EC /* Foundation.framework */; };
+		A11ED9FD1587B960007422EC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11ED9FC1587B960007422EC /* CoreGraphics.framework */; };
+		A11EDA031587B960007422EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A11EDA011587B960007422EC /* InfoPlist.strings */; };
+		A11EDA051587B960007422EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A11EDA041587B960007422EC /* main.m */; };
+		A11EDA091587B960007422EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A11EDA081587B960007422EC /* AppDelegate.m */; };
+		A11EDA0C1587B960007422EC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A11EDA0B1587B960007422EC /* ViewController.m */; };
+		A11EDA0F1587B960007422EC /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = A11EDA0D1587B960007422EC /* ViewController_iPhone.xib */; };
+		A11EDA121587B960007422EC /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = A11EDA101587B960007422EC /* ViewController_iPad.xib */; };
+		A11EDA1A1587B960007422EC /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11EDA191587B960007422EC /* SenTestingKit.framework */; };
+		A11EDA1B1587B960007422EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11ED9F81587B960007422EC /* UIKit.framework */; };
+		A11EDA1C1587B960007422EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11ED9FA1587B960007422EC /* Foundation.framework */; };
+		A11EDA241587B960007422EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A11EDA221587B960007422EC /* InfoPlist.strings */; };
+		A11EDA271587B960007422EC /* DataCenterSpikeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A11EDA261587B960007422EC /* DataCenterSpikeTests.m */; };
+		A11EDA321587B989007422EC /* DataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = A11EDA311587B989007422EC /* DataCenter.m */; };
+		A11EDA39158FFDBE007422EC /* Baton_UIPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = A11EDA38158FFDBE007422EC /* Baton_UIPlane.m */; };
+		A11EDA3C158FFE1E007422EC /* Baton_UI_Element.m in Sources */ = {isa = PBXBuildFile; fileRef = A11EDA3B158FFE1E007422EC /* Baton_UI_Element.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A11EDA1D1587B960007422EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A11ED9EB1587B960007422EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A11ED9F31587B960007422EC;
+			remoteInfo = DataCenterSpike;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A11ED9F41587B960007422EC /* DataCenterSpike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataCenterSpike.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A11ED9F81587B960007422EC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A11ED9FA1587B960007422EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A11ED9FC1587B960007422EC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A11EDA001587B960007422EC /* DataCenterSpike-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DataCenterSpike-Info.plist"; sourceTree = "<group>"; };
+		A11EDA021587B960007422EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A11EDA041587B960007422EC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A11EDA061587B960007422EC /* DataCenterSpike-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DataCenterSpike-Prefix.pch"; sourceTree = "<group>"; };
+		A11EDA071587B960007422EC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A11EDA081587B960007422EC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A11EDA0A1587B960007422EC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A11EDA0B1587B960007422EC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A11EDA0E1587B960007422EC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		A11EDA111587B960007422EC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		A11EDA181587B960007422EC /* DataCenterSpikeTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataCenterSpikeTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A11EDA191587B960007422EC /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		A11EDA211587B960007422EC /* DataCenterSpikeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DataCenterSpikeTests-Info.plist"; sourceTree = "<group>"; };
+		A11EDA231587B960007422EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A11EDA251587B960007422EC /* DataCenterSpikeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataCenterSpikeTests.h; sourceTree = "<group>"; };
+		A11EDA261587B960007422EC /* DataCenterSpikeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataCenterSpikeTests.m; sourceTree = "<group>"; };
+		A11EDA301587B989007422EC /* DataCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataCenter.h; sourceTree = "<group>"; };
+		A11EDA311587B989007422EC /* DataCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataCenter.m; sourceTree = "<group>"; };
+		A11EDA37158FFDBE007422EC /* Baton_UIPlane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Baton_UIPlane.h; sourceTree = "<group>"; };
+		A11EDA38158FFDBE007422EC /* Baton_UIPlane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Baton_UIPlane.m; sourceTree = "<group>"; };
+		A11EDA3A158FFE1E007422EC /* Baton_UI_Element.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Baton_UI_Element.h; sourceTree = "<group>"; };
+		A11EDA3B158FFE1E007422EC /* Baton_UI_Element.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Baton_UI_Element.m; sourceTree = "<group>"; };
+		A11EDA3D158FFF1A007422EC /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A11ED9F11587B960007422EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A11ED9F91587B960007422EC /* UIKit.framework in Frameworks */,
+				A11ED9FB1587B960007422EC /* Foundation.framework in Frameworks */,
+				A11ED9FD1587B960007422EC /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A11EDA141587B960007422EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A11EDA1A1587B960007422EC /* SenTestingKit.framework in Frameworks */,
+				A11EDA1B1587B960007422EC /* UIKit.framework in Frameworks */,
+				A11EDA1C1587B960007422EC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A11ED9E91587B960007422EC = {
+			isa = PBXGroup;
+			children = (
+				A11ED9FE1587B960007422EC /* DataCenterSpike */,
+				A11EDA1F1587B960007422EC /* DataCenterSpikeTests */,
+				A11ED9F71587B960007422EC /* Frameworks */,
+				A11ED9F51587B960007422EC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A11ED9F51587B960007422EC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A11ED9F41587B960007422EC /* DataCenterSpike.app */,
+				A11EDA181587B960007422EC /* DataCenterSpikeTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A11ED9F71587B960007422EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A11ED9F81587B960007422EC /* UIKit.framework */,
+				A11ED9FA1587B960007422EC /* Foundation.framework */,
+				A11ED9FC1587B960007422EC /* CoreGraphics.framework */,
+				A11EDA191587B960007422EC /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A11ED9FE1587B960007422EC /* DataCenterSpike */ = {
+			isa = PBXGroup;
+			children = (
+				A11EDA3E15900C77007422EC /* UI_Elements */,
+				A11EDA071587B960007422EC /* AppDelegate.h */,
+				A11EDA081587B960007422EC /* AppDelegate.m */,
+				A11EDA0A1587B960007422EC /* ViewController.h */,
+				A11EDA0B1587B960007422EC /* ViewController.m */,
+				A11EDA0D1587B960007422EC /* ViewController_iPhone.xib */,
+				A11EDA101587B960007422EC /* ViewController_iPad.xib */,
+				A11ED9FF1587B960007422EC /* Supporting Files */,
+				A11EDA301587B989007422EC /* DataCenter.h */,
+				A11EDA311587B989007422EC /* DataCenter.m */,
+				A11EDA3D158FFF1A007422EC /* Common.h */,
+			);
+			path = DataCenterSpike;
+			sourceTree = "<group>";
+		};
+		A11ED9FF1587B960007422EC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A11EDA001587B960007422EC /* DataCenterSpike-Info.plist */,
+				A11EDA011587B960007422EC /* InfoPlist.strings */,
+				A11EDA041587B960007422EC /* main.m */,
+				A11EDA061587B960007422EC /* DataCenterSpike-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A11EDA1F1587B960007422EC /* DataCenterSpikeTests */ = {
+			isa = PBXGroup;
+			children = (
+				A11EDA251587B960007422EC /* DataCenterSpikeTests.h */,
+				A11EDA261587B960007422EC /* DataCenterSpikeTests.m */,
+				A11EDA201587B960007422EC /* Supporting Files */,
+			);
+			path = DataCenterSpikeTests;
+			sourceTree = "<group>";
+		};
+		A11EDA201587B960007422EC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A11EDA211587B960007422EC /* DataCenterSpikeTests-Info.plist */,
+				A11EDA221587B960007422EC /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A11EDA3E15900C77007422EC /* UI_Elements */ = {
+			isa = PBXGroup;
+			children = (
+				A11EDA3A158FFE1E007422EC /* Baton_UI_Element.h */,
+				A11EDA3B158FFE1E007422EC /* Baton_UI_Element.m */,
+				A11EDA37158FFDBE007422EC /* Baton_UIPlane.h */,
+				A11EDA38158FFDBE007422EC /* Baton_UIPlane.m */,
+			);
+			name = UI_Elements;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A11ED9F31587B960007422EC /* DataCenterSpike */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A11EDA2A1587B960007422EC /* Build configuration list for PBXNativeTarget "DataCenterSpike" */;
+			buildPhases = (
+				A11ED9F01587B960007422EC /* Sources */,
+				A11ED9F11587B960007422EC /* Frameworks */,
+				A11ED9F21587B960007422EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DataCenterSpike;
+			productName = DataCenterSpike;
+			productReference = A11ED9F41587B960007422EC /* DataCenterSpike.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A11EDA171587B960007422EC /* DataCenterSpikeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A11EDA2D1587B960007422EC /* Build configuration list for PBXNativeTarget "DataCenterSpikeTests" */;
+			buildPhases = (
+				A11EDA131587B960007422EC /* Sources */,
+				A11EDA141587B960007422EC /* Frameworks */,
+				A11EDA151587B960007422EC /* Resources */,
+				A11EDA161587B960007422EC /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A11EDA1E1587B960007422EC /* PBXTargetDependency */,
+			);
+			name = DataCenterSpikeTests;
+			productName = DataCenterSpikeTests;
+			productReference = A11EDA181587B960007422EC /* DataCenterSpikeTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A11ED9EB1587B960007422EC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = A11ED9EE1587B960007422EC /* Build configuration list for PBXProject "DataCenterSpike" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A11ED9E91587B960007422EC;
+			productRefGroup = A11ED9F51587B960007422EC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A11ED9F31587B960007422EC /* DataCenterSpike */,
+				A11EDA171587B960007422EC /* DataCenterSpikeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A11ED9F21587B960007422EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A11EDA031587B960007422EC /* InfoPlist.strings in Resources */,
+				A11EDA0F1587B960007422EC /* ViewController_iPhone.xib in Resources */,
+				A11EDA121587B960007422EC /* ViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A11EDA151587B960007422EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A11EDA241587B960007422EC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A11EDA161587B960007422EC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A11ED9F01587B960007422EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A11EDA051587B960007422EC /* main.m in Sources */,
+				A11EDA091587B960007422EC /* AppDelegate.m in Sources */,
+				A11EDA0C1587B960007422EC /* ViewController.m in Sources */,
+				A11EDA321587B989007422EC /* DataCenter.m in Sources */,
+				A11EDA39158FFDBE007422EC /* Baton_UIPlane.m in Sources */,
+				A11EDA3C158FFE1E007422EC /* Baton_UI_Element.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A11EDA131587B960007422EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A11EDA271587B960007422EC /* DataCenterSpikeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A11EDA1E1587B960007422EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A11ED9F31587B960007422EC /* DataCenterSpike */;
+			targetProxy = A11EDA1D1587B960007422EC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A11EDA011587B960007422EC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A11EDA021587B960007422EC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		A11EDA0D1587B960007422EC /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A11EDA0E1587B960007422EC /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		A11EDA101587B960007422EC /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A11EDA111587B960007422EC /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		A11EDA221587B960007422EC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A11EDA231587B960007422EC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A11EDA281587B960007422EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A11EDA291587B960007422EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A11EDA2B1587B960007422EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DataCenterSpike/DataCenterSpike-Prefix.pch";
+				INFOPLIST_FILE = "DataCenterSpike/DataCenterSpike-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A11EDA2C1587B960007422EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DataCenterSpike/DataCenterSpike-Prefix.pch";
+				INFOPLIST_FILE = "DataCenterSpike/DataCenterSpike-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		A11EDA2E1587B960007422EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DataCenterSpike.app/DataCenterSpike";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DataCenterSpike/DataCenterSpike-Prefix.pch";
+				INFOPLIST_FILE = "DataCenterSpikeTests/DataCenterSpikeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		A11EDA2F1587B960007422EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/DataCenterSpike.app/DataCenterSpike";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DataCenterSpike/DataCenterSpike-Prefix.pch";
+				INFOPLIST_FILE = "DataCenterSpikeTests/DataCenterSpikeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A11ED9EE1587B960007422EC /* Build configuration list for PBXProject "DataCenterSpike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A11EDA281587B960007422EC /* Debug */,
+				A11EDA291587B960007422EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A11EDA2A1587B960007422EC /* Build configuration list for PBXNativeTarget "DataCenterSpike" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A11EDA2B1587B960007422EC /* Debug */,
+				A11EDA2C1587B960007422EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A11EDA2D1587B960007422EC /* Build configuration list for PBXNativeTarget "DataCenterSpikeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A11EDA2E1587B960007422EC /* Debug */,
+				A11EDA2F1587B960007422EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A11ED9EB1587B960007422EC /* Project object */;
+}
