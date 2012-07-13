@@ -8,6 +8,15 @@
 
 #import "OSCBlob.h"
 
-@implementation OSCBlob 
+@implementation OSCBlob
+
+-(NSData *)finishAndReturnData
+{
+    return NULL;
+}
+-(NSString *) typeString
+{
+    return @"b";
+}
 
 @end

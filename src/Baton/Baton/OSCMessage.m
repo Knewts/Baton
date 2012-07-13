@@ -34,6 +34,13 @@
     return obj;
 }
 */
+-(BOOL) addObject:(NSObject<OSCObject> *) object
+{
+    [typeString appendString:[object getTypeString]];
+    [data appendData:[object finishAndReturnData]];
+    return YES;
+}
+
 //should abstract this...
 -(BOOL) addInt32:(int32_t)num
 {
@@ -41,6 +48,9 @@
     [data appendBytes:&num length:4];
     return YES;
 }
+/*
+The addString function has been covered by the addObject function. Keeping it in here until we clear up the rest of these abstractions.
+ */
 -(BOOL) addString:(NSString *)inString
 {
     [typeString appendString:@"s"];

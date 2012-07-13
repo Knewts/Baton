@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "OSCstring.h"
+#import "OSCObject.h"
 @interface OSCMessage : NSObject
 {
     OSCstring * address;
@@ -22,9 +23,9 @@
 -(id) initWithAddress:(NSString *)_address;
 
 //+(id) oscMessagetoAddress:(NSString *) address;
-//this can be done.  It might be benificial to do it this way, too.
+//the first add function is an abstraction of the other add functions.  It's going to take some time and work to write implementations for each of the types, however.
 
-
+-(BOOL) addObject:(OSCObject *) object;
 -(BOOL) addInt32:(int32_t)num;
 -(BOOL) addFloat32:(Float32)num;
 -(BOOL) addString:(NSString *)string;
