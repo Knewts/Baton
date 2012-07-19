@@ -25,7 +25,7 @@
 {
     // Insert code here to initialize your application
     
-    NSURL *url = [[NSURL alloc] initWithString:@"http://timmaha.com:8080/songs.xml"];
+    NSURL *url = [[NSURL alloc] initWithString:@"http://timmaha.com:8080/songsbroke.xml"];
     NSData *data = [[NSData alloc] initWithContentsOfURL:url];
     
     NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithData:data];
@@ -33,6 +33,7 @@
     XMLParser *theParser = [[XMLParser alloc] initXMLParser];
     
     [xmlParser setDelegate:theParser];
+    [xmlParser setShouldResolveExternalEntities:YES];
     
     BOOL worked = [xmlParser parse];
     

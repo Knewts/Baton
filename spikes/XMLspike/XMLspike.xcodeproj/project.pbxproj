@@ -17,10 +17,11 @@
 		662AE0AC1559D6BA00DE7231 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 662AE08C1559D6BA00DE7231 /* Cocoa.framework */; };
 		662AE0B41559D6BA00DE7231 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 662AE0B21559D6BA00DE7231 /* InfoPlist.strings */; };
 		662AE0B71559D6BA00DE7231 /* XMLspikeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AE0B61559D6BA00DE7231 /* XMLspikeTests.m */; };
+		664BC73215B8A9FF00C9B698 /* songs.dtd in Resources */ = {isa = PBXBuildFile; fileRef = 664BC73115B8A9FF00C9B698 /* songs.dtd */; };
+		664BC73415B8AA1200C9B698 /* songsbroke.xml in Resources */ = {isa = PBXBuildFile; fileRef = 664BC73315B8AA1200C9B698 /* songsbroke.xml */; };
 		665312B9156C2A3800F30D8C /* song.m in Sources */ = {isa = PBXBuildFile; fileRef = 665312B8156C2A3800F30D8C /* song.m */; };
 		665312BE156C39FD00F30D8C /* XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 665312BD156C39FD00F30D8C /* XMLParser.m */; };
 		665312C1156C444000F30D8C /* songs.xml in Resources */ = {isa = PBXBuildFile; fileRef = 665312BF156C444000F30D8C /* songs.xml */; };
-		665312C2156C444000F30D8C /* songs.xsd in Resources */ = {isa = PBXBuildFile; fileRef = 665312C0156C444000F30D8C /* songs.xsd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,12 +54,13 @@
 		662AE0B31559D6BA00DE7231 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		662AE0B51559D6BA00DE7231 /* XMLspikeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMLspikeTests.h; sourceTree = "<group>"; };
 		662AE0B61559D6BA00DE7231 /* XMLspikeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMLspikeTests.m; sourceTree = "<group>"; };
+		664BC73115B8A9FF00C9B698 /* songs.dtd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = songs.dtd; path = ../../../../songs.dtd; sourceTree = "<group>"; };
+		664BC73315B8AA1200C9B698 /* songsbroke.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = songsbroke.xml; path = ../../../../songsbroke.xml; sourceTree = "<group>"; };
 		665312B7156C2A3800F30D8C /* song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = song.h; sourceTree = "<group>"; };
 		665312B8156C2A3800F30D8C /* song.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = song.m; sourceTree = "<group>"; };
 		665312BC156C39FD00F30D8C /* XMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLParser.h; sourceTree = "<group>"; };
 		665312BD156C39FD00F30D8C /* XMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLParser.m; sourceTree = "<group>"; };
 		665312BF156C444000F30D8C /* songs.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = songs.xml; path = ../../../../songs.xml; sourceTree = "<group>"; };
-		665312C0156C444000F30D8C /* songs.xsd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = songs.xsd; path = ../../../../songs.xsd; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,8 +126,9 @@
 		662AE0921559D6BA00DE7231 /* XMLspike */ = {
 			isa = PBXGroup;
 			children = (
+				664BC73315B8AA1200C9B698 /* songsbroke.xml */,
+				664BC73115B8A9FF00C9B698 /* songs.dtd */,
 				665312BF156C444000F30D8C /* songs.xml */,
-				665312C0156C444000F30D8C /* songs.xsd */,
 				665312BC156C39FD00F30D8C /* XMLParser.h */,
 				665312BD156C39FD00F30D8C /* XMLParser.m */,
 				662AE09E1559D6BA00DE7231 /* AppDelegate.h */,
@@ -243,7 +246,8 @@
 				662AE09D1559D6BA00DE7231 /* Credits.rtf in Resources */,
 				662AE0A31559D6BA00DE7231 /* MainMenu.xib in Resources */,
 				665312C1156C444000F30D8C /* songs.xml in Resources */,
-				665312C2156C444000F30D8C /* songs.xsd in Resources */,
+				664BC73215B8A9FF00C9B698 /* songs.dtd in Resources */,
+				664BC73415B8AA1200C9B698 /* songsbroke.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
