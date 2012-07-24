@@ -25,10 +25,9 @@
 {
     // Insert code here to initialize your application
     
-    NSURL *url = [[NSURL alloc] initWithString:@"http://timmaha.com:8080/songsbroke.xml"];
-    NSData *data = [[NSData alloc] initWithContentsOfURL:url];
-    
-    NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithData:data];
+    NSString *xmlPath = [[NSBundle mainBundle] pathForResource:@"songs" ofType:@"xml"];
+    NSData *xmlData = [NSData dataWithContentsOfFile:xmlPath];
+    NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithData:xmlData];
     
     XMLParser *theParser = [[XMLParser alloc] initXMLParser];
     

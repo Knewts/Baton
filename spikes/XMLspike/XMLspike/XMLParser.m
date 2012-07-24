@@ -28,7 +28,6 @@
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qualifiedName attributes:(NSDictionary *)attributeDict {
     
-    NSLog(@"Attmepting 1st method");
     if ([elementName isEqualToString:@"song"]) {
         NSLog(@"song element found – create a new instance of song class...");
         songToParse = [[song alloc] init];
@@ -80,8 +79,16 @@ qualifiedName:(NSString *)qName {
     currentElementValue = nil;
 }
 
+- (NSData *)parser:(NSXMLParser *)parser resolveExternalEntityName:(NSString *)name systemID:(NSString *)systemID {
+    NSLog(name);
+    NSString *string = [[NSString alloc] initWithString:@" "];
+    NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
+    return data;
+}
+
 -(NSMutableArray*)getSongs {
 	return allSongs;
 }
+
 // end of XMLParser.m file
 @end
