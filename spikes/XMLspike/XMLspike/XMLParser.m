@@ -14,7 +14,7 @@
 @synthesize allSongs;
 
 - (XMLParser *) initXMLParser {
-	NSLog(@"Attempting Init");
+	NSLog(@"INIT xml parser");
 	[super init];
     
     //irish guy
@@ -24,9 +24,11 @@
 	allSongs = [[NSMutableArray alloc] init];
 	NSLog(@"Init Done");
 	return self;
-}
+}//end init
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qualifiedName attributes:(NSDictionary *)attributeDict {
+    
+    NSLog(@"entered StartElement");
     
     if ([elementName isEqualToString:@"song"]) {
         NSLog(@"song element found – create a new instance of song class...");
@@ -35,10 +37,12 @@
         // you do, you can extract them here: 
         // song.att = [[attributeDict objectForKey:@"<att name>"] ...];
     }
-}
+}//end didStartElement
 
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
-    NSLog(@"Attmepting 1st method");
+    
+    NSLog(@"entered foundCharacters");
+    
     if (!currentElementValue) {
         // init the ad hoc string with the value     
         currentElementValue = [[NSMutableString alloc] initWithString:string];
@@ -47,16 +51,27 @@
         // append value to the ad hoc string    
 		[currentElementValue appendString:string];
     }
-    NSLog(@"Processing value for : %@", string);
-}
+    
+    
+
+    NSCharacterSet *whitespace = [NSCharacterSet whitespaceAndNewlineCharacterSet];
+    NSString *trimmed = [string stringByTrimmingCharactersInSet:whitespace];
+    if ([trimmed length] != 0) {
+        NSLog(@"Processing value for : %@", string);
+    }
+    
+
+}//end foundCharacters
 
 - (void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError {
 	NSLog(@"Parser error occured %@",parseError);
-}
+}//end parseErrorOccurred
 
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI 
 qualifiedName:(NSString *)qName {
-    NSLog(@"Attmepting 1st method");
+    
+    NSLog(@"entered EndElement");
+    
     if ([elementName isEqualToString:@"songs"]) {
         // We reached the end of the XML document
         return;
@@ -77,18 +92,24 @@ qualifiedName:(NSString *)qName {
     }
     [currentElementValue release];
     currentElementValue = nil;
-}
+    NSLog(@"");
+
+}//end didEndElement
 
 - (NSData *)parser:(NSXMLParser *)parser resolveExternalEntityName:(NSString *)name systemID:(NSString *)systemID {
-    NSLog(name);
+    
+    NSLog(@"entered resolveExternalEntityName");
+    
+    //NSLog(name);
     NSString *string = [[NSString alloc] initWithString:@" "];
     NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
     return data;
-}
+
+}//end resolveExternalEntityName
 
 -(NSMutableArray*)getSongs {
 	return allSongs;
-}
+}//end getSongs
 
 // end of XMLParser.m file
 @end
