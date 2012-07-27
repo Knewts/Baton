@@ -38,6 +38,8 @@
 		63E873EA1543B195009081AA /* WSOSCBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E873E21543A265009081AA /* WSOSCBundle.m */; };
 		63E873EB1543B195009081AA /* WSOSCMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E873E41543A265009081AA /* WSOSCMessage.m */; };
 		63E873EC1543B195009081AA /* WSOSCPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E873E61543A265009081AA /* WSOSCPacket.m */; };
+		A22D927515C09EF400FBC13B /* Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = A22D927415C09EF400FBC13B /* Layout.m */; };
+		A22D927915C09F9900FBC13B /* LayoutTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A22D927815C09F9900FBC13B /* LayoutTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +96,10 @@
 		63E873E41543A265009081AA /* WSOSCMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSOSCMessage.m; sourceTree = "<group>"; };
 		63E873E51543A265009081AA /* WSOSCPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSOSCPacket.h; sourceTree = "<group>"; };
 		63E873E61543A265009081AA /* WSOSCPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSOSCPacket.m; sourceTree = "<group>"; };
+		A22D927315C09EF400FBC13B /* Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Layout.h; sourceTree = "<group>"; };
+		A22D927415C09EF400FBC13B /* Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Layout.m; sourceTree = "<group>"; };
+		A22D927715C09F9900FBC13B /* LayoutTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutTableViewController.h; sourceTree = "<group>"; };
+		A22D927815C09F9900FBC13B /* LayoutTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayoutTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,11 +168,15 @@
 				63967609152F4800004DD305 /* AppDelegate.h */,
 				6396760A152F4800004DD305 /* AppDelegate.m */,
 				6396760C152F4800004DD305 /* MainStoryboard_iPhone.storyboard */,
+				A22D927315C09EF400FBC13B /* Layout.h */,
+				A22D927415C09EF400FBC13B /* Layout.m */,
 				6396760F152F4800004DD305 /* MainStoryboard_iPad.storyboard */,
 				6326E92C1590F1CE00674097 /* SettingsTableViewController.h */,
 				6326E92D1590F1CE00674097 /* SettingsTableViewController.m */,
 				63967612152F4800004DD305 /* ViewController.h */,
 				63967613152F4800004DD305 /* ViewController.m */,
+				A22D927715C09F9900FBC13B /* LayoutTableViewController.h */,
+				A22D927815C09F9900FBC13B /* LayoutTableViewController.m */,
 				63967601152F4800004DD305 /* Supporting Files */,
 			);
 			path = Baton;
@@ -373,6 +383,8 @@
 				639715FB1592782500655547 /* OSCBlob.m in Sources */,
 				639715FD1592782500655547 /* OSCMessage.m in Sources */,
 				639715FF1592782500655547 /* OSCstring.m in Sources */,
+				A22D927515C09EF400FBC13B /* Layout.m in Sources */,
+				A22D927915C09F9900FBC13B /* LayoutTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

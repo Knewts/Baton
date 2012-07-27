@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11D50b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2ud-1h-n2T">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2ud-1h-n2T">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
-        <development defaultVersion="4200" identifier="xcode"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1498"/>
     </dependencies>
     <scenes>
         <!--Settings Table View Controller-->
@@ -61,7 +60,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <connections>
-                                            <segue destination="Fgg-Zc-gOs" kind="push" identifier="PushToLayoutSelect" id="5Cl-AB-cnk"/>
+                                            <segue destination="Fgg-Zc-gOs" kind="modal" identifier="PushToLayoutSelect" id="5Cl-AB-cnk"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -167,11 +166,11 @@
             </objects>
             <point key="canvasLocation" x="783" y="-231"/>
         </scene>
-        <!--Settings Table View Controller-->
+        <!--Layout Table View Controller-->
         <scene sceneID="rh3-RT-jR6">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AQ2-pu-aCD" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="Fgg-Zc-gOs" customClass="SettingsTableViewController" sceneMemberID="viewController">
+                <tableViewController id="Fgg-Zc-gOs" customClass="LayoutTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="UL4-BO-U27">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -195,12 +194,21 @@
                             </items>
                         </navigationBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LayoutTable" id="oqc-0i-Pj3">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LayoutCell" editingAccessoryType="disclosureIndicator" textLabel="GbC-nP-qx3" style="IBUITableViewCellStyleDefault" id="oqc-0i-Pj3">
                                 <rect key="frame" x="0.0" y="80" width="320" height="46"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="10" y="1" width="300" height="43"/>
+                                    <rect key="frame" x="10" y="1" width="280" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GbC-nP-qx3">
+                                            <rect key="frame" x="10" y="0.0" width="260" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                             </tableViewCell>
@@ -217,9 +225,17 @@
         </scene>
     </scenes>
     <classes>
+        <class className="LayoutTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LayoutTableViewController.h"/>
+        </class>
         <class className="SettingsTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsTableViewController.h"/>
             <relationships>
+                <relationship kind="action" name="cancelLayoutSelection:"/>
+                <relationship kind="action" name="cancelOSCConfig:"/>
+                <relationship kind="action" name="finishLayoutSelection:"/>
+                <relationship kind="action" name="finishOSCConfig:"/>
+                <relationship kind="action" name="textFieldDidBeginEditing:" candidateClass="UITextField"/>
                 <relationship kind="action" name="userCanceledLayoutSelection:"/>
                 <relationship kind="action" name="userCanceledOSCConfig:"/>
                 <relationship kind="action" name="userDidFinishLayoutSelection:"/>

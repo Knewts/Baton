@@ -11,6 +11,6 @@
 @interface OSCBlob : NSObject <OSCObject>
 
 -(NSData *)finishAndReturnData;
--(NSString *)typeString;
+-(NSString *)getTypeString;
 
 @end

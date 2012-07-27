@@ -14,7 +14,7 @@
 {
     return NULL;
 }
--(NSString *) typeString
+-(NSString *) getTypeString
 {
     return @"b";
 }
