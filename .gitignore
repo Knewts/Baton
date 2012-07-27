@@ -3,7 +3,5 @@
 *.DS_Store
 xcuserdata
 xcuserdata/
-xcuserdata/*
 project.xcworkspace
 project.xcworkspace/
-project.xcworkspace/*
