@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE songs SYSTEM "songs.dtd">
+
+<songs>
+    <song>
+        <trackNumber>04</trackNumber>
+        <artist>Test Artist</artist>
+        <album>Test Album</album>
+        <title>Test Title</title>
+    </song>
+    <song>
+        <trackNumber>01</trackNumber>
+        <artist>The Beatles</artist>
+        <album>Sgt. Pepper</album>
+        <title>Sgt. Pepper Title</title>
+    </song>
+    <song>
+        <trackNumber>07</trackNumber>
+        <artist>White Stripes</artist>
+        <album>De Stijil</album>
+        <title>Hotel Yorba</title>
+    </song>
+</songs>

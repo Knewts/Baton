@@ -52,8 +52,6 @@
 		[currentElementValue appendString:string];
     }
     
-    
-
     NSCharacterSet *whitespace = [NSCharacterSet whitespaceAndNewlineCharacterSet];
     NSString *trimmed = [string stringByTrimmingCharactersInSet:whitespace];
     if ([trimmed length] != 0) {
