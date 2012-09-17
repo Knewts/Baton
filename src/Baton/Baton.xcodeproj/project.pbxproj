@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6309E2F41543509900A58229 /* GCDUDPSocketController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6309E2F31543509900A58229 /* GCDUDPSocketController.m */; };
 		6326E92E1590F1CE00674097 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6326E92D1590F1CE00674097 /* SettingsTableViewController.m */; };
+		636FB3E31607E7F200AA9518 /* OSCFloat.m in Sources */ = {isa = PBXBuildFile; fileRef = 636FB3E01607E7F200AA9518 /* OSCFloat.m */; };
+		636FB3E41607E7F200AA9518 /* OSCInt.m in Sources */ = {isa = PBXBuildFile; fileRef = 636FB3E21607E7F200AA9518 /* OSCInt.m */; };
 		639675FB152F4800004DD305 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 639675FA152F4800004DD305 /* UIKit.framework */; };
 		639675FD152F4800004DD305 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 639675FC152F4800004DD305 /* Foundation.framework */; };
 		639675FF152F4800004DD305 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 639675FE152F4800004DD305 /* CoreGraphics.framework */; };
@@ -57,6 +59,10 @@
 		6309E2F31543509900A58229 /* GCDUDPSocketController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDUDPSocketController.m; sourceTree = "<group>"; };
 		6326E92C1590F1CE00674097 /* SettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
 		6326E92D1590F1CE00674097 /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
+		636FB3DF1607E7F200AA9518 /* OSCFloat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCFloat.h; sourceTree = "<group>"; };
+		636FB3E01607E7F200AA9518 /* OSCFloat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCFloat.m; sourceTree = "<group>"; };
+		636FB3E11607E7F200AA9518 /* OSCInt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCInt.h; sourceTree = "<group>"; };
+		636FB3E21607E7F200AA9518 /* OSCInt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCInt.m; sourceTree = "<group>"; };
 		639675F6152F4800004DD305 /* Baton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Baton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		639675FA152F4800004DD305 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		639675FC152F4800004DD305 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -225,6 +231,10 @@
 		63967639152F48A8004DD305 /* OSC */ = {
 			isa = PBXGroup;
 			children = (
+				636FB3DF1607E7F200AA9518 /* OSCFloat.h */,
+				636FB3E01607E7F200AA9518 /* OSCFloat.m */,
+				636FB3E11607E7F200AA9518 /* OSCInt.h */,
+				636FB3E21607E7F200AA9518 /* OSCInt.m */,
 				639715F41592782500655547 /* OSCBlob.h */,
 				639715F51592782500655547 /* OSCBlob.m */,
 				639715F61592782500655547 /* OSCMessage.h */,
@@ -385,6 +395,8 @@
 				639715FF1592782500655547 /* OSCstring.m in Sources */,
 				A22D927515C09EF400FBC13B /* Layout.m in Sources */,
 				A22D927915C09F9900FBC13B /* LayoutTableViewController.m in Sources */,
+				636FB3E31607E7F200AA9518 /* OSCFloat.m in Sources */,
+				636FB3E41607E7F200AA9518 /* OSCInt.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -26,11 +26,6 @@
 //the first add function is an abstraction of the other add functions.  It's going to take some time and work to write implementations for each of the types, however.
 
 -(BOOL) addObject:(NSObject <OSCObject> *) object;
--(BOOL) addInt32:(int32_t)num;
--(BOOL) addFloat32:(Float32)num;
--(BOOL) addString:(NSString *)string;
--(BOOL) addBlob:(NSData *) blob;
-
 
 -(NSData *) writeToData;
 
