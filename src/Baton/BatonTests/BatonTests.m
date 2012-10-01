@@ -50,23 +50,44 @@
 -(void)testAddString
 {
     OSCMessage * testMessage = [[[OSCMessage alloc] initWithAddress:@"/foo"] autorelease];
-    [testMessage addString:@"This is a test"];
+    [testMessage addObject:[[OSCstring alloc] initWithString:@"This is a test"]];
 
     if([[testMessage writeToData] length] % 4 != 0)
+    {
+        STFail(@"Message data length not a multiple of 4");
+    }
+    if([[testMessage writeToData] length] == 0)
+    {
+        STFail(@"Nothing in the message");
+    }
+
+}
+-(void)testAddStringStatic
 {
-    STFail(@"Message data length not a multiple of 4");
+    OSCMessage * testMessage = [[[OSCMessage alloc] initWithAddress:@"/foo"] autorelease];
+    [testMessage addObject:[OSCstring oscStringfromString:@"This is a Test"]];
+    
+    if([[testMessage writeToData] length] % 4 != 0)
+    {
+        STFail(@"Message data length not a multiple of 4");
+    }
+    if([[testMessage writeToData] length] == 0)
+    {
+        STFail(@"Nothing in the message");
+    }
 }
-
-}
-
 -(void)testTypeString
 {
     OSCMessage * testMessage = [[[OSCMessage alloc] initWithAddress:@"/foo"] autorelease];
-    [testMessage addString:@"This is a test"];
+    [testMessage addObject:[[OSCstring alloc] initWithString:@"This is a test"]];
 
     if([[testMessage typeString] compare:@",s"] != NSOrderedSame)
     {
         STFail(@"TypeString incorrect. is: %@",[testMessage typeString]);
+    }
+    if([[testMessage writeToData] length] == 0)
+    {
+        STFail(@"Nothing in the message");
     }
 }
 

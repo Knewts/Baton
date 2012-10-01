@@ -17,6 +17,10 @@
     self.num = value;
     return self;
 }
++(id)oscIntWithInt:(NSNumber *)value
+{
+    return [[OSCInt alloc] initWithInt:value];
+}
 
 -(NSString *)getTypeString
 {

@@ -1,81 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="2ud-1h-n2T">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="qIJ-Ut-XvT">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1498"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
     </dependencies>
     <scenes>
-        <!--Settings Table View Controller-->
-        <scene sceneID="Z8z-6x-due">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="N6n-Dx-eeE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="2ud-1h-n2T" customClass="SettingsTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="3P8-6p-iG8">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <sections>
-                            <tableViewSection headerTitle="Networking" id="4tD-qc-CKj">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="99j-2O-FFc" style="IBUITableViewCellStyleDefault" id="plo-Of-2MH">
-                                        <rect key="frame" x="0.0" y="46" width="320" height="46"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Configure OSC..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="99j-2O-FFc">
-                                                    <rect key="frame" x="10" y="0.0" width="260" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <connections>
-                                            <segue destination="gf7-BY-nNi" kind="modal" identifier="OSCConfigSegue" modalTransitionStyle="coverVertical" id="M5z-sD-p5V"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="Layout" id="N3N-oc-CTY">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="j2S-hs-jsW" style="IBUITableViewCellStyleDefault" id="JgH-S4-gA0">
-                                        <rect key="frame" x="0.0" y="138" width="320" height="46"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Select Layout..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="j2S-hs-jsW">
-                                                    <rect key="frame" x="10" y="0.0" width="260" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <connections>
-                                            <segue destination="Fgg-Zc-gOs" kind="modal" identifier="PushToLayoutSelect" id="5Cl-AB-cnk"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="2ud-1h-n2T" id="23d-Wl-jKY"/>
-                            <outlet property="delegate" destination="2ud-1h-n2T" id="LtB-Oq-YeF"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="WDK-hr-O7i"/>
-                </tableViewController>
-            </objects>
-            <point key="canvasLocation" x="207" y="68"/>
-        </scene>
         <!--Settings Table View Controller-->
         <scene sceneID="30i-p5-duI">
             <objects>
@@ -166,36 +95,18 @@
             </objects>
             <point key="canvasLocation" x="783" y="-231"/>
         </scene>
-        <!--Layout Table View Controller-->
+        <!--Layout Table View Controller - Layouts-->
         <scene sceneID="rh3-RT-jR6">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AQ2-pu-aCD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="Fgg-Zc-gOs" customClass="LayoutTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="UL4-BO-U27">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <navigationBar key="tableHeaderView" contentMode="scaleToFill" id="CYc-nB-LUV">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <items>
-                                <navigationItem title="Layout Selection" id="M47-7l-cKJ">
-                                    <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="sqf-xQ-ob3">
-                                        <connections>
-                                            <action selector="cancelLayoutSelection:" destination="Fgg-Zc-gOs" id="dSr-HT-aX6"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="VKx-aN-F24">
-                                        <connections>
-                                            <action selector="finishLayoutSelection:" destination="Fgg-Zc-gOs" id="O32-ra-cm5"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </navigationItem>
-                            </items>
-                        </navigationBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LayoutCell" editingAccessoryType="disclosureIndicator" textLabel="GbC-nP-qx3" style="IBUITableViewCellStyleDefault" id="oqc-0i-Pj3">
-                                <rect key="frame" x="0.0" y="80" width="320" height="46"/>
+                                <rect key="frame" x="0.0" y="46" width="320" height="46"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="10" y="1" width="280" height="43"/>
@@ -218,10 +129,98 @@
                             <outlet property="delegate" destination="Fgg-Zc-gOs" id="6dl-cE-TX4"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="i55-Mh-szr"/>
+                    <navigationItem key="navigationItem" title="Layouts" id="i55-Mh-szr">
+                        <barButtonItem key="backBarButtonItem" title="Cancel" id="qqk-cM-ocP"/>
+                    </navigationItem>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="783" y="359"/>
+        </scene>
+        <!--Settings Table View Controller - Baton-->
+        <scene sceneID="g7j-Eq-rdr">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qck-gw-Qlo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController id="dFb-aQ-hn4" customClass="SettingsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="3P8-6p-iG8">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Networking" id="4tD-qc-CKj">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="99j-2O-FFc" style="IBUITableViewCellStyleDefault" id="plo-Of-2MH">
+                                        <rect key="frame" x="0.0" y="46" width="320" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Configure OSC..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="99j-2O-FFc">
+                                                    <rect key="frame" x="10" y="0.0" width="260" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <segue destination="gf7-BY-nNi" kind="modal" identifier="OSCConfigSegue" modalTransitionStyle="coverVertical" id="M5z-sD-p5V"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Layout" id="N3N-oc-CTY">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="j2S-hs-jsW" style="IBUITableViewCellStyleDefault" id="JgH-S4-gA0">
+                                        <rect key="frame" x="0.0" y="138" width="320" height="46"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="10" y="1" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Select Layout..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="j2S-hs-jsW">
+                                                    <rect key="frame" x="10" y="0.0" width="260" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <segue destination="Fgg-Zc-gOs" kind="push" identifier="PushToLayoutSelect" id="5Cl-AB-cnk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="dFb-aQ-hn4" id="5o4-2S-apx"/>
+                            <outlet property="delegate" destination="dFb-aQ-hn4" id="pEP-1f-6Oc"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Baton" id="kNK-4g-2dW"/>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="207" y="-105"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cUI-if-VR1">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bd4-bB-ML5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" id="qIJ-Ut-XvT" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="1j0-MY-B2o">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="dFb-aQ-hn4" kind="relationship" relationship="rootViewController" id="ygw-q1-NM8"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-250" y="-105"/>
         </scene>
     </scenes>
     <classes>
@@ -231,11 +230,6 @@
         <class className="SettingsTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsTableViewController.h"/>
             <relationships>
-                <relationship kind="action" name="cancelLayoutSelection:"/>
-                <relationship kind="action" name="cancelOSCConfig:"/>
-                <relationship kind="action" name="finishLayoutSelection:"/>
-                <relationship kind="action" name="finishOSCConfig:"/>
-                <relationship kind="action" name="textFieldDidBeginEditing:" candidateClass="UITextField"/>
                 <relationship kind="action" name="userCanceledLayoutSelection:"/>
                 <relationship kind="action" name="userCanceledOSCConfig:"/>
                 <relationship kind="action" name="userDidFinishLayoutSelection:"/>

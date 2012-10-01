@@ -17,7 +17,10 @@
     self.num = value;
     return self;
 }
-
++(id)oscIntWithDecimalNumber:(NSDecimalNumber *)value
+{
+    return [[OSCFloat alloc] initWithDecimalNumber:value];
+}
 -(NSString *)getTypeString
 {
     return @"f";

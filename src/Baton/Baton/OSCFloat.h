@@ -16,5 +16,5 @@
 @property (nonatomic, assign) NSDecimalNumber * num;
 
 -(id)initWithDecimalNumber:(NSDecimalNumber *)value;
-
++(id)oscIntWithDecimalNumber:(NSDecimalNumber *)value;
 @end
