@@ -37,6 +37,7 @@
 -(BOOL) addObject:(NSObject<OSCObject> *) object
 {
     [typeString appendString:[object getTypeString]];
+    //here all appended data should have length divisable by 4.
     [data appendData:[object finishAndReturnData]];
     return YES;
 }
