@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "OSCstring.h"
+#import "OSCObject.h"
 @interface OSCMessage : NSObject
 {
     OSCstring * address;
@@ -22,14 +23,11 @@
 -(id) initWithAddress:(NSString *)_address;
 
 //+(id) oscMessagetoAddress:(NSString *) address;
-//this can be done.  It might be benificial to do it this way, too.
 
-
--(BOOL) addInt32:(int32_t)num;
--(BOOL) addFloat32:(Float32)num;
--(BOOL) addString:(NSString *)string;
--(BOOL) addBlob:(NSData *) blob;
-
+//This method is an abstract method that controls the addition of any sort of object to the message.
+//That means this code currently comforms to the open close principle.  as such, THIS CODE IS CLOSED TO CHANGE.
+//Any additional OSCObjects should be written as a seperate class that implements the OSCObject protocal.
+-(BOOL) addObject:(NSObject <OSCObject> *) object;
 
 -(NSData *) writeToData;
 

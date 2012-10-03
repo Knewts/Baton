@@ -9,5 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @protocol OSCObject <NSObject>
+@required
+
+-(NSData*)finishAndReturnData;
+-(NSString*)getTypeString;
 
 @end

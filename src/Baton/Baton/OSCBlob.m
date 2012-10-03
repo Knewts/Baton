@@ -10,4 +10,13 @@
 
 @implementation OSCBlob
 
+-(NSData *)finishAndReturnData
+{
+    return NULL;
+}
+-(NSString *) getTypeString
+{
+    return @"b";
+}
+
 @end

@@ -1,5 +1,7 @@
 
 #ignore everything except the pbxproj file
-*.xcodeproj/ !*.xcodeproj/project.pbxproj
 *.DS_Store
-
+xcuserdata
+xcuserdata/
+project.xcworkspace
+project.xcworkspace/

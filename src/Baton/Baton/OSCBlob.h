@@ -8,6 +8,9 @@
 
 #import "OSCObject.h"
 
-@interface OSCBlob : OSCObject
+@interface OSCBlob : NSObject <OSCObject>
+
+-(NSData *)finishAndReturnData;
+-(NSString *)getTypeString;
 
 @end

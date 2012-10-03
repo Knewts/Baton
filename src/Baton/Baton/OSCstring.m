@@ -28,8 +28,19 @@
     self.data = [[NSData alloc] initWithBytes:buff length:length];
     return self;
 }
+
 +(id)oscStringfromString:(NSString *)inString
 {
     return [[OSCstring alloc] initWithString:inString];
+}
+
+-(NSData *)finishAndReturnData
+{
+    return self.data;
+}
+
+-(NSString *)getTypeString
+{
+    return @"s";
 }
 @end

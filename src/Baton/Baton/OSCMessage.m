@@ -34,47 +34,11 @@
     return obj;
 }
 */
-//should abstract this...
--(BOOL) addInt32:(int32_t)num
+-(BOOL) addObject:(NSObject<OSCObject> *) object
 {
-    [typeString appendString:@"i"];
-    [data appendBytes:&num length:4];
-    return YES;
-}
--(BOOL) addString:(NSString *)inString
-{
-    [typeString appendString:@"s"];
-    [data appendData:[[OSCstring oscStringfromString:inString] data]];
-    return YES;
-}
--(BOOL) addFloat32:(Float32)num
-{
-    [typeString appendString:@"f"];
-    [data appendBytes:&num length:4];
-    return YES;
-}
--(BOOL) addBlob:(NSData *) blob
-{
-    [typeString appendString:@"b"];
-    
-    NSUInteger templength = [blob length];
-    if(templength %4 == 0)
-    {
-        [data appendBytes:&templength length:4];
-        [data appendData:blob];
-    }
-    else {
-        //calculate the new length.  Going to increase the size to be a multiple of 4.
-        templength = templength + (4-(templength % 4));
-        
-        char * newBytes = (char*)calloc(templength,sizeof(char));
-        
-        memcpy(newBytes, [blob bytes], [blob length]);
-        
-        [data appendBytes:&templength length:4];
-        [data appendData:[NSData dataWithBytesNoCopy:newBytes length:templength]];
-    }
-        
+    [typeString appendString:[object getTypeString]];
+    //here all appended data should have length divisable by 4.
+    [data appendData:[object finishAndReturnData]];
     return YES;
 }
 -(NSData *) writeToData
