@@ -7,8 +7,7 @@
 //  All rights reserved.
 //
 /* This class acts as the central controller for all UI
- * elements and session variables. Upon activation, each UI
- * element will send a message to the handler() of this class.
+ * elements and session variables. of this class.
  * This handler() will then take the appropriate action based
  * on the command/argument pairing in the message.
  *

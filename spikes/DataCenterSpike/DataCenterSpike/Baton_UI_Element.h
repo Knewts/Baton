@@ -47,4 +47,5 @@
 @property(nonatomic)BatonCommand command;
 @property(nonatomic)NSString* commandArguments;
 
+
 @end

@@ -7,7 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BatonUICreator.h"
 
 @interface XMLParser : NSObject
+{
+    CGRect screenFrame;
+    BatonUICreator *buic;
+}
+
+-(id)initWithScreenFrame:(CGRect)frame;
+
+//-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
+
+-(UIView *) getView;
 
 @end

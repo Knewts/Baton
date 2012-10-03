@@ -14,6 +14,7 @@
 @synthesize command;
 @synthesize commandArguments;
 
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -22,6 +23,7 @@
     }
     return self;
 }
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

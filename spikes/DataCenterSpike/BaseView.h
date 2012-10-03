@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XMLParser.h"
 
 @interface BaseView : UIView
+{
+    XMLParser *mockXML;
+    
+}
+-(void)awakeFromNib;
 
 @end

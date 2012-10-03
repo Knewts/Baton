@@ -11,5 +11,10 @@
 
 @interface BatonEventHandler : UIView <BatonUIElementDelegate>
 
+- (id)initWithFrame:(CGRect)frame;
+
+-(bool)addVariable:(NSString*)key;
+-(void)addUIElement:(Baton_UI_Element*) batonUI;
+-(void)executeCommand:(BatonCommand) command;
 
 @end

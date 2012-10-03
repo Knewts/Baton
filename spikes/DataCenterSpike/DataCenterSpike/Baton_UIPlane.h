@@ -12,9 +12,6 @@
 
 @interface Baton_UIPlane : Baton_UI_Element
 {
-    
-    int xData;
-    int yData;
     bool AccelOn;
     double lastUpdate;
     CMMotionManager *MManager;
@@ -23,14 +20,17 @@
     //UIAccelerometer aMeter;
 }
 
-@property int xData;
-@property int yData;
-
 -(id)initWithFrame:(CGRect)frame;
+-(id)initWithDictionary:(NSDictionary *)params;
+
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event;
 -(void)activateAccelerometer;
 -(void)UpdateAccel;	
+
+// Defines where the data point will be drawn.
+@property float xData;
+@property float yData;
 
 @end
 

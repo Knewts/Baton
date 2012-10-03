@@ -6,6 +6,15 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
+/*
+ *      DICTIONARY REQUIRED PARAMETERS:
+ *  X       - X position on the screen (integer)
+ *  Y       - Y position on the screen (integer)
+ *  WIDTH   - width of the on-screen display
+ *  HEIGHT  - height of the on-screen display
+ *  ACCEL   - 1 or 0. 1 is ON, 0 is OFF.
+ */
+
 #import "Baton_UIPlane.h"
 
 @implementation Baton_UIPlane
@@ -13,7 +22,7 @@
 @synthesize yData;
 
 /*
- *Init - This should be moved to a superclass
+ *Init
  */
 -(id)initWithFrame:(CGRect)frame
 {
@@ -28,8 +37,39 @@
     return self;
 }
 
-// This function draws the UI element to its own layer object. This should only be done
-//when some status of the element has changed.
+-(id)initWithDictionary:(NSDictionary *)params
+{
+    // Get the parameters we need.
+    NSNumber *temp;
+    temp = [params valueForKey:@"X"];
+    int xposition = [temp intValue];
+    
+    temp = [params valueForKey:@"Y"];
+    int yposition = [temp intValue];
+    
+    temp = [params valueForKey:@"WIDTH"];
+    int width = [temp intValue];
+    
+    temp = [params valueForKey:@"HEIGHT"];
+    int height = [temp intValue];
+    
+    temp = [params valueForKey:@"ACCEL"];
+    Boolean accel = [temp intValue];
+    
+    CGRect newRect = CGRectMake(xposition, yposition, width, height);
+    
+    if (self = [super initWithFrame:newRect])
+    {
+        AccelOn = accel;
+        myTimer = nil;
+        MManager = nil;
+    }
+    
+    return self;
+}
+
+// This function draws the UI element to its own layer object. This should
+//only be done when some status of the element has changed.
 -(void)drawRect:(CGRect)rect
 {
     //Update the Acceleration information
@@ -43,6 +83,8 @@
     // Fill with the background color
     CGContextAddRect(context, rect);
     CGContextSetFillColorWithColor(context, [UIColor blackColor].CGColor);
+    
+    //ToDo: Draw Sub-Regions here.
     
     //Set the stroke width and change the color to blue.	
     CGFloat components[] = {0.3, 0.4, 1.0, 1.0};

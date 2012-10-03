@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Baton_UI_Element.h"
 
 @interface BatonUICreator : NSObject
+
+-(id)init;
+-(Baton_UI_Element *)CreateObjectFrom:(NSArray *) array;
 
 @end
