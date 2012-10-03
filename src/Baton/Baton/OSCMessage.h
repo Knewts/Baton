@@ -5,6 +5,7 @@
 //  Created by Matthew Knewtson on 4/23/12.
 //  Copyright (c) 2012 Western Michigan University. All rights reserved.
 //
+//  NOTE: OSCMessages should never be autoreleased. If they're in the autorelease pool after being sent to the GCD asynchronous socket, we'll encounter segfault errors.
 
 #import <Foundation/Foundation.h>
 #import "OSCstring.h"

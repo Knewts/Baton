@@ -12,12 +12,12 @@
 
 @synthesize num;
 
--(id)initWithInt:(NSNumber *) value;
+-(id)initWithInt:(int) value;
 {
-    self.num = value;
+    self.num = [NSNumber numberWithInt:value];
     return self;
 }
-+(id)oscIntWithInt:(NSNumber *)value
++(id)oscIntWithInt:(int)value
 {
     return [[OSCInt alloc] initWithInt:value];
 }

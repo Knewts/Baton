@@ -7,8 +7,8 @@
 //
 
 #import <SenTestingKit/SenTestingKit.h>
-#import "OSCMessage.h"
-#import "OSCstring.h"
+#import "OSClib.h"
+
 @interface BatonTests : SenTestCase
 
 @end

@@ -15,7 +15,7 @@
 
 @property (nonatomic, assign) NSNumber * num;
 
--(id)initWithInt:(NSNumber *) value;
-+(id)oscIntWithInt:(NSNumber *) value;
+-(id)initWithInt:(int) value;
++(id)oscIntWithInt:(int) value;
 
 @end
