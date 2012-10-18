@@ -35,6 +35,7 @@
 		639715FF1592782500655547 /* OSCstring.m in Sources */ = {isa = PBXBuildFile; fileRef = 639715FA1592782500655547 /* OSCstring.m */; };
 		639716001592782500655547 /* OSCstring.m in Sources */ = {isa = PBXBuildFile; fileRef = 639715FA1592782500655547 /* OSCstring.m */; };
 		63BBEF70161C8E8B00B15688 /* Stories.txt in Resources */ = {isa = PBXBuildFile; fileRef = 63BBEF6F161C8E8B00B15688 /* Stories.txt */; };
+		63BD1F5F16307F51006C097E /* defaultConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 63BD1F5E16307F51006C097E /* defaultConfig.plist */; };
 		63D760611545B0290012E8E9 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D760601545B0290012E8E9 /* CFNetwork.framework */; };
 		63D76068154899220012E8E9 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D760601545B0290012E8E9 /* CFNetwork.framework */; };
 		63D76069154899220012E8E9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 639675FE152F4800004DD305 /* CoreGraphics.framework */; };
@@ -100,6 +101,7 @@
 		639715F91592782500655547 /* OSCstring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCstring.h; sourceTree = "<group>"; };
 		639715FA1592782500655547 /* OSCstring.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCstring.m; sourceTree = "<group>"; };
 		63BBEF6F161C8E8B00B15688 /* Stories.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Stories.txt; path = Baton/Stories.txt; sourceTree = "<group>"; };
+		63BD1F5E16307F51006C097E /* defaultConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = defaultConfig.plist; sourceTree = "<group>"; };
 		63D760601545B0290012E8E9 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		63E873E01543A265009081AA /* WSOSC_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSOSC_Prefix.pch; sourceTree = "<group>"; };
 		63E873E11543A265009081AA /* WSOSCBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSOSCBundle.h; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				A22D927715C09F9900FBC13B /* LayoutTableViewController.h */,
 				A22D927815C09F9900FBC13B /* LayoutTableViewController.m */,
 				63967601152F4800004DD305 /* Supporting Files */,
+				63BD1F5E16307F51006C097E /* defaultConfig.plist */,
 			);
 			path = Baton;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 				6396760E152F4800004DD305 /* MainStoryboard_iPhone.storyboard in Resources */,
 				63967611152F4800004DD305 /* MainStoryboard_iPad.storyboard in Resources */,
 				63BBEF70161C8E8B00B15688 /* Stories.txt in Resources */,
+				63BD1F5F16307F51006C097E /* defaultConfig.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

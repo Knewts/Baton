@@ -21,12 +21,12 @@
                                 <navigationItem title="OSC Configuration" id="8Rr-yZ-iv3">
                                     <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="WIo-sV-GVu">
                                         <connections>
-                                            <action selector="cancelOSCConfig:" destination="gf7-BY-nNi" id="Ucy-nm-QXt"/>
+                                            <action selector="userCanceledOSCConfig:" destination="gf7-BY-nNi" id="sTz-D4-OLZ"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem key="rightBarButtonItem" systemItem="done" id="yTz-TJ-4yO">
                                         <connections>
-                                            <action selector="finishOSCConfig:" destination="gf7-BY-nNi" id="ULq-ou-t8d"/>
+                                            <action selector="userDidFinishOSCConfig:" destination="gf7-BY-nNi" id="1jy-SA-iAv"/>
                                         </connections>
                                     </barButtonItem>
                                 </navigationItem>
@@ -47,6 +47,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="textFieldDidBeginEditing:" destination="gf7-BY-nNi" eventType="editingDidBegin" id="JT8-hc-qb2"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Host" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="RNF-au-7jk">
                                                     <rect key="frame" x="20" y="9" width="42" height="21"/>
@@ -78,6 +81,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="textFieldDidBeginEditing:" destination="gf7-BY-nNi" eventType="editingDidBegin" id="tNF-WL-sHa"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -91,6 +97,10 @@
                             <outlet property="delegate" destination="gf7-BY-nNi" id="Joy-GD-k2i"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="hostAddress" destination="g52-JE-5oT" id="93K-6x-6GD"/>
+                        <outlet property="port" destination="Lky-MH-ZDl" id="B5u-XO-Pmm"/>
+                    </connections>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="783" y="-231"/>
@@ -123,6 +133,9 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <connections>
+                                    <segue destination="Re0-49-UKM" kind="push" id="ssw-SN-6rj"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -143,7 +156,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kdX-eI-pSA" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Re0-49-UKM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iFV-cc-N6Y">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -251,6 +264,8 @@
                 <relationship kind="action" name="userCanceledOSCConfig:"/>
                 <relationship kind="action" name="userDidFinishLayoutSelection:"/>
                 <relationship kind="action" name="userDidFinishOSCConfig:"/>
+                <relationship kind="outlet" name="hostAddress" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="port" candidateClass="UITextField"/>
             </relationships>
         </class>
     </classes>

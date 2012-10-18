@@ -10,12 +10,29 @@
 
 @implementation AppDelegate
 
+@synthesize sock;
+@synthesize configuration;
 @synthesize window = _window;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-
+    // Place file handling code here.
+    
+    // Load configuration
+    sock = [[GCDUDPSocketController alloc] init];
+    
+    NSFileManager * manager = [NSFileManager defaultManager];
+    
+    if ([manager fileExistsAtPath:@"config.plist"]) {
+        configuration = [NSDictionary dictionaryWithContentsOfFile:@"config.plist"];
+    }
+    else
+    {
+        configuration = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"defaultConfig" ofType:@"plist"]];
+    }
+    
+    
     return YES;
 }
 							
@@ -43,6 +60,9 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
+    [configuration writeToFile:@"config.plist" atomically:YES];
+    [configuration release];
+    [sock release];
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 

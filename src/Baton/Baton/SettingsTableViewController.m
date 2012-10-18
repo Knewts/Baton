@@ -8,21 +8,42 @@
 
 #import "SettingsTableViewController.h"
 
+
 @implementation SettingsTableViewController
 
--(IBAction)cancelOSCConfig:(id)sender
+@synthesize hostAddress;
+@synthesize port;
+@synthesize delegate;
+- (void)viewDidLoad
+{
+    
+    [super viewDidLoad];
+	// Do any additional setup after loading the view, typically from a nib.
+    
+    delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    hostAddress.placeholder = [[delegate configuration] objectForKey:@"hostIP"];
+    port.placeholder = [[delegate configuration] objectForKey:@"hostport"];
+    
+    
+}
+-(IBAction)userCanceledOSCConfig:(id)sender
 {
     [self dismissModalViewControllerAnimated:YES];
 }
--(IBAction)finishOSCConfig:(id)sender
+-(IBAction)userDidFinishOSCConfig:(id)sender
 {
+ 
+    [[delegate configuration] setValue:hostAddress.text forKey:@"hostIP"];
+    [[delegate configuration] setValue:port.text forKey:@"hostport"];
+    
     [self dismissModalViewControllerAnimated:YES];
 }
--(IBAction)cancelLayoutSelection:(id)sender
+-(IBAction)userCanceledLayoutSelection:(id)sender
 {
     
 }
--(IBAction)finishLayoutSelection:(id)sender
+-(IBAction)userDidFinishLayoutSelection:(id)sender
 {
     
 }
