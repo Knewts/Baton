@@ -180,20 +180,8 @@
 			children = (
 				63967639152F48A8004DD305 /* OSC */,
 				63967632152F486F004DD305 /* Socket */,
-				63967609152F4800004DD305 /* AppDelegate.h */,
-				6396760A152F4800004DD305 /* AppDelegate.m */,
-				6396760C152F4800004DD305 /* MainStoryboard_iPhone.storyboard */,
-				A22D927315C09EF400FBC13B /* Layout.h */,
-				A22D927415C09EF400FBC13B /* Layout.m */,
-				6396760F152F4800004DD305 /* MainStoryboard_iPad.storyboard */,
-				6326E92C1590F1CE00674097 /* SettingsTableViewController.h */,
-				6326E92D1590F1CE00674097 /* SettingsTableViewController.m */,
-				63967612152F4800004DD305 /* ViewController.h */,
-				63967613152F4800004DD305 /* ViewController.m */,
-				A22D927715C09F9900FBC13B /* LayoutTableViewController.h */,
-				A22D927815C09F9900FBC13B /* LayoutTableViewController.m */,
+				63BF0EB91630974100830552 /* Housekeeping */,
 				63967601152F4800004DD305 /* Supporting Files */,
-				63BD1F5E16307F51006C097E /* defaultConfig.plist */,
 			);
 			path = Baton;
 			sourceTree = "<group>";
@@ -256,6 +244,26 @@
 				63D760631545B0A00012E8E9 /* WSOSC */,
 			);
 			name = OSC;
+			sourceTree = "<group>";
+		};
+		63BF0EB91630974100830552 /* Housekeeping */ = {
+			isa = PBXGroup;
+			children = (
+				63967609152F4800004DD305 /* AppDelegate.h */,
+				6396760A152F4800004DD305 /* AppDelegate.m */,
+				6396760C152F4800004DD305 /* MainStoryboard_iPhone.storyboard */,
+				A22D927315C09EF400FBC13B /* Layout.h */,
+				A22D927415C09EF400FBC13B /* Layout.m */,
+				6396760F152F4800004DD305 /* MainStoryboard_iPad.storyboard */,
+				6326E92C1590F1CE00674097 /* SettingsTableViewController.h */,
+				6326E92D1590F1CE00674097 /* SettingsTableViewController.m */,
+				63967612152F4800004DD305 /* ViewController.h */,
+				63967613152F4800004DD305 /* ViewController.m */,
+				A22D927715C09F9900FBC13B /* LayoutTableViewController.h */,
+				A22D927815C09F9900FBC13B /* LayoutTableViewController.m */,
+				63BD1F5E16307F51006C097E /* defaultConfig.plist */,
+			);
+			name = Housekeeping;
 			sourceTree = "<group>";
 		};
 		63D760631545B0A00012E8E9 /* WSOSC */ = {
