@@ -7,6 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63E798DC1639810700198634 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E798D71639810700198634 /* GCDAsyncSocket.m */; };
+		63E798DD1639810700198634 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E798D71639810700198634 /* GCDAsyncSocket.m */; };
+		63E798DE1639810700198634 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E798D91639810700198634 /* GCDAsyncUdpSocket.m */; };
+		63E798DF1639810700198634 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E798D91639810700198634 /* GCDAsyncUdpSocket.m */; };
+		63E798E01639810700198634 /* GCDUDPSocketController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E798DB1639810700198634 /* GCDUDPSocketController.m */; };
+		63E798E11639810700198634 /* GCDUDPSocketController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E798DB1639810700198634 /* GCDUDPSocketController.m */; };
+		63E798F01639813800198634 /* OSCBlob.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E798E51639813800198634 /* OSCBlob.m */; };
+		63E798F11639813800198634 /* OSCBlob.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E798E51639813800198634 /* OSCBlob.m */; };
+		63E798F21639813800198634 /* OSCFloat.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E798E71639813800198634 /* OSCFloat.m */; };
+		63E798F31639813800198634 /* OSCFloat.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E798E71639813800198634 /* OSCFloat.m */; };
+		63E798F41639813800198634 /* OSCInt.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E798E91639813800198634 /* OSCInt.m */; };
+		63E798F51639813800198634 /* OSCInt.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E798E91639813800198634 /* OSCInt.m */; };
+		63E798F61639813800198634 /* OSCMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E798EC1639813800198634 /* OSCMessage.m */; };
+		63E798F71639813800198634 /* OSCMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E798EC1639813800198634 /* OSCMessage.m */; };
+		63E798F81639813800198634 /* OSCstring.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E798EF1639813800198634 /* OSCstring.m */; };
+		63E798F91639813800198634 /* OSCstring.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E798EF1639813800198634 /* OSCstring.m */; };
+		63E799021639815B00198634 /* WSOSCBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E798FD1639815B00198634 /* WSOSCBundle.m */; };
+		63E799031639815B00198634 /* WSOSCMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E798FF1639815B00198634 /* WSOSCMessage.m */; };
+		63E799041639815B00198634 /* WSOSCPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E799011639815B00198634 /* WSOSCPacket.m */; };
 		A11ED9F91587B960007422EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11ED9F81587B960007422EC /* UIKit.framework */; };
 		A11ED9FB1587B960007422EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11ED9FA1587B960007422EC /* Foundation.framework */; };
 		A11ED9FD1587B960007422EC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11ED9FC1587B960007422EC /* CoreGraphics.framework */; };
@@ -42,6 +61,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		63E798D61639810700198634 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		63E798D71639810700198634 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		63E798D81639810700198634 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		63E798D91639810700198634 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		63E798DA1639810700198634 /* GCDUDPSocketController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDUDPSocketController.h; sourceTree = "<group>"; };
+		63E798DB1639810700198634 /* GCDUDPSocketController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDUDPSocketController.m; sourceTree = "<group>"; };
+		63E798E41639813800198634 /* OSCBlob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCBlob.h; sourceTree = "<group>"; };
+		63E798E51639813800198634 /* OSCBlob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCBlob.m; sourceTree = "<group>"; };
+		63E798E61639813800198634 /* OSCFloat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCFloat.h; sourceTree = "<group>"; };
+		63E798E71639813800198634 /* OSCFloat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCFloat.m; sourceTree = "<group>"; };
+		63E798E81639813800198634 /* OSCInt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCInt.h; sourceTree = "<group>"; };
+		63E798E91639813800198634 /* OSCInt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCInt.m; sourceTree = "<group>"; };
+		63E798EA1639813800198634 /* OSClib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSClib.h; sourceTree = "<group>"; };
+		63E798EB1639813800198634 /* OSCMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCMessage.h; sourceTree = "<group>"; };
+		63E798EC1639813800198634 /* OSCMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCMessage.m; sourceTree = "<group>"; };
+		63E798ED1639813800198634 /* OSCObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCObject.h; sourceTree = "<group>"; };
+		63E798EE1639813800198634 /* OSCstring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCstring.h; sourceTree = "<group>"; };
+		63E798EF1639813800198634 /* OSCstring.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCstring.m; sourceTree = "<group>"; };
+		63E798FC1639815B00198634 /* WSOSCBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSOSCBundle.h; sourceTree = "<group>"; };
+		63E798FD1639815B00198634 /* WSOSCBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSOSCBundle.m; sourceTree = "<group>"; };
+		63E798FE1639815B00198634 /* WSOSCMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSOSCMessage.h; sourceTree = "<group>"; };
+		63E798FF1639815B00198634 /* WSOSCMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSOSCMessage.m; sourceTree = "<group>"; };
+		63E799001639815B00198634 /* WSOSCPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSOSCPacket.h; sourceTree = "<group>"; };
+		63E799011639815B00198634 /* WSOSCPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSOSCPacket.m; sourceTree = "<group>"; };
 		A11ED9F41587B960007422EC /* DataCenterSpike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataCenterSpike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A11ED9F81587B960007422EC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A11ED9FA1587B960007422EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -105,6 +148,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63E798D4163980EA00198634 /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				63E798E21639810C00198634 /* GCDLibrary */,
+				63E798DA1639810700198634 /* GCDUDPSocketController.h */,
+				63E798DB1639810700198634 /* GCDUDPSocketController.m */,
+			);
+			name = Socket;
+			sourceTree = "<group>";
+		};
+		63E798E21639810C00198634 /* GCDLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				63E798D61639810700198634 /* GCDAsyncSocket.h */,
+				63E798D71639810700198634 /* GCDAsyncSocket.m */,
+				63E798D81639810700198634 /* GCDAsyncUdpSocket.h */,
+				63E798D91639810700198634 /* GCDAsyncUdpSocket.m */,
+			);
+			name = GCDLibrary;
+			sourceTree = "<group>";
+		};
+		63E798E31639812B00198634 /* OSCLib */ = {
+			isa = PBXGroup;
+			children = (
+				63E798E41639813800198634 /* OSCBlob.h */,
+				63E798E51639813800198634 /* OSCBlob.m */,
+				63E798E61639813800198634 /* OSCFloat.h */,
+				63E798E71639813800198634 /* OSCFloat.m */,
+				63E798E81639813800198634 /* OSCInt.h */,
+				63E798E91639813800198634 /* OSCInt.m */,
+				63E798EA1639813800198634 /* OSClib.h */,
+				63E798EB1639813800198634 /* OSCMessage.h */,
+				63E798EC1639813800198634 /* OSCMessage.m */,
+				63E798ED1639813800198634 /* OSCObject.h */,
+				63E798EE1639813800198634 /* OSCstring.h */,
+				63E798EF1639813800198634 /* OSCstring.m */,
+			);
+			name = OSCLib;
+			sourceTree = "<group>";
+		};
+		63E798FA1639814800198634 /* OSC */ = {
+			isa = PBXGroup;
+			children = (
+				63E798FB1639814D00198634 /* WSOSC */,
+				63E798E31639812B00198634 /* OSCLib */,
+			);
+			name = OSC;
+			sourceTree = "<group>";
+		};
+		63E798FB1639814D00198634 /* WSOSC */ = {
+			isa = PBXGroup;
+			children = (
+				63E798FC1639815B00198634 /* WSOSCBundle.h */,
+				63E798FD1639815B00198634 /* WSOSCBundle.m */,
+				63E798FE1639815B00198634 /* WSOSCMessage.h */,
+				63E798FF1639815B00198634 /* WSOSCMessage.m */,
+				63E799001639815B00198634 /* WSOSCPacket.h */,
+				63E799011639815B00198634 /* WSOSCPacket.m */,
+			);
+			name = WSOSC;
+			sourceTree = "<group>";
+		};
 		A11ED9E91587B960007422EC = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +244,8 @@
 		A11ED9FE1587B960007422EC /* DataCenterSpike */ = {
 			isa = PBXGroup;
 			children = (
+				63E798FA1639814800198634 /* OSC */,
+				63E798D4163980EA00198634 /* Socket */,
 				A11EDA3D158FFF1A007422EC /* Common.h */,
 				A19B6B35161A1AF300A83BFD /* BaseView.h */,
 				A19B6B36161A1AF300A83BFD /* BaseView.m */,
@@ -336,6 +443,14 @@
 				A1A4DC0115B364700087EDEF /* OSCHandler.m in Sources */,
 				A19B4E561606961F008799CA /* BatonUICreator.m in Sources */,
 				A19B6B37161A1AF300A83BFD /* BaseView.m in Sources */,
+				63E798DC1639810700198634 /* GCDAsyncSocket.m in Sources */,
+				63E798DE1639810700198634 /* GCDAsyncUdpSocket.m in Sources */,
+				63E798E01639810700198634 /* GCDUDPSocketController.m in Sources */,
+				63E798F01639813800198634 /* OSCBlob.m in Sources */,
+				63E798F21639813800198634 /* OSCFloat.m in Sources */,
+				63E798F41639813800198634 /* OSCInt.m in Sources */,
+				63E798F61639813800198634 /* OSCMessage.m in Sources */,
+				63E798F81639813800198634 /* OSCstring.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +459,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				A11EDA271587B960007422EC /* DataCenterSpikeTests.m in Sources */,
+				63E798DD1639810700198634 /* GCDAsyncSocket.m in Sources */,
+				63E798DF1639810700198634 /* GCDAsyncUdpSocket.m in Sources */,
+				63E798E11639810700198634 /* GCDUDPSocketController.m in Sources */,
+				63E798F11639813800198634 /* OSCBlob.m in Sources */,
+				63E798F31639813800198634 /* OSCFloat.m in Sources */,
+				63E798F51639813800198634 /* OSCInt.m in Sources */,
+				63E798F71639813800198634 /* OSCMessage.m in Sources */,
+				63E798F91639813800198634 /* OSCstring.m in Sources */,
+				63E799021639815B00198634 /* WSOSCBundle.m in Sources */,
+				63E799031639815B00198634 /* WSOSCMessage.m in Sources */,
+				63E799041639815B00198634 /* WSOSCPacket.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
