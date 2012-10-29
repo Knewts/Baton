@@ -17,7 +17,7 @@
     self.num = value;
     return self;
 }
-+(id)oscIntWithDecimalNumber:(NSDecimalNumber *)value
++(id)oscFloatWithDecimalNumber:(NSDecimalNumber *)value
 {
     return [[OSCFloat alloc] initWithDecimalNumber:value];
 }

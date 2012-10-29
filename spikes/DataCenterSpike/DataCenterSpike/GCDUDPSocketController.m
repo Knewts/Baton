@@ -21,8 +21,8 @@
 
 - (id)initWithAddress:(NSString *)host
 {
-    [self initWithAddress:host onPort:1337];
-    return self;
+    return [self initWithAddress:host onPort:1337];
+  
 }
 
 - (id)initWithAddress:(NSString *)host onPort:(uint16_t)port
@@ -43,6 +43,5 @@
 {   
     //short timeout in case we get lots of messages
     [sock sendData:[message writeToData] toHost:host port:port withTimeout:2.0 tag:0];
-    [message release];
 }
 @end

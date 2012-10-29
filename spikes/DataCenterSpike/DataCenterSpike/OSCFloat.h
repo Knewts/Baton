@@ -13,8 +13,8 @@
     NSDecimalNumber * num;
 }
 
-@property (nonatomic, assign) NSDecimalNumber * num;
+@property (retain) NSDecimalNumber * num;
 
 -(id)initWithDecimalNumber:(NSDecimalNumber *)value;
-+(id)oscIntWithDecimalNumber:(NSDecimalNumber *)value;
++(id)oscFloatWithDecimalNumber:(NSDecimalNumber *)value;
 @end

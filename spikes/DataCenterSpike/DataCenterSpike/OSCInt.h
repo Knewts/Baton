@@ -13,7 +13,7 @@
     NSNumber * num;
 }
 
-@property (nonatomic, assign) NSNumber * num;
+@property (retain) NSNumber * num;
 
 -(id)initWithInt:(int) value;
 +(id)oscIntWithInt:(int) value;
