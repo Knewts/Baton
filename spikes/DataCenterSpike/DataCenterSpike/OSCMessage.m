@@ -55,15 +55,28 @@
 //this function will only handle the four default OSC types.  Any more will have to be handled the normal way.
 +(OSCMessage *) sendMessagewithFormat:(NSString*) format toAddress:(NSString *)addr, ...
 {
+    //[OSCMessage sendMessagewithFormat:@"<formatstring>" toAddress:@"<OSC Address>" , 35.4]
+    
     va_list args;
     va_start(args,addr);
     
+    
+    
     OSCMessage * message = [[OSCMessage alloc] initWithAddress:addr];
     
-    NSArray * strings = [format componentsSeparatedByString:@"%"];
-    NSUInteger index = 0;
+    //"X: %f Y: %f Z: %f
+    //<address> sfsfsf "X: " float "Y: " float "Z: " float
+    //"Acceldata: %f%f%f"
     
-    for (NSString * string in strings) 
+    NSArray * strings = [format componentsSeparatedByString:@"%"];
+    NSUInteger index = 1;
+    
+    if([[strings objectAtIndex:0] length] != 0)
+    {
+        [message addObject:[OSCstring oscStringfromString:[strings objectAtIndex:0]]];
+    }
+    
+    for (NSString * string in [strings subarrayWithRange:NSMakeRange(1,[strings count])])
     {
         //if the string is empty, we need to skip it
         if ([string length] != 0) {
@@ -81,6 +94,9 @@
                 case 'b':
                     //add a blob object
                     //this might be able to simply be passed a set of data.
+                    //currently not implemented.
+                    [message addObject:[OSCstring oscStringfromString:@"Blobs are not yet implemented"]];
+                    va_arg(args, NSData *);
                 default:
                     break;
             }
