@@ -1,25 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11E53" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="QkR-1N-92i">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11E53" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="uYI-ts-8K6">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <development defaultVersion="4200" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="4">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
-                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="229" y="-1223"/>
-        </scene>
         <!--Settings Table View Controller-->
         <scene sceneID="KpP-5g-4zs">
             <objects>
@@ -249,19 +235,21 @@
         <class className="SettingsTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsTableViewController.h"/>
             <relationships>
-                <relationship kind="action" name="userCanceledLayoutSelection:"/>
+                <relationship kind="action" name="changedDifferentServerOption:"/>
+                <relationship kind="action" name="changedErrorReportingOption:"/>
+                <relationship kind="action" name="textFieldDidBeginEditing:"/>
                 <relationship kind="action" name="userCanceledOSCConfig:"/>
-                <relationship kind="action" name="userDidFinishLayoutSelection:"/>
                 <relationship kind="action" name="userDidFinishOSCConfig:"/>
-            </relationships>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="SendMessage:"/>
-                <relationship kind="outlet" name="hostAddr" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="message" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="portNum" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="errorAddress" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="errorAddressLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="errorPort" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="errorPortLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="hostAddress" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="myIPAddress" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="port" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="reportErrorToOSC" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="reportToDifferentServer" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="reportToDifferentServerLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
     </classes>

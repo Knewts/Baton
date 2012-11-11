@@ -5,8 +5,6 @@
 //  Created by Matthew Knewtson on 6/19/12.
 //  Copyright (c) 2012 Western Michigan University. All rights reserved.
 //
-#ifndef SETTINGSTABLEVIEW_H
-#define SETTINGSTABLEVIEW_H
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 
@@ -29,7 +27,6 @@
     
     UILabel IBOutlet * myIPAddress;
     
-    AppDelegate * delegate;
     
 }
 
@@ -58,9 +55,6 @@
 @property (nonatomic,retain) IBOutlet UITextField * errorPort;
 
 
-//this holds the app's delegate, which will hold the configuration dictionary and write out the configuration file.
-@property (nonatomic,retain) AppDelegate * delegate;
-
 @property (nonatomic,retain) UILabel IBOutlet * myIPAddress;
 
 
@@ -87,4 +81,3 @@
 -(NSString *)getIPAddress;
 
 @end
-#endif

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6364134D16504AE6006B307E /* Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6364134816504AE6006B307E /* Layout.m */; };
+		6364134E16504AE6006B307E /* LayoutTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6364134A16504AE6006B307E /* LayoutTableViewController.m */; };
+		6364134F16504AE6006B307E /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6364134C16504AE6006B307E /* SettingsTableViewController.m */; };
 		638ADAEA163F2F6000B727F6 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 638ADAE7163F2F6000B727F6 /* GCDAsyncSocket.m */; };
 		638ADAEB163F2F6000B727F6 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 638ADAE7163F2F6000B727F6 /* GCDAsyncSocket.m */; };
 		638ADAEC163F2F6000B727F6 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 638ADAE9163F2F6000B727F6 /* GCDAsyncUdpSocket.m */; };
@@ -16,6 +19,10 @@
 		638ADAF5163F32D600B727F6 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A4DBF815B35A4B0087EDEF /* CoreMotion.framework */; };
 		638ADAF6163F32D900B727F6 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638ADAEE163F31EB00B727F6 /* CFNetwork.framework */; };
 		638ADAF8163F336800B727F6 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 638ADAF7163F336800B727F6 /* Security.framework */; };
+		63E6CBF8164EFAA0006E2E5F /* ErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E6CBF7164EFAA0006E2E5F /* ErrorHandler.m */; };
+		63E6CBFC164EFD1C006E2E5F /* defaultConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 63E6CBFB164EFD1C006E2E5F /* defaultConfig.plist */; };
+		63E6CC01164EFDAC006E2E5F /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63E6CBFD164EFDAC006E2E5F /* MainStoryboard_iPad.storyboard */; };
+		63E6CC02164EFDAC006E2E5F /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63E6CBFF164EFDAC006E2E5F /* MainStoryboard_iPhone.storyboard */; };
 		63E798E01639810700198634 /* GCDUDPSocketController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E798DB1639810700198634 /* GCDUDPSocketController.m */; };
 		63E798E11639810700198634 /* GCDUDPSocketController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E798DB1639810700198634 /* GCDUDPSocketController.m */; };
 		63E798F01639813800198634 /* OSCBlob.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E798E51639813800198634 /* OSCBlob.m */; };
@@ -35,8 +42,6 @@
 		A11EDA051587B960007422EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A11EDA041587B960007422EC /* main.m */; };
 		A11EDA091587B960007422EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A11EDA081587B960007422EC /* AppDelegate.m */; };
 		A11EDA0C1587B960007422EC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A11EDA0B1587B960007422EC /* ViewController.m */; };
-		A11EDA0F1587B960007422EC /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = A11EDA0D1587B960007422EC /* ViewController_iPhone.xib */; };
-		A11EDA121587B960007422EC /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = A11EDA101587B960007422EC /* ViewController_iPad.xib */; };
 		A11EDA1A1587B960007422EC /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11EDA191587B960007422EC /* SenTestingKit.framework */; };
 		A11EDA1B1587B960007422EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11ED9F81587B960007422EC /* UIKit.framework */; };
 		A11EDA1C1587B960007422EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11ED9FA1587B960007422EC /* Foundation.framework */; };
@@ -63,12 +68,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6364134716504AE6006B307E /* Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Layout.h; sourceTree = "<group>"; };
+		6364134816504AE6006B307E /* Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Layout.m; sourceTree = "<group>"; };
+		6364134916504AE6006B307E /* LayoutTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutTableViewController.h; sourceTree = "<group>"; };
+		6364134A16504AE6006B307E /* LayoutTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayoutTableViewController.m; sourceTree = "<group>"; };
+		6364134B16504AE6006B307E /* SettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
+		6364134C16504AE6006B307E /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
 		638ADAE6163F2F6000B727F6 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
 		638ADAE7163F2F6000B727F6 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
 		638ADAE8163F2F6000B727F6 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
 		638ADAE9163F2F6000B727F6 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
 		638ADAEE163F31EB00B727F6 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		638ADAF7163F336800B727F6 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		63E6CBF6164EFAA0006E2E5F /* ErrorHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorHandler.h; sourceTree = "<group>"; };
+		63E6CBF7164EFAA0006E2E5F /* ErrorHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ErrorHandler.m; sourceTree = "<group>"; };
+		63E6CBFB164EFD1C006E2E5F /* defaultConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = defaultConfig.plist; path = ../../../src/Baton/Baton/defaultConfig.plist; sourceTree = "<group>"; };
+		63E6CBFE164EFDAC006E2E5F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = ../../../src/Baton/Baton/en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		63E6CC00164EFDAC006E2E5F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = ../../../src/Baton/Baton/en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		63E798DA1639810700198634 /* GCDUDPSocketController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDUDPSocketController.h; sourceTree = "<group>"; };
 		63E798DB1639810700198634 /* GCDUDPSocketController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDUDPSocketController.m; sourceTree = "<group>"; };
 		63E798E41639813800198634 /* OSCBlob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCBlob.h; sourceTree = "<group>"; };
@@ -95,8 +111,6 @@
 		A11EDA081587B960007422EC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A11EDA0A1587B960007422EC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		A11EDA0B1587B960007422EC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		A11EDA0E1587B960007422EC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
-		A11EDA111587B960007422EC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
 		A11EDA181587B960007422EC /* DataCenterSpikeTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataCenterSpikeTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A11EDA191587B960007422EC /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		A11EDA211587B960007422EC /* DataCenterSpikeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DataCenterSpikeTests-Info.plist"; sourceTree = "<group>"; };
@@ -151,6 +165,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63E6CBFA164EFAAF006E2E5F /* Housekeeping */ = {
+			isa = PBXGroup;
+			children = (
+				6364134716504AE6006B307E /* Layout.h */,
+				6364134816504AE6006B307E /* Layout.m */,
+				6364134916504AE6006B307E /* LayoutTableViewController.h */,
+				6364134A16504AE6006B307E /* LayoutTableViewController.m */,
+				6364134B16504AE6006B307E /* SettingsTableViewController.h */,
+				6364134C16504AE6006B307E /* SettingsTableViewController.m */,
+				A11EDA071587B960007422EC /* AppDelegate.h */,
+				A11EDA081587B960007422EC /* AppDelegate.m */,
+				63E6CBFD164EFDAC006E2E5F /* MainStoryboard_iPad.storyboard */,
+				63E6CBFF164EFDAC006E2E5F /* MainStoryboard_iPhone.storyboard */,
+				63E6CBFB164EFD1C006E2E5F /* defaultConfig.plist */,
+				63E6CBF6164EFAA0006E2E5F /* ErrorHandler.h */,
+				63E6CBF7164EFAA0006E2E5F /* ErrorHandler.m */,
+			);
+			name = Housekeeping;
+			sourceTree = "<group>";
+		};
 		63E798D4163980EA00198634 /* Socket */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,9 +281,8 @@
 				A1A4DBFB15B364130087EDEF /* MockObects */,
 				A11EDA3E15900C77007422EC /* UI_Elements */,
 				A19B6B33161A18AD00A83BFD /* Default Files */,
-				A11EDA0D1587B960007422EC /* ViewController_iPhone.xib */,
-				A11EDA101587B960007422EC /* ViewController_iPad.xib */,
 				A11ED9FF1587B960007422EC /* Supporting Files */,
+				63E6CBFA164EFAAF006E2E5F /* Housekeeping */,
 			);
 			path = DataCenterSpike;
 			sourceTree = "<group>";
@@ -298,8 +331,6 @@
 		A19B6B33161A18AD00A83BFD /* Default Files */ = {
 			isa = PBXGroup;
 			children = (
-				A11EDA071587B960007422EC /* AppDelegate.h */,
-				A11EDA081587B960007422EC /* AppDelegate.m */,
 				A11EDA0A1587B960007422EC /* ViewController.h */,
 				A11EDA0B1587B960007422EC /* ViewController.m */,
 			);
@@ -388,8 +419,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A11EDA031587B960007422EC /* InfoPlist.strings in Resources */,
-				A11EDA0F1587B960007422EC /* ViewController_iPhone.xib in Resources */,
-				A11EDA121587B960007422EC /* ViewController_iPad.xib in Resources */,
+				63E6CBFC164EFD1C006E2E5F /* defaultConfig.plist in Resources */,
+				63E6CC01164EFDAC006E2E5F /* MainStoryboard_iPad.storyboard in Resources */,
+				63E6CC02164EFDAC006E2E5F /* MainStoryboard_iPhone.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +474,10 @@
 				63E798F81639813800198634 /* OSCstring.m in Sources */,
 				638ADAEA163F2F6000B727F6 /* GCDAsyncSocket.m in Sources */,
 				638ADAEC163F2F6000B727F6 /* GCDAsyncUdpSocket.m in Sources */,
+				63E6CBF8164EFAA0006E2E5F /* ErrorHandler.m in Sources */,
+				6364134D16504AE6006B307E /* Layout.m in Sources */,
+				6364134E16504AE6006B307E /* LayoutTableViewController.m in Sources */,
+				6364134F16504AE6006B307E /* SettingsTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,28 +508,28 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		63E6CBFD164EFDAC006E2E5F /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63E6CBFE164EFDAC006E2E5F /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		63E6CBFF164EFDAC006E2E5F /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63E6CC00164EFDAC006E2E5F /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
 		A11EDA011587B960007422EC /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				A11EDA021587B960007422EC /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		A11EDA0D1587B960007422EC /* ViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A11EDA0E1587B960007422EC /* en */,
-			);
-			name = ViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		A11EDA101587B960007422EC /* ViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A11EDA111587B960007422EC /* en */,
-			);
-			name = ViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
 		A11EDA221587B960007422EC /* InfoPlist.strings */ = {

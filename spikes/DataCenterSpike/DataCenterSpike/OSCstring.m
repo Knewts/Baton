@@ -10,7 +10,7 @@
 
 #import "OSCstring.h"
 
-@implementation OSCstring
+@implementation OSCString
 @synthesize data;
 @synthesize length;
 
@@ -31,7 +31,7 @@
 
 +(id)oscStringfromString:(NSString *)inString
 {
-    return [[OSCstring alloc] initWithString:inString];
+    return [[OSCString alloc] initWithString:inString];
 }
 
 -(NSData *)finishAndReturnData

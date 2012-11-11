@@ -11,7 +11,7 @@
 #import <Foundation/Foundation.h>
 #import "OSCObject.h"
 
-@interface OSCstring : NSObject <OSCObject>
+@interface OSCString : NSObject <OSCObject>
 {
     NSData * data;
     NSUInteger length;

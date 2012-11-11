@@ -8,24 +8,46 @@
 
 #import "AppDelegate.h"
 
-#import "ViewController.h"
 
 @implementation AppDelegate
 
+@synthesize sock;
+@synthesize configuration;
+
 @synthesize window = _window;
-@synthesize viewController = _viewController;
+@synthesize storyboard;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        self.viewController = [[ViewController alloc] initWithNibName:@"ViewController_iPhone" bundle:nil];
-    } else {
-        self.viewController = [[ViewController alloc] initWithNibName:@"ViewController_iPad" bundle:nil];
+    
+    
+    //allocating and configuring the socket, the error handler, and the configuration
+    sock = [[GCDUDPSocketController alloc] init];
+    
+    
+    //configuration stuff.  Should probably hide this in a class.
+    NSFileManager * manager = [NSFileManager defaultManager];
+    
+    if ([manager fileExistsAtPath:@"config.plist"]) {
+        configuration = [NSDictionary dictionaryWithContentsOfFile:@"config.plist"];
     }
-    self.window.rootViewController = self.viewController;
+    else
+    {
+        configuration = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"defaultConfig" ofType:@"plist"]];
+    }
+
+    
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        self.storyboard = [UIStoryboard storyboardWithName:@"MainStoryBoard_iPhone" bundle:nil];
+    } else {
+        self.storyboard = [UIStoryboard storyboardWithName:@"MainStoryBoard_iPad" bundle:nil];
+    }
+    
+    self.window.rootViewController = [storyboard instantiateInitialViewController];
     [self.window makeKeyAndVisible];
+     
     return YES;
 }
 
@@ -39,6 +61,9 @@
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
+    [configuration writeToFile:@"config.plist" atomically:YES];
+
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
@@ -53,7 +78,16 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
+    
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    
+    [configuration writeToFile:@"config.plist" atomically:YES];
+    
+}
+
++(AppDelegate*)sharedAppdelegate
+{
+    return (AppDelegate*)[[UIApplication sharedApplication] delegate];
 }
 
 @end

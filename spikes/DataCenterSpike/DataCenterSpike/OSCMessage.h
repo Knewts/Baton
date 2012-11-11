@@ -12,12 +12,12 @@
 #import "OSCObject.h"
 @interface OSCMessage : NSObject
 {
-    OSCstring * address;
+    OSCString * address;
     NSMutableString * typeString;
     NSMutableData * data;
 }
 
-@property (atomic,retain) OSCstring * address;
+@property (atomic,retain) OSCString * address;
 @property (atomic,retain) NSMutableString * typeString;
 @property (atomic,retain) NSMutableData * data;
 

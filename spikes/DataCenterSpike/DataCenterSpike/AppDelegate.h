@@ -5,15 +5,23 @@
 //  Created by Andy Stratton on 6/12/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
-
 #import <UIKit/UIKit.h>
-
-@class ViewController;
+#import "GCDUDPSocketController.h"
+#import "OSClib.h"
+#import "SettingsTableViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
+{
+    GCDUDPSocketController * sock;
+    NSDictionary * configuration;
+    UIStoryboard * storyboard;
+}
+
+@property (nonatomic, retain) GCDUDPSocketController * sock;
+@property (strong, nonatomic) NSDictionary * configuration;
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) UIStoryboard *storyboard;
 
-@property (strong, nonatomic) ViewController *viewController;
-
++(AppDelegate*)sharedAppdelegate;
 @end

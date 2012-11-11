@@ -11,7 +11,7 @@
 @implementation Baton_UI_Element
 
 @synthesize delegate;
-@synthesize command;
+//@synthesize command;
 @synthesize commandArguments;
 
 

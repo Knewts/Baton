@@ -18,7 +18,7 @@
      
      self.data = [[NSMutableData alloc] init];
      
-     self.address = [OSCstring oscStringfromString:_address];
+     self.address = [OSCString oscStringfromString:_address];
      self.typeString = [NSMutableString stringWithString:@","];
      
      return self;
@@ -47,7 +47,7 @@
     NSMutableData * result = [[NSMutableData alloc] init];
     
     [result appendData:[address data]];
-    [result appendData:[[OSCstring oscStringfromString:typeString] data]];
+    [result appendData:[[OSCString oscStringfromString:typeString] data]];
     [result appendData:data];
      
     return result;
@@ -73,7 +73,7 @@
     
     if([[strings objectAtIndex:0] length] != 0)
     {
-        [message addObject:[OSCstring oscStringfromString:[strings objectAtIndex:0]]];
+        [message addObject:[OSCString oscStringfromString:[strings objectAtIndex:0]]];
     }
     
     for (NSString * string in [strings subarrayWithRange:NSMakeRange(1,[strings count])])
@@ -83,7 +83,7 @@
             NSString * postString = [string substringFromIndex:1];
             switch ([string characterAtIndex:0]) {
                 case 's':
-                    [message addObject:[OSCstring oscStringfromString:va_arg(args, NSString *)]];
+                    [message addObject:[OSCString oscStringfromString:va_arg(args, NSString *)]];
                     break;
                 case 'i':
                     [message addObject:[OSCInt oscIntWithInt:va_arg(args, int)]];
@@ -95,14 +95,14 @@
                     //add a blob object
                     //this might be able to simply be passed a set of data.
                     //currently not implemented.
-                    [message addObject:[OSCstring oscStringfromString:@"Blobs are not yet implemented"]];
+                    [message addObject:[OSCString oscStringfromString:@"Blobs are not yet implemented"]];
                     va_arg(args, NSData *);
                 default:
                     break;
             }
             if ([postString length] != 0)
             {
-                [message addObject:[OSCstring oscStringfromString:postString]];
+                [message addObject:[OSCString oscStringfromString:postString]];
             }
         }
         index++;
