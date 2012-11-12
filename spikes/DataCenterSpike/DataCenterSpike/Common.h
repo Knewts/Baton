@@ -12,11 +12,9 @@
 // This defines the various commands the 
 // BatonUIDelegate.executeCommand can check for.
 
-typedef enum {
-    SEND_OSC,
-    SET_PLAYER_NUMBER,
-    PLAY_SOUND
-} BatonCommand;
+
+
+
 
 
 #endif

@@ -1,0 +1,10 @@
+TODO:
+    Display the IP address on the configuration page.
+        
+        
+For the report:
+    Get pictures and Diagrams.  The more the better.
+    Start writing the report over the pictures and Diagrams.
+    
+
+    

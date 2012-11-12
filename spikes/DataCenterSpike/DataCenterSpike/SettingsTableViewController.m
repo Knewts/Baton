@@ -14,7 +14,6 @@
 @synthesize hostAddress;
 @synthesize port;
 
-@synthesize delegate;
 
 @synthesize reportToDifferentServer;
 @synthesize reportToDifferentServerLabel;
@@ -34,7 +33,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     //grab the delegate
-    delegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    AppDelegate * delegate = [AppDelegate sharedAppdelegate];
     
     //set the placeholders for both of the textfields.  These should be what 
     hostAddress.placeholder = [[delegate configuration] objectForKey:@"hostIP"];
@@ -66,6 +65,7 @@
     //need to do some input validation...
     
     
+    AppDelegate * delegate = [AppDelegate sharedAppdelegate];
     
     [[delegate configuration] setValue:hostAddress.text forKey:@"hostIP"];
     [[delegate configuration] setValue:port.text forKey:@"hostport"];

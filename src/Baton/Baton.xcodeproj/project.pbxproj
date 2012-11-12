@@ -11,6 +11,9 @@
 		6326E92E1590F1CE00674097 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6326E92D1590F1CE00674097 /* SettingsTableViewController.m */; };
 		636FB3E31607E7F200AA9518 /* OSCFloat.m in Sources */ = {isa = PBXBuildFile; fileRef = 636FB3E01607E7F200AA9518 /* OSCFloat.m */; };
 		636FB3E41607E7F200AA9518 /* OSCInt.m in Sources */ = {isa = PBXBuildFile; fileRef = 636FB3E21607E7F200AA9518 /* OSCInt.m */; };
+		6375EE0C161C73EB0014C6EF /* OSCFloat.m in Sources */ = {isa = PBXBuildFile; fileRef = 636FB3E01607E7F200AA9518 /* OSCFloat.m */; };
+		6375EE0D161C73EB0014C6EF /* OSCInt.m in Sources */ = {isa = PBXBuildFile; fileRef = 636FB3E21607E7F200AA9518 /* OSCInt.m */; };
+		6375EE0E161C73EF0014C6EF /* OSClib.h in Sources */ = {isa = PBXBuildFile; fileRef = 6375EE0A161C73670014C6EF /* OSClib.h */; };
 		639675FB152F4800004DD305 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 639675FA152F4800004DD305 /* UIKit.framework */; };
 		639675FD152F4800004DD305 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 639675FC152F4800004DD305 /* Foundation.framework */; };
 		639675FF152F4800004DD305 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 639675FE152F4800004DD305 /* CoreGraphics.framework */; };
@@ -31,6 +34,8 @@
 		639715FE1592782500655547 /* OSCMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 639715F71592782500655547 /* OSCMessage.m */; };
 		639715FF1592782500655547 /* OSCstring.m in Sources */ = {isa = PBXBuildFile; fileRef = 639715FA1592782500655547 /* OSCstring.m */; };
 		639716001592782500655547 /* OSCstring.m in Sources */ = {isa = PBXBuildFile; fileRef = 639715FA1592782500655547 /* OSCstring.m */; };
+		63BBEF70161C8E8B00B15688 /* Stories.txt in Resources */ = {isa = PBXBuildFile; fileRef = 63BBEF6F161C8E8B00B15688 /* Stories.txt */; };
+		63BD1F5F16307F51006C097E /* defaultConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 63BD1F5E16307F51006C097E /* defaultConfig.plist */; };
 		63D760611545B0290012E8E9 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D760601545B0290012E8E9 /* CFNetwork.framework */; };
 		63D76068154899220012E8E9 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63D760601545B0290012E8E9 /* CFNetwork.framework */; };
 		63D76069154899220012E8E9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 639675FE152F4800004DD305 /* CoreGraphics.framework */; };
@@ -63,6 +68,7 @@
 		636FB3E01607E7F200AA9518 /* OSCFloat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCFloat.m; sourceTree = "<group>"; };
 		636FB3E11607E7F200AA9518 /* OSCInt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCInt.h; sourceTree = "<group>"; };
 		636FB3E21607E7F200AA9518 /* OSCInt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCInt.m; sourceTree = "<group>"; };
+		6375EE0A161C73670014C6EF /* OSClib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSClib.h; sourceTree = "<group>"; };
 		639675F6152F4800004DD305 /* Baton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Baton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		639675FA152F4800004DD305 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		639675FC152F4800004DD305 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -94,6 +100,8 @@
 		639715F81592782500655547 /* OSCObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCObject.h; sourceTree = "<group>"; };
 		639715F91592782500655547 /* OSCstring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OSCstring.h; sourceTree = "<group>"; };
 		639715FA1592782500655547 /* OSCstring.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OSCstring.m; sourceTree = "<group>"; };
+		63BBEF6F161C8E8B00B15688 /* Stories.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Stories.txt; path = Baton/Stories.txt; sourceTree = "<group>"; };
+		63BD1F5E16307F51006C097E /* defaultConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = defaultConfig.plist; sourceTree = "<group>"; };
 		63D760601545B0290012E8E9 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		63E873E01543A265009081AA /* WSOSC_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSOSC_Prefix.pch; sourceTree = "<group>"; };
 		63E873E11543A265009081AA /* WSOSCBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSOSCBundle.h; sourceTree = "<group>"; };
@@ -138,6 +146,7 @@
 		639675EB152F4800004DD305 = {
 			isa = PBXGroup;
 			children = (
+				63BBEF6F161C8E8B00B15688 /* Stories.txt */,
 				63967600152F4800004DD305 /* Baton */,
 				63967621152F4800004DD305 /* BatonTests */,
 				639675F9152F4800004DD305 /* Frameworks */,
@@ -171,18 +180,7 @@
 			children = (
 				63967639152F48A8004DD305 /* OSC */,
 				63967632152F486F004DD305 /* Socket */,
-				63967609152F4800004DD305 /* AppDelegate.h */,
-				6396760A152F4800004DD305 /* AppDelegate.m */,
-				6396760C152F4800004DD305 /* MainStoryboard_iPhone.storyboard */,
-				A22D927315C09EF400FBC13B /* Layout.h */,
-				A22D927415C09EF400FBC13B /* Layout.m */,
-				6396760F152F4800004DD305 /* MainStoryboard_iPad.storyboard */,
-				6326E92C1590F1CE00674097 /* SettingsTableViewController.h */,
-				6326E92D1590F1CE00674097 /* SettingsTableViewController.m */,
-				63967612152F4800004DD305 /* ViewController.h */,
-				63967613152F4800004DD305 /* ViewController.m */,
-				A22D927715C09F9900FBC13B /* LayoutTableViewController.h */,
-				A22D927815C09F9900FBC13B /* LayoutTableViewController.m */,
+				63BF0EB91630974100830552 /* Housekeeping */,
 				63967601152F4800004DD305 /* Supporting Files */,
 			);
 			path = Baton;
@@ -231,6 +229,7 @@
 		63967639152F48A8004DD305 /* OSC */ = {
 			isa = PBXGroup;
 			children = (
+				6375EE0A161C73670014C6EF /* OSClib.h */,
 				636FB3DF1607E7F200AA9518 /* OSCFloat.h */,
 				636FB3E01607E7F200AA9518 /* OSCFloat.m */,
 				636FB3E11607E7F200AA9518 /* OSCInt.h */,
@@ -245,6 +244,26 @@
 				63D760631545B0A00012E8E9 /* WSOSC */,
 			);
 			name = OSC;
+			sourceTree = "<group>";
+		};
+		63BF0EB91630974100830552 /* Housekeeping */ = {
+			isa = PBXGroup;
+			children = (
+				63967609152F4800004DD305 /* AppDelegate.h */,
+				6396760A152F4800004DD305 /* AppDelegate.m */,
+				6396760C152F4800004DD305 /* MainStoryboard_iPhone.storyboard */,
+				A22D927315C09EF400FBC13B /* Layout.h */,
+				A22D927415C09EF400FBC13B /* Layout.m */,
+				6396760F152F4800004DD305 /* MainStoryboard_iPad.storyboard */,
+				6326E92C1590F1CE00674097 /* SettingsTableViewController.h */,
+				6326E92D1590F1CE00674097 /* SettingsTableViewController.m */,
+				63967612152F4800004DD305 /* ViewController.h */,
+				63967613152F4800004DD305 /* ViewController.m */,
+				A22D927715C09F9900FBC13B /* LayoutTableViewController.h */,
+				A22D927815C09F9900FBC13B /* LayoutTableViewController.m */,
+				63BD1F5E16307F51006C097E /* defaultConfig.plist */,
+			);
+			name = Housekeeping;
 			sourceTree = "<group>";
 		};
 		63D760631545B0A00012E8E9 /* WSOSC */ = {
@@ -346,6 +365,8 @@
 				63967605152F4800004DD305 /* InfoPlist.strings in Resources */,
 				6396760E152F4800004DD305 /* MainStoryboard_iPhone.storyboard in Resources */,
 				63967611152F4800004DD305 /* MainStoryboard_iPad.storyboard in Resources */,
+				63BBEF70161C8E8B00B15688 /* Stories.txt in Resources */,
+				63BD1F5F16307F51006C097E /* defaultConfig.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +425,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6375EE0E161C73EF0014C6EF /* OSClib.h in Sources */,
+				6375EE0C161C73EB0014C6EF /* OSCFloat.m in Sources */,
+				6375EE0D161C73EB0014C6EF /* OSCInt.m in Sources */,
 				63D7606C1548993A0012E8E9 /* GCDUDPSocketController.m in Sources */,
 				63967629152F4800004DD305 /* BatonTests.m in Sources */,
 				639715FC1592782500655547 /* OSCBlob.m in Sources */,
