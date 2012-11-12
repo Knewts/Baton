@@ -15,6 +15,6 @@
 
 -(bool)addVariable:(NSString*)key;
 -(void)addUIElement:(Baton_UI_Element*) batonUI;
--(void)executeCommand:(BatonCommand) command;
+-(void)executeCommand:(NSString *) command withArguments: (NSString *) arguments;
 
 @end

@@ -22,8 +22,9 @@
 		A11EDA241587B960007422EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A11EDA221587B960007422EC /* InfoPlist.strings */; };
 		A11EDA271587B960007422EC /* DataCenterSpikeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A11EDA261587B960007422EC /* DataCenterSpikeTests.m */; };
 		A11EDA321587B989007422EC /* BatonEventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A11EDA311587B989007422EC /* BatonEventHandler.m */; };
-		A11EDA39158FFDBE007422EC /* Baton_UIPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = A11EDA38158FFDBE007422EC /* Baton_UIPlane.m */; };
 		A11EDA3C158FFE1E007422EC /* Baton_UI_Element.m in Sources */ = {isa = PBXBuildFile; fileRef = A11EDA3B158FFE1E007422EC /* Baton_UI_Element.m */; };
+		A1483A691629CAB8004FE6D8 /* Baton_UIPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = A1483A681629CAB8004FE6D8 /* Baton_UIPlane.m */; };
+		A19199CE161C581D0042CD79 /* Baton_UIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A19199CD161C581D0042CD79 /* Baton_UIButton.m */; };
 		A19B4E561606961F008799CA /* BatonUICreator.m in Sources */ = {isa = PBXBuildFile; fileRef = A19B4E551606961F008799CA /* BatonUICreator.m */; };
 		A19B6B37161A1AF300A83BFD /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = A19B6B36161A1AF300A83BFD /* BaseView.m */; };
 		A1A4DBF915B35A4B0087EDEF /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A4DBF815B35A4B0087EDEF /* CoreMotion.framework */; };
@@ -65,10 +66,12 @@
 		A11EDA301587B989007422EC /* BatonEventHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BatonEventHandler.h; sourceTree = "<group>"; };
 		A11EDA311587B989007422EC /* BatonEventHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BatonEventHandler.m; sourceTree = "<group>"; };
 		A11EDA37158FFDBE007422EC /* Baton_UIPlane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Baton_UIPlane.h; sourceTree = "<group>"; };
-		A11EDA38158FFDBE007422EC /* Baton_UIPlane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Baton_UIPlane.m; sourceTree = "<group>"; };
 		A11EDA3A158FFE1E007422EC /* Baton_UI_Element.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Baton_UI_Element.h; sourceTree = "<group>"; };
 		A11EDA3B158FFE1E007422EC /* Baton_UI_Element.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Baton_UI_Element.m; sourceTree = "<group>"; };
 		A11EDA3D158FFF1A007422EC /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		A1483A681629CAB8004FE6D8 /* Baton_UIPlane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Baton_UIPlane.m; sourceTree = "<group>"; };
+		A19199CC161C581D0042CD79 /* Baton_UIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Baton_UIButton.h; sourceTree = "<group>"; };
+		A19199CD161C581D0042CD79 /* Baton_UIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Baton_UIButton.m; sourceTree = "<group>"; };
 		A19B4E541606961F008799CA /* BatonUICreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BatonUICreator.h; sourceTree = "<group>"; };
 		A19B4E551606961F008799CA /* BatonUICreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BatonUICreator.m; sourceTree = "<group>"; };
 		A19B6B35161A1AF300A83BFD /* BaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseView.h; path = ../BaseView.h; sourceTree = "<group>"; };
@@ -192,7 +195,9 @@
 				A11EDA3A158FFE1E007422EC /* Baton_UI_Element.h */,
 				A11EDA3B158FFE1E007422EC /* Baton_UI_Element.m */,
 				A11EDA37158FFDBE007422EC /* Baton_UIPlane.h */,
-				A11EDA38158FFDBE007422EC /* Baton_UIPlane.m */,
+				A1483A681629CAB8004FE6D8 /* Baton_UIPlane.m */,
+				A19199CC161C581D0042CD79 /* Baton_UIButton.h */,
+				A19199CD161C581D0042CD79 /* Baton_UIButton.m */,
 			);
 			name = UI_Elements;
 			sourceTree = "<group>";
@@ -330,12 +335,13 @@
 				A11EDA091587B960007422EC /* AppDelegate.m in Sources */,
 				A11EDA0C1587B960007422EC /* ViewController.m in Sources */,
 				A11EDA321587B989007422EC /* BatonEventHandler.m in Sources */,
-				A11EDA39158FFDBE007422EC /* Baton_UIPlane.m in Sources */,
 				A11EDA3C158FFE1E007422EC /* Baton_UI_Element.m in Sources */,
 				A1A4DBFE15B3644E0087EDEF /* XMLParser.m in Sources */,
 				A1A4DC0115B364700087EDEF /* OSCHandler.m in Sources */,
 				A19B4E561606961F008799CA /* BatonUICreator.m in Sources */,
 				A19B6B37161A1AF300A83BFD /* BaseView.m in Sources */,
+				A19199CE161C581D0042CD79 /* Baton_UIButton.m in Sources */,
+				A1483A691629CAB8004FE6D8 /* Baton_UIPlane.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

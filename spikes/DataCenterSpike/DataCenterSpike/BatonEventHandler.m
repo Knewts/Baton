@@ -66,10 +66,12 @@
 #pragma mark -
 #pragma mark DelegateFunctions
 
--(void)executeCommand:(BatonCommand) command withArguments: (NSString *) arguments
+-(void)executeCommand:(NSString *) command withArguments: (NSString *) arguments
 {
-    // Handle Commands here.
-    // switch (command) {...}
+    if ([command isEqualToString:@"LOG"])
+    {
+        NSLog(arguments);
+    }
 }
 
 @end

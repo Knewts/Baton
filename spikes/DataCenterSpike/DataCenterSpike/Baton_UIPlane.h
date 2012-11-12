@@ -22,6 +22,7 @@
 
 -(id)initWithFrame:(CGRect)frame;
 -(id)initWithDictionary:(NSDictionary *)params;
+-(void)drawRect:(CGRect)rect;
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event;
