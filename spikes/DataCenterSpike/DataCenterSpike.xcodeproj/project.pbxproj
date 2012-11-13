@@ -26,6 +26,10 @@
 		63213FF91652FAA400760C4B /* Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 63213FF51652FAA400760C4B /* Layout.m */; };
 		63213FFE1652FB0800760C4B /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63213FFA1652FB0800760C4B /* MainStoryboard_iPad.storyboard */; };
 		63213FFF1652FB0800760C4B /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63213FFC1652FB0800760C4B /* MainStoryboard_iPhone.storyboard */; };
+		63FAECBD1652FB9900DD3873 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63FAECBC1652FB9900DD3873 /* Accelerate.framework */; };
+		63FAECC01652FBA400DD3873 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63FAECBF1652FBA400DD3873 /* CFNetwork.framework */; };
+		63FAECC21652FBB000DD3873 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63FAECC11652FBB000DD3873 /* Security.framework */; };
+		63FAECC41652FBBB00DD3873 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63FAECC31652FBBB00DD3873 /* CoreMotion.framework */; };
 		A11ED9F91587B960007422EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11ED9F81587B960007422EC /* UIKit.framework */; };
 		A11ED9FB1587B960007422EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11ED9FA1587B960007422EC /* Foundation.framework */; };
 		A11ED9FD1587B960007422EC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11ED9FC1587B960007422EC /* CoreGraphics.framework */; };
@@ -92,6 +96,10 @@
 		63213FF61652FAA400760C4B /* LayoutTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LayoutTableViewController.h; path = DataCenterSpike/LayoutTableViewController.h; sourceTree = "<group>"; };
 		63213FFB1652FB0800760C4B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = DataCenterSpike/en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		63213FFD1652FB0800760C4B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = DataCenterSpike/en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		63FAECBC1652FB9900DD3873 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		63FAECBF1652FBA400DD3873 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		63FAECC11652FBB000DD3873 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		63FAECC31652FBBB00DD3873 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		A11ED9F41587B960007422EC /* DataCenterSpike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataCenterSpike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A11ED9F81587B960007422EC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A11ED9FA1587B960007422EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -124,6 +132,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63FAECC41652FBBB00DD3873 /* CoreMotion.framework in Frameworks */,
+				63FAECC21652FBB000DD3873 /* Security.framework in Frameworks */,
+				63FAECC01652FBA400DD3873 /* CFNetwork.framework in Frameworks */,
+				63FAECBD1652FB9900DD3873 /* Accelerate.framework in Frameworks */,
 				A11ED9F91587B960007422EC /* UIKit.framework in Frameworks */,
 				A11ED9FB1587B960007422EC /* Foundation.framework in Frameworks */,
 				A11ED9FD1587B960007422EC /* CoreGraphics.framework in Frameworks */,
@@ -221,6 +233,10 @@
 		A11ED9F71587B960007422EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				63FAECC31652FBBB00DD3873 /* CoreMotion.framework */,
+				63FAECC11652FBB000DD3873 /* Security.framework */,
+				63FAECBF1652FBA400DD3873 /* CFNetwork.framework */,
+				63FAECBC1652FB9900DD3873 /* Accelerate.framework */,
 				A11ED9F81587B960007422EC /* UIKit.framework */,
 				A11ED9FA1587B960007422EC /* Foundation.framework */,
 				A11ED9FC1587B960007422EC /* CoreGraphics.framework */,
@@ -532,10 +548,12 @@
 		A11EDA2B1587B960007422EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Matthew Knewtson (7K74P45729)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DataCenterSpike/DataCenterSpike-Prefix.pch";
 				INFOPLIST_FILE = "DataCenterSpike/DataCenterSpike-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -543,10 +561,12 @@
 		A11EDA2C1587B960007422EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Matthew Knewtson (7K74P45729)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DataCenterSpike/DataCenterSpike-Prefix.pch";
 				INFOPLIST_FILE = "DataCenterSpike/DataCenterSpike-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
