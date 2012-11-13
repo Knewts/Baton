@@ -50,6 +50,7 @@
 #import "BatonUICreator.h"
 #import "Baton_UI_Element.h"
 #import "Baton_UIPlane.h"
+#import "Baton_UIButton.h"
 
 @implementation BatonUICreator
 
@@ -82,7 +83,8 @@
         
     } else if ([type isEqualToString:@"BUTTON"]) 
     {
-                   
+        Baton_UIButton * button = [[Baton_UIButton alloc] initWithDictionary:(NSDictionary*)[array objectAtIndex:1]];
+        retVal = button;
     }
     
     return retVal;

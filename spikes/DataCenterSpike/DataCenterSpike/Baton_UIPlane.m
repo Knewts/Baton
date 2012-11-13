@@ -65,6 +65,7 @@
         MManager = nil;
     }
     
+    if (AccelOn) { [self activateAccelerometer]; }
     return self;
 }
 
@@ -124,6 +125,8 @@
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
+    [delegate executeCommand:@"LOG" withArguments:@"THIS WORKS"];
+    
     if (!AccelOn)
     {
         CGPoint location = [[touches anyObject] locationInView:self];

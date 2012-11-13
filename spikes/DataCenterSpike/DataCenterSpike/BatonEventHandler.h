@@ -16,6 +16,10 @@
 
 -(bool)addVariable:(NSString*)key;
 -(void)addUIElement:(Baton_UI_Element*) batonUI;
+<<<<<<< HEAD
+-(void)executeCommand:(NSString *) command withArguments: (NSString *) arguments;
+=======
 //-(void)executeCommand:(BatonCommand) command;
+>>>>>>> e18cac15ff421569dcca3a77848699914af5a22a
 
 @end

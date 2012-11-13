@@ -68,8 +68,10 @@
 
 -(void)executeCommand:(NSString *) command withArguments: (NSString *) arguments
 {
-    // Handle Commands here.
-    // switch (command) {...}
+    if ([command isEqualToString:@"LOG"])
+    {
+        NSLog(arguments);
+    }
 }
 
 @end

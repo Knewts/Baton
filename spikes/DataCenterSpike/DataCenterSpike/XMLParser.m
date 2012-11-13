@@ -47,13 +47,29 @@
     [planeParams setObject:@"100" forKey:@"WIDTH"];
     [planeParams setObject:@"200" forKey:@"HEIGHT"];
     [planeParams setObject:@"0" forKey:@"ACCEL"];
+    
+    NSMutableDictionary *buttonParams = [[NSMutableDictionary alloc] init ];
+    [buttonParams setObject:@"10" forKey:@"X"];
+    [buttonParams setObject:@"250" forKey:@"Y"];
+    [buttonParams setObject:@"130" forKey:@"WIDTH"];
+    [buttonParams setObject:@"100" forKey:@"HEIGHT"];
+    [buttonParams setObject:@"0" forKey:@"TOGGLE"];
+    [buttonParams setObject:@"My Button" forKey:@"TEXT"];
+    [buttonParams setObject:@"0035F7" forKey:@"BGCOLOR"];
+    
     //    [planeParams setObject:@"0" forKey:@"XRANGE_MIN"];
     //    [planeParams setObject:@"30" forKey:@"XRANGE_MAX"];
     NSArray *planeArray = [NSArray arrayWithObjects:@"PLANE",planeParams, nil];
-    //TODO:
-    Baton_UI_Element *temp = [buic CreateObjectFrom:planeArray];
-    [beh addUIElement:temp];
+    NSArray *buttonArray = [NSArray arrayWithObjects:@"BUTTON",buttonParams, nil];
     
+    
+    NSArray *finalArray = [NSArray arrayWithObjects:planeArray,buttonArray, nil];
+    //TODO:
+    for (NSArray *array in finalArray)
+    {
+        Baton_UI_Element *temp = [buic CreateObjectFrom:array];
+        [beh addUIElement:temp];
+    }
     
     // Return the full beh object with subviews in place.
     return beh;

@@ -29,7 +29,11 @@
  
         Functions for handling commands could/should be added to the @required/@optional sections here???
      */
+<<<<<<< HEAD
+    -(void)executeCommand:(NSString *) command withArguments: (NSString *) arguments;
+=======
 //    -(void)executeCommand:(BatonCommand) command withArguments: (NSString *) arguments;
+>>>>>>> e18cac15ff421569dcca3a77848699914af5a22a
 //END @REQUIRED
 
 @end
