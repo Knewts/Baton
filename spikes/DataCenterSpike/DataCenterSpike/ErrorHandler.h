@@ -9,18 +9,17 @@
 #import <Foundation/Foundation.h>
 #import "OSCLib.h"
 #import "GCDUDPSocketController.h"
-#import "AppDelegate.h"
+#import "BatonConfiguration.h"
 
 @interface ErrorHandler : NSObject
 {
     GCDUDPSocketController * sock;
-    AppDelegate * delegate;
     
 }
 @property (atomic, retain) GCDUDPSocketController * sock;
-@property (nonatomic,retain) AppDelegate * delegate;
+@property (atomic, assign) BatonConfiguration * config;
 
--(id)initWithDelegate:(AppDelegate *) delegateIn;
+-(id)initWithConfiguration:(BatonConfiguration *) config;
 
 -(BOOL)reportError:(NSString *) error;
 

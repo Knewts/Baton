@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63193EE6165185E00022FA0D /* BatonConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 63193EE5165185E00022FA0D /* BatonConfiguration.m */; };
 		6364134D16504AE6006B307E /* Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6364134816504AE6006B307E /* Layout.m */; };
 		6364134E16504AE6006B307E /* LayoutTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6364134A16504AE6006B307E /* LayoutTableViewController.m */; };
 		6364134F16504AE6006B307E /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6364134C16504AE6006B307E /* SettingsTableViewController.m */; };
@@ -68,6 +69,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		63193EE4165185E00022FA0D /* BatonConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BatonConfiguration.h; sourceTree = "<group>"; };
+		63193EE5165185E00022FA0D /* BatonConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BatonConfiguration.m; sourceTree = "<group>"; };
 		6364134716504AE6006B307E /* Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Layout.h; sourceTree = "<group>"; };
 		6364134816504AE6006B307E /* Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Layout.m; sourceTree = "<group>"; };
 		6364134916504AE6006B307E /* LayoutTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutTableViewController.h; sourceTree = "<group>"; };
@@ -181,6 +184,8 @@
 				63E6CBFB164EFD1C006E2E5F /* defaultConfig.plist */,
 				63E6CBF6164EFAA0006E2E5F /* ErrorHandler.h */,
 				63E6CBF7164EFAA0006E2E5F /* ErrorHandler.m */,
+				63193EE4165185E00022FA0D /* BatonConfiguration.h */,
+				63193EE5165185E00022FA0D /* BatonConfiguration.m */,
 			);
 			name = Housekeeping;
 			sourceTree = "<group>";
@@ -478,6 +483,7 @@
 				6364134D16504AE6006B307E /* Layout.m in Sources */,
 				6364134E16504AE6006B307E /* LayoutTableViewController.m in Sources */,
 				6364134F16504AE6006B307E /* SettingsTableViewController.m in Sources */,
+				63193EE6165185E00022FA0D /* BatonConfiguration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

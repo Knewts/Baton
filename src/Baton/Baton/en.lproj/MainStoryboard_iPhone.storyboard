@@ -68,9 +68,10 @@
                                                     <rect key="frame" x="98" y="6" width="182" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numbersAndPunctuation"/>
                                                     <connections>
                                                         <action selector="textFieldDidBeginEditing:" destination="gf7-BY-nNi" eventType="editingDidBegin" id="JT8-hc-qb2"/>
+                                                        <outlet property="delegate" destination="gf7-BY-nNi" id="XO3-lD-2HK"/>
                                                     </connections>
                                                 </textField>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Host" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="RNF-au-7jk">
@@ -102,9 +103,10 @@
                                                     <rect key="frame" x="98" y="6" width="182" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numbersAndPunctuation"/>
                                                     <connections>
                                                         <action selector="textFieldDidBeginEditing:" destination="gf7-BY-nNi" eventType="editingDidBegin" id="tNF-WL-sHa"/>
+                                                        <outlet property="delegate" destination="gf7-BY-nNi" id="udd-qS-VbL"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -125,6 +127,9 @@
                                                 <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="lUC-04-A0M">
                                                     <rect key="frame" x="221" y="8" width="79" height="27"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="changedErrorReportingOption:" destination="gf7-BY-nNi" eventType="valueChanged" id="Acn-HW-V7g"/>
+                                                    </connections>
                                                 </switch>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Report Errors Over OSC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="JQE-J9-ev8">
                                                     <rect key="frame" x="20" y="11" width="186" height="21"/>
@@ -147,6 +152,9 @@
                                                 <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="Bqq-Fz-A21">
                                                     <rect key="frame" x="221" y="8" width="79" height="27"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <connections>
+                                                        <action selector="changedDifferentServerOption:" destination="gf7-BY-nNi" eventType="valueChanged" id="jc0-Gv-cfZ"/>
+                                                    </connections>
                                                 </switch>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Use a Different Server" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Ieb-ap-Hz0">
                                                     <rect key="frame" x="20" y="11" width="193" height="21"/>
@@ -170,9 +178,11 @@
                                                     <rect key="frame" x="98" y="6" width="182" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numbersAndPunctuation"/>
                                                     <connections>
+                                                        <action selector="finishedTyping:" destination="gf7-BY-nNi" eventType="editingDidEnd" id="CeP-Cn-1oZ"/>
                                                         <action selector="textFieldDidBeginEditing:" destination="gf7-BY-nNi" eventType="editingDidBegin" id="nif-RA-PXp"/>
+                                                        <outlet property="delegate" destination="gf7-BY-nNi" id="Jne-pw-NKg"/>
                                                     </connections>
                                                 </textField>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Host" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Hkm-dq-YwR">
@@ -204,9 +214,11 @@
                                                     <rect key="frame" x="98" y="6" width="182" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numbersAndPunctuation"/>
                                                     <connections>
+                                                        <action selector="finishedTyping:" destination="gf7-BY-nNi" eventType="editingDidEnd" id="ACk-SH-dFy"/>
                                                         <action selector="textFieldDidBeginEditing:" destination="gf7-BY-nNi" eventType="editingDidBegin" id="d1o-zj-g0C"/>
+                                                        <outlet property="delegate" destination="gf7-BY-nNi" id="DjU-5z-TIc"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -222,9 +234,16 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="errorAddress" destination="RfD-co-3BH" id="En4-IV-3RH"/>
+                        <outlet property="errorAddressLabel" destination="Hkm-dq-YwR" id="vKr-3O-VX4"/>
+                        <outlet property="errorPort" destination="31z-wG-U5M" id="Dba-Wb-OxG"/>
+                        <outlet property="errorPortLabel" destination="bJc-FY-7kt" id="ROe-nP-GUr"/>
                         <outlet property="hostAddress" destination="g52-JE-5oT" id="93K-6x-6GD"/>
                         <outlet property="myIPAddress" destination="cgx-B9-YdG" id="RbS-5C-84w"/>
                         <outlet property="port" destination="Lky-MH-ZDl" id="B5u-XO-Pmm"/>
+                        <outlet property="reportErrorToOSC" destination="lUC-04-A0M" id="AiW-8C-qxA"/>
+                        <outlet property="reportToDifferentServer" destination="Bqq-Fz-A21" id="XpU-MU-L8R"/>
+                        <outlet property="reportToDifferentServerLabel" destination="Ieb-ap-Hz0" id="lP2-Eu-qCx"/>
                     </connections>
                 </tableViewController>
             </objects>

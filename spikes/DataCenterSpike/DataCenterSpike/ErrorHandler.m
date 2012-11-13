@@ -11,19 +11,20 @@
 @implementation ErrorHandler
 
 @synthesize sock;
-@synthesize delegate;
+@synthesize config;
 
--(id)initWithDelegate:(AppDelegate *) delegateIn
+-(id)initWithConfiguration:(BatonConfiguration *)configuration
 {
-    self.delegate = delegateIn;
+    self.config = configuration;
     self.sock = [[GCDUDPSocketController alloc] init];
     return self;
 }
 
 -(BOOL)reportError:(NSString *)error
 {
+    
     //if the configuration calls for reporting errors to OSC
-    if([[[delegate configuration] objectForKey:@"reportErrorsOverOSC"] boolValue])
+    if([[config getObjectForKey:@"reportErrorsOverOSC"] boolValue])
     {
         
         //we need to build the OSC message with the error in it.
@@ -37,18 +38,18 @@
         NSString * host;
         
         //if the user wants errors to go somewhere else.
-        if ([[[delegate configuration] objectForKey:@"differentServerForErrorReporting"] boolValue]) {
+        if ([[config getObjectForKey:@"differentServerForErrorReporting"] boolValue]) {
             
             //set the host and port to go there.
-            host = [[delegate configuration] objectForKey:@"errorIP"];
-            port = [[delegate configuration] objectForKey:@"errorPort"];
+            host = [config getObjectForKey:@"errorIP"];
+            port = [config getObjectForKey:@"errorPort"];
             
         }
         else {
             
             //otherwise, use the standard.
-            host = [[delegate configuration] objectForKey:@"hostIP"];
-            port = [[delegate configuration] objectForKey:@"hostPort"];
+            host = [config getObjectForKey:@"hostIP"];
+            port = [config getObjectForKey:@"hostPort"];
         }
         
         [sock sendMessage:errorMessage toHost:host onPort:[port intValue]];

@@ -9,16 +9,20 @@
 #import "GCDUDPSocketController.h"
 #import "OSClib.h"
 #import "SettingsTableViewController.h"
+#import "BatonConfiguration.h"
+#import "ErrorHandler.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 {
     GCDUDPSocketController * sock;
-    NSDictionary * configuration;
+    BatonConfiguration * config;
     UIStoryboard * storyboard;
+    ErrorHandler * error;
 }
 
 @property (nonatomic, retain) GCDUDPSocketController * sock;
-@property (strong, nonatomic) NSDictionary * configuration;
+@property (strong, nonatomic) BatonConfiguration * config;
+@property (strong, nonatomic) ErrorHandler * error;
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) UIStoryboard *storyboard;

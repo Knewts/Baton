@@ -11,6 +11,9 @@
 
 @implementation SettingsTableViewController
 
+@synthesize config;
+@synthesize error;
+
 @synthesize hostAddress;
 @synthesize port;
 
@@ -33,24 +36,31 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     //grab the delegate
-    AppDelegate * delegate = [AppDelegate sharedAppdelegate];
+    config = [[AppDelegate sharedAppdelegate] config];
+    error = [[AppDelegate sharedAppdelegate] error];
     
-    //set the placeholders for both of the textfields.  These should be what 
-    hostAddress.placeholder = [[delegate configuration] objectForKey:@"hostIP"];
-    port.placeholder = [[delegate configuration] objectForKey:@"hostport"];
     
-    errorAddress.placeholder = [[delegate configuration] objectForKey:@"errorIP"];
-    errorPort.placeholder = [[delegate configuration] objectForKey:@"errorPort"];
+    //set placeholder and instatiate a boolean for making sure only to update a value if it's changed.
+    hostAddress.text = [config getObjectForKey:@"hostIP"];
+    hostAddressChanged = false;
     
-    reportErrorToOSC.on = [[[delegate configuration] objectForKey:@"reportErrorsOverOSC"] boolValue];
+    port.text = [NSString stringWithFormat:@"%d",[(NSNumber *)[config getObjectForKey:@"hostPort"] intValue]];
+    hostPortChanged = false;
     
-    reportToDifferentServer.on = [[[delegate configuration] objectForKey:@"differentServerForErrorReporting"] boolValue];
+    errorAddress.text = [config getObjectForKey:@"errorIP"];
+    errorAddressChanged = false;
+    
+    errorPort.text = [NSString stringWithFormat:@"%d",[(NSNumber *)[config getObjectForKey:@"errorPort"] intValue]];
+    errorPortChanged = false;
+    
+    reportErrorToOSC.on = [[config getObjectForKey:@"reportErrorsOverOSC"] boolValue];
+    
+    reportToDifferentServer.on = [[config getObjectForKey:@"differentServerForErrorReporting"] boolValue];
     
     myIPAddress.text = [self getIPAddress];
     
     [self checkDifferentServer];
     [self checkErrorToOSC];
-    
     
     
 }
@@ -63,21 +73,71 @@
 -(IBAction)userDidFinishOSCConfig:(id)sender
 {
     //need to do some input validation...
+    if (hostAddressChanged) {
+        [config setObject:hostAddress.text forKey:@"hostIP"];
+    }
+    NSNumberFormatter * formatter = [[NSNumberFormatter alloc] init];
+    [formatter setNumberStyle:NSNumberFormatterBehaviorDefault];
+
+    if (hostPortChanged) {
+        NSLog(@"%d:%@",[[formatter numberFromString:port.text] intValue],port.text);
+        [config setObject:[formatter numberFromString:port.text] forKey:@"hostport"];
+    }
+
+    
+    [config setObject:[NSNumber numberWithBool:reportErrorToOSC.on] forKey:@"reportErrorsOverOSC"];
+    [config setObject:[NSNumber numberWithBool:reportToDifferentServer.on] forKey:@"differentServerForErrorReporting"];
     
     
-    AppDelegate * delegate = [AppDelegate sharedAppdelegate];
+    if (reportToDifferentServer.on) {
+        if (errorAddressChanged) {
+            [config setObject:errorAddress.text forKey:@"errorIP"];
+        }
+        if (errorPortChanged) {
+            [config setObject:[formatter numberFromString:errorPort.text] forKey:@"errorPort"];
+        }
+    }
     
-    [[delegate configuration] setValue:hostAddress.text forKey:@"hostIP"];
-    [[delegate configuration] setValue:port.text forKey:@"hostport"];
-    
-    [[delegate configuration] setValue:[NSNumber numberWithBool:reportErrorToOSC.on] forKey:@"reportErrorsOverOSC"];
-    [[delegate configuration] setValue:[NSNumber numberWithBool:reportToDifferentServer.on] forKey:@"differentServerForErrorReporting"];
-    
-    [[delegate configuration] setValue:errorAddress.text forKey:@"errorIP"];
-    [[delegate configuration] setValue:errorPort.text forKey:@"errorIP"];
     
     [self dismissModalViewControllerAnimated:YES];
 }
+-(BOOL)checkIP:(NSString *)ip
+{
+    NSError * err;
+    NSRegularExpression * regex = [NSRegularExpression regularExpressionWithPattern:@"\b([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]\\.){3}[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]\b" options:NSRegularExpressionCaseInsensitive error:&err];
+    NSUInteger numMatches = [regex numberOfMatchesInString:ip options:0 range:NSMakeRange(0, [ip length])];
+    if (numMatches == 0) {
+        [error reportError:@"ip Address specified invalid.  Must be in the range 0.0.0.0 to 255.255.255.255"];
+        return false;
+    }
+    return true;
+}
+-(BOOL)checkPort:(NSString *)portText
+{
+    
+    NSError * err;
+    NSRegularExpression * regex = [NSRegularExpression regularExpressionWithPattern:@"^[0-9]*[0-9]$" options:NSRegularExpressionCaseInsensitive error:&err];
+    
+    NSUInteger numMatches = [regex numberOfMatchesInString:portText options:0 range:NSMakeRange(0, [portText length])];
+    
+    if (numMatches > 0) {
+        NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
+        [f setNumberStyle:NSNumberFormatterBehaviorDefault];
+    
+        NSNumber * portNum = [f numberFromString:portText];
+    
+        if ([portNum intValue] >=0 && [portNum intValue] <= 65535)
+            return true;
+        else {
+            [error reportError:@"Port number invalid.  Must be an integer between 0 and 65535"];
+            return false;
+        }
+    } else {
+        [error reportError:@"Invalid characters in port number."];
+        return false;
+    }
+}
+
 
 -(void)checkErrorToOSC
 {
@@ -120,6 +180,35 @@
 {
     textField.placeholder = nil;
 }
+-(BOOL)textFieldShouldReturn:(UITextField *)sender
+{
+    if (sender == hostAddress || sender == errorAddress) {
+        if([self checkIP:[sender text]])
+        {
+            if (sender == hostAddress) {
+                hostAddressChanged = true;
+            }
+            else {
+                errorAddressChanged = true;
+            }
+        }
+    }
+    else {
+        if([self checkPort:[sender text]])
+        {
+            if (sender == port) {
+                hostPortChanged = true;
+            }
+            if (sender == errorPort) {
+                errorPortChanged = true;
+            }
+        }
+        
+    }
+    [sender resignFirstResponder];
+    return YES;
+}
+
 
 - (NSString *)getIPAddress {
     

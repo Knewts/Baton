@@ -7,6 +7,8 @@
 //
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
+#import "BatonConfiguration.h"
+#import "ErrorHandler.h"
 
 //for getting the IP of the phone.
 #include <ifaddrs.h>
@@ -15,25 +17,35 @@
 @interface SettingsTableViewController : UITableViewController
 {
     UITextField IBOutlet * hostAddress;
+    BOOL hostAddressChanged;
     UITextField IBOutlet * port;
+    BOOL hostPortChanged;
     
     UISwitch IBOutlet * reportErrorToOSC;
+    
     UILabel IBOutlet * reportToDifferentServerLabel;
     UISwitch IBOutlet * reportToDifferentServer;
+    
     UILabel IBOutlet * errorAddressLabel;
     UILabel IBOutlet * errorPortLabel;
+    
     UITextField IBOutlet * errorAddress;
+    BOOL errorAddressChanged;
     UITextField IBOutlet * errorPort;
+    BOOL errorPortChanged;
     
     UILabel IBOutlet * myIPAddress;
     
     
 }
 
+@property (nonatomic,assign) BatonConfiguration * config;
+@property (nonatomic,assign) ErrorHandler * error;
 
 //these are the text fields where the standard OSC Stuff goes
 @property (nonatomic,retain) IBOutlet UITextField * hostAddress;
 @property (nonatomic,retain) IBOutlet UITextField * port;
+
 
 
 //A couple of Switches.
@@ -65,7 +77,7 @@
 
 //removes the placeholder.
 -(IBAction)textFieldDidBeginEditing:(id)sender;
-
+-(BOOL)textFieldShouldReturn:(UITextField *)sender;
 
 //for the switches.
 -(IBAction)changedErrorReportingOption:(id)sender;

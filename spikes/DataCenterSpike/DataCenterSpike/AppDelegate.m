@@ -12,7 +12,8 @@
 @implementation AppDelegate
 
 @synthesize sock;
-@synthesize configuration;
+@synthesize config;
+@synthesize error;
 
 @synthesize window = _window;
 @synthesize storyboard;
@@ -24,20 +25,16 @@
     
     
     //allocating and configuring the socket, the error handler, and the configuration
+    
+    
+    config = [[BatonConfiguration alloc] initDefaults];
+    error = [[ErrorHandler alloc] initWithConfiguration:config];
+    
+    
     sock = [[GCDUDPSocketController alloc] init];
     
     
-    //configuration stuff.  Should probably hide this in a class.
-    NSFileManager * manager = [NSFileManager defaultManager];
     
-    if ([manager fileExistsAtPath:@"config.plist"]) {
-        configuration = [NSDictionary dictionaryWithContentsOfFile:@"config.plist"];
-    }
-    else
-    {
-        configuration = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"defaultConfig" ofType:@"plist"]];
-    }
-
     
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         self.storyboard = [UIStoryboard storyboardWithName:@"MainStoryBoard_iPhone" bundle:nil];
@@ -62,7 +59,7 @@
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     
-    [configuration writeToFile:@"config.plist" atomically:YES];
+    [config writeDefaults];
 
 }
 
@@ -81,7 +78,7 @@
     
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     
-    [configuration writeToFile:@"config.plist" atomically:YES];
+    [config writeDefaults];
     
 }
 
