@@ -20,6 +20,7 @@
 
 -(BOOL)loadWithFile:(NSString *)filename;
 {
+    //xml stuff in here
     NSFileManager * manager = [NSFileManager defaultManager];
     
     if ([manager fileExistsAtPath:filename])

@@ -45,6 +45,8 @@
 		63E873EA1543B195009081AA /* WSOSCBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E873E21543A265009081AA /* WSOSCBundle.m */; };
 		63E873EB1543B195009081AA /* WSOSCMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E873E41543A265009081AA /* WSOSCMessage.m */; };
 		63E873EC1543B195009081AA /* WSOSCPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = 63E873E61543A265009081AA /* WSOSCPacket.m */; };
+		663BA35C1655AB58008BC8B1 /* XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 663BA35B1655AB58008BC8B1 /* XMLParser.m */; };
+		663BA35E1655AB9D008BC8B1 /* UIelements.dtd in Resources */ = {isa = PBXBuildFile; fileRef = 663BA35D1655AB9D008BC8B1 /* UIelements.dtd */; };
 		A22D927515C09EF400FBC13B /* Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = A22D927415C09EF400FBC13B /* Layout.m */; };
 		A22D927915C09F9900FBC13B /* LayoutTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A22D927815C09F9900FBC13B /* LayoutTableViewController.m */; };
 /* End PBXBuildFile section */
@@ -110,6 +112,9 @@
 		63E873E41543A265009081AA /* WSOSCMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSOSCMessage.m; sourceTree = "<group>"; };
 		63E873E51543A265009081AA /* WSOSCPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSOSCPacket.h; sourceTree = "<group>"; };
 		63E873E61543A265009081AA /* WSOSCPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSOSCPacket.m; sourceTree = "<group>"; };
+		663BA35A1655AB58008BC8B1 /* XMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLParser.h; sourceTree = "<group>"; };
+		663BA35B1655AB58008BC8B1 /* XMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLParser.m; sourceTree = "<group>"; };
+		663BA35D1655AB9D008BC8B1 /* UIelements.dtd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = UIelements.dtd; sourceTree = "<group>"; };
 		A22D927315C09EF400FBC13B /* Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Layout.h; sourceTree = "<group>"; };
 		A22D927415C09EF400FBC13B /* Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Layout.m; sourceTree = "<group>"; };
 		A22D927715C09F9900FBC13B /* LayoutTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayoutTableViewController.h; sourceTree = "<group>"; };
@@ -178,6 +183,7 @@
 		63967600152F4800004DD305 /* Baton */ = {
 			isa = PBXGroup;
 			children = (
+				663BA3581655AAAB008BC8B1 /* XML */,
 				63967639152F48A8004DD305 /* OSC */,
 				63967632152F486F004DD305 /* Socket */,
 				63BF0EB91630974100830552 /* Housekeeping */,
@@ -291,6 +297,16 @@
 			name = CocoaAsyncSocket;
 			sourceTree = "<group>";
 		};
+		663BA3581655AAAB008BC8B1 /* XML */ = {
+			isa = PBXGroup;
+			children = (
+				663BA35A1655AB58008BC8B1 /* XMLParser.h */,
+				663BA35B1655AB58008BC8B1 /* XMLParser.m */,
+				663BA35D1655AB9D008BC8B1 /* UIelements.dtd */,
+			);
+			name = XML;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -367,6 +383,7 @@
 				63967611152F4800004DD305 /* MainStoryboard_iPad.storyboard in Resources */,
 				63BBEF70161C8E8B00B15688 /* Stories.txt in Resources */,
 				63BD1F5F16307F51006C097E /* defaultConfig.plist in Resources */,
+				663BA35E1655AB9D008BC8B1 /* UIelements.dtd in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +435,7 @@
 				A22D927915C09F9900FBC13B /* LayoutTableViewController.m in Sources */,
 				636FB3E31607E7F200AA9518 /* OSCFloat.m in Sources */,
 				636FB3E41607E7F200AA9518 /* OSCInt.m in Sources */,
+				663BA35C1655AB58008BC8B1 /* XMLParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

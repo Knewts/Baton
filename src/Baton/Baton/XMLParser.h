@@ -1,32 +1,36 @@
 //
 //  XMLParser.h
-//  DataCenterSpike
+//  PopulationFromXMLTest
 //
-//  Created by Andy Stratton on 7/15/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Created by Geoffrey Pamerleau on 4/11/11.
+//  Copyright 2011 US Air Force Academy. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "BatonUICreator.h"
+#import "AppDelegate.h"
+#import "song.h"
 
-@interface XMLParser : NSObject
-{
-    CGRect screenFrame;
-    BatonUICreator *buic;
+@class song;
+
+@interface XMLParser : NSObject<NSXMLParserDelegate> {
     
-    // an ad hoc string to hold element value
+    AppDelegate *app;
+    
+	// an ad hoc string to hold element value
 	NSMutableString *currentElementValue;
+	// song object
+	song *songToParse;
+	// array of song objects
+	NSMutableArray *allSongs;
 }
 
--(id)initWithScreenFrame:(CGRect)frame;
+@property (nonatomic, retain) song *songToParse;
+@property (nonatomic, retain) NSMutableArray *allSongs;
 
-//-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
-
--(UIView *) getView;
-
+-(NSMutableArray*)getSongs;
+- (XMLParser *) initXMLParser;
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qualifiedName attributes: (NSDictionary *)attributeDict;
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string;
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName;
 - (NSData *)parser:(NSXMLParser *)parser resolveExternalEntityName:(NSString *)name systemID:(NSString *)systemID;
-
 @end
