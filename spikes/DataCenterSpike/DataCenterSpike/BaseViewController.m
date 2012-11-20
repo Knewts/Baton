@@ -16,6 +16,8 @@
 
 -(void)viewDidLoad
 {
+    [super viewDidLoad];
+    
     navbar.topItem.title = layout.title;
     
     if([layout.title isEqualToString:@"Default"])

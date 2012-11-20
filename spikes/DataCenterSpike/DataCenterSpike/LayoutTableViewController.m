@@ -59,7 +59,7 @@
     if ([segue.identifier isEqualToString:@"showLayout"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         BaseViewController *destViewController = segue.destinationViewController;
-        destViewController.layout = [layouts objectAtIndex:indexPath.row];
+        [destViewController setLayout:[layouts objectAtIndex:indexPath.row]];
     }
 }
 
