@@ -30,24 +30,37 @@
     // Release any retained subviews of the main view.
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-	UITableViewCell *cell = [tableView
-                             dequeueReusableCellWithIdentifier:@"LayoutCell"];
-	Layout *layout = [self.layouts objectAtIndex:indexPath.row];
-	cell.textLabel.text = layout.title;
-    return cell;
-}
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
 	return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView
- numberOfRowsInSection:(NSInteger)section
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *cellID = @"LayoutCell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+    }
+    
+    cell.textLabel.text = [[layouts objectAtIndex:indexPath.row] title];
+    return cell;
+    
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 	return [self.layouts count];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"showLayout"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        BaseViewController *destViewController = segue.destinationViewController;
+        destViewController.layout = [layouts objectAtIndex:indexPath.row];
+    }
+}
 
 @end

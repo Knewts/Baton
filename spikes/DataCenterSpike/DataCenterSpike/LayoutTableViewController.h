@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "Layout.h"
+#import "AppDelegate.h"
+#import "BaseViewController.h"
 
 @interface LayoutTableViewController : UITableViewController
 
