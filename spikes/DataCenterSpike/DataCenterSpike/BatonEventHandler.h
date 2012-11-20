@@ -18,4 +18,7 @@
 -(void)addUIElement:(Baton_UI_Element*) batonUI;
 -(void)executeCommand:(NSString *) command withArguments: (NSString *) arguments;
 
+//-(void)executeCommand:(BatonCommand) command;
+
+
 @end

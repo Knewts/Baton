@@ -15,7 +15,7 @@
 // the NSObject[] should be structured to create a plane:
 
 // NSObject[0]: "PLANE"
-// NSObject[0]: NSDictionary:
+// NSObject[1]: NSDictionary:
 //      "TYPE":"PLANE"
 //      "INPUT":"ACCEL"
 //      "POS_X":"10"
@@ -51,6 +51,7 @@
 #import "Baton_UI_Element.h"
 #import "Baton_UIPlane.h"
 #import "Baton_UIButton.h"
+#import "Baton_Region_Threshold.h"
 
 @implementation BatonUICreator
 
@@ -75,7 +76,15 @@
     if ([type isEqualToString:@"PLANE"]) {
         //TODO: Create Plane and return it.
         Baton_UIPlane * plane = [[Baton_UIPlane alloc] initWithDictionary:(NSDictionary*)[array objectAtIndex:1]];
-                                 
+        
+        int elementCount = [array count];
+        for (int i=2; i<elementCount; i++) {
+            
+            NSDictionary * region = (NSDictionary*)[array objectAtIndex:i];
+            
+            // Determine the type. Create it then add it.
+            [plane  AddRegion:[[Baton_Region_Threshold alloc] initFromDictionary:region]];
+        }
         // for remaining array elements
         //      add region to plane defined by array[i]
         

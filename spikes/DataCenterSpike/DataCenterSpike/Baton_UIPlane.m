@@ -20,6 +20,8 @@
 @implementation Baton_UIPlane
 @synthesize xData;
 @synthesize yData;
+@synthesize xScale;
+@synthesize yScale;
 
 /*
  *Init
@@ -47,6 +49,8 @@
     temp = [params valueForKey:@"Y"];
     int yposition = [temp intValue];
     
+    
+    
     temp = [params valueForKey:@"WIDTH"];
     int width = [temp intValue];
     
@@ -63,6 +67,12 @@
         AccelOn = accel;
         myTimer = nil;
         MManager = nil;
+        
+        temp = [params valueForKey:@"XSCALE"];
+        xScale = [temp intValue];
+    
+        temp = [params valueForKey:@"YSCALE"];
+        yScale = [temp intValue];
     }
     
     if (AccelOn) { [self activateAccelerometer]; }
@@ -84,8 +94,16 @@
     // Fill with the background color
     CGContextAddRect(context, rect);
     CGContextSetFillColorWithColor(context, [UIColor blackColor].CGColor);
+    CGColorRef regionColor = [UIColor redColor].CGColor;
     
     //ToDo: Draw Sub-Regions here.
+    int regionCount = [regions count];
+    for (int i=0; i<regionCount; i++)
+    {
+        Baton_Plane_Region * element = [regions objectAtIndex:i];
+
+        [element drawContext:context Color:regionColor ScaleX:xScale ScaleY:yScale Frame:rect];
+    }
     
     //Set the stroke width and change the color to blue.	
     CGFloat components[] = {0.3, 0.4, 1.0, 1.0};
@@ -161,12 +179,18 @@
 - (void)UpdateAccel
 {
     
-	xData = MManager.accelerometerData.acceleration.x * self.frame.size.width/2;
-	yData = -MManager.accelerometerData.acceleration.y * self.frame.size.height/2;
+	xData = MManager.accelerometerData.acceleration.x * (self.frame.size.width/2);
+	yData = -MManager.accelerometerData.acceleration.y * (self.frame.size.height/2);
     [self setNeedsDisplay];
 	//z.text = [NSString stringWithFormat:@"Z is: %f", acceleration.z];
 }
 
+// Add a region to the array
+-(void)AddRegion:(Baton_Plane_Region*)region
+{
+    [regions addObject:(id)region];
+    NSLog(@"Added Region %d", [regions count]);
+}
 
 
 -(void)dealloc

@@ -29,7 +29,10 @@
  
         Functions for handling commands could/should be added to the @required/@optional sections here???
      */
+
     -(void)executeCommand:(NSString *) command withArguments: (NSString *) arguments;
+//    -(void)executeCommand:(BatonCommand) command withArguments: (NSString *) arguments;
+
 //END @REQUIRED
 
 @end
@@ -44,8 +47,8 @@
 }
 
 @property(nonatomic,weak)id delegate;
-//@property(nonatomic)BatonCommand command;
 @property(nonatomic)NSString* commandArguments;
+@property(nonatomic)NSString* commandString;
 
 
 @end

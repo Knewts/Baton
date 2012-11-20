@@ -75,7 +75,7 @@
     }
     
     return self;
-    
+
 }
 -(void)drawRect:(CGRect)rect
 {
@@ -83,12 +83,12 @@
     CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceRGB();
     const CGFloat * test = bgColorOff;
     if (Active)
-        test = bgColorOn;
+    test = bgColorOn;
     
-    
+  
     CGColorRef color = CGColorCreate(colorspace, test);
     CGContextSetFillColorWithColor(context, color);
-    CGContextFillRect(context, rect);
+        CGContextFillRect(context, rect);
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event 

@@ -11,8 +11,8 @@
 @implementation Baton_UI_Element
 
 @synthesize delegate;
-//@synthesize command;
 @synthesize commandArguments;
+@synthesize commandString;
 
 
 - (id)initWithFrame:(CGRect)frame

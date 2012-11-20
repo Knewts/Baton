@@ -9,6 +9,7 @@
 #import <CoreMotion/CoreMotion.h>
 #import <Foundation/Foundation.h>
 #import "Baton_UI_Element.h"
+#import "Baton_Plane_Region.h"
 
 @interface Baton_UIPlane : Baton_UI_Element
 {
@@ -16,6 +17,7 @@
     double lastUpdate;
     CMMotionManager *MManager;
     NSTimer *myTimer;
+    NSMutableArray *regions;
     //CGLayerRef layer;
     //UIAccelerometer aMeter;
 }
@@ -29,9 +31,14 @@
 -(void)activateAccelerometer;
 -(void)UpdateAccel;	
 
+-(void)AddRegion:(Baton_Plane_Region*)region;
+
 // Defines where the data point will be drawn.
 @property float xData;
 @property float yData;
+@property float xScale;
+@property float yScale;
 
 @end
+
 

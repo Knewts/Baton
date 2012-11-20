@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		63213FE01652F9CF00760C4B /* Baton_UIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 63213FC31652F9CF00760C4B /* Baton_UIButton.m */; };
 		63213FE11652F9CF00760C4B /* BatonConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 63213FC51652F9CF00760C4B /* BatonConfiguration.m */; };
-		63213FE21652F9CF00760C4B /* BatonUICreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 63213FC71652F9CF00760C4B /* BatonUICreator.m */; };
 		63213FE31652F9CF00760C4B /* ErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 63213FC91652F9CF00760C4B /* ErrorHandler.m */; };
 		63213FE41652F9CF00760C4B /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 63213FCB1652F9CF00760C4B /* GCDAsyncSocket.m */; };
 		63213FE51652F9CF00760C4B /* LayoutTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 63213FCD1652F9CF00760C4B /* LayoutTableViewController.m */; };
@@ -31,6 +29,20 @@
 		63FAECC01652FBA400DD3873 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63FAECBF1652FBA400DD3873 /* CFNetwork.framework */; };
 		63FAECC21652FBB000DD3873 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63FAECC11652FBB000DD3873 /* Security.framework */; };
 		63FAECC41652FBBB00DD3873 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63FAECC31652FBBB00DD3873 /* CoreMotion.framework */; };
+		66CBEE86165B215F0068122E /* Baton_UI_Element.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CBEE80165B215F0068122E /* Baton_UI_Element.m */; };
+		66CBEE87165B215F0068122E /* Baton_UI_Element.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CBEE80165B215F0068122E /* Baton_UI_Element.m */; };
+		66CBEE88165B215F0068122E /* BatonEventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CBEE82165B215F0068122E /* BatonEventHandler.m */; };
+		66CBEE89165B215F0068122E /* BatonEventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CBEE82165B215F0068122E /* BatonEventHandler.m */; };
+		66CBEE8A165B215F0068122E /* BatonUICreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CBEE84165B215F0068122E /* BatonUICreator.m */; };
+		66CBEE8B165B215F0068122E /* BatonUICreator.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CBEE84165B215F0068122E /* BatonUICreator.m */; };
+		66CBEE94165B218F0068122E /* Baton_UIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CBEE8D165B218F0068122E /* Baton_UIButton.m */; };
+		66CBEE95165B218F0068122E /* Baton_UIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CBEE8D165B218F0068122E /* Baton_UIButton.m */; };
+		66CBEE96165B218F0068122E /* Baton_UIPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CBEE8F165B218F0068122E /* Baton_UIPlane.m */; };
+		66CBEE97165B218F0068122E /* Baton_UIPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CBEE8F165B218F0068122E /* Baton_UIPlane.m */; };
+		66CBEE98165B218F0068122E /* Baton_Plane_Region.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CBEE91165B218F0068122E /* Baton_Plane_Region.m */; };
+		66CBEE99165B218F0068122E /* Baton_Plane_Region.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CBEE91165B218F0068122E /* Baton_Plane_Region.m */; };
+		66CBEE9A165B218F0068122E /* Baton_Region_Threshold.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CBEE93165B218F0068122E /* Baton_Region_Threshold.m */; };
+		66CBEE9B165B218F0068122E /* Baton_Region_Threshold.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CBEE93165B218F0068122E /* Baton_Region_Threshold.m */; };
 		A11ED9F91587B960007422EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11ED9F81587B960007422EC /* UIKit.framework */; };
 		A11ED9FB1587B960007422EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11ED9FA1587B960007422EC /* Foundation.framework */; };
 		A11ED9FD1587B960007422EC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11ED9FC1587B960007422EC /* CoreGraphics.framework */; };
@@ -43,9 +55,6 @@
 		A11EDA1C1587B960007422EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11ED9FA1587B960007422EC /* Foundation.framework */; };
 		A11EDA241587B960007422EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A11EDA221587B960007422EC /* InfoPlist.strings */; };
 		A11EDA271587B960007422EC /* DataCenterSpikeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A11EDA261587B960007422EC /* DataCenterSpikeTests.m */; };
-		A11EDA321587B989007422EC /* BatonEventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A11EDA311587B989007422EC /* BatonEventHandler.m */; };
-		A11EDA39158FFDBE007422EC /* Baton_UIPlane.m in Sources */ = {isa = PBXBuildFile; fileRef = A11EDA38158FFDBE007422EC /* Baton_UIPlane.m */; };
-		A11EDA3C158FFE1E007422EC /* Baton_UI_Element.m in Sources */ = {isa = PBXBuildFile; fileRef = A11EDA3B158FFE1E007422EC /* Baton_UI_Element.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,12 +68,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		63213FC21652F9CF00760C4B /* Baton_UIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Baton_UIButton.h; sourceTree = "<group>"; };
-		63213FC31652F9CF00760C4B /* Baton_UIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Baton_UIButton.m; sourceTree = "<group>"; };
 		63213FC41652F9CF00760C4B /* BatonConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BatonConfiguration.h; path = DataCenterSpike/BatonConfiguration.h; sourceTree = "<group>"; };
 		63213FC51652F9CF00760C4B /* BatonConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BatonConfiguration.m; path = DataCenterSpike/BatonConfiguration.m; sourceTree = "<group>"; };
-		63213FC61652F9CF00760C4B /* BatonUICreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BatonUICreator.h; sourceTree = "<group>"; };
-		63213FC71652F9CF00760C4B /* BatonUICreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BatonUICreator.m; sourceTree = "<group>"; };
 		63213FC81652F9CF00760C4B /* ErrorHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorHandler.h; path = DataCenterSpike/ErrorHandler.h; sourceTree = "<group>"; };
 		63213FC91652F9CF00760C4B /* ErrorHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ErrorHandler.m; path = DataCenterSpike/ErrorHandler.m; sourceTree = "<group>"; };
 		63213FCA1652F9CF00760C4B /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCDAsyncSocket.h; path = DataCenterSpike/GCDAsyncSocket.h; sourceTree = "<group>"; };
@@ -103,6 +108,21 @@
 		63FAECBF1652FBA400DD3873 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		63FAECC11652FBB000DD3873 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		63FAECC31652FBBB00DD3873 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		66CBEE7F165B215F0068122E /* Baton_UI_Element.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Baton_UI_Element.h; sourceTree = "<group>"; };
+		66CBEE80165B215F0068122E /* Baton_UI_Element.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Baton_UI_Element.m; sourceTree = "<group>"; };
+		66CBEE81165B215F0068122E /* BatonEventHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BatonEventHandler.h; sourceTree = "<group>"; };
+		66CBEE82165B215F0068122E /* BatonEventHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BatonEventHandler.m; sourceTree = "<group>"; };
+		66CBEE83165B215F0068122E /* BatonUICreator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BatonUICreator.h; sourceTree = "<group>"; };
+		66CBEE84165B215F0068122E /* BatonUICreator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BatonUICreator.m; sourceTree = "<group>"; };
+		66CBEE85165B215F0068122E /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		66CBEE8C165B218F0068122E /* Baton_UIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Baton_UIButton.h; sourceTree = "<group>"; };
+		66CBEE8D165B218F0068122E /* Baton_UIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Baton_UIButton.m; sourceTree = "<group>"; };
+		66CBEE8E165B218F0068122E /* Baton_UIPlane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Baton_UIPlane.h; sourceTree = "<group>"; };
+		66CBEE8F165B218F0068122E /* Baton_UIPlane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Baton_UIPlane.m; sourceTree = "<group>"; };
+		66CBEE90165B218F0068122E /* Baton_Plane_Region.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Baton_Plane_Region.h; sourceTree = "<group>"; };
+		66CBEE91165B218F0068122E /* Baton_Plane_Region.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Baton_Plane_Region.m; sourceTree = "<group>"; };
+		66CBEE92165B218F0068122E /* Baton_Region_Threshold.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Baton_Region_Threshold.h; sourceTree = "<group>"; };
+		66CBEE93165B218F0068122E /* Baton_Region_Threshold.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Baton_Region_Threshold.m; sourceTree = "<group>"; };
 		A11ED9F41587B960007422EC /* DataCenterSpike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataCenterSpike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A11ED9F81587B960007422EC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A11ED9FA1587B960007422EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -121,13 +141,6 @@
 		A11EDA231587B960007422EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A11EDA251587B960007422EC /* DataCenterSpikeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataCenterSpikeTests.h; sourceTree = "<group>"; };
 		A11EDA261587B960007422EC /* DataCenterSpikeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataCenterSpikeTests.m; sourceTree = "<group>"; };
-		A11EDA301587B989007422EC /* BatonEventHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BatonEventHandler.h; sourceTree = "<group>"; };
-		A11EDA311587B989007422EC /* BatonEventHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BatonEventHandler.m; sourceTree = "<group>"; };
-		A11EDA37158FFDBE007422EC /* Baton_UIPlane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Baton_UIPlane.h; sourceTree = "<group>"; };
-		A11EDA38158FFDBE007422EC /* Baton_UIPlane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Baton_UIPlane.m; sourceTree = "<group>"; };
-		A11EDA3A158FFE1E007422EC /* Baton_UI_Element.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Baton_UI_Element.h; sourceTree = "<group>"; };
-		A11EDA3B158FFE1E007422EC /* Baton_UI_Element.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Baton_UI_Element.m; sourceTree = "<group>"; };
-		A11EDA3D158FFF1A007422EC /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +229,36 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		66CBEE9C165B219C0068122E /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				66CBEE8C165B218F0068122E /* Baton_UIButton.h */,
+				66CBEE8D165B218F0068122E /* Baton_UIButton.m */,
+			);
+			name = Buttons;
+			sourceTree = "<group>";
+		};
+		66CBEE9D165B21A30068122E /* Plane */ = {
+			isa = PBXGroup;
+			children = (
+				66CBEE8E165B218F0068122E /* Baton_UIPlane.h */,
+				66CBEE8F165B218F0068122E /* Baton_UIPlane.m */,
+				66CBEE9E165B21AC0068122E /* Regions */,
+			);
+			name = Plane;
+			sourceTree = "<group>";
+		};
+		66CBEE9E165B21AC0068122E /* Regions */ = {
+			isa = PBXGroup;
+			children = (
+				66CBEE90165B218F0068122E /* Baton_Plane_Region.h */,
+				66CBEE91165B218F0068122E /* Baton_Plane_Region.m */,
+				66CBEE92165B218F0068122E /* Baton_Region_Threshold.h */,
+				66CBEE93165B218F0068122E /* Baton_Region_Threshold.m */,
+			);
+			name = Regions;
+			sourceTree = "<group>";
+		};
 		A11ED9E91587B960007422EC = {
 			isa = PBXGroup;
 			children = (
@@ -255,10 +298,6 @@
 			children = (
 				63213FD21652F9CF00760C4B /* OSCHandler.h */,
 				63213FD31652F9CF00760C4B /* OSCHandler.m */,
-				63213FC21652F9CF00760C4B /* Baton_UIButton.h */,
-				63213FC31652F9CF00760C4B /* Baton_UIButton.m */,
-				63213FC61652F9CF00760C4B /* BatonUICreator.h */,
-				63213FC71652F9CF00760C4B /* BatonUICreator.m */,
 				63213FF01652FA0900760C4B /* Housekeeping */,
 				63213FEF1652F9EB00760C4B /* Socket */,
 				63213FEE1652F9DF00760C4B /* OSCLib */,
@@ -268,9 +307,6 @@
 				A11EDA0A1587B960007422EC /* ViewController.h */,
 				A11EDA0B1587B960007422EC /* ViewController.m */,
 				A11ED9FF1587B960007422EC /* Supporting Files */,
-				A11EDA301587B989007422EC /* BatonEventHandler.h */,
-				A11EDA311587B989007422EC /* BatonEventHandler.m */,
-				A11EDA3D158FFF1A007422EC /* Common.h */,
 				A11EDA201587B960007422EC /* Supporting Files */,
 			);
 			path = DataCenterSpike;
@@ -309,10 +345,15 @@
 		A11EDA3E15900C77007422EC /* UI_Elements */ = {
 			isa = PBXGroup;
 			children = (
-				A11EDA3A158FFE1E007422EC /* Baton_UI_Element.h */,
-				A11EDA3B158FFE1E007422EC /* Baton_UI_Element.m */,
-				A11EDA37158FFDBE007422EC /* Baton_UIPlane.h */,
-				A11EDA38158FFDBE007422EC /* Baton_UIPlane.m */,
+				66CBEE9D165B21A30068122E /* Plane */,
+				66CBEE9C165B219C0068122E /* Buttons */,
+				66CBEE7F165B215F0068122E /* Baton_UI_Element.h */,
+				66CBEE80165B215F0068122E /* Baton_UI_Element.m */,
+				66CBEE81165B215F0068122E /* BatonEventHandler.h */,
+				66CBEE82165B215F0068122E /* BatonEventHandler.m */,
+				66CBEE83165B215F0068122E /* BatonUICreator.h */,
+				66CBEE84165B215F0068122E /* BatonUICreator.m */,
+				66CBEE85165B215F0068122E /* Common.h */,
 			);
 			name = UI_Elements;
 			sourceTree = "<group>";
@@ -427,12 +468,7 @@
 				A11EDA051587B960007422EC /* main.m in Sources */,
 				A11EDA091587B960007422EC /* AppDelegate.m in Sources */,
 				A11EDA0C1587B960007422EC /* ViewController.m in Sources */,
-				A11EDA321587B989007422EC /* BatonEventHandler.m in Sources */,
-				A11EDA39158FFDBE007422EC /* Baton_UIPlane.m in Sources */,
-				A11EDA3C158FFE1E007422EC /* Baton_UI_Element.m in Sources */,
-				63213FE01652F9CF00760C4B /* Baton_UIButton.m in Sources */,
 				63213FE11652F9CF00760C4B /* BatonConfiguration.m in Sources */,
-				63213FE21652F9CF00760C4B /* BatonUICreator.m in Sources */,
 				63213FE31652F9CF00760C4B /* ErrorHandler.m in Sources */,
 				63213FE41652F9CF00760C4B /* GCDAsyncSocket.m in Sources */,
 				63213FE51652F9CF00760C4B /* LayoutTableViewController.m in Sources */,
@@ -448,6 +484,13 @@
 				63213FF81652FAA400760C4B /* GCDUDPSocketController.m in Sources */,
 				63213FF91652FAA400760C4B /* Layout.m in Sources */,
 				6321A88F165B072800CCE849 /* BaseViewController.m in Sources */,
+				66CBEE86165B215F0068122E /* Baton_UI_Element.m in Sources */,
+				66CBEE88165B215F0068122E /* BatonEventHandler.m in Sources */,
+				66CBEE8A165B215F0068122E /* BatonUICreator.m in Sources */,
+				66CBEE94165B218F0068122E /* Baton_UIButton.m in Sources */,
+				66CBEE96165B218F0068122E /* Baton_UIPlane.m in Sources */,
+				66CBEE98165B218F0068122E /* Baton_Plane_Region.m in Sources */,
+				66CBEE9A165B218F0068122E /* Baton_Region_Threshold.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,6 +499,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A11EDA271587B960007422EC /* DataCenterSpikeTests.m in Sources */,
+				66CBEE87165B215F0068122E /* Baton_UI_Element.m in Sources */,
+				66CBEE89165B215F0068122E /* BatonEventHandler.m in Sources */,
+				66CBEE8B165B215F0068122E /* BatonUICreator.m in Sources */,
+				66CBEE95165B218F0068122E /* Baton_UIButton.m in Sources */,
+				66CBEE97165B218F0068122E /* Baton_UIPlane.m in Sources */,
+				66CBEE99165B218F0068122E /* Baton_Plane_Region.m in Sources */,
+				66CBEE9B165B218F0068122E /* Baton_Region_Threshold.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
