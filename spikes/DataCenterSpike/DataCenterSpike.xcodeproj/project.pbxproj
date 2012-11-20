@@ -43,6 +43,8 @@
 		66CBEE99165B218F0068122E /* Baton_Plane_Region.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CBEE91165B218F0068122E /* Baton_Plane_Region.m */; };
 		66CBEE9A165B218F0068122E /* Baton_Region_Threshold.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CBEE93165B218F0068122E /* Baton_Region_Threshold.m */; };
 		66CBEE9B165B218F0068122E /* Baton_Region_Threshold.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CBEE93165B218F0068122E /* Baton_Region_Threshold.m */; };
+		66CBEEA1165B26E20068122E /* AddLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CBEEA0165B26E20068122E /* AddLayoutViewController.m */; };
+		66CBEEA2165B26E20068122E /* AddLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CBEEA0165B26E20068122E /* AddLayoutViewController.m */; };
 		A11ED9F91587B960007422EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11ED9F81587B960007422EC /* UIKit.framework */; };
 		A11ED9FB1587B960007422EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11ED9FA1587B960007422EC /* Foundation.framework */; };
 		A11ED9FD1587B960007422EC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11ED9FC1587B960007422EC /* CoreGraphics.framework */; };
@@ -123,6 +125,8 @@
 		66CBEE91165B218F0068122E /* Baton_Plane_Region.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Baton_Plane_Region.m; sourceTree = "<group>"; };
 		66CBEE92165B218F0068122E /* Baton_Region_Threshold.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Baton_Region_Threshold.h; sourceTree = "<group>"; };
 		66CBEE93165B218F0068122E /* Baton_Region_Threshold.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Baton_Region_Threshold.m; sourceTree = "<group>"; };
+		66CBEE9F165B26E20068122E /* AddLayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddLayoutViewController.h; path = DataCenterSpike/AddLayoutViewController.h; sourceTree = "<group>"; };
+		66CBEEA0165B26E20068122E /* AddLayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddLayoutViewController.m; path = DataCenterSpike/AddLayoutViewController.m; sourceTree = "<group>"; };
 		A11ED9F41587B960007422EC /* DataCenterSpike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataCenterSpike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A11ED9F81587B960007422EC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A11ED9FA1587B960007422EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -224,6 +228,8 @@
 				63213FC91652F9CF00760C4B /* ErrorHandler.m */,
 				6321A88D165B072800CCE849 /* BaseViewController.h */,
 				6321A88E165B072800CCE849 /* BaseViewController.m */,
+				66CBEE9F165B26E20068122E /* AddLayoutViewController.h */,
+				66CBEEA0165B26E20068122E /* AddLayoutViewController.m */,
 			);
 			name = Housekeeping;
 			path = ..;
@@ -491,6 +497,7 @@
 				66CBEE96165B218F0068122E /* Baton_UIPlane.m in Sources */,
 				66CBEE98165B218F0068122E /* Baton_Plane_Region.m in Sources */,
 				66CBEE9A165B218F0068122E /* Baton_Region_Threshold.m in Sources */,
+				66CBEEA1165B26E20068122E /* AddLayoutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,6 +513,7 @@
 				66CBEE97165B218F0068122E /* Baton_UIPlane.m in Sources */,
 				66CBEE99165B218F0068122E /* Baton_Plane_Region.m in Sources */,
 				66CBEE9B165B218F0068122E /* Baton_Region_Threshold.m in Sources */,
+				66CBEEA2165B26E20068122E /* AddLayoutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
