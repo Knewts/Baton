@@ -13,7 +13,20 @@
 
 @synthesize navbar;
 @synthesize layout;
-@synthesize delegate;
 
+-(void)viewDidLoad
+{
+    navbar.topItem.title = layout.title;
+    
+    if([layout.title isEqualToString:@"Default"])
+    {
+        XMLParser * mockXML = [[XMLParser alloc]  initWithScreenFrame:self.view.frame];
+        
+        //BatonEventHandler *beh = [[BatonEventHandler alloc] initWithFrame:self.frame];
+        
+        [self.view addSubview:[mockXML getView]];
+    }
+    
+}
 
 @end

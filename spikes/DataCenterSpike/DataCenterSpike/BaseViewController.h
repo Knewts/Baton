@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "Layout.h"
 #import "AppDelegate.h"
+#import "XMLParser.h"
 
 @interface BaseViewController : ViewController
 {

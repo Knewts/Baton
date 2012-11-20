@@ -11,7 +11,6 @@
 
 @interface BaseView : UIView
 {
-    XMLParser *mockXML;
     
 }
 -(void)awakeFromNib;

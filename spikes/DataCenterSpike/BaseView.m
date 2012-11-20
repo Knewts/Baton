@@ -18,11 +18,7 @@
 
 -(void)awakeFromNib
 {
-    mockXML = [[XMLParser alloc]  initWithScreenFrame:self.frame];
-    
-    //BatonEventHandler *beh = [[BatonEventHandler alloc] initWithFrame:self.frame];
-    
-    [self addSubview:[mockXML getView]];
+
     
 }
 
