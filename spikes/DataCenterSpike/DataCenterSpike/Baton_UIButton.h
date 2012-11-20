@@ -26,13 +26,16 @@
 
 @interface Baton_UIButton : Baton_UI_Element
 {
-       
+    Boolean Active; // True when pressed
     Boolean toggleType; // True turns a button on, False Turns a button off.
+    
     NSString *primaryCommand; // Command for basic button and toggle turns on.
     NSString *primaryParameters; // Parameters for the primary command
+    
     NSString *secondaryCommand; // Command for toggle turning off.
     NSString *secondaryParameters; // Parameters for the secondary command  
-    CGColorRef bgColor;
+    
+    //CGColorRef bgColorOn, bgColorOff, bgColorActive;
     UIControlState state;
     NSString *text;
     
@@ -45,5 +48,11 @@
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event;
 
+
+-(void) swapState;
 CGMutablePathRef createRoundedRectForRect(CGRect rect, CGFloat radius);
+
+@property CGFloat * bgColorOn;
+@property CGFloat * bgColorOff;
+@property CGFloat * bgColorActive;
 @end

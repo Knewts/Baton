@@ -11,12 +11,16 @@
 
 @implementation Baton_UIButton
 
+@synthesize bgColorOn;
+@synthesize bgColorOff;
+@synthesize bgColorActive;
+
 -(id)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame])
     {
         toggleType = false;
         text = @"Button";
-        bgColor = UIColorFromRGB(createRGBIntFromHexString(@"FF9900")).CGColor;
+        //bgColorOn = UIColorFromRGB(createRGBIntFromHexString(@"FF9900")).CGColor;
     }
     return self;
 }
@@ -51,73 +55,74 @@
         
         text = [params  valueForKey:@"TEXT"];
         
-        NSString *color = [params valueForKey:@"BGCOLOR"];
+        NSString *color = [params valueForKey:@"BGCOLOR_ON"];
         color = [color stringByTrimmingCharactersInSet:finalCharacterSet];
-        bgColor = UIColorFromRGB(createRGBIntFromHexString(color)).CGColor;
+        bgColorOn = CGColorGetComponents(UIColorFromRGB(createRGBIntFromHexString(color)).CGColor);
+        
+        color = [params valueForKey:@"BGCOLOR_OFF"];
+        color = [color stringByTrimmingCharactersInSet:finalCharacterSet];
+        bgColorOff = CGColorGetComponents(UIColorFromRGB(createRGBIntFromHexString(color)).CGColor);
+        
+        //Set active to false and the active color to off
+        Active = false;
+        bgColorActive = bgColorOff;
+        
+        color = [params valueForKey:@"COMMAND"];
+        primaryCommand = color;
+        
+        color = [params valueForKey:@"PARAMETERS"];
+        primaryParameters = color;
     }
     
     return self;
-
+    
 }
 -(void)drawRect:(CGRect)rect
 {
-    //Get the layer context.
     CGContextRef context = UIGraphicsGetCurrentContext();
+    CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceRGB();
+    const CGFloat * test = bgColorOff;
+    if (Active)
+        test = bgColorOn;
     
-    CGColorRef blackColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:1.0].CGColor;
-    CGColorRef highlightStart = [UIColor colorWithRed:1.0 green:1.0  blue:1.0 alpha:0.4].CGColor;
-    CGColorRef highlightStop = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:0.1].CGColor;
-    CGColorRef shadowColor = [UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:0.5].CGColor;
     
-    //Recover Hue saturation and brightness from backgroundColor
-    //UIColor *test = [UIColor colorWithCGColor:self->bgColor];
-    
-    CGFloat _hue, _sat, _alph, _bright;
-
-    
-    _hue = bgColor->h;
-_sat = bgColor->s;
-	
-    CGColorRef outerTop =    [UIColor colorWithHue:_hue saturation:_sat brightness:1.00*_bright  alpha:1.0].CGColor;
-    CGColorRef outerBottom = [UIColor colorWithHue:_hue saturation:_sat brightness:0.80*_bright alpha:1.0].CGColor;
-    CGColorRef innerStroke = [UIColor colorWithHue:_hue saturation:_sat brightness:0.80*_bright alpha:1.0].CGColor;
-    CGColorRef innerTop =    [UIColor colorWithHue:_hue saturation:_sat brightness:0.90*_bright alpha:1.0].CGColor;
-    CGColorRef innerBottom = [UIColor colorWithHue:_hue saturation:_sat brightness:0.70*_bright alpha:1.0].CGColor;
-    
-    CGFloat outerMargin = 5.0f;
-    CGRect outerRect = CGRectInset(self.bounds, outerMargin, outerMargin);
-    CGMutablePathRef outerPath = createRoundedRectForRect(outerRect, 6.0);
-    
-    CGFloat innerMargin = 3.0f;
-    CGRect innerRect = CGRectInset(outerRect, innerMargin, innerMargin);
-    CGMutablePathRef innerPath = createRoundedRectForRect(innerRect, 6.0);
-    
-    if (state != UIControlStateHighlighted) {
-        CGContextSaveGState(context);
-        CGContextSetFillColorWithColor(context, bgColor);
-        CGContextSetShadowWithColor(context, CGSizeMake(0, 2), 3.0, shadowColor);
-        CGContextAddPath(context, outerPath);
-        CGContextFillPath(context);
-        CGContextRestoreGState(context);
-    }
-    
-    CGContextSaveGState(context);
-    CGContextAddPath(context, outerPath);
-    CGContextClip(context);
-    //drawGlossAndGradient(context, outerRect, outerTop, outerBottom);
-    CGContextRestoreGState(context);
-    
-    CGContextSaveGState(context);
-    CGContextAddPath(context, innerPath);
-    CGContextClip(context);
-    //drawGlossAndGradient(context, innerRect, innerTop, innerBottom);
-    CGContextRestoreGState(context);
-    
+    CGColorRef color = CGColorCreate(colorspace, test);
+    CGContextSetFillColorWithColor(context, color);
+    CGContextFillRect(context, rect);
 }
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {}
--(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {}
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event 
+{
+    if (!toggleType)
+    {
+        //Only act on mouse down with non-toggle types
+        [delegate executeCommand:primaryCommand withArguments:primaryParameters];
+        Active = true;
+        [self setNeedsDisplay];
+    }
+    
+}
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event 
+{
+    if (toggleType)
+    {
+        [delegate executeCommand:primaryCommand withArguments:primaryParameters];
+        Active = !Active;
+    } 
+    else
+    {   
+        // This is NOT a toggle button
+        [delegate executeCommand:@"LOG" withArguments:@"THIS WORKS"];
+        Active = false;
+    }
+    [self setNeedsDisplay];
+}
 
+-(void) swapState
+{
+    Active = !Active;
+    
+}
 
 // Code from: http://www.raywenderlich.com/2134/core-graphics-101-glossy-buttons
 CGMutablePathRef createRoundedRectForRect(CGRect rect, CGFloat radius) {
@@ -142,9 +147,11 @@ unsigned createRGBIntFromHexString(NSString * s)
     unsigned retVal = 0;
     NSScanner *scanner = [NSScanner scannerWithString:s];
     
-    [scanner setScanLocation:0]; // bypass '#' character
+    [scanner setScanLocation:0];
     [scanner scanHexInt:&retVal];
     
     return retVal;
 }
+
+
 @end
