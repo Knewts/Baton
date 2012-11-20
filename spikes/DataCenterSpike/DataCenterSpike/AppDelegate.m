@@ -27,7 +27,11 @@
     //allocating and configuring the socket, the error handler, and the configuration
     
     
+    
+    
     config = [[BatonConfiguration alloc] initDefaults];
+    
+    
     error = [[ErrorHandler alloc] initWithConfiguration:config];
     
     

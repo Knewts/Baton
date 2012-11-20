@@ -278,7 +278,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
-                                    <segue destination="Re0-49-UKM" kind="push" id="Qan-y4-BLH"/>
+                                    <segue destination="Re0-49-UKM" kind="push" identifier="showLayout" id="Qan-y4-BLH"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -397,34 +397,6 @@
             <point key="canvasLocation" x="-250" y="-105"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="BaseView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BaseView.h"/>
-        </class>
-        <class className="LayoutTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LayoutTableViewController.h"/>
-        </class>
-        <class className="SettingsTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsTableViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="changedDifferentServerOption:"/>
-                <relationship kind="action" name="changedErrorReportingOption:"/>
-                <relationship kind="action" name="textFieldDidBeginEditing:"/>
-                <relationship kind="action" name="userCanceledOSCConfig:"/>
-                <relationship kind="action" name="userDidFinishOSCConfig:"/>
-                <relationship kind="outlet" name="errorAddress" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="errorAddressLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="errorPort" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="errorPortLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="hostAddress" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="myIPAddress" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="port" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="reportErrorToOSC" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="reportToDifferentServer" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="reportToDifferentServerLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
