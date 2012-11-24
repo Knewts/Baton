@@ -25,6 +25,7 @@
 		63213FFE1652FB0800760C4B /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63213FFA1652FB0800760C4B /* MainStoryboard_iPad.storyboard */; };
 		63213FFF1652FB0800760C4B /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63213FFC1652FB0800760C4B /* MainStoryboard_iPhone.storyboard */; };
 		6321A88F165B072800CCE849 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6321A88E165B072800CCE849 /* BaseViewController.m */; };
+		633BB72E1660656000D57C6A /* LayoutList.m in Sources */ = {isa = PBXBuildFile; fileRef = 633BB72D1660655F00D57C6A /* LayoutList.m */; };
 		63FAECBD1652FB9900DD3873 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63FAECBC1652FB9900DD3873 /* Accelerate.framework */; };
 		63FAECC01652FBA400DD3873 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63FAECBF1652FBA400DD3873 /* CFNetwork.framework */; };
 		63FAECC21652FBB000DD3873 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63FAECC11652FBB000DD3873 /* Security.framework */; };
@@ -106,6 +107,8 @@
 		63213FFD1652FB0800760C4B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = DataCenterSpike/en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		6321A88D165B072800CCE849 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseViewController.h; path = DataCenterSpike/BaseViewController.h; sourceTree = "<group>"; };
 		6321A88E165B072800CCE849 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseViewController.m; path = DataCenterSpike/BaseViewController.m; sourceTree = "<group>"; };
+		633BB72C1660655F00D57C6A /* LayoutList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LayoutList.h; path = DataCenterSpike/LayoutList.h; sourceTree = "<group>"; };
+		633BB72D1660655F00D57C6A /* LayoutList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LayoutList.m; path = DataCenterSpike/LayoutList.m; sourceTree = "<group>"; };
 		63FAECBC1652FB9900DD3873 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		63FAECBF1652FBA400DD3873 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		63FAECC11652FBB000DD3873 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -220,6 +223,8 @@
 				A11EDA081587B960007422EC /* AppDelegate.m */,
 				63213FF41652FAA400760C4B /* Layout.h */,
 				63213FF51652FAA400760C4B /* Layout.m */,
+				633BB72C1660655F00D57C6A /* LayoutList.h */,
+				633BB72D1660655F00D57C6A /* LayoutList.m */,
 				63213FF61652FAA400760C4B /* LayoutTableViewController.h */,
 				63213FCD1652F9CF00760C4B /* LayoutTableViewController.m */,
 				63213FDC1652F9CF00760C4B /* SettingsTableViewController.h */,
@@ -498,6 +503,7 @@
 				66CBEE98165B218F0068122E /* Baton_Plane_Region.m in Sources */,
 				66CBEE9A165B218F0068122E /* Baton_Region_Threshold.m in Sources */,
 				66CBEEA1165B26E20068122E /* AddLayoutViewController.m in Sources */,
+				633BB72E1660656000D57C6A /* LayoutList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

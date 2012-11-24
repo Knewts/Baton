@@ -8,9 +8,8 @@
 
 #import "LayoutTableViewController.h"
 
-@implementation LayoutTableViewController{
-  
-}
+@implementation LayoutTableViewController
+
 @synthesize layouts;
 - (void)viewDidLoad
 {
@@ -18,10 +17,10 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    //TODO: Here, we're going to initialize the layout array, I think.  Either that or we should do it at application load.
     
-    //for now, put something standard in there.
-    layouts = [[NSMutableArray alloc]initWithObjects:[[Layout alloc] initWithTitle:@"Default"], nil];
+    //hold an assigned reference to the layouts table.
+    //The delegate functions associated with the prototype cells will handle the rest of the initialization.
+    layouts = [[AppDelegate sharedAppdelegate] layouts];
 }
 
 - (void)viewDidUnload
@@ -45,22 +44,23 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
     }
     
-    cell.textLabel.text = [[layouts objectAtIndex:indexPath.row] title];
+    cell.textLabel.text = [[layouts objectInLayoutsAtIndex:indexPath.row] title];
     return cell;
     
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-	return [self.layouts count];
+	return [self.layouts countOfLayouts];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"showLayout"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         BaseViewController *destViewController = segue.destinationViewController;
-        [destViewController setLayout:[layouts objectAtIndex:indexPath.row]];
+        [destViewController setLayout:[layouts objectInLayoutsAtIndex:indexPath.row]];
     }
 }
+
 
 @end
