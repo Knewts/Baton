@@ -14,6 +14,7 @@
 @synthesize sock;
 @synthesize config;
 @synthesize error;
+@synthesize layouts;
 
 @synthesize window = _window;
 @synthesize storyboard;
@@ -36,6 +37,9 @@
     
     
     sock = [[GCDUDPSocketController alloc] init];
+    
+    
+    layouts = [[LayoutList alloc] initWithDefaultFile];
     
     
     

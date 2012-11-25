@@ -10,11 +10,11 @@
 #import "Layout.h"
 #import "AppDelegate.h"
 #import "BaseViewController.h"
+#import "LayoutList.h"
 
 @interface LayoutTableViewController : UITableViewController
 
-@property (nonatomic,strong) NSMutableArray * layouts;
-
+@property (nonatomic,assign) LayoutList * layouts;
 
 
 @end
