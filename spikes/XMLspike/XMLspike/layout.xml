@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE layout SYSTEM "">
+
+<layout>
+    <button>
+        <x>10</x>
+        <y>10</y>
+        <width>300</width>
+        <height>100</height>
+        <toggle>1</toggle>
+        <command>LOG</command>
+        <parameters>Button Down Works</parameters>
+        <text>10</text>
+        <bgcoloron>FF0000</bgcoloron>
+        <bgcoloroff>FFFF00</bgcoloroff>
+    </button>
+    
+    <plane>
+        <x>10</x>
+        <y>150</y>
+        <xscale>20</xscale>
+        <yscale>15</yscale>
+        <width>300</width>
+        <height>100</height>
+        <accel>0</accel>
+        <command>LOG</command>
+        <parameters>PLANE WORKS</parameters>
+    </plane>
+    
+    <threshold>
+        <haxis>1</haxis>
+        <value>10</value>
+        <command>LOG</command>
+        <parameters>PLANE WORKS</parameters>
+    </threshold>
+    
+</layout>

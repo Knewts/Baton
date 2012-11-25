@@ -25,14 +25,14 @@
 {
     // Insert code here to initialize your application
     
-    NSString *xmlPath = [[NSBundle mainBundle] pathForResource:@"songs" ofType:@"xml"];
+    NSString *xmlPath = [[NSBundle mainBundle] pathForResource:@"layout" ofType:@"xml"];
     NSData *xmlData = [NSData dataWithContentsOfFile:xmlPath];
     NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithData:xmlData];
     
     XMLParser *theParser = [[XMLParser alloc] initXMLParser];
     
     [xmlParser setDelegate:theParser];
-    [xmlParser setShouldResolveExternalEntities:YES];
+    //[xmlParser setShouldResolveExternalEntities:YES];
     
     BOOL worked = [xmlParser parse];
     

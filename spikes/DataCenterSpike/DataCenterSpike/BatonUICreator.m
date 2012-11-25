@@ -37,7 +37,7 @@
 //      "POS_Y":"30"
 //      "RADIUS":"10"
 
-//  Because the regions are subobjects of the plane, they must be created and placed within the 
+// Because the regions are subobjects of the plane, they must be created and placed within the 
 // plane object before is becomes a subview of the BatonEventHandler. In this instance, the 
 // createObjectFrom:NSArray function would pass the array to CreatePlane:NSObject. This function will
 // pass the first Dictionary Object to the Baton_UIPlane class and hold the returned object. It will

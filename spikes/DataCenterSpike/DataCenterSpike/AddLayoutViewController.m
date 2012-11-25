@@ -41,6 +41,8 @@
     
     if (worked) {
         //NSLog(@"Amount: %lu", theParser.getSongs.count);
+        NSLog(@"yay");
+
         
     }
     else {

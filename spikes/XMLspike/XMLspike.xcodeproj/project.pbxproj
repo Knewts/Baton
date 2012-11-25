@@ -19,9 +19,9 @@
 		662AE0B71559D6BA00DE7231 /* XMLspikeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 662AE0B61559D6BA00DE7231 /* XMLspikeTests.m */; };
 		6644F0BA15BF3782007E1FBD /* songs.dtd in Resources */ = {isa = PBXBuildFile; fileRef = 6644F0B715BF3782007E1FBD /* songs.dtd */; };
 		6644F0BB15BF3782007E1FBD /* songs.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6644F0B815BF3782007E1FBD /* songs.xml */; };
-		6644F0BC15BF3782007E1FBD /* songsbroke.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6644F0B915BF3782007E1FBD /* songsbroke.xml */; };
 		665312B9156C2A3800F30D8C /* song.m in Sources */ = {isa = PBXBuildFile; fileRef = 665312B8156C2A3800F30D8C /* song.m */; };
 		665312BE156C39FD00F30D8C /* XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 665312BD156C39FD00F30D8C /* XMLParser.m */; };
+		66BD2F791662C73A006CBBA5 /* layout.xml in Resources */ = {isa = PBXBuildFile; fileRef = 66BD2F781662C73A006CBBA5 /* layout.xml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,11 +56,11 @@
 		662AE0B61559D6BA00DE7231 /* XMLspikeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMLspikeTests.m; sourceTree = "<group>"; };
 		6644F0B715BF3782007E1FBD /* songs.dtd */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = songs.dtd; sourceTree = "<group>"; };
 		6644F0B815BF3782007E1FBD /* songs.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = songs.xml; sourceTree = "<group>"; };
-		6644F0B915BF3782007E1FBD /* songsbroke.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = songsbroke.xml; sourceTree = "<group>"; };
 		665312B7156C2A3800F30D8C /* song.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = song.h; sourceTree = "<group>"; };
 		665312B8156C2A3800F30D8C /* song.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = song.m; sourceTree = "<group>"; };
 		665312BC156C39FD00F30D8C /* XMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLParser.h; sourceTree = "<group>"; };
 		665312BD156C39FD00F30D8C /* XMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLParser.m; sourceTree = "<group>"; };
+		66BD2F781662C73A006CBBA5 /* layout.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = layout.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,9 +126,9 @@
 		662AE0921559D6BA00DE7231 /* XMLspike */ = {
 			isa = PBXGroup;
 			children = (
+				66BD2F781662C73A006CBBA5 /* layout.xml */,
 				6644F0B715BF3782007E1FBD /* songs.dtd */,
 				6644F0B815BF3782007E1FBD /* songs.xml */,
-				6644F0B915BF3782007E1FBD /* songsbroke.xml */,
 				665312BC156C39FD00F30D8C /* XMLParser.h */,
 				665312BD156C39FD00F30D8C /* XMLParser.m */,
 				662AE09E1559D6BA00DE7231 /* AppDelegate.h */,
@@ -247,7 +247,7 @@
 				662AE0A31559D6BA00DE7231 /* MainMenu.xib in Resources */,
 				6644F0BA15BF3782007E1FBD /* songs.dtd in Resources */,
 				6644F0BB15BF3782007E1FBD /* songs.xml in Resources */,
-				6644F0BC15BF3782007E1FBD /* songsbroke.xml in Resources */,
+				66BD2F791662C73A006CBBA5 /* layout.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

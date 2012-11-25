@@ -10,8 +10,8 @@
 #import "song.h"
 
 @implementation XMLParser
-@synthesize songToParse;
-@synthesize allSongs;
+//@synthesize songToParse;
+//@synthesize allSongs;
 
 - (XMLParser *) initXMLParser {
 	NSLog(@"INIT xml parser");
@@ -21,27 +21,47 @@
     //app = (AppDelegate *)[[UIApplication sharedApplication]delegate];
 	
     // init array of song objects 
-	allSongs = [[NSMutableArray alloc] init];
+	//allSongs = [[NSMutableArray alloc] init];
 	NSLog(@"Init Done");
 	return self;
 }//end init
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qualifiedName attributes:(NSDictionary *)attributeDict {
     
-    NSLog(@"entered StartElement");
+    NSLog(@"StartElement - %@", elementName);
     
-    if ([elementName isEqualToString:@"song"]) {
-        NSLog(@"song element found – create a new instance of song class...");
-        songToParse = [[song alloc] init];
+    if ([elementName isEqualToString:@"button"]) {
+        //NSLog(@"StartElement - found button");
+        //songToParse = [[song alloc] init];
         //We do not have any attributes in the song elements, but if
         // you do, you can extract them here: 
         // song.att = [[attributeDict objectForKey:@"<att name>"] ...];
-    }
+    
+    } //end if element==button
+    
+    else if ([elementName isEqualToString:@"plane"]) {
+        //NSLog(@"StartElement - found plane");
+        //songToParse = [[song alloc] init];
+        //We do not have any attributes in the song elements, but if
+        // you do, you can extract them here: 
+        // song.att = [[attributeDict objectForKey:@"<att name>"] ...];
+    
+    }//end if element==plane
+    
+    else if ([elementName isEqualToString:@"threshold"]) {
+        //NSLog(@"StartElement - found threshold");
+        //songToParse = [[song alloc] init];
+        //We do not have any attributes in the song elements, but if
+        // you do, you can extract them here: 
+        // song.att = [[attributeDict objectForKey:@"<att name>"] ...];
+        
+    }//end if element==threshold
+    
 }//end didStartElement
 
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
     
-    NSLog(@"entered foundCharacters");
+    //NSLog(@"entered foundCharacters");
     
     if (!currentElementValue) {
         // init the ad hoc string with the value     
@@ -55,7 +75,7 @@
     NSCharacterSet *whitespace = [NSCharacterSet whitespaceAndNewlineCharacterSet];
     NSString *trimmed = [string stringByTrimmingCharactersInSet:whitespace];
     if ([trimmed length] != 0) {
-        NSLog(@"Processing value for : %@", string);
+        NSLog(@"foundCharacters - Processing value for : %@", string);
     }
     
 
@@ -68,25 +88,52 @@
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI 
 qualifiedName:(NSString *)qName {
     
-    NSLog(@"entered EndElement");
+    NSLog(@"EndElement - %@", elementName);
     
-    if ([elementName isEqualToString:@"songs"]) {
+    if ([elementName isEqualToString:@"layout"]) {
+        NSLog(@"EndElement - reached layout, end of document");
         // We reached the end of the XML document
         return;
     }
-	else if ([elementName isEqualToString:@"song"]) {
+	else if ([elementName isEqualToString:@"button"]) {
         // We are done with user entry – add the parsed user 
         // object to our user array
-        [allSongs addObject:self.songToParse];
+        //NSLog(@"EndElement - found button");
+        //[allSongs addObject:self.songToParse];
         // release user object
-        [songToParse release];
-        songToParse= nil;
-    }
+        //[songToParse release];
+        //songToParse= nil;
+    
+    } //end if element==button
+    
+    else if ([elementName isEqualToString:@"plane"]) {
+        // We are done with user entry – add the parsed user 
+        // object to our user array
+        //NSLog(@"EndElement - found plane");
+        //[allSongs addObject:self.songToParse];
+        // release user object
+        //[songToParse release];
+        //songToParse= nil;
+    
+    } //end if element==plane
+    
+    else if ([elementName isEqualToString:@"threshold"]) {
+        // We are done with user entry – add the parsed user 
+        // object to our user array
+        //NSLog(@"EndElement - found threshold");
+        //[allSongs addObject:self.songToParse];
+        // release user object
+        //[songToParse release];
+        //songToParse= nil;
+        
+    } //end if element==threshold
+    
     else {
         // The parser hit one of the element values. 
+        NSLog(@"EndElement - found element value");
         // This syntax is possible because User object 
         // property names match the XML user element names  
-        [songToParse setValue:currentElementValue forKey:elementName];
+        //[songToParse setValue:currentElementValue forKey:elementName];
     }
     [currentElementValue release];
     currentElementValue = nil;

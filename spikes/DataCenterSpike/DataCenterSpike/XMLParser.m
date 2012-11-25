@@ -10,6 +10,10 @@
 #import "BatonEventHandler.h"
 #import "BatonUICreator.h"
 
+@interface XMLParser ()
+
+@end
+
 @implementation XMLParser
 
 // Gets the XML Mock Object ready.
