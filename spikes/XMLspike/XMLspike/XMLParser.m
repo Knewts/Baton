@@ -105,6 +105,12 @@ qualifiedName:(NSString *)qName {
 
 }//end resolveExternalEntityName
 
+- (void)parser:(NSXMLParser *)parser validationErrorOccurred:(NSError *)validationError {
+    
+    NSLog(@"entered validationErrorOccurred");
+    
+} //end validation error occurred
+
 -(NSMutableArray*)getSongs {
 	return allSongs;
 }//end getSongs

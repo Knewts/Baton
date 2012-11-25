@@ -7,6 +7,8 @@
 //
 
 #import "AddLayoutViewController.h"
+#import "XMLParser.h"
+
 
 @interface AddLayoutViewController ()
 
@@ -24,6 +26,29 @@
     //make sure valid url (regex for http:// .com
     
     //handle for bad url
+    
+    
+    NSString *xmlPath = [[NSBundle mainBundle] pathForResource:@"songs" ofType:@"xml"];
+    NSData *xmlData = [NSData dataWithContentsOfFile:xmlPath];
+    NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithData:xmlData];
+    
+    XMLParser *theParser = [[XMLParser alloc] initXMLParser];
+    
+    [xmlParser setDelegate:theParser];
+    [xmlParser setShouldResolveExternalEntities:YES];
+    
+    BOOL worked = [xmlParser parse];
+    
+    if (worked) {
+        //NSLog(@"Amount: %lu", theParser.getSongs.count);
+        
+    }
+    else {
+        NSLog(@"boo");
+    }
+    
+    
+    
 }//end user hit done
 
 

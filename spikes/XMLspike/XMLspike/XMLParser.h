@@ -33,4 +33,6 @@
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string;
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName;
 - (NSData *)parser:(NSXMLParser *)parser resolveExternalEntityName:(NSString *)name systemID:(NSString *)systemID;
+- (void)parser:(NSXMLParser *)parser validationErrorOccurred:(NSError *)validationError;
+// If validation is on, this will report a fatal validation error to the delegate. The parser will stop parsing.
 @end

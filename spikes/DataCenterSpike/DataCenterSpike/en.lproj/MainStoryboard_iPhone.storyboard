@@ -306,7 +306,7 @@
                     </tableView>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="294" y="452"/>
+            <point key="canvasLocation" x="368" y="464"/>
         </scene>
         <!--Layout Table View Controller - Layouts-->
         <scene sceneID="rh3-RT-jR6">
@@ -477,47 +477,6 @@
             <point key="canvasLocation" x="-250" y="-105"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="AddLayoutViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AddLayoutViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="userHitCancelButton:"/>
-                <relationship kind="action" name="userHitDoneButton:"/>
-            </relationships>
-        </class>
-        <class className="BaseViewController" superclassName="ViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BaseViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="navbar" candidateClass="UINavigationBar"/>
-            </relationships>
-        </class>
-        <class className="LayoutTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LayoutTableViewController.h"/>
-        </class>
-        <class className="SettingsTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsTableViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="changedDifferentServerOption:"/>
-                <relationship kind="action" name="changedErrorReportingOption:"/>
-                <relationship kind="action" name="textFieldDidBeginEditing:"/>
-                <relationship kind="action" name="userCanceledOSCConfig:"/>
-                <relationship kind="action" name="userDidFinishOSCConfig:"/>
-                <relationship kind="outlet" name="errorAddress" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="errorAddressLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="errorPort" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="errorPortLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="hostAddress" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="myIPAddress" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="port" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="reportErrorToOSC" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="reportToDifferentServer" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="reportToDifferentServerLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

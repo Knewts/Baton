@@ -75,6 +75,19 @@
     return beh;
 }//end getView
 
+- (XMLParser *) initXMLParser {
+	NSLog(@"INIT xml parser");
+	//[super init];
+    
+    //irish guy
+    //app = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+	
+    // init array of song objects 
+	//allSongs = [[NSMutableArray alloc] init];
+	NSLog(@"Init Done");
+	return self;
+}//end init
+
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qualifiedName attributes:(NSDictionary *)attributeDict {
     
     NSLog(@"entered StartElement");
