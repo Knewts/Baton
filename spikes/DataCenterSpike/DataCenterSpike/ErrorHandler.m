@@ -20,7 +20,12 @@
     return self;
 }
 
--(BOOL)reportError:(NSString *)error
+-(BOOL)reportError:(NSError *)error
+{
+    return [self reportErrorString:[error localizedDescription]];
+}
+
+-(BOOL)reportErrorString:(NSString *)error
 {
     
     //if the configuration calls for reporting errors to OSC

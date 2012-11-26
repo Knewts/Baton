@@ -21,6 +21,7 @@
 
 -(id)initWithConfiguration:(BatonConfiguration *) config;
 
--(BOOL)reportError:(NSString *) error;
+-(BOOL)reportError:(NSError *) error;
+-(BOOL)reportErrorString:(NSString *)error;
 
 @end

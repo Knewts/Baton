@@ -20,7 +20,7 @@
     return self;
 }
 
--(id)initWithTitle:(NSString *)inTitle resourcePath:(NSString *)inTree
+-(id)initWithTitle:(NSString *)inTitle layoutTree:(NSArray *)inTree
 {
     title = inTitle;
     tree = inTree;
