@@ -26,7 +26,7 @@
 
 -(BOOL)saveLayoutsToFile:(NSString *)filename
 {
-    [layouts writeToFile:filename atomically:YES];
+    [NSKeyedArchiver archiveRootObject:layouts toFile:filename];
     return YES;
 }
 -(void)saveLayoutsToDefaultFile
@@ -36,7 +36,7 @@
 -(BOOL)loadLayoutsFromFile:(NSString *)filename
 {
     
-    layouts = [NSMutableArray arrayWithContentsOfFile:filename];
+    layouts = [NSKeyedUnarchiver unarchiveObjectWithFile:filename];
     
     if (layouts == nil)
     {

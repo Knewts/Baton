@@ -11,13 +11,13 @@
 @interface Layout : NSObject
 {
     NSString * title;
-    NSString * path;
+    NSArray * tree;
 }
 
 @property (nonatomic,retain) NSString * title;
-@property (nonatomic,retain) NSString * path;
+@property (nonatomic,retain) NSArray * tree;
 
--(id)initWithTitle:(NSString *) inTitle resourcePath:(NSString *) inPath;
+-(id)initWithTitle:(NSString *) inTitle layoutTree:(NSArray *) inTree;
 
 
 @end

@@ -16,14 +16,14 @@
 -(id)init
 {
     title = @"Default";
-    path = @"Default";
+    tree = nil;
     return self;
 }
 
--(id)initWithTitle:(NSString *)inTitle resourcePath:(NSString *)inPath
+-(id)initWithTitle:(NSString *)inTitle resourcePath:(NSString *)inTree
 {
     title = inTitle;
-    path = inPath;
+    tree = inTree;
     return self;
 }
 
