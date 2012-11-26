@@ -19,9 +19,9 @@
 	// an ad hoc string to hold element value
 	NSMutableString *currentElementValue;
 	// song object
-	song *songToParse;
+	//song *songToParse;
 	// array of song objects
-	NSMutableArray *allSongs;
+	//NSMutableArray *allSongs;
 }
 
 @property (nonatomic, retain) song *songToParse;

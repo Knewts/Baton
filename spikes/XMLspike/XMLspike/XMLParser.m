@@ -10,18 +10,15 @@
 #import "song.h"
 
 @implementation XMLParser
-//@synthesize songToParse;
-//@synthesize allSongs;
+@synthesize songToParse;
+@synthesize allSongs;
 
 - (XMLParser *) initXMLParser {
 	NSLog(@"INIT xml parser");
 	[super init];
-    
-    //irish guy
-    //app = (AppDelegate *)[[UIApplication sharedApplication]delegate];
 	
     // init array of song objects 
-	//allSongs = [[NSMutableArray alloc] init];
+	allSongs = [[NSMutableArray alloc] init];
 	NSLog(@"Init Done");
 	return self;
 }//end init
@@ -30,32 +27,64 @@
     
     NSLog(@"StartElement - %@", elementName);
     
+    
     if ([elementName isEqualToString:@"button"]) {
         //NSLog(@"StartElement - found button");
         //songToParse = [[song alloc] init];
-        //We do not have any attributes in the song elements, but if
-        // you do, you can extract them here: 
-        // song.att = [[attributeDict objectForKey:@"<att name>"] ...];
-    
+        
     } //end if element==button
     
     else if ([elementName isEqualToString:@"plane"]) {
         //NSLog(@"StartElement - found plane");
         //songToParse = [[song alloc] init];
-        //We do not have any attributes in the song elements, but if
-        // you do, you can extract them here: 
-        // song.att = [[attributeDict objectForKey:@"<att name>"] ...];
-    
+        
     }//end if element==plane
     
     else if ([elementName isEqualToString:@"threshold"]) {
         //NSLog(@"StartElement - found threshold");
         //songToParse = [[song alloc] init];
-        //We do not have any attributes in the song elements, but if
-        // you do, you can extract them here: 
-        // song.att = [[attributeDict objectForKey:@"<att name>"] ...];
         
     }//end if element==threshold
+    
+    //all
+    else if ([elementName isEqualToString:@"command"]) {        
+    }//end if element==command
+    else if ([elementName isEqualToString:@"parameters"]) {        
+    }//end if element==parameters
+    
+    //button&plane
+    else if ([elementName isEqualToString:@"width"]) {        
+    }//end if element==width
+    else if ([elementName isEqualToString:@"height"]) {        
+    }//end if element==height
+    
+    //button
+    else if ([elementName isEqualToString:@"x"]) {        
+    }//end if element==x
+    else if ([elementName isEqualToString:@"y"]) {        
+    }//end if element==y
+    else if ([elementName isEqualToString:@"toggle"]) {        
+    }//end if element==toggle
+    else if ([elementName isEqualToString:@"text"]) {        
+    }//end if element==text
+    else if ([elementName isEqualToString:@"bgcoloron"]) {        
+    }//end if element==bgcoloron
+    else if ([elementName isEqualToString:@"bgcoloroff"]) {        
+    }//end if element==bgcoloroff
+    
+    //plane
+    else if ([elementName isEqualToString:@"xscale"]) {        
+    }//end if element==xscale
+    else if ([elementName isEqualToString:@"yscale"]) {        
+    }//end if element==yscale
+    else if ([elementName isEqualToString:@"accel"]) {        
+    }//end if element==accel
+    
+    //threshold
+    else if ([elementName isEqualToString:@"haxis"]) {        
+    }//end if element==haxis
+    else if ([elementName isEqualToString:@"value"]) {        
+    }//end if element==value
     
 }//end didStartElement
 
