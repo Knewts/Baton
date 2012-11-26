@@ -11,10 +11,19 @@
 @implementation Layout
 
 @synthesize title;
+@synthesize path;
 
--(id)initWithTitle:(NSString *)inTitle
+-(id)init
 {
-    self.title = inTitle;
+    title = @"Default";
+    path = @"Default";
+    return self;
+}
+
+-(id)initWithTitle:(NSString *)inTitle resourcePath:(NSString *)inPath
+{
+    title = inTitle;
+    path = inPath;
     return self;
 }
 

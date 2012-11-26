@@ -10,10 +10,6 @@
 #import "XMLParser.h"
 
 
-@interface AddLayoutViewController ()
-
-@end
-
 @implementation AddLayoutViewController
 
 

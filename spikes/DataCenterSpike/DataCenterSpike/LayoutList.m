@@ -48,7 +48,7 @@
 -(void)loadLayoutsFromDefaultFile
 {
     if(![self loadLayoutsFromFile:@"layouts.plist"])
-        layouts = [[NSMutableArray alloc] initWithObjects:[[Layout alloc]initWithTitle:@"Default"], nil];
+        layouts = [[NSMutableArray alloc] initWithObjects:[[Layout alloc]init], nil];
 }
 
 
