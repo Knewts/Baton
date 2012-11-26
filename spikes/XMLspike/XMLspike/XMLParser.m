@@ -69,63 +69,111 @@ NSString *currentUIElementBeingParsed;
     else if ([elementName isEqualToString:@"command"]) {
         
         if ([currentUIElementBeingParsed isEqualToString:@"button"]) {
-            
+            //set flag to add command to button Dict
         } //end if uielement is a button
         else if ([currentUIElementBeingParsed isEqualToString:@"plane"]) {
-            
+            //set flag to add command to plane Dict
         } //end if uielement is a plane
         else if ([currentUIElementBeingParsed isEqualToString:@"threshold"]) {
-            
+            //set flag to add command to threshold Dict
         } //end if uielement is a threshold
         
     }//end if element==command
+    
     else if ([elementName isEqualToString:@"parameters"]) { 
         
         if ([currentUIElementBeingParsed isEqualToString:@"button"]) {
-            
+            //set flag to add parameters to button Dict
         } //end if uielement is a button
         else if ([currentUIElementBeingParsed isEqualToString:@"plane"]) {
-            
+            //set flag to add parameters to plane Dict
         } //end if uielement is a plane
         else if ([currentUIElementBeingParsed isEqualToString:@"threshold"]) {
-            
+            //set flag to add parameters to threshold Dict
         } //end if uielement is a threshold
         
     }//end if element==parameters
     
     //button&plane
-    else if ([elementName isEqualToString:@"width"]) {        
+    else if ([elementName isEqualToString:@"x"]) {  
+        
+        if ([currentUIElementBeingParsed isEqualToString:@"button"]) {
+            //set flag to add x to button Dict
+        } //end if uielement is a button
+        else if ([currentUIElementBeingParsed isEqualToString:@"plane"]) {
+            //set flag to add x to plane Dict
+        } //end if uielement is a plane
+        
+    }//end if element==x
+    
+    else if ([elementName isEqualToString:@"y"]) { 
+        
+        if ([currentUIElementBeingParsed isEqualToString:@"button"]) {
+            //set flag to add y to button Dict
+        } //end if uielement is a button
+        else if ([currentUIElementBeingParsed isEqualToString:@"plane"]) {
+            //set flag to add y to plane Dict
+        } //end if uielement is a plane
+        
+    }//end if element==y
+    
+    else if ([elementName isEqualToString:@"width"]) { 
+        
+        if ([currentUIElementBeingParsed isEqualToString:@"button"]) {
+            //set flag to add width to button Dict
+        } //end if uielement is a button
+        else if ([currentUIElementBeingParsed isEqualToString:@"plane"]) {
+            //set flag to add width to plane Dict
+        } //end if uielement is a plane
+        
     }//end if element==width
-    else if ([elementName isEqualToString:@"height"]) {        
+    
+    else if ([elementName isEqualToString:@"height"]) {
+        
+        if ([currentUIElementBeingParsed isEqualToString:@"button"]) {
+            //set flag to add height to button Dict
+        } //end if uielement is a button
+        else if ([currentUIElementBeingParsed isEqualToString:@"plane"]) {
+            //set flag to add height to plane Dict
+        } //end if uielement is a plane
+        
     }//end if element==height
     
     //button
-    else if ([elementName isEqualToString:@"x"]) {        
-    }//end if element==x
-    else if ([elementName isEqualToString:@"y"]) {        
-    }//end if element==y
-    else if ([elementName isEqualToString:@"toggle"]) {        
+    else if ([elementName isEqualToString:@"toggle"]) {
+        //set flag to add toggle to button Dict
     }//end if element==toggle
-    else if ([elementName isEqualToString:@"text"]) {        
+    else if ([elementName isEqualToString:@"text"]) {   
+        //set flag to add text to button Dict
     }//end if element==text
-    else if ([elementName isEqualToString:@"bgcoloron"]) {        
+    else if ([elementName isEqualToString:@"bgcoloron"]) {    
+        //set flag to add bgcoloron to button Dict
     }//end if element==bgcoloron
-    else if ([elementName isEqualToString:@"bgcoloroff"]) {        
+    else if ([elementName isEqualToString:@"bgcoloroff"]) {  
+        //set flag to add bgcoloroff to button Dict
     }//end if element==bgcoloroff
     
     //plane
-    else if ([elementName isEqualToString:@"xscale"]) {        
+    else if ([elementName isEqualToString:@"xscale"]) {   
+        //set flag to add xscale to plane Dict
     }//end if element==xscale
-    else if ([elementName isEqualToString:@"yscale"]) {        
+    else if ([elementName isEqualToString:@"yscale"]) {   
+        //set flag to add yscale to plane Dict
     }//end if element==yscale
-    else if ([elementName isEqualToString:@"accel"]) {        
+    else if ([elementName isEqualToString:@"accel"]) {   
+        //set flag to add accel to plane Dict
     }//end if element==accel
     
     //threshold
     else if ([elementName isEqualToString:@"haxis"]) {        
+        //set flag to add haxis to threshold Dict
     }//end if element==haxis
-    else if ([elementName isEqualToString:@"value"]) {        
+    else if ([elementName isEqualToString:@"value"]) {  
+        //set flag to add value to threshold Dict
     }//end if element==value
+    
+    
+    //finish these up and add each element to the current temp NSMutableDictionary
     
 }//end didStartElement
 
@@ -141,6 +189,10 @@ NSString *currentUIElementBeingParsed;
         // append value to the ad hoc string    
 		[currentElementValue appendString:string];
     }
+    
+    
+    //enumerate through flags to determine where the element value gets stored
+    
     
     NSCharacterSet *whitespace = [NSCharacterSet whitespaceAndNewlineCharacterSet];
     NSString *trimmed = [string stringByTrimmingCharactersInSet:whitespace];
@@ -161,10 +213,15 @@ qualifiedName:(NSString *)qName {
     NSLog(@"EndElement - %@", elementName);
     
     if ([elementName isEqualToString:@"layout"]) {
+        
+        //send array to andy
+        
         NSLog(@"EndElement - reached layout, end of document");
         // We reached the end of the XML document
         return;
     }
+    
+    //add Dict to array
 	else if ([elementName isEqualToString:@"button"]) {
         // We are done with user entry – add the parsed user 
         // object to our user array
@@ -176,6 +233,7 @@ qualifiedName:(NSString *)qName {
     
     } //end if element==button
     
+    //add dict to array
     else if ([elementName isEqualToString:@"plane"]) {
         // We are done with user entry – add the parsed user 
         // object to our user array
@@ -187,6 +245,7 @@ qualifiedName:(NSString *)qName {
     
     } //end if element==plane
     
+    //add dict to array
     else if ([elementName isEqualToString:@"threshold"]) {
         // We are done with user entry – add the parsed user 
         // object to our user array
@@ -197,6 +256,9 @@ qualifiedName:(NSString *)qName {
         //songToParse= nil;
         
     } //end if element==threshold
+    
+    //enumerate through elements and close the active one
+    //possibly unnecessary
     
     //all
     else if ([elementName isEqualToString:@"command"]) {        
