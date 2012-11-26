@@ -1,9 +1,9 @@
 //
 //  BatonUICreator.m
-//  DataCenterSpike
+//  Baton - Western Michigan University KLORK
 //
 //  Created by Andy Stratton on 9/16/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Western Michigan University. All rights reserved.
 //
 
 //   The XML parser will send data to this class to get BatonUI items in return.
@@ -15,7 +15,7 @@
 // the NSObject[] should be structured to create a plane:
 
 // NSObject[0]: "PLANE"
-// NSObject[1]: NSDictionary:
+// NSObject[0]: NSDictionary:
 //      "TYPE":"PLANE"
 //      "INPUT":"ACCEL"
 //      "POS_X":"10"
@@ -37,7 +37,7 @@
 //      "POS_Y":"30"
 //      "RADIUS":"10"
 
-// Because the regions are subobjects of the plane, they must be created and placed within the 
+//  Because the regions are subobjects of the plane, they must be created and placed within the 
 // plane object before is becomes a subview of the BatonEventHandler. In this instance, the 
 // createObjectFrom:NSArray function would pass the array to CreatePlane:NSObject. This function will
 // pass the first Dictionary Object to the Baton_UIPlane class and hold the returned object. It will
@@ -83,7 +83,11 @@
             NSDictionary * region = (NSDictionary*)[array objectAtIndex:i];
             
             // Determine the type. Create it then add it.
-            [plane  AddRegion:[[Baton_Region_Threshold alloc] initFromDictionary:region]];
+            NSString *regionType = [region valueForKey:@"TYPE"];
+            if ([regionType isEqualToString:@"THRESHOLD"]) {
+                [plane  AddRegion:[[Baton_Region_Threshold alloc] initFromDictionary:region]];
+            }
+            
         }
         // for remaining array elements
         //      add region to plane defined by array[i]

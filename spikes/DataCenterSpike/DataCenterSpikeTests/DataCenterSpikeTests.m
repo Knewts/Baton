@@ -3,7 +3,7 @@
 //  DataCenterSpikeTests
 //
 //  Created by Andy Stratton on 6/12/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Western Michigan University. All rights reserved.
 //
 
 #import "DataCenterSpikeTests.h"

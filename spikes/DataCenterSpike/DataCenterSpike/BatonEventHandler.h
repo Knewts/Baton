@@ -1,14 +1,13 @@
 //
 //  DataCenter.h
-//  DataCenterSpike
+//  Baton - Western Michigan University KLORK
 //
 //  Created by Andy Stratton on 6/12/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Western Michigan University. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import "Baton_UI_Element.h"
-#import "Common.h"
 
 @interface BatonEventHandler : UIView <BatonUIElementDelegate>
 

@@ -1,9 +1,9 @@
 //
 //  Baton_UI_Element.m
-//  DataCenterSpike
+//  Baton - Western Michigan University KLORK
 //
 //  Created by Andy Stratton on 6/18/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Western Michigan University. All rights reserved.
 //
 
 #import "Baton_UI_Element.h"
@@ -23,15 +23,5 @@
     }
     return self;
 }
-
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
 
 @end

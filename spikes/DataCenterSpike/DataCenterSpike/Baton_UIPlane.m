@@ -1,27 +1,16 @@
 //
 //  Baton_UIPlane.m
-//  draw2D
+//  Baton - Western Michigan University KLORK
 //
 //  Created by Andy Stratton on 4/9/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Western Michigan University. All rights reserved.
 //
 
-/*
- *      DICTIONARY REQUIRED PARAMETERS:
- *  X       - X position on the screen (integer)
- *  Y       - Y position on the screen (integer)
- *  WIDTH   - width of the on-screen display
- *  HEIGHT  - height of the on-screen display
- *  ACCEL   - 1 or 0. 1 is ON, 0 is OFF.
- */
 
 #import "Baton_UIPlane.h"
 
 @implementation Baton_UIPlane
-@synthesize xData;
-@synthesize yData;
-@synthesize xScale;
-@synthesize yScale;
+
 
 /*
  *Init
@@ -41,6 +30,8 @@
 
 -(id)initWithDictionary:(NSDictionary *)params
 {
+    regions = [[NSMutableArray alloc] init];
+    
     // Get the parameters we need.
     NSNumber *temp;
     temp = [params valueForKey:@"X"];
@@ -48,7 +39,6 @@
     
     temp = [params valueForKey:@"Y"];
     int yposition = [temp intValue];
-    
     
     
     temp = [params valueForKey:@"WIDTH"];
@@ -68,11 +58,35 @@
         myTimer = nil;
         MManager = nil;
         
+        // Smoothing
+        if  (AccelOn)
+        {
+            sampleNumber = 8;
+            
+            xSamples = malloc(sizeof(float)*sampleNumber);
+            ySamples = malloc(sizeof(float)*sampleNumber);
+            
+            int i;
+            for (i=0; i<sampleNumber; i++) {
+                xSamples[i] = 0.0;
+                ySamples[i] = 0.0;
+            }
+            samplePosition = 0;
+            xSmoothTotal = 0;
+            ySmoothTotal = 0;
+        }
+        
         temp = [params valueForKey:@"XSCALE"];
-        xScale = [temp intValue];
-    
+        xScale = ([temp intValue] == 0)? 1 :[temp intValue];
+            
         temp = [params valueForKey:@"YSCALE"];
-        yScale = [temp intValue];
+        yScale = ([temp intValue] == 0)? 1 :[temp intValue];
+        
+        temp = [params valueForKey:@"XMAX"];
+        xMax = ([temp intValue] == 0)? xScale :[temp intValue];
+        
+        temp = [params valueForKey:@"YMAX"];
+        yMax = ([temp intValue] == 0)? yScale :[temp intValue];
     }
     
     if (AccelOn) { [self activateAccelerometer]; }
@@ -94,23 +108,15 @@
     // Fill with the background color
     CGContextAddRect(context, rect);
     CGContextSetFillColorWithColor(context, [UIColor blackColor].CGColor);
-    CGColorRef regionColor = [UIColor redColor].CGColor;
+    CGContextFillRect(context, rect);
     
-    //ToDo: Draw Sub-Regions here.
-    int regionCount = [regions count];
-    for (int i=0; i<regionCount; i++)
-    {
-        Baton_Plane_Region * element = [regions objectAtIndex:i];
-
-        [element drawContext:context Color:regionColor ScaleX:xScale ScaleY:yScale Frame:rect];
-    }
-    
+        
     //Set the stroke width and change the color to blue.	
     CGFloat components[] = {0.3, 0.4, 1.0, 1.0};
     CGColorRef color = CGColorCreate(CGColorSpaceCreateDeviceRGB(), components);
     CGContextSetStrokeColorWithColor(context, color);
     CGContextSetLineWidth(context, 2.0);
-    CGContextFillRect(context, rect);
+    
     
     int xCenter = (rect.size.width/2);
     int yCenter = (rect.size.height/2);
@@ -121,36 +127,50 @@
     //Horizontal Origin
     CGContextMoveToPoint(context, 0, yCenter);	
     CGContextAddLineToPoint(context, rect.size.width, yCenter);
+
+    CGContextStrokePath(context); 
     
-    CGContextStrokePath(context);    
     
+    //ToDo: Draw Sub-Regions here.
+    int regionCount = [regions count];
+    for (int i=0; i<regionCount; i++)
+    {
+        Baton_Plane_Region * element = [regions objectAtIndex:i];
+
+        [element drawContext:context ScaleX:xScale ScaleY:yScale Frame:rect];
+    }
+
     //Draw Text
     CGContextSetTextDrawingMode(context, kCGTextFill);
     CGContextSetFillColorWithColor(context, [UIColor whiteColor].CGColor);
     CGContextSelectFont(context, "Helvetica", 10, kCGEncodingMacRoman);
     CGAffineTransform trans = CGAffineTransformMake(1.0, 0.0, 0.0, -1.0, 0, 0);
     CGContextSetTextMatrix(context, trans);
-    NSString *text = [NSString stringWithFormat: @"X:%d Y:%d",xData,yData];
+    NSString *text = [NSString stringWithFormat: @"X:%f Y:%f",xData,yData];
     CGContextShowTextAtPoint(context, 10, 10, [text cStringUsingEncoding:NSASCIIStringEncoding], text.length);
     
     //Data Circle
     int dataRadius = 4;
     CGContextSetStrokeColorWithColor(context, [UIColor yellowColor].CGColor);
-    CGContextStrokeEllipseInRect(context, CGRectMake(xCenter+xData-dataRadius, yCenter+yData-dataRadius, dataRadius*2, dataRadius*2));
+    int xPos = xCenter + (xData*((self.frame.size.width/2))) - dataRadius;
+    int yPos = yCenter - (yData*((self.frame.size.height/2))) - dataRadius;
+    CGContextStrokeEllipseInRect(context, CGRectMake(xPos, yPos, dataRadius*2, dataRadius*2));
     
 }
 
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    [delegate executeCommand:@"LOG" withArguments:@"THIS WORKS"];
+    //[delegate executeCommand:@"LOG" withArguments:@"THIS WORKS"];
     
     if (!AccelOn)
     {
         CGPoint location = [[touches anyObject] locationInView:self];
-        xData = location.x-(self.frame.size.width/2);
-        yData = location.y-(self.frame.size.height/2);
+        xData = 2*((location.x-(self.frame.size.width/2))/self.frame.size.width);
+        yData = -2*((location.y-(self.frame.size.height/2))/self.frame.size.height);
+        
         [self setNeedsDisplay];
+        [self CheckRegions];
     }
 }
 
@@ -160,10 +180,12 @@
     if (!AccelOn)
     {
         CGPoint location = [[touches anyObject] locationInView:self];
-        xData = location.x-(self.frame.size.width/2);
-        yData = location.y-(self.frame.size.height/2);
+        xData = 2*((location.x-(self.frame.size.width/2))/self.frame.size.width);
+        yData = -2*((location.y-(self.frame.size.height/2))/self.frame.size.height);
+        [self setNeedsDisplay];
+        [self CheckRegions];
     }
-    [self setNeedsDisplay];
+    //[self setNeedsDisplay];
     
 }
 
@@ -177,13 +199,41 @@
 }
 
 - (void)UpdateAccel
-{
+{   
+    // Remove the old data
+    xSmoothTotal -= xSamples[samplePosition];
+    ySmoothTotal -= ySamples[samplePosition];
+    // Add the new Data
+    xSamples[samplePosition] = MManager.accelerometerData.acceleration.x;
+    ySamples[samplePosition] = MManager.accelerometerData.acceleration.y;
+    xSmoothTotal += xSamples[samplePosition];
+    ySmoothTotal += ySamples[samplePosition];
     
-	xData = MManager.accelerometerData.acceleration.x * (self.frame.size.width/2);
-	yData = -MManager.accelerometerData.acceleration.y * (self.frame.size.height/2);
+    // Increment the position until you hit the sampleNumber
+    samplePosition++;
+    if (samplePosition == sampleNumber)
+        samplePosition =0;
+    
+    xData = xSmoothTotal/sampleNumber;
+    yData = ySmoothTotal/sampleNumber;
+    //xData = MManager.accelerometerData.acceleration.x;
+	//yData = MManager.accelerometerData.acceleration.y;
     [self setNeedsDisplay];
-	//z.text = [NSString stringWithFormat:@"Z is: %f", acceleration.z];
 }
+
+-(void)CheckRegions
+{
+    int regionCount = [regions count];
+    for (int i=0; i<regionCount; i++)
+    {
+        Baton_Plane_Region * element = [regions objectAtIndex:i];
+        
+        if ([element checkPointX:xData Y:yData ScaleX:xScale ScaleY:yScale])
+            [delegate executeCommand:[element getCommand] withArguments:[element getParams]];
+    }
+    
+}
+
 
 // Add a region to the array
 -(void)AddRegion:(Baton_Plane_Region*)region
@@ -200,5 +250,12 @@
     {
         [MManager stopAccelerometerUpdates];
     }
+    if (AccelOn)
+    {
+        free(xSamples);
+        free(ySamples);
+    }
 }
+
+
 @end

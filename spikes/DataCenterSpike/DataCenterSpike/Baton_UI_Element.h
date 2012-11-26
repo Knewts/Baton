@@ -1,9 +1,9 @@
 //
 //  Baton_UI_Element.h
-//  DataCenterSpike
+//  Baton - Western Michigan University KLORK
 //
 //  Created by Andy Stratton on 6/18/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Western Michigan University. All rights reserved.
 //
 /*
  * This class is the base class for all UI elements in the Baton application. The main function of this class is to establish the BatonUIElementDelegate which will allow each UI element to send command requests to a central handler. This central handler is a UIView subclass of which each UI Element will be a subview.
@@ -18,7 +18,7 @@
  */
 
 #import <UIKit/UIKit.h>
-#import "Common.h"
+
 
 //Define the protocol that must be used by the SuperView
 @protocol BatonUIElementDelegate <NSObject>

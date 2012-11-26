@@ -1,9 +1,9 @@
 //
 //  BatonUICreator.h
-//  DataCenterSpike
+//  Baton - Western Michigan University KLORK
 //
 //  Created by Andy Stratton on 9/16/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Western Michigan University. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

@@ -1,31 +1,40 @@
 //
 //  Baton_UIButton.h
-//  DataCenterSpike
+//  Baton - Western Michigan University KLORK
 //
 //  Created by Andy Stratton on 10/3/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Western Michigan University. All rights reserved.
 //
 //
-//  XML Parameters <optional>:
-//      X
-//      Y
-//      WIDTH
-//      HEIGHT
-//      TOGGLE
-//      COMMAND
-//      PARAMETERS
-//      TEXT
-//      <TOGGLE_OFF_COMMAND>
-//      <TOGGLE_OFF_PARAMETERS>
-//      <BGCOLOR> (in hex, but no 0x or # (rrggbb) ff9900  reddish yellow)
-//      <BGCOLOR_ACTIVE>
-#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+/*
+ *      DICTIONARY REQUIRED PARAMETERS:
+ *  X       - X position on the screen (integer)
+ *  Y       - Y position on the screen (integer)
+ *  WIDTH   - width of the on-screen display
+ *  HEIGHT  - height of the on-screen display
+ *  COMMAND - The command to execute upon activation.
+ *  PARAMETERS - The parameters for the command above.
+ *
+ *
+ *      OPTIONAL PARAMETERS
+ *  COLOR   - The color to draw the threshold. Overrides active direction color.
+ *      ** No threshold will be colored:
+ *          Yellow activates in a positive to negative direction.
+ *          Red activates in a negative to positive direction.
+ *          Orange activates in both directions.
+ *  TOGGLE  - 0/1 : 1 Acvitates in positive to negative direction.
+ *  BGCOLOR_ON  - Hex String representing a color when the button is active/pressed.
+ *  BGCOLOR_OFF - Hex String representing a color when the button is NOT active/pressed.
+ *  TEXT        - Text string that will be auto sized to fit the button.
+ */
 
 #import <UIKit/UIKit.h>
 #import "Baton_UI_Element.h"
 
 @interface Baton_UIButton : Baton_UI_Element
 {
+    int BORDER;
     Boolean Active; // True when pressed
     Boolean toggleType; // True turns a button on, False Turns a button off.
     
@@ -35,10 +44,16 @@
     NSString *secondaryCommand; // Command for toggle turning off.
     NSString *secondaryParameters; // Parameters for the secondary command  
     
+    
+    UIColor * bgColorOn;
+    UIColor * bgColorOff;
+    
     //CGColorRef bgColorOn, bgColorOff, bgColorActive;
     UIControlState state;
     NSString *text;
     
+    UIFont *buttonFont;
+    float radius;
 }
 
 -(id)initWithFrame:(CGRect)frame;
@@ -52,7 +67,4 @@
 -(void) swapState;
 CGMutablePathRef createRoundedRectForRect(CGRect rect, CGFloat radius);
 
-@property CGFloat * bgColorOn;
-@property CGFloat * bgColorOff;
-@property CGFloat * bgColorActive;
 @end

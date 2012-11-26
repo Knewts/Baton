@@ -1,6 +1,6 @@
 //
 //  Baton_Plane_Region.m
-//  ARC enabled Build Center
+//  Baton - Western Michigan University KLORK
 //
 //  Created by Andy Stratton on 11/15/12.
 //  
@@ -17,9 +17,6 @@
     return self;
 }
 
-- (void)drawContext:(CGContextRef)context{
-    // Drawing code
-}
 
 
 @end
