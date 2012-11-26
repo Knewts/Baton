@@ -9,9 +9,15 @@
 #import <Foundation/Foundation.h>
 
 @interface Layout : NSObject
+{
+    NSString * title;
+    NSString * path;
+}
 
-@property (nonatomic,copy) NSString * title;
+@property (nonatomic,retain) NSString * title;
+@property (nonatomic,retain) NSString * path;
 
--(id)initWithTitle:(NSString *) title;
+-(id)initWithTitle:(NSString *) inTitle resourcePath:(NSString *) inPath;
+
 
 @end
