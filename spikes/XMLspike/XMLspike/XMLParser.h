@@ -21,7 +21,7 @@
 	// song object
 	//song *songToParse;
 	// array of song objects
-	//NSMutableArray *allSongs;
+	NSMutableArray *allSongs;
 }
 
 @property (nonatomic, retain) song *songToParse;

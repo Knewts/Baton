@@ -13,12 +13,27 @@
 @synthesize songToParse;
 @synthesize allSongs;
 
+
+
+NSMutableDictionary *plane;
+NSMutableDictionary *threshold;
+NSMutableDictionary *button;
+
+NSMutableArray *layout;
+NSString *currentUIElementBeingParsed;
+
+
+
+
 - (XMLParser *) initXMLParser {
 	NSLog(@"INIT xml parser");
 	[super init];
 	
     // init array of song objects 
-	allSongs = [[NSMutableArray alloc] init];
+	//allSongs = [[NSMutableArray alloc] init];
+    
+    layout = [[NSMutableArray alloc] init];
+    
 	NSLog(@"Init Done");
 	return self;
 }//end init
@@ -29,24 +44,33 @@
     
     
     if ([elementName isEqualToString:@"button"]) {
-        //songToParse = [[song alloc] init];
+        
+        NSMutableDictionary *button = [[NSMutableDictionary alloc] init];
+        NSString *currentUIElementBeingParsed = [[NSString alloc] initWithString:elementName];
+        //NSLog(@"Current uielement being parsed: %@", currentUIElementBeingParsed);
         
     } //end if element==button
     
     else if ([elementName isEqualToString:@"plane"]) {
-        //songToParse = [[song alloc] init];
+        
+        NSMutableDictionary *plane = [[NSMutableDictionary alloc] init];
+        NSString *currentUIElementBeingParsed = [[NSString alloc] initWithString:elementName];
         
     }//end if element==plane
     
     else if ([elementName isEqualToString:@"threshold"]) {
-        //songToParse = [[song alloc] init];
+
+        NSMutableDictionary *threshold = [[NSMutableDictionary alloc] init];
+        NSString *currentUIElementBeingParsed = [[NSString alloc] initWithString:elementName];
         
     }//end if element==threshold
     
     //all
-    else if ([elementName isEqualToString:@"command"]) {        
+    else if ([elementName isEqualToString:@"command"]) {
+        
     }//end if element==command
-    else if ([elementName isEqualToString:@"parameters"]) {        
+    else if ([elementName isEqualToString:@"parameters"]) { 
+        
     }//end if element==parameters
     
     //button&plane
