@@ -11,7 +11,7 @@
 @implementation Layout
 
 @synthesize title;
-@synthesize path;
+@synthesize tree;
 
 -(id)init
 {
