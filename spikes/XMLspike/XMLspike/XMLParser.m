@@ -68,8 +68,28 @@ NSString *currentUIElementBeingParsed;
     //all
     else if ([elementName isEqualToString:@"command"]) {
         
+        if ([currentUIElementBeingParsed isEqualToString:@"button"]) {
+            
+        } //end if uielement is a button
+        else if ([currentUIElementBeingParsed isEqualToString:@"plane"]) {
+            
+        } //end if uielement is a plane
+        else if ([currentUIElementBeingParsed isEqualToString:@"threshold"]) {
+            
+        } //end if uielement is a threshold
+        
     }//end if element==command
     else if ([elementName isEqualToString:@"parameters"]) { 
+        
+        if ([currentUIElementBeingParsed isEqualToString:@"button"]) {
+            
+        } //end if uielement is a button
+        else if ([currentUIElementBeingParsed isEqualToString:@"plane"]) {
+            
+        } //end if uielement is a plane
+        else if ([currentUIElementBeingParsed isEqualToString:@"threshold"]) {
+            
+        } //end if uielement is a threshold
         
     }//end if element==parameters
     
