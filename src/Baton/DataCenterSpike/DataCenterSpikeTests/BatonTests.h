@@ -1,13 +1,12 @@
 //
-//  BatonTests.h
-//  BatonTests
+//  DataCenterSpikeTests.h
+//  DataCenterSpikeTests
 //
-//  Created by Matthew Knewtson on 4/6/12.
+//  Created by Andy Stratton on 6/12/12.
 //  Copyright (c) 2012 Western Michigan University. All rights reserved.
 //
 
 #import <SenTestingKit/SenTestingKit.h>
-#import "OSClib.h"
 
 @interface BatonTests : SenTestCase
 

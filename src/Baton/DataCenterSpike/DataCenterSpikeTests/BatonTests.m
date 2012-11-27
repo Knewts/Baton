@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 Western Michigan University. All rights reserved.
 //
 
-#import "DataCenterSpikeTests.h"
+#import "BatonTests.h"
 
-@implementation DataCenterSpikeTests
+@implementation BatonTests
 
 - (void)setUp
 {
