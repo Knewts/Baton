@@ -10,6 +10,12 @@
 
 @interface AddLayoutViewController : UITableViewController
 
+{
+    IBOutlet UITextField* layoutURL;
+}
+
+@property (nonatomic, retain) IBOutlet UITextField* layoutURL;
+
 -(IBAction)userHitCancelButton:(id)sender;
 -(IBAction)userHitDoneButton:(id)sender;
 

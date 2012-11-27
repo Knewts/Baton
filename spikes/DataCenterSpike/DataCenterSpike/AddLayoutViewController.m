@@ -11,6 +11,7 @@
 
 
 @implementation AddLayoutViewController
+@synthesize layoutURL;
 
 
 -(IBAction)userHitCancelButton:(id)sender {
@@ -24,26 +25,26 @@
     //handle for bad url
     
     
-    NSString *xmlPath = [[NSBundle mainBundle] pathForResource:@"songs" ofType:@"xml"];
-    NSData *xmlData = [NSData dataWithContentsOfFile:xmlPath];
-    NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithData:xmlData];
+    //NSString *xmlPath = [[NSBundle mainBundle] pathForResource:@"songs" ofType:@"xml"];
+    //NSData *xmlData = [NSData dataWithContentsOfFile:xmlPath];
+    //NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithData:xmlData];
     
-    XMLParser *theParser = [[XMLParser alloc] initXMLParser];
+    //XMLParser *theParser = [[XMLParser alloc] initXMLParser];
     
-    [xmlParser setDelegate:theParser];
-    [xmlParser setShouldResolveExternalEntities:YES];
+    //[xmlParser setDelegate:theParser];
+    //[xmlParser setShouldResolveExternalEntities:YES];
     
-    BOOL worked = [xmlParser parse];
+    //BOOL worked = [xmlParser parse];
     
-    if (worked) {
+    //if (worked) {
         //NSLog(@"Amount: %lu", theParser.getSongs.count);
-        NSLog(@"yay");
+   //     NSLog(@"yay");
 
         
-    }
-    else {
-        NSLog(@"boo");
-    }
+   // }
+   // else {
+    //    NSLog(@"boo");
+   // }
     
     
     

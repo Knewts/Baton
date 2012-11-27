@@ -39,44 +39,108 @@
 
 - (UIView *) getView
 {
-    // Create the BatonEventHandler. It will be returned to the base view to take over the screen.
-    BatonEventHandler *beh = [[BatonEventHandler alloc] initWithFrame:screenFrame];
+    BatonEventHandler *BEH = [BatonEventHandler new];
+    BatonUICreator *BUIC = [BatonUICreator new];
+    /*
+     *      DICTIONARY REQUIRED PARAMETERS:
+     *  X       - X position on the screen (integer)
+     *  Y       - Y position on the screen (integer)
+     *  WIDTH   - width of the on-screen display
+     *  HEIGHT  - height of the on-screen display
+     *  ACCEL   - 1 or 0. 1 is ON, 0 is OFF.
+     */
     
-    // This is where we add the actual UIElements to the beh object.
-        //Create an array of Keys and and array of parameters.
+    NSMutableDictionary *plane = [NSMutableDictionary new];
+    [plane setObject:@"10" forKey:@"X"];
+    [plane setObject:@"150" forKey:@"Y"];
+    [plane setObject:@"20" forKey:@"XSCALE"];
+    [plane setObject:@"15" forKey:@"YSCALE"];
+    [plane setObject:@"300" forKey:@"WIDTH"];
+    [plane setObject:@"100" forKey:@"HEIGHT"];
+    [plane setObject:@"0" forKey:@"ACCEL"];
+    [plane setObject:@"LOG" forKey:@"COMMAND"];
+    [plane setObject:@"Plane works" forKey:@"PARAMETERS"];
     
-    NSMutableDictionary *planeParams = [[NSMutableDictionary alloc] init ];
-    [planeParams setObject:@"10" forKey:@"X"];
-    [planeParams setObject:@"10" forKey:@"Y"];
-    [planeParams setObject:@"100" forKey:@"WIDTH"];
-    [planeParams setObject:@"200" forKey:@"HEIGHT"];
-    [planeParams setObject:@"0" forKey:@"ACCEL"];
+    NSMutableDictionary *plane2 = [NSMutableDictionary new];
+    [plane2 setObject:@"10" forKey:@"X"];
+    [plane2 setObject:@"300" forKey:@"Y"];
+    [plane2 setObject:@"20" forKey:@"XSCALE"];
+    [plane2 setObject:@"15" forKey:@"YSCALE"];
+    [plane2 setObject:@"300" forKey:@"WIDTH"];
+    [plane2 setObject:@"100" forKey:@"HEIGHT"];
+    [plane2 setObject:@"1" forKey:@"ACCEL"];
+    [plane2 setObject:@"LOG" forKey:@"COMMAND"];
+    [plane2 setObject:@"Plane works" forKey:@"PARAMETERS"];
     
-    NSMutableDictionary *buttonParams = [[NSMutableDictionary alloc] init ];
-    [buttonParams setObject:@"10" forKey:@"X"];
-    [buttonParams setObject:@"250" forKey:@"Y"];
-    [buttonParams setObject:@"130" forKey:@"WIDTH"];
-    [buttonParams setObject:@"100" forKey:@"HEIGHT"];
-    [buttonParams setObject:@"0" forKey:@"TOGGLE"];
-    [buttonParams setObject:@"My Button" forKey:@"TEXT"];
-    [buttonParams setObject:@"0035F7" forKey:@"BGCOLOR"];
-    
-    //    [planeParams setObject:@"0" forKey:@"XRANGE_MIN"];
-    //    [planeParams setObject:@"30" forKey:@"XRANGE_MAX"];
-    NSArray *planeArray = [NSArray arrayWithObjects:@"PLANE",planeParams, nil];
-    NSArray *buttonArray = [NSArray arrayWithObjects:@"BUTTON",buttonParams, nil];
+    NSMutableDictionary *threshold = [NSMutableDictionary new];
+    [threshold setObject:@"1" forKey:@"HAXIS"];
+    [threshold setObject:@"8" forKey:@"VALUE"];
+    [threshold setObject:@"LOG" forKey:@"COMMAND"];
+    [threshold setObject:@"Y Thresh Works" forKey:@"PARAMETERS"];
+    [threshold setObject:@"THRESHOLD" forKey:@"TYPE"];
     
     
-    NSArray *finalArray = [NSArray arrayWithObjects:planeArray,buttonArray, nil];
-    //TODO:
-    for (NSArray *array in finalArray)
-    {
-        Baton_UI_Element *temp = [buic CreateObjectFrom:array];
-        [beh addUIElement:temp];
-    }
+    NSMutableDictionary *threshold2 = [NSMutableDictionary new];
+    [threshold2 setObject:@"THRESHOLD" forKey:@"TYPE"];
+    [threshold2 setObject:@"0000FF" forKey:@"COLOR"];
+    [threshold2 setObject:@"0" forKey:@"HAXIS"];
+    [threshold2 setObject:@"10" forKey:@"VALUE"];
+    [threshold2 setObject:@"LOG" forKey:@"COMMAND"];
+    [threshold2 setObject:@"0" forKey:@"NEG_TO_POS"];
+    [threshold2 setObject:@"X Thresh Works" forKey:@"PARAMETERS"];
     
-    // Return the full beh object with subviews in place.
-    return beh;
+    NSMutableDictionary *threshold3 = [NSMutableDictionary new];
+    [threshold3 setObject:@"THRESHOLD" forKey:@"TYPE"];
+    [threshold3 setObject:@"0" forKey:@"HAXIS"];
+    [threshold3 setObject:@"-10" forKey:@"VALUE"];
+    [threshold3 setObject:@"LOG" forKey:@"COMMAND"];
+    [threshold3 setObject:@"0" forKey:@"POS_TO_NEG"];
+    [threshold3 setObject:@"X Thresh Works" forKey:@"PARAMETERS"];
+    
+    NSMutableDictionary *button = [NSMutableDictionary new];
+    [button setObject:@"10" forKey:@"X"];
+    [button setObject:@"10" forKey:@"Y"];
+    [button setObject:@"200" forKey:@"WIDTH"];
+    [button setObject:@"100" forKey:@"HEIGHT"];
+    [button setObject:@"0" forKey:@"TOGGLE"];
+    [button setObject:@"LOG" forKey:@"COMMAND"];
+    [button setObject:@"Button Down works" forKey:@"PARAMETERS"];
+    [button setObject:@"Button" forKey:@"TEXT"];
+    //[button setObject:@"FF0000" forKey:@"BGCOLOR_ON"];  
+    //[button setObject:@"FFFF00" forKey:@"BGCOLOR_OFF"];
+    
+    NSMutableDictionary *button2 = [NSMutableDictionary new];
+    [button2 setObject:@"215" forKey:@"X"];
+    [button2 setObject:@"10" forKey:@"Y"];
+    [button2 setObject:@"100" forKey:@"WIDTH"];
+    [button2 setObject:@"30" forKey:@"HEIGHT"];
+    [button2 setObject:@"1" forKey:@"TOGGLE"];
+    [button2 setObject:@"LOG" forKey:@"COMMAND"];
+    [button2 setObject:@"Button Down works" forKey:@"PARAMETERS"];
+    [button2 setObject:@"BLUE" forKey:@"TEXT"];
+    [button2 setObject:@"6495ED" forKey:@"BGCOLOR_ON"];  
+    [button2 setObject:@"3670AA" forKey:@"BGCOLOR_OFF"];
+    
+    NSMutableDictionary *button3 = [NSMutableDictionary new];
+    [button3 setObject:@"250" forKey:@"X"];
+    [button3 setObject:@"50" forKey:@"Y"];
+    [button3 setObject:@"30" forKey:@"WIDTH"];
+    [button3 setObject:@"100" forKey:@"HEIGHT"];
+    [button3 setObject:@"0" forKey:@"TOGGLE"];
+    [button3 setObject:@"LOG" forKey:@"COMMAND"];
+    [button3 setObject:@"Button Down works" forKey:@"PARAMETERS"];
+    [button3 setObject:@"" forKey:@"TEXT"];
+    [button3 setObject:@"FF0000" forKey:@"BGCOLOR_ON"];  
+    [button3 setObject:@"FFFF00" forKey:@"BGCOLOR_OFF"];
+    
+    [BEH addUIElement:[BUIC CreateObjectFrom:[NSArray arrayWithObjects:@"BUTTON", button, nil]]];
+    [BEH addUIElement:[BUIC CreateObjectFrom:[NSArray arrayWithObjects:@"BUTTON", button2, nil]]];
+    [BEH addUIElement:[BUIC CreateObjectFrom:[NSArray arrayWithObjects:@"BUTTON", button3, nil]]];
+    [BEH addUIElement:[BUIC CreateObjectFrom:[NSArray arrayWithObjects:@"PLANE", plane, threshold, threshold2, threshold3, nil]]];
+    [BEH addUIElement:[BUIC CreateObjectFrom:[NSArray arrayWithObjects:@"PLANE", plane2, threshold, threshold2, threshold3, nil]]];    
+
+    return BEH;
+    
 }//end getView
 
 - (XMLParser *) initXMLParser {

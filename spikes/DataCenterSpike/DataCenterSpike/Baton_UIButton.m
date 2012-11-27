@@ -91,7 +91,7 @@
         }
         //Set active to false and the active color to off
         Active = false;
-        bgColorActive = bgColorOff;
+        //bgColorActive = bgColorOff;
         
         color = [params valueForKey:@"COMMAND"];
         primaryCommand = color;

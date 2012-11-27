@@ -21,7 +21,7 @@ NSMutableDictionary *button;
 
 NSMutableArray *layout;
 NSString *currentUIElementBeingParsed;
-
+NSSTring *currentSubElementBeingParsed;
 
 
 
@@ -46,6 +46,7 @@ NSString *currentUIElementBeingParsed;
     if ([elementName isEqualToString:@"button"]) {
         
         NSMutableDictionary *button = [[NSMutableDictionary alloc] init];
+        
         NSString *currentUIElementBeingParsed = [[NSString alloc] initWithString:elementName];
         //NSLog(@"Current uielement being parsed: %@", currentUIElementBeingParsed);
         
@@ -54,6 +55,7 @@ NSString *currentUIElementBeingParsed;
     else if ([elementName isEqualToString:@"plane"]) {
         
         NSMutableDictionary *plane = [[NSMutableDictionary alloc] init];
+        
         NSString *currentUIElementBeingParsed = [[NSString alloc] initWithString:elementName];
         
     }//end if element==plane
@@ -61,12 +63,15 @@ NSString *currentUIElementBeingParsed;
     else if ([elementName isEqualToString:@"threshold"]) {
 
         NSMutableDictionary *threshold = [[NSMutableDictionary alloc] init];
+        
         NSString *currentUIElementBeingParsed = [[NSString alloc] initWithString:elementName];
         
     }//end if element==threshold
     
     //all
     else if ([elementName isEqualToString:@"command"]) {
+        
+        NSString *currentSubElementBeingParsed = [[NSString alloc] initWithString:currentSubElementBeingParsed];
         
         if ([currentUIElementBeingParsed isEqualToString:@"button"]) {
             //set flag to add command to button Dict
@@ -82,15 +87,7 @@ NSString *currentUIElementBeingParsed;
     
     else if ([elementName isEqualToString:@"parameters"]) { 
         
-        if ([currentUIElementBeingParsed isEqualToString:@"button"]) {
-            //set flag to add parameters to button Dict
-        } //end if uielement is a button
-        else if ([currentUIElementBeingParsed isEqualToString:@"plane"]) {
-            //set flag to add parameters to plane Dict
-        } //end if uielement is a plane
-        else if ([currentUIElementBeingParsed isEqualToString:@"threshold"]) {
-            //set flag to add parameters to threshold Dict
-        } //end if uielement is a threshold
+        NSString *currentSubElementBeingParsed = [[NSString alloc] initWithString:currentSubElementBeingParsed];
         
     }//end if element==parameters
     
@@ -98,10 +95,16 @@ NSString *currentUIElementBeingParsed;
     else if ([elementName isEqualToString:@"x"]) {  
         
         if ([currentUIElementBeingParsed isEqualToString:@"button"]) {
+            
             //set flag to add x to button Dict
+            NSString *currentSubElementBeingParsed = [[NSString alloc] initWithString:currentSubElementBeingParsed];
+            
         } //end if uielement is a button
         else if ([currentUIElementBeingParsed isEqualToString:@"plane"]) {
+            
             //set flag to add x to plane Dict
+            NSString *currentSubElementBeingParsed = [[NSString alloc] initWithString:currentSubElementBeingParsed];
+            
         } //end if uielement is a plane
         
     }//end if element==x
@@ -110,9 +113,13 @@ NSString *currentUIElementBeingParsed;
         
         if ([currentUIElementBeingParsed isEqualToString:@"button"]) {
             //set flag to add y to button Dict
+            NSString *currentSubElementBeingParsed = [[NSString alloc] initWithString:currentSubElementBeingParsed];
+            
         } //end if uielement is a button
         else if ([currentUIElementBeingParsed isEqualToString:@"plane"]) {
             //set flag to add y to plane Dict
+            NSString *currentSubElementBeingParsed = [[NSString alloc] initWithString:currentSubElementBeingParsed];
+            
         } //end if uielement is a plane
         
     }//end if element==y
@@ -121,9 +128,11 @@ NSString *currentUIElementBeingParsed;
         
         if ([currentUIElementBeingParsed isEqualToString:@"button"]) {
             //set flag to add width to button Dict
+            NSString *currentSubElementBeingParsed = [[NSString alloc] initWithString:currentSubElementBeingParsed];
         } //end if uielement is a button
         else if ([currentUIElementBeingParsed isEqualToString:@"plane"]) {
             //set flag to add width to plane Dict
+            NSString *currentSubElementBeingParsed = [[NSString alloc] initWithString:currentSubElementBeingParsed];
         } //end if uielement is a plane
         
     }//end if element==width
@@ -132,9 +141,11 @@ NSString *currentUIElementBeingParsed;
         
         if ([currentUIElementBeingParsed isEqualToString:@"button"]) {
             //set flag to add height to button Dict
+            NSString *currentSubElementBeingParsed = [[NSString alloc] initWithString:currentSubElementBeingParsed];
         } //end if uielement is a button
         else if ([currentUIElementBeingParsed isEqualToString:@"plane"]) {
             //set flag to add height to plane Dict
+            NSString *currentSubElementBeingParsed = [[NSString alloc] initWithString:currentSubElementBeingParsed];
         } //end if uielement is a plane
         
     }//end if element==height
@@ -142,34 +153,43 @@ NSString *currentUIElementBeingParsed;
     //button
     else if ([elementName isEqualToString:@"toggle"]) {
         //set flag to add toggle to button Dict
+        NSString *currentSubElementBeingParsed = [[NSString alloc] initWithString:currentSubElementBeingParsed];
     }//end if element==toggle
     else if ([elementName isEqualToString:@"text"]) {   
         //set flag to add text to button Dict
+        NSString *currentSubElementBeingParsed = [[NSString alloc] initWithString:currentSubElementBeingParsed];
     }//end if element==text
     else if ([elementName isEqualToString:@"bgcoloron"]) {    
         //set flag to add bgcoloron to button Dict
+        NSString *currentSubElementBeingParsed = [[NSString alloc] initWithString:currentSubElementBeingParsed];
     }//end if element==bgcoloron
     else if ([elementName isEqualToString:@"bgcoloroff"]) {  
         //set flag to add bgcoloroff to button Dict
+        NSString *currentSubElementBeingParsed = [[NSString alloc] initWithString:currentSubElementBeingParsed];
     }//end if element==bgcoloroff
     
     //plane
     else if ([elementName isEqualToString:@"xscale"]) {   
         //set flag to add xscale to plane Dict
+        NSString *currentSubElementBeingParsed = [[NSString alloc] initWithString:currentSubElementBeingParsed];
     }//end if element==xscale
     else if ([elementName isEqualToString:@"yscale"]) {   
         //set flag to add yscale to plane Dict
+        NSString *currentSubElementBeingParsed = [[NSString alloc] initWithString:currentSubElementBeingParsed];
     }//end if element==yscale
     else if ([elementName isEqualToString:@"accel"]) {   
         //set flag to add accel to plane Dict
+        NSString *currentSubElementBeingParsed = [[NSString alloc] initWithString:currentSubElementBeingParsed];
     }//end if element==accel
     
     //threshold
     else if ([elementName isEqualToString:@"haxis"]) {        
         //set flag to add haxis to threshold Dict
+        NSString *currentSubElementBeingParsed = [[NSString alloc] initWithString:currentSubElementBeingParsed];
     }//end if element==haxis
     else if ([elementName isEqualToString:@"value"]) {  
         //set flag to add value to threshold Dict
+        NSString *currentSubElementBeingParsed = [[NSString alloc] initWithString:currentSubElementBeingParsed];
     }//end if element==value
     
     
@@ -202,10 +222,6 @@ NSString *currentUIElementBeingParsed;
     
 
 }//end foundCharacters
-
-- (void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError {
-	NSLog(@"Parser error occured %@",parseError);
-}//end parseErrorOccurred
 
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI 
 qualifiedName:(NSString *)qName {
@@ -312,6 +328,14 @@ qualifiedName:(NSString *)qName {
     NSLog(@"");
 
 }//end didEndElement
+
+
+
+
+
+- (void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError {
+	NSLog(@"Parser error occured %@",parseError);
+}//end parseErrorOccurred
 
 - (NSData *)parser:(NSXMLParser *)parser resolveExternalEntityName:(NSString *)name systemID:(NSString *)systemID {
     

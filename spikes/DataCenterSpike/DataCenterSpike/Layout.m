@@ -11,7 +11,7 @@
 @implementation Layout
 
 @synthesize title;
-@synthesize path;
+@synthesize tree;
 
 -(id)init
 {
@@ -20,8 +20,10 @@
     return self;
 }
 
--(id)initWithTitle:(NSString *)inTitle resourcePath:(NSString *)inTree
+-(id)initWithTitle:(NSString *)inTitle layoutTree:(NSArray *)inTree
 {
+    //send nsarray to this
+    //title is first param, last part of url
     title = inTitle;
     tree = inTree;
     return self;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11E53" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="qIJ-Ut-XvT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="1.1" toolsVersion="2182" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="qIJ-Ut-XvT">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
@@ -304,6 +304,9 @@
                             <outlet property="delegate" destination="8RA-Gt-jTX" id="rRc-Sx-Jki"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="layoutURL" destination="Qvd-OM-AQe" id="eu4-Kh-cwU"/>
+                    </connections>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="368" y="464"/>
@@ -483,6 +486,7 @@
             <relationships>
                 <relationship kind="action" name="userHitCancelButton:"/>
                 <relationship kind="action" name="userHitDoneButton:"/>
+                <relationship kind="outlet" name="layoutURL" candidateClass="UITextField"/>
             </relationships>
         </class>
         <class className="BaseViewController" superclassName="ViewController">
