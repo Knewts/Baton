@@ -327,7 +327,6 @@
 				A11EDA0A1587B960007422EC /* ViewController.h */,
 				A11EDA0B1587B960007422EC /* ViewController.m */,
 				A11ED9FF1587B960007422EC /* Supporting Files */,
-				A11EDA201587B960007422EC /* Supporting Files */,
 			);
 			name = Baton;
 			path = DataCenterSpike;
@@ -349,6 +348,7 @@
 			children = (
 				A11EDA251587B960007422EC /* BatonTests.h */,
 				A11EDA261587B960007422EC /* BatonTests.m */,
+				A11EDA201587B960007422EC /* Supporting Files */,
 			);
 			name = BatonTests;
 			path = DataCenterSpikeTests;
