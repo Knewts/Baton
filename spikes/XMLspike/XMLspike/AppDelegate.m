@@ -37,12 +37,13 @@
     BOOL worked = [xmlParser parse];
     
     if (worked) {
-        NSLog(@"Amount: %lu", theParser.getSongs.count);
+        //NSLog(@"Amount: %lu", theParser.getSongs.count);
         
     }
     else {
         NSLog(@"boo");
     }
-}
+    
+}//end app did finish launching
 
 @end
