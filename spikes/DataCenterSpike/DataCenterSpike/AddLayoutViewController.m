@@ -25,27 +25,16 @@
     //handle for bad url
     
     
-    //NSString *xmlPath = [[NSBundle mainBundle] pathForResource:@"songs" ofType:@"xml"];
-    //NSData *xmlData = [NSData dataWithContentsOfFile:xmlPath];
-    //NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithData:xmlData];
+    NSString *xmlPath = [[NSBundle mainBundle] pathForResource:@"layout" ofType:@"xml"];
+    NSData *xmlData = [NSData dataWithContentsOfFile:xmlPath];
+    NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithData:xmlData];
     
-    //XMLParser *theParser = [[XMLParser alloc] initXMLParser];
+    XMLParser *theParser = [[XMLParser alloc] initXMLParser];
     
-    //[xmlParser setDelegate:theParser];
+    [xmlParser setDelegate:theParser];
     //[xmlParser setShouldResolveExternalEntities:YES];
     
-    //BOOL worked = [xmlParser parse];
-    
-    //if (worked) {
-        //NSLog(@"Amount: %lu", theParser.getSongs.count);
-   //     NSLog(@"yay");
-
-        
-   // }
-   // else {
-    //    NSLog(@"boo");
-   // }
-    
+    BOOL worked = [xmlParser parse];
     
     
 }//end user hit done

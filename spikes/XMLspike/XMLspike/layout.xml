@@ -6,14 +6,36 @@
     <BUTTON>
         <X>10</X>
         <Y>10</Y>
-        <WIDTH>300</WIDTH>
+        <WIDTH>200</WIDTH>
         <HEIGHT>100</HEIGHT>
+        <TOGGLE>0</TOGGLE>
+        <COMMAND>LOG</COMMAND>
+        <PARAMETERS>Button Down Works</PARAMETERS>
+        <TEXT>Button</TEXT>
+    </BUTTON>
+    <BUTTON>
+        <X>215</X>
+        <Y>10</Y>
+        <WIDTH>100</WIDTH>
+        <HEIGHT>30</HEIGHT>
         <TOGGLE>1</TOGGLE>
         <COMMAND>LOG</COMMAND>
-        <PARAMETERS>BUTTON Down Works</PARAMETERS>
-        <TEXT>10</TEXT>
-        <BGCOLORON>FF0000</BGCOLORON>
-        <BGCOLOROFF>FFFF00</BGCOLOROFF>
+        <PARAMETERS>Button Down Works</PARAMETERS>
+        <TEXT>Blue</TEXT>
+        <BGCOLOR_ON>6495ED</BGCOLOR_ON>
+        <BGCOLOR_OFF>3670AA</BGCOLOR_OFF>
+    </BUTTON>
+    <BUTTON>
+        <X>250</X>
+        <Y>50</Y>
+        <WIDTH>30</WIDTH>
+        <HEIGHT>100</HEIGHT>
+        <TOGGLE>0</TOGGLE>
+        <COMMAND>LOG</COMMAND>
+        <PARAMETERS>Button Down Works</PARAMETERS>
+        <TEXT> </TEXT>
+        <BGCOLOR_ON>FF0000</BGCOLOR_ON>
+        <BGCOLOR_OFF>FFFF00</BGCOLOR_OFF>
     </BUTTON>
     
     <PLANE>
@@ -25,14 +47,43 @@
         <HEIGHT>100</HEIGHT>
         <ACCEL>0</ACCEL>
         <COMMAND>LOG</COMMAND>
-        <PARAMETERS>PLANE WORKS</PARAMETERS>
+        <PARAMETERS>Plane Works</PARAMETERS>
+    </PLANE>
+    <THRESHOLD>
+        <HAXIS>1</HAXIS>
+        <VALUE>8</VALUE>
+        <COMMAND>LOG</COMMAND>
+        <PARAMETERS>Y Thresh Works</PARAMETERS>
+    </THRESHOLD>
+    
+    <PLANE>
+        <X>10</X>
+        <Y>300</Y>
+        <XSCALE>20</XSCALE>
+        <YSCALE>15</YSCALE>
+        <WIDTH>300</WIDTH>
+        <HEIGHT>100</HEIGHT>
+        <ACCEL>1</ACCEL>
+        <COMMAND>LOG</COMMAND>
+        <PARAMETERS>Plane Works</PARAMETERS>
     </PLANE>
     
     <THRESHOLD>
-        <HAXIS>1</HAXIS>
+        <COLOR>0000FF</COLOR>
+        <HAXIS>0</HAXIS>
         <VALUE>10</VALUE>
         <COMMAND>LOG</COMMAND>
-        <PARAMETERS>PLANE WORKS</PARAMETERS>
+        <PARAMETERS>Y Thresh Works</PARAMETERS>
+        <NEG_TO_POS>0</NEG_TO_POS>
     </THRESHOLD>
     
+    <THRESHOLD>
+        <COLOR>0000FF</COLOR>
+        <HAXIS>0</HAXIS>
+        <VALUE>-10</VALUE>
+        <COMMAND>LOG</COMMAND>
+        <PARAMETERS>Y Thresh Works</PARAMETERS>
+        <POS_TO_NEG>0</POS_TO_NEG>
+    </THRESHOLD>
+
 </LAYOUT>

@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "AppDelegate.h"
-#import "song.h"
+//#import "song.h"
 
-@class song;
+//@class song;
 
 @interface XMLParser : NSObject<NSXMLParserDelegate> {
     
@@ -20,17 +20,17 @@
     //instance variables
     NSMutableArray * layout;
     
-    NSMutableArray * planesAndThresholds;
+    NSMutableArray * buttons;
+    NSMutableArray * planes;
+    NSMutableArray * thresholds;
     
+    NSMutableDictionary * button;
     NSMutableDictionary * plane;
     NSMutableDictionary * threshold;
-    NSMutableDictionary * button;
     
     NSString * currentUIElementBeingParsed;
     NSString * currentSubElementBeingParsed;
     NSString * currentSubElementValue;
-    
-    BOOL waitingOnThresholds;
     
 }//end instance variables
 

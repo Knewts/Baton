@@ -31,6 +31,7 @@
 		63FAECC21652FBB000DD3873 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63FAECC11652FBB000DD3873 /* Security.framework */; };
 		63FAECC41652FBBB00DD3873 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63FAECC31652FBBB00DD3873 /* CoreMotion.framework */; };
 		66B214A416643C60005ACF9E /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66B214A316643C60005ACF9E /* CoreText.framework */; };
+		66B214AB1664AD37005ACF9E /* layout.xml in Resources */ = {isa = PBXBuildFile; fileRef = 66B214AA1664AD37005ACF9E /* layout.xml */; };
 		66CBEE86165B215F0068122E /* Baton_UI_Element.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CBEE80165B215F0068122E /* Baton_UI_Element.m */; };
 		66CBEE87165B215F0068122E /* Baton_UI_Element.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CBEE80165B215F0068122E /* Baton_UI_Element.m */; };
 		66CBEE88165B215F0068122E /* BatonEventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CBEE82165B215F0068122E /* BatonEventHandler.m */; };
@@ -116,6 +117,7 @@
 		63FAECC11652FBB000DD3873 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		63FAECC31652FBBB00DD3873 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		66B214A316643C60005ACF9E /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		66B214AA1664AD37005ACF9E /* layout.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = layout.xml; path = ../XMLspike/XMLspike/layout.xml; sourceTree = "<group>"; };
 		66CBEE7F165B215F0068122E /* Baton_UI_Element.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Baton_UI_Element.h; sourceTree = "<group>"; };
 		66CBEE80165B215F0068122E /* Baton_UI_Element.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Baton_UI_Element.m; sourceTree = "<group>"; };
 		66CBEE81165B215F0068122E /* BatonEventHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BatonEventHandler.h; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				6321A88E165B072800CCE849 /* BaseViewController.m */,
 				66CBEE9F165B26E20068122E /* AddLayoutViewController.h */,
 				66CBEEA0165B26E20068122E /* AddLayoutViewController.m */,
+				66B214AA1664AD37005ACF9E /* layout.xml */,
 			);
 			name = Housekeeping;
 			path = ..;
@@ -449,6 +452,7 @@
 				A11EDA031587B960007422EC /* InfoPlist.strings in Resources */,
 				63213FFE1652FB0800760C4B /* MainStoryboard_iPad.storyboard in Resources */,
 				63213FFF1652FB0800760C4B /* MainStoryboard_iPhone.storyboard in Resources */,
+				66B214AB1664AD37005ACF9E /* layout.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

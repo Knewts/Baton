@@ -7,10 +7,9 @@
 //
 
 #import "XMLParser.h"
-#import "song.h"
+//#import "song.h"
 
 @implementation XMLParser
-
 
 
 - (XMLParser *) initXMLParser {
@@ -24,27 +23,18 @@
     currentSubElementBeingParsed = [[NSString alloc] init];
     currentSubElementValue = [[NSString alloc] init];
     
-    waitingOnThresholds = NO;
-    
-	//NSLog(@"Init Done");
 	return self;
 }//end init
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qualifiedName attributes:(NSDictionary *)attributeDict {
     
-    //NSLog(@"StartElement - %@", elementName);
+    if ([self isStartUIElement:elementName] == YES) { //if elementName is a UIElement
     
-    
-    if ([self isStartUIElement:elementName] == YES) {
-        
-        //correct UIElement dict initialized
         currentUIElementBeingParsed = [[NSString alloc] initWithString:elementName];
-        //NSLog(@"Start UI Element: %@", currentUIElementBeingParsed);
     }
-    else if ([self isStartSubElement:elementName] == YES) {
+    else if ([self isStartSubElement:elementName] == YES) { //IF elementName is a Sub-element
         
         currentSubElementBeingParsed = [[NSString alloc] initWithString:elementName];
-        //NSLog(@"Start SUB Element: %@", currentSubElementBeingParsed);
     }
     else if ([elementName isEqualToString:@"LAYOUT"]) {
         
@@ -60,8 +50,6 @@
 //begin foundCharacters
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
     
-    //NSLog(@"entered foundCharacters");
-    
     if (!currentElementValue) {
         // init the ad hoc string with the value     
         currentElementValue = [[NSMutableString alloc] initWithString:string];
@@ -75,8 +63,6 @@
     NSString *trimmed = [string stringByTrimmingCharactersInSet:whitespace];
     if ([trimmed length] != 0) {
         
-        //NSLog(@"foundCharacters: %@", string);
-        
         currentSubElementValue = [[NSString alloc] initWithString:string];
         
     }//end if trimmed length not 0
@@ -87,9 +73,7 @@
 //begin didEndElement
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI 
 qualifiedName:(NSString *)qName {
-    
-    //NSLog(@"EndElement: %@", elementName);
-    
+    ///
     if ([elementName isEqualToString:@"LAYOUT"]) {
         
         //send array to andy
@@ -128,12 +112,15 @@ qualifiedName:(NSString *)qName {
 }//end didEndElement
 
 
+//************************END BUILT IN METHODS***********************************************
+
+
 //begin isStartUIElement
 - (BOOL)isStartUIElement:(NSString *)elementName {
     
     BOOL ret = NO;
     
-    //CHECKING IF ELEMENT IS A UI ELEMENT
+    //CHECKING IF INCOMING ELEMENT IS A UI ELEMENT
     if ([elementName isEqualToString:@"BUTTON"]) {
         
         ret = YES;
@@ -145,7 +132,6 @@ qualifiedName:(NSString *)qName {
         
         ret = YES;
         plane = [[NSMutableDictionary alloc] init];
-        waitingOnThresholds = YES;
         
     }//end if element==plane
     
@@ -156,20 +142,16 @@ qualifiedName:(NSString *)qName {
         
     }//end if element==threshold
     
-    else {
-        //not a UIElement
-    }
-
     return ret;
-    
 }//end isStartUIElement
+
 
 //begin isEndUIElement
 - (BOOL)isEndUIElement:(NSString *)elementName {
     
     BOOL ret = NO;
     
-    //CHECKING IF ELEMENT IS A UI ELEMENT
+    //CHECKING IF INCOMING ELEMENT IS A UI ELEMENT
     if ([elementName isEqualToString:@"BUTTON"]) {
         
         ret = YES;
@@ -202,8 +184,8 @@ qualifiedName:(NSString *)qName {
     }
     
     return ret;
-    
 }//end is End of a UIElement
+
 
 //begin is Start of a SubElement
 - (BOOL)isStartSubElement:(NSString *)elementName {
@@ -212,153 +194,56 @@ qualifiedName:(NSString *)qName {
     
     if ([currentUIElementBeingParsed isEqualToString:@"BUTTON"]) { //only check for known button subelements
         
-        if ([elementName isEqualToString:@"X"]) {  
+        if ([elementName isEqualToString:@"X"] || 
+            [elementName isEqualToString:@"Y"] || 
+            [elementName isEqualToString:@"WIDTH"] || 
+            [elementName isEqualToString:@"HEIGHT"] || 
+            [elementName isEqualToString:@"TOGGLE"] || 
+            [elementName isEqualToString:@"COMMAND"] || 
+            [elementName isEqualToString:@"PARAMETERS"] || 
+            [elementName isEqualToString:@"TOGGLE_OFF_COMMAND"] || 
+            [elementName isEqualToString:@"TOGGLE_OFF_PARAMETERS"] || 
+            [elementName isEqualToString:@"TEXT"] || 
+            [elementName isEqualToString:@"BGCOLOR_ON"] || 
+            [elementName isEqualToString:@"BGCOLOR_OFF"]) {  
             
             ret = YES;
             
-        }//end if element==x
-        
-        else if ([elementName isEqualToString:@"Y"]) { 
-            
-            ret = YES;
-            
-        }//end if element==y
-        
-        else if ([elementName isEqualToString:@"WIDTH"]) { 
-            
-            ret = YES;
-            
-        }//end if element==width
-        
-        else if ([elementName isEqualToString:@"HEIGHT"]) {
-            
-            ret = YES;
-            
-        }//end if element==height
-        
-        else if ([elementName isEqualToString:@"TOGGLE"]) {
-            
-            ret = YES;
-            
-        }//end if element==toggle
-        
-        else if ([elementName isEqualToString:@"COMMAND"]) {
-            
-            ret = YES;
-            
-        }//end if element==command
-        
-        else if ([elementName isEqualToString:@"PARAMETERS"]) { 
-            
-            ret = YES;
-            
-        }//end if element==parameters
-        
-        else if ([elementName isEqualToString:@"TEXT"]) {   
-            
-            ret = YES;
-            
-        }//end if element==text
-        
-        else if ([elementName isEqualToString:@"BGCOLORON"]) {   
-            
-            ret = YES;
-            
-        }//end if element==bgcoloron
-        
-        else if ([elementName isEqualToString:@"BGCOLOROFF"]) {  
-            
-            ret = YES;
-            
-        }//end if element==bgcoloroff
-        
-        
+        }//end if subelement being parsed is a valid button sub-element
     } //end if currentuielement is a button
     
     else if ([currentUIElementBeingParsed isEqualToString:@"PLANE"]) { //only check for plane subelements
         
-        if ([elementName isEqualToString:@"X"]) {  
+        if ([elementName isEqualToString:@"X"] || 
+            [elementName isEqualToString:@"Y"] || 
+            [elementName isEqualToString:@"XSCALE"] || 
+            [elementName isEqualToString:@"YSCALE"] || 
+            [elementName isEqualToString:@"XMAX"] || 
+            [elementName isEqualToString:@"YMAX"] || 
+            [elementName isEqualToString:@"WIDTH"] || 
+            [elementName isEqualToString:@"HEIGHT"] || 
+            [elementName isEqualToString:@"ACCEL"] || 
+            [elementName isEqualToString:@"COMMAND"] || 
+            [elementName isEqualToString:@"PARAMETERS"]) { 
             
             ret = YES;
             
-        }//end if element==x
-        
-        else if ([elementName isEqualToString:@"Y"]) { 
-            
-            ret = YES;
-            
-        }//end if element==y
-        
-        else if ([elementName isEqualToString:@"XSCALE"]) {   
-            
-            ret = YES;
-            
-        }//end if element==xscale
-        
-        else if ([elementName isEqualToString:@"YSCALE"]) {   
-            
-            ret = YES;
-            
-        }//end if element==yscale
-        
-        else if ([elementName isEqualToString:@"WIDTH"]) { 
-            
-            ret = YES;
-            
-        }//end if element==width
-        
-        else if ([elementName isEqualToString:@"HEIGHT"]) {
-            
-            ret = YES;
-            
-        }//end if element==height
-        
-        else if ([elementName isEqualToString:@"ACCEL"]) {  
-            
-            ret = YES;
-            
-        }//end if element==accel
-        
-        else if ([elementName isEqualToString:@"COMMAND"]) {
-            
-            ret = YES;
-            
-        }//end if element==command
-        
-        else if ([elementName isEqualToString:@"PARAMETERS"]) { 
-            
-            ret = YES;
-            
-        }//end if element==parameters
-        
+        }//end if sub-element being parsed is a valid plane sub-element
     } //end if uielement is a plane
     
     else if ([currentUIElementBeingParsed isEqualToString:@"THRESHOLD"]) { //only check for threshold subelements
         
-        if ([elementName isEqualToString:@"HAXIS"]) {  
+        if ([elementName isEqualToString:@"HAXIS"] || 
+            [elementName isEqualToString:@"VALUE"] || 
+            [elementName isEqualToString:@"COMMAND"] || 
+            [elementName isEqualToString:@"PARAMETERS"] || 
+            [elementName isEqualToString:@"COLOR"] || 
+            [elementName isEqualToString:@"NEG_TO_POS"] || 
+            [elementName isEqualToString:@"POS_TO_NEG"]) { 
             
             ret = YES;
             
-        }//end if element==haxis
-        
-        else if ([elementName isEqualToString:@"VALUE"]) {  
-            
-            ret = YES;
-            
-        }//end if element==value
-        
-        else if ([elementName isEqualToString:@"COMMAND"]) {
-            
-            ret = YES;
-            
-        }//end if element==command
-        
-        else if ([elementName isEqualToString:@"PARAMETERS"]) { 
-            
-            ret = YES;
-            
-        }//end if element==parameters
-        
+        }//end if sub element being parsed is a valid threshold sub-element
     } //end if uielement is a threshold
     
     else {
@@ -366,8 +251,8 @@ qualifiedName:(NSString *)qName {
     }//end if 
 
     return ret;
-
 }//end is Start of a SubElement
+
 
 //begin is End of a SubElement
 - (BOOL)isEndSubElement:(NSString *)elementName {
@@ -394,6 +279,7 @@ qualifiedName:(NSString *)qName {
         
         ret = YES;
         [threshold setObject:currentSubElementValue forKey:elementName];
+        
     } //end if current ui element is a threshold
     
     else {
