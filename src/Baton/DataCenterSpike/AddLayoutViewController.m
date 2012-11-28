@@ -20,24 +20,34 @@
 
 
 -(IBAction)userHitDoneButton:(id)sender {
+    
     //make sure valid url (regex for http:// .com
-    
-    //handle for bad url
-    
     
     NSString *xmlPath = [[NSBundle mainBundle] pathForResource:@"layout" ofType:@"xml"];
     NSData *xmlData = [NSData dataWithContentsOfFile:xmlPath];
+    
+    //NSData *xmlData = [NSData dataWithContentsOfURL:candidateURL];
     NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithData:xmlData];
     
-    XMLParser *theParser = [[XMLParser alloc] initXMLParser];
+    XMLParser *parser = [[XMLParser alloc] initXMLParser];
+    [xmlParser setDelegate:parser];
     
-    [xmlParser setDelegate:theParser];
-    //[xmlParser setShouldResolveExternalEntities:YES];
+    //NSURL *candidateURL = [NSURL URLWithString:layoutURL.text];
+    //if (candidateURL && candidateURL.scheme && candidateURL.host) {
+        // candidate is a well-formed url with:
+        //  - a scheme (like http://)
+        //  - a host (like stackoverflow.com)
+        
+        
+        
+        
+    //}  
+    //handle for bad url
     
-    BOOL worked = [xmlParser parse];
-    
+    [self dismissModalViewControllerAnimated:YES];
     
 }//end user hit done
+
 
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

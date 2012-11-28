@@ -50,128 +50,140 @@
      *  ACCEL   - 1 or 0. 1 is ON, 0 is OFF.
      */
     
-    NSMutableDictionary *plane = [NSMutableDictionary new];
-    [plane setObject:@"10" forKey:@"X"];
-    [plane setObject:@"150" forKey:@"Y"];
-    [plane setObject:@"20" forKey:@"XSCALE"];
-    [plane setObject:@"15" forKey:@"YSCALE"];
-    [plane setObject:@"300" forKey:@"WIDTH"];
-    [plane setObject:@"100" forKey:@"HEIGHT"];
-    [plane setObject:@"0" forKey:@"ACCEL"];
-    [plane setObject:@"LOG" forKey:@"COMMAND"];
-    [plane setObject:@"Plane works" forKey:@"PARAMETERS"];
+    NSMutableDictionary *testPlane = [NSMutableDictionary new];
+    [testPlane setObject:@"10" forKey:@"X"];
+    [testPlane setObject:@"150" forKey:@"Y"];
+    [testPlane setObject:@"20" forKey:@"XSCALE"];
+    [testPlane setObject:@"15" forKey:@"YSCALE"];
+    [testPlane setObject:@"300" forKey:@"WIDTH"];
+    [testPlane setObject:@"100" forKey:@"HEIGHT"];
+    [testPlane setObject:@"0" forKey:@"ACCEL"];
+    [testPlane setObject:@"LOG" forKey:@"COMMAND"];
+    [testPlane setObject:@"Plane works" forKey:@"PARAMETERS"];
     
-    NSMutableDictionary *plane2 = [NSMutableDictionary new];
-    [plane2 setObject:@"10" forKey:@"X"];
-    [plane2 setObject:@"300" forKey:@"Y"];
-    [plane2 setObject:@"20" forKey:@"XSCALE"];
-    [plane2 setObject:@"15" forKey:@"YSCALE"];
-    [plane2 setObject:@"300" forKey:@"WIDTH"];
-    [plane2 setObject:@"100" forKey:@"HEIGHT"];
-    [plane2 setObject:@"1" forKey:@"ACCEL"];
-    [plane2 setObject:@"LOG" forKey:@"COMMAND"];
-    [plane2 setObject:@"Plane works" forKey:@"PARAMETERS"];
+    NSMutableDictionary *testPlane2 = [NSMutableDictionary new];
+    [testPlane2 setObject:@"10" forKey:@"X"];
+    [testPlane2 setObject:@"300" forKey:@"Y"];
+    [testPlane2 setObject:@"20" forKey:@"XSCALE"];
+    [testPlane2 setObject:@"15" forKey:@"YSCALE"];
+    [testPlane2 setObject:@"300" forKey:@"WIDTH"];
+    [testPlane2 setObject:@"100" forKey:@"HEIGHT"];
+    [testPlane2 setObject:@"1" forKey:@"ACCEL"];
+    [testPlane2 setObject:@"LOG" forKey:@"COMMAND"];
+    [testPlane2 setObject:@"Plane works" forKey:@"PARAMETERS"];
     
-    NSMutableDictionary *threshold = [NSMutableDictionary new];
-    [threshold setObject:@"1" forKey:@"HAXIS"];
-    [threshold setObject:@"8" forKey:@"VALUE"];
-    [threshold setObject:@"LOG" forKey:@"COMMAND"];
-    [threshold setObject:@"Y Thresh Works" forKey:@"PARAMETERS"];
-    [threshold setObject:@"THRESHOLD" forKey:@"TYPE"];
+    NSMutableDictionary *testThreshold = [NSMutableDictionary new];
+    [testThreshold setObject:@"1" forKey:@"HAXIS"];
+    [testThreshold setObject:@"8" forKey:@"VALUE"];
+    [testThreshold setObject:@"LOG" forKey:@"COMMAND"];
+    [testThreshold setObject:@"Y Thresh Works" forKey:@"PARAMETERS"];
+    [testThreshold setObject:@"THRESHOLD" forKey:@"TYPE"];
     
     
-    NSMutableDictionary *threshold2 = [NSMutableDictionary new];
-    [threshold2 setObject:@"THRESHOLD" forKey:@"TYPE"];
-    [threshold2 setObject:@"0000FF" forKey:@"COLOR"];
-    [threshold2 setObject:@"0" forKey:@"HAXIS"];
-    [threshold2 setObject:@"10" forKey:@"VALUE"];
-    [threshold2 setObject:@"LOG" forKey:@"COMMAND"];
-    [threshold2 setObject:@"0" forKey:@"NEG_TO_POS"];
-    [threshold2 setObject:@"X Thresh Works" forKey:@"PARAMETERS"];
+    NSMutableDictionary *testThreshold2 = [NSMutableDictionary new];
+    [testThreshold2 setObject:@"THRESHOLD" forKey:@"TYPE"];
+    [testThreshold2 setObject:@"0000FF" forKey:@"COLOR"];
+    [testThreshold2 setObject:@"0" forKey:@"HAXIS"];
+    [testThreshold2 setObject:@"10" forKey:@"VALUE"];
+    [testThreshold2 setObject:@"LOG" forKey:@"COMMAND"];
+    [testThreshold2 setObject:@"0" forKey:@"NEG_TO_POS"];
+    [testThreshold2 setObject:@"X Thresh Works" forKey:@"PARAMETERS"];
     
-    NSMutableDictionary *threshold3 = [NSMutableDictionary new];
-    [threshold3 setObject:@"THRESHOLD" forKey:@"TYPE"];
-    [threshold3 setObject:@"0" forKey:@"HAXIS"];
-    [threshold3 setObject:@"-10" forKey:@"VALUE"];
-    [threshold3 setObject:@"LOG" forKey:@"COMMAND"];
-    [threshold3 setObject:@"0" forKey:@"POS_TO_NEG"];
-    [threshold3 setObject:@"X Thresh Works" forKey:@"PARAMETERS"];
+    NSMutableDictionary *testThreshold3 = [NSMutableDictionary new];
+    [testThreshold3 setObject:@"THRESHOLD" forKey:@"TYPE"];
+    [testThreshold3 setObject:@"0" forKey:@"HAXIS"];
+    [testThreshold3 setObject:@"-10" forKey:@"VALUE"];
+    [testThreshold3 setObject:@"LOG" forKey:@"COMMAND"];
+    [testThreshold3 setObject:@"0" forKey:@"POS_TO_NEG"];
+    [testThreshold3 setObject:@"X Thresh Works" forKey:@"PARAMETERS"];
     
-    NSMutableDictionary *button = [NSMutableDictionary new];
-    [button setObject:@"10" forKey:@"X"];
-    [button setObject:@"10" forKey:@"Y"];
-    [button setObject:@"200" forKey:@"WIDTH"];
-    [button setObject:@"100" forKey:@"HEIGHT"];
-    [button setObject:@"0" forKey:@"TOGGLE"];
-    [button setObject:@"LOG" forKey:@"COMMAND"];
-    [button setObject:@"Button Down works" forKey:@"PARAMETERS"];
-    [button setObject:@"Button" forKey:@"TEXT"];
+    NSMutableDictionary *testButton = [NSMutableDictionary new];
+    [testButton setObject:@"10" forKey:@"X"];
+    [testButton setObject:@"10" forKey:@"Y"];
+    [testButton setObject:@"200" forKey:@"WIDTH"];
+    [testButton setObject:@"100" forKey:@"HEIGHT"];
+    [testButton setObject:@"0" forKey:@"TOGGLE"];
+    [testButton setObject:@"LOG" forKey:@"COMMAND"];
+    [testButton setObject:@"Button Down works" forKey:@"PARAMETERS"];
+    [testButton setObject:@"Button" forKey:@"TEXT"];
     //[button setObject:@"FF0000" forKey:@"BGCOLOR_ON"];  
     //[button setObject:@"FFFF00" forKey:@"BGCOLOR_OFF"];
     
-    NSMutableDictionary *button2 = [NSMutableDictionary new];
-    [button2 setObject:@"215" forKey:@"X"];
-    [button2 setObject:@"10" forKey:@"Y"];
-    [button2 setObject:@"100" forKey:@"WIDTH"];
-    [button2 setObject:@"30" forKey:@"HEIGHT"];
-    [button2 setObject:@"1" forKey:@"TOGGLE"];
-    [button2 setObject:@"LOG" forKey:@"COMMAND"];
-    [button2 setObject:@"Button Down works" forKey:@"PARAMETERS"];
-    [button2 setObject:@"BLUE" forKey:@"TEXT"];
-    [button2 setObject:@"6495ED" forKey:@"BGCOLOR_ON"];  
-    [button2 setObject:@"3670AA" forKey:@"BGCOLOR_OFF"];
+    NSMutableDictionary *testButton2 = [NSMutableDictionary new];
+    [testButton2 setObject:@"215" forKey:@"X"];
+    [testButton2 setObject:@"10" forKey:@"Y"];
+    [testButton2 setObject:@"100" forKey:@"WIDTH"];
+    [testButton2 setObject:@"30" forKey:@"HEIGHT"];
+    [testButton2 setObject:@"1" forKey:@"TOGGLE"];
+    [testButton2 setObject:@"LOG" forKey:@"COMMAND"];
+    [testButton2 setObject:@"Button Down works" forKey:@"PARAMETERS"];
+    [testButton2 setObject:@"BLUE" forKey:@"TEXT"];
+    [testButton2 setObject:@"6495ED" forKey:@"BGCOLOR_ON"];  
+    [testButton2 setObject:@"3670AA" forKey:@"BGCOLOR_OFF"];
     
-    NSMutableDictionary *button3 = [NSMutableDictionary new];
-    [button3 setObject:@"250" forKey:@"X"];
-    [button3 setObject:@"50" forKey:@"Y"];
-    [button3 setObject:@"30" forKey:@"WIDTH"];
-    [button3 setObject:@"100" forKey:@"HEIGHT"];
-    [button3 setObject:@"0" forKey:@"TOGGLE"];
-    [button3 setObject:@"LOG" forKey:@"COMMAND"];
-    [button3 setObject:@"Button Down works" forKey:@"PARAMETERS"];
-    [button3 setObject:@"" forKey:@"TEXT"];
-    [button3 setObject:@"FF0000" forKey:@"BGCOLOR_ON"];  
-    [button3 setObject:@"FFFF00" forKey:@"BGCOLOR_OFF"];
+    NSMutableDictionary *testButton3 = [NSMutableDictionary new];
+    [testButton3 setObject:@"250" forKey:@"X"];
+    [testButton3 setObject:@"50" forKey:@"Y"];
+    [testButton3 setObject:@"30" forKey:@"WIDTH"];
+    [testButton3 setObject:@"100" forKey:@"HEIGHT"];
+    [testButton3 setObject:@"0" forKey:@"TOGGLE"];
+    [testButton3 setObject:@"LOG" forKey:@"COMMAND"];
+    [testButton3 setObject:@"Button Down works" forKey:@"PARAMETERS"];
+    [testButton3 setObject:@"" forKey:@"TEXT"];
+    [testButton3 setObject:@"FF0000" forKey:@"BGCOLOR_ON"];  
+    [testButton3 setObject:@"FFFF00" forKey:@"BGCOLOR_OFF"];
     
-    [BEH addUIElement:[BUIC CreateObjectFrom:[NSArray arrayWithObjects:@"BUTTON", button, nil]]];
-    [BEH addUIElement:[BUIC CreateObjectFrom:[NSArray arrayWithObjects:@"BUTTON", button2, nil]]];
-    [BEH addUIElement:[BUIC CreateObjectFrom:[NSArray arrayWithObjects:@"BUTTON", button3, nil]]];
-    [BEH addUIElement:[BUIC CreateObjectFrom:[NSArray arrayWithObjects:@"PLANE", plane, threshold, threshold2, threshold3, nil]]];
-    [BEH addUIElement:[BUIC CreateObjectFrom:[NSArray arrayWithObjects:@"PLANE", plane2, threshold, threshold2, threshold3, nil]]];    
+    [BEH addUIElement:[BUIC CreateObjectFrom:[NSArray arrayWithObjects:@"BUTTON", testButton, nil]]];
+    [BEH addUIElement:[BUIC CreateObjectFrom:[NSArray arrayWithObjects:@"BUTTON", testButton2, nil]]];
+    [BEH addUIElement:[BUIC CreateObjectFrom:[NSArray arrayWithObjects:@"BUTTON", testButton3, nil]]];
+    [BEH addUIElement:[BUIC CreateObjectFrom:[NSArray arrayWithObjects:@"PLANE", testPlane, testThreshold, testThreshold2, testThreshold3, nil]]];
+    [BEH addUIElement:[BUIC CreateObjectFrom:[NSArray arrayWithObjects:@"PLANE", testPlane2, testThreshold, testThreshold2, testThreshold3, nil]]];    
 
     return BEH;
     
 }//end getView
 
-- (XMLParser *) initXMLParser {
-	NSLog(@"INIT xml parser");
-	//[super init];
-    
-    //irish guy
-    //app = (AppDelegate *)[[UIApplication sharedApplication]delegate];
+- (id) initXMLParser {
 	
-    // init array of song objects 
-	//allSongs = [[NSMutableArray alloc] init];
-	NSLog(@"Init Done");
+    self = [super init];
+    if (self != nil) {
+        addLayoutViewController = (AddLayoutViewController *)[[UIApplication sharedApplication] delegate];
+    }
+    
+    layout = [[NSMutableArray alloc] init];
+    
+    currentUIElementBeingParsed = [[NSString alloc] init];
+    currentSubElementBeingParsed = [[NSString alloc] init];
+    currentSubElementValue = [[NSString alloc] init];
+    
+    waitingForThreshold = NO;
+    
 	return self;
 }//end init
 
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qualifiedName attributes:(NSDictionary *)attributeDict {
     
-    NSLog(@"entered StartElement");
-    
-    if ([elementName isEqualToString:@"song"]) {
-        NSLog(@"song element found – create a new instance of song class...");
-        //songToParse = [[song alloc] init];
-        //We do not have any attributes in the song elements, but if
-        // you do, you can extract them here: 
-        // song.att = [[attributeDict objectForKey:@"<att name>"] ...];
+    if ([self isStartUIElement:elementName] == YES) { //if elementName is a UIElement
+        
+        currentUIElementBeingParsed = [[NSString alloc] initWithString:elementName];
     }
+    else if ([self isStartSubElement:elementName] == YES) { //IF elementName is a Sub-element
+        
+        currentSubElementBeingParsed = [[NSString alloc] initWithString:elementName];
+    }
+    else if ([elementName isEqualToString:@"LAYOUT"]) {
+        
+    }
+    else {
+        
+        NSLog(@"How did i get here?");
+    }
+    
 }//end didStartElement
 
+
+//begin foundCharacters
 - (void)parser:(NSXMLParser *)parser foundCharacters:(NSString *)string {
-    
-    NSLog(@"entered foundCharacters");
     
     if (!currentElementValue) {
         // init the ad hoc string with the value     
@@ -185,35 +197,55 @@
     NSCharacterSet *whitespace = [NSCharacterSet whitespaceAndNewlineCharacterSet];
     NSString *trimmed = [string stringByTrimmingCharactersInSet:whitespace];
     if ([trimmed length] != 0) {
-        NSLog(@"Processing value for : %@", string);
-    }
-    
+        
+        currentSubElementValue = [[NSString alloc] initWithString:string];
+        
+    }//end if trimmed length not 0
     
 }//end foundCharacters
 
-- (void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError {
-	NSLog(@"Parser error occured %@",parseError);
-}//end parseErrorOccurred
 
+//begin didEndElement
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI 
  qualifiedName:(NSString *)qName {
-    
-    NSLog(@"entered EndElement");
-    
-    if ([elementName isEqualToString:@"songs"]) {
+    ///
+    if ([elementName isEqualToString:@"LAYOUT"]) {
+        
+        if (waitingForThreshold) { //a plane needs to be added to array and will not encounter another threshold to add
+            [self addPlaneToLayout];
+        }//end waiting for threshold
+        
+        //array ready to be sent  
+        BatonEventHandler *BEH = [BatonEventHandler new];
+        BatonUICreator *BUIC = [BatonUICreator new];
+        
+        [BEH addUIElement:[BUIC CreateObjectFrom:[NSArray arrayWithArray:layout]]];
+        
+        //NSLog(@"EndElement - reached layout, end of document");
         // We reached the end of the XML document
         return;
     }
-	else if ([elementName isEqualToString:@"song"]) {
-        // We are done with user entry – add the parsed user 
-        // object to our user array
-        //[allSongs addObject:self.songToParse];
-        // release user object
-        //[songToParse release];
-        //songToParse= nil;
+    
+	if ([self isEndUIElement:elementName] == YES) {
+        
+        //correct UIElement dict added to array and released
+        //NSLog(@"End UI Element: %@", currentUIElementBeingParsed);
     }
+    
+    else if ([self isEndSubElement:elementName] == YES) {
+        //add current subelement && value to uie dict
+        
+        //release sub element & value
+        currentSubElementValue = nil;
+        //[currentSubElementValue release];
+        currentSubElementBeingParsed = nil;
+        //[currentSubElementBeingParsed release];
+        
+    }//end if end of sub element
+    
     else {
         // The parser hit one of the element values. 
+        NSLog(@"EndElement - found element value");
         // This syntax is possible because User object 
         // property names match the XML user element names  
         //[songToParse setValue:currentElementValue forKey:elementName];
@@ -223,6 +255,213 @@
     NSLog(@"");
     
 }//end didEndElement
+
+
+//************************END BUILT IN METHODS***********************************************
+
+
+//begin isStartUIElement
+- (BOOL)isStartUIElement:(NSString *)elementName {
+    
+    BOOL ret = NO;
+    
+    //CHECKING IF INCOMING ELEMENT IS A UI ELEMENT
+    if ([elementName isEqualToString:@"BUTTON"]) {
+        
+        if (waitingForThreshold) { //a plane needs to be added to array and will not encounter another threshold to add
+            [self addPlaneToLayout];
+        }//end waiting for threshold
+        
+        ret = YES;
+        button = [[NSMutableDictionary alloc] init];
+        
+        
+    } //end if element==button
+    
+    else if ([elementName isEqualToString:@"PLANE"]) {
+        
+        if (waitingForThreshold) { //a plane needs to be added to array and will not encounter another threshold to add
+            [self addPlaneToLayout];
+        }//end waiting for threshold
+        
+        ret = YES;
+        planesAndThresholds = [[NSMutableArray alloc] initWithObjects:@"PLANE", nil];
+        
+        plane = [[NSMutableDictionary alloc] init];
+        waitingForThreshold = YES;
+        
+    }//end if element==plane
+    
+    else if ([elementName isEqualToString:@"THRESHOLD"]) {
+        
+        ret = YES;
+        threshold = [[NSMutableDictionary alloc] init];
+        
+    }//end if element==threshold
+    
+    return ret;
+}//end isStartUIElement
+
+
+//begin isEndUIElement
+- (BOOL)isEndUIElement:(NSString *)elementName {
+    
+    BOOL ret = NO;
+    
+    //CHECKING IF INCOMING ELEMENT IS A UI ELEMENT
+    if ([elementName isEqualToString:@"BUTTON"]) {
+        
+        ret = YES;
+        [layout addObject:[NSArray arrayWithObjects:@"BUTTON", button, nil]];
+        button = nil;
+        //[button release];
+        
+    } //end if element==button
+    
+    else if ([elementName isEqualToString:@"PLANE"]) {
+        
+        ret = YES;
+        [planesAndThresholds addObject:plane];
+        plane = nil;
+        //[plane release];
+        
+    }//end if element==plane
+    
+    else if ([elementName isEqualToString:@"THRESHOLD"]) {
+        
+        ret = YES;
+        [planesAndThresholds addObject:threshold];
+        threshold = nil;
+        //[threshold release];
+        
+    }//end if element==threshold
+    
+    else {
+        //not a UIElement
+    }
+    
+    return ret;
+}//end is End of a UIElement
+
+
+//begin is Start of a SubElement
+- (BOOL)isStartSubElement:(NSString *)elementName {
+    
+    BOOL ret = NO;
+    
+    if ([currentUIElementBeingParsed isEqualToString:@"BUTTON"]) { //only check for known button subelements
+        
+        if ([elementName isEqualToString:@"X"] || 
+            [elementName isEqualToString:@"Y"] || 
+            [elementName isEqualToString:@"WIDTH"] || 
+            [elementName isEqualToString:@"HEIGHT"] || 
+            [elementName isEqualToString:@"TOGGLE"] || 
+            [elementName isEqualToString:@"COMMAND"] || 
+            [elementName isEqualToString:@"PARAMETERS"] || 
+            [elementName isEqualToString:@"TOGGLE_OFF_COMMAND"] || 
+            [elementName isEqualToString:@"TOGGLE_OFF_PARAMETERS"] || 
+            [elementName isEqualToString:@"TEXT"] || 
+            [elementName isEqualToString:@"BGCOLOR_ON"] || 
+            [elementName isEqualToString:@"BGCOLOR_OFF"]) {  
+            
+            ret = YES;
+            
+        }//end if subelement being parsed is a valid button sub-element
+    } //end if currentuielement is a button
+    
+    else if ([currentUIElementBeingParsed isEqualToString:@"PLANE"]) { //only check for plane subelements
+        
+        if ([elementName isEqualToString:@"X"] || 
+            [elementName isEqualToString:@"Y"] || 
+            [elementName isEqualToString:@"XSCALE"] || 
+            [elementName isEqualToString:@"YSCALE"] || 
+            [elementName isEqualToString:@"XMAX"] || 
+            [elementName isEqualToString:@"YMAX"] || 
+            [elementName isEqualToString:@"WIDTH"] || 
+            [elementName isEqualToString:@"HEIGHT"] || 
+            [elementName isEqualToString:@"ACCEL"] || 
+            [elementName isEqualToString:@"COMMAND"] || 
+            [elementName isEqualToString:@"PARAMETERS"]) { 
+            
+            ret = YES;
+            
+        }//end if sub-element being parsed is a valid plane sub-element
+    } //end if uielement is a plane
+    
+    else if ([currentUIElementBeingParsed isEqualToString:@"THRESHOLD"]) { //only check for threshold subelements
+        
+        if ([elementName isEqualToString:@"HAXIS"] || 
+            [elementName isEqualToString:@"VALUE"] || 
+            [elementName isEqualToString:@"COMMAND"] || 
+            [elementName isEqualToString:@"PARAMETERS"] || 
+            [elementName isEqualToString:@"COLOR"] || 
+            [elementName isEqualToString:@"NEG_TO_POS"] || 
+            [elementName isEqualToString:@"POS_TO_NEG"]) { 
+            
+            ret = YES;
+            
+        }//end if sub element being parsed is a valid threshold sub-element
+    } //end if uielement is a threshold
+    
+    else {
+        NSLog(@"UNHANDLED: %@", elementName);
+    }//end if 
+    
+    return ret;
+}//end is Start of a SubElement
+
+
+//begin is End of a SubElement
+- (BOOL)isEndSubElement:(NSString *)elementName {
+    
+    BOOL ret = NO;
+    
+    //NSLog(@"end of sub element cUIEBP: %@ \teN: %@ \tcSEBP: %@ \tcSEV: %@", currentUIElementBeingParsed, elementName, currentSubElementBeingParsed, currentSubElementValue);
+    
+    if ([currentUIElementBeingParsed isEqualToString:@"BUTTON"] && [elementName isEqualToString:currentSubElementBeingParsed]) { //only check for known button subelements
+        
+        ret = YES;
+        [button setObject:currentSubElementValue forKey:elementName];
+        
+    } //end if current ui element is a button
+    
+    else if ([currentUIElementBeingParsed isEqualToString:@"PLANE"] && [elementName isEqualToString:currentSubElementBeingParsed]) { //only check for plane subelements
+        
+        ret = YES;
+        [plane setObject:currentSubElementValue forKey:elementName];
+        
+    } //end if current ui element is a plane
+    
+    else if ([currentUIElementBeingParsed isEqualToString:@"THRESHOLD"] && [elementName isEqualToString:currentSubElementBeingParsed]) { //only check for threshold subelements
+        
+        ret = YES;
+        [threshold setObject:currentSubElementValue forKey:elementName];
+        
+    } //end if current ui element is a threshold
+    
+    else {
+        NSLog(@"UNHANDLED: %@", elementName);
+    }//end if 
+    
+    return ret;
+    
+}//end is End of a SubElement
+
+//begin add plane to layout
+-(void)addPlaneToLayout {
+    
+    waitingForThreshold = NO;
+    [layout addObject:[NSArray arrayWithArray:planesAndThresholds]];
+    planesAndThresholds = nil;
+    //[planesAndThresholds release];
+    
+}//end add plane to layout
+
+//********************************************************************************
+
+- (void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError {
+	NSLog(@"Parser error occured %@",parseError);
+}//end parseErrorOccurred
 
 - (NSData *)parser:(NSXMLParser *)parser resolveExternalEntityName:(NSString *)name systemID:(NSString *)systemID {
     
@@ -234,4 +473,12 @@
     return data;
     
 }//end resolveExternalEntityName
+
+- (void)parser:(NSXMLParser *)parser validationErrorOccurred:(NSError *)validationError {
+    
+    NSLog(@"entered validationErrorOccurred");
+    
+} //end validation error occurred
+
+// end of XMLParser.m file
 @end
