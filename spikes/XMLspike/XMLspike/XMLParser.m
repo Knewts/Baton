@@ -23,6 +23,8 @@
     currentSubElementBeingParsed = [[NSString alloc] init];
     currentSubElementValue = [[NSString alloc] init];
     
+    waitingForThreshold = NO;
+    
 	return self;
 }//end init
 
@@ -76,7 +78,11 @@ qualifiedName:(NSString *)qName {
     ///
     if ([elementName isEqualToString:@"LAYOUT"]) {
         
-        //send array to andy
+        if (waitingForThreshold) { //a plane needs to be added to array and will not encounter another threshold to add
+            [self addPlaneToLayout];
+        }//end waiting for threshold
+        
+        //array ready to be sent        
         
         //NSLog(@"EndElement - reached layout, end of document");
         // We reached the end of the XML document
@@ -123,15 +129,27 @@ qualifiedName:(NSString *)qName {
     //CHECKING IF INCOMING ELEMENT IS A UI ELEMENT
     if ([elementName isEqualToString:@"BUTTON"]) {
         
+        if (waitingForThreshold) { //a plane needs to be added to array and will not encounter another threshold to add
+            [self addPlaneToLayout];
+        }//end waiting for threshold
+        
         ret = YES;
         button = [[NSMutableDictionary alloc] init];
+        
         
     } //end if element==button
     
     else if ([elementName isEqualToString:@"PLANE"]) {
         
+        if (waitingForThreshold) { //a plane needs to be added to array and will not encounter another threshold to add
+            [self addPlaneToLayout];
+        }//end waiting for threshold
+        
         ret = YES;
+        planesAndThresholds = [[NSMutableArray alloc] initWithObjects:@"PLANE", nil];
+        
         plane = [[NSMutableDictionary alloc] init];
+        waitingForThreshold = YES;
         
     }//end if element==plane
     
@@ -163,19 +181,16 @@ qualifiedName:(NSString *)qName {
     else if ([elementName isEqualToString:@"PLANE"]) {
         
         ret = YES;
-        //add dict to nsarray
-        //release dict
-        
-        //wait for possibly more than 1 threshold
+        [planesAndThresholds addObject:plane];
+        [plane release];
         
     }//end if element==plane
     
     else if ([elementName isEqualToString:@"THRESHOLD"]) {
         
         ret = YES;
-        //add dict to nsarray
-        
-        //wait for more than 1 threshold
+        [planesAndThresholds addObject:threshold];
+        [threshold release];
         
     }//end if element==threshold
     
@@ -259,7 +274,7 @@ qualifiedName:(NSString *)qName {
     
     BOOL ret = NO;
     
-    NSLog(@"is end of sub element? cUIEBP: %@ \teN: %@ \tcSEBP: %@ \tcSEV: %@", currentUIElementBeingParsed, elementName, currentSubElementBeingParsed, currentSubElementValue);
+    //NSLog(@"end of sub element cUIEBP: %@ \teN: %@ \tcSEBP: %@ \tcSEV: %@", currentUIElementBeingParsed, elementName, currentSubElementBeingParsed, currentSubElementValue);
     
     if ([currentUIElementBeingParsed isEqualToString:@"BUTTON"] && [elementName isEqualToString:currentSubElementBeingParsed]) { //only check for known button subelements
         
@@ -289,6 +304,15 @@ qualifiedName:(NSString *)qName {
     return ret;
     
 }//end is End of a SubElement
+
+//begin add plane to layout
+-(void)addPlaneToLayout {
+    
+    waitingForThreshold = NO;
+    [layout addObject:planesAndThresholds];
+    [planesAndThresholds release];
+    
+}//end add plane to layout
 
 //********************************************************************************
 

@@ -20,17 +20,16 @@
     //instance variables
     NSMutableArray * layout;
     
-    NSMutableArray * buttons;
-    NSMutableArray * planes;
-    NSMutableArray * thresholds;
-    
     NSMutableDictionary * button;
     NSMutableDictionary * plane;
     NSMutableDictionary * threshold;
+    NSMutableArray * planesAndThresholds;
     
     NSString * currentUIElementBeingParsed;
     NSString * currentSubElementBeingParsed;
     NSString * currentSubElementValue;
+    
+    BOOL waitingForThreshold;
     
 }//end instance variables
 
@@ -44,6 +43,8 @@
 - (BOOL)isEndUIElement:(NSString *)elementName;
 - (BOOL)isStartSubElement:(NSString *)elementName;
 - (BOOL)isEndSubElement:(NSString *)elementName;
+
+- (void)addPlaneToLayout;
 
 - (NSData *)parser:(NSXMLParser *)parser resolveExternalEntityName:(NSString *)name systemID:(NSString *)systemID;
 - (void)parser:(NSXMLParser *)parser validationErrorOccurred:(NSError *)validationError;
