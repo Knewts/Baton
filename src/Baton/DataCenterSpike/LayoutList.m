@@ -62,5 +62,9 @@
 {
     return [layouts objectAtIndex:index];
 }
+-(void)addLayoutsObject:(Layout *)object
+{
+    [layouts addObject:object];
+}
 
 @end

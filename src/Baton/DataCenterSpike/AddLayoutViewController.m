@@ -37,7 +37,7 @@
         // candidate is a well-formed url with:
         //  - a scheme (like http://)
         //  - a host (like stackoverflow.com)
-        
+    [xmlParser parse];
         
         
         

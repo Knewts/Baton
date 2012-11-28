@@ -30,6 +30,7 @@
 
 -(NSUInteger)countOfLayouts;
 -(id)objectInLayoutsAtIndex:(NSUInteger)index;
+-(void)addLayoutsObject:(Layout *)object;
 
 
 @end

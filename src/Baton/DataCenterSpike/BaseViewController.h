@@ -6,12 +6,14 @@
 //  Copyright (c) 2012 Western Michigan University. All rights reserved.
 //
 
-#import "ViewController.h"
+
 #import "Layout.h"
 #import "AppDelegate.h"
 #import "XMLParser.h"
+#import "mockXMLParser.h"
+#import "BatonUICreator.h"
 
-@interface BaseViewController : ViewController
+@interface BaseViewController : UIViewController
 {
     IBOutlet UINavigationBar * navbar;
     

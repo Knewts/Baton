@@ -107,7 +107,7 @@
     NSRegularExpression * regex = [NSRegularExpression regularExpressionWithPattern:@"\b([0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]\\.){3}[0-9]|[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5]\b" options:NSRegularExpressionCaseInsensitive error:&err];
     NSUInteger numMatches = [regex numberOfMatchesInString:ip options:0 range:NSMakeRange(0, [ip length])];
     if (numMatches == 0) {
-        [error reportError:@"ip Address specified invalid.  Must be in the range 0.0.0.0 to 255.255.255.255"];
+        [error reportErrorString:@"ip Address specified invalid.  Must be in the range 0.0.0.0 to 255.255.255.255"];
         return false;
     }
     return true;
@@ -129,11 +129,11 @@
         if ([portNum intValue] >=0 && [portNum intValue] <= 65535)
             return true;
         else {
-            [error reportError:@"Port number invalid.  Must be an integer between 0 and 65535"];
+            [error reportErrorString:@"Port number invalid.  Must be an integer between 0 and 65535"];
             return false;
         }
     } else {
-        [error reportError:@"Invalid characters in port number."];
+        [error reportErrorString:@"Invalid characters in port number."];
         return false;
     }
 }
