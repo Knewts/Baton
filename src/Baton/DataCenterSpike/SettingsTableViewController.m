@@ -81,7 +81,7 @@
 
     if (hostPortChanged) {
         NSLog(@"%d:%@",[[formatter numberFromString:port.text] intValue],port.text);
-        [config setObject:[formatter numberFromString:port.text] forKey:@"hostport"];
+        [config setObject:[formatter numberFromString:port.text] forKey:@"hostPort"];
     }
 
     

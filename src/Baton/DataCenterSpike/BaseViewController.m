@@ -18,21 +18,23 @@
 {
     [super viewDidLoad];
     
-    BatonUICreator * uiCreator = [[BatonUICreator alloc] init];
-    
     navbar.topItem.title = layout.title;
     
     if([layout.title isEqualToString:@"Default"])
     {
         mockXMLParser * mockXML = [[mockXMLParser alloc]  initWithScreenFrame:self.view.frame];
         
-        //BatonEventHandler *beh = [[BatonEventHandler alloc] initWithFrame:self.frame];
-        
         [self.view addSubview:[mockXML getView]];
     }
     else 
     {
-        [self.view addSubview:[uiCreator CreateObjectFrom:[layout tree]]];
+        BatonEventHandler * beh = [[BatonEventHandler alloc] initWithFrame:self.view.frame];
+        BatonUICreator * creator = [[BatonUICreator alloc] init];
+        
+        for (id UIItem in layout.tree) {
+            [beh addUIElement:[creator CreateObjectFrom:UIItem]];
+        }
+        [self.view addSubview:beh];
     }
     
 }

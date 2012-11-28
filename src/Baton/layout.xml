@@ -33,7 +33,7 @@
         <TOGGLE>0</TOGGLE>
         <COMMAND>LOG</COMMAND>
         <PARAMETERS>Button Down Works</PARAMETERS>
-        <TEXT> </TEXT>
+        <TEXT>Test</TEXT>
         <BGCOLOR_ON>FF0000</BGCOLOR_ON>
         <BGCOLOR_OFF>FFFF00</BGCOLOR_OFF>
     </BUTTON>

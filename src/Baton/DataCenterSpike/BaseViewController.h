@@ -12,6 +12,7 @@
 #import "XMLParser.h"
 #import "mockXMLParser.h"
 #import "BatonUICreator.h"
+#import "BatonEventHandler.h"
 
 @interface BaseViewController : UIViewController
 {

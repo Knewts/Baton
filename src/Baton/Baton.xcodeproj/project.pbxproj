@@ -48,6 +48,7 @@
 		66CBEE9B165B218F0068122E /* Baton_Region_Threshold.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CBEE93165B218F0068122E /* Baton_Region_Threshold.m */; };
 		66CBEEA1165B26E20068122E /* AddLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CBEEA0165B26E20068122E /* AddLayoutViewController.m */; };
 		66CBEEA2165B26E20068122E /* AddLayoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CBEEA0165B26E20068122E /* AddLayoutViewController.m */; };
+		66D754021666CF8200F13902 /* defaultConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 66D754011666CF8200F13902 /* defaultConfig.plist */; };
 		A11ED9F91587B960007422EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11ED9F81587B960007422EC /* UIKit.framework */; };
 		A11ED9FB1587B960007422EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11ED9FA1587B960007422EC /* Foundation.framework */; };
 		A11ED9FD1587B960007422EC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A11ED9FC1587B960007422EC /* CoreGraphics.framework */; };
@@ -134,6 +135,7 @@
 		66CBEE93165B218F0068122E /* Baton_Region_Threshold.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Baton_Region_Threshold.m; sourceTree = "<group>"; };
 		66CBEE9F165B26E20068122E /* AddLayoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddLayoutViewController.h; path = DataCenterSpike/AddLayoutViewController.h; sourceTree = "<group>"; };
 		66CBEEA0165B26E20068122E /* AddLayoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddLayoutViewController.m; path = DataCenterSpike/AddLayoutViewController.m; sourceTree = "<group>"; };
+		66D754011666CF8200F13902 /* defaultConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = defaultConfig.plist; path = DataCenterSpike/defaultConfig.plist; sourceTree = "<group>"; };
 		A11ED9F41587B960007422EC /* Baton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Baton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A11ED9F81587B960007422EC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A11ED9FA1587B960007422EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -243,6 +245,7 @@
 				66CBEE9F165B26E20068122E /* AddLayoutViewController.h */,
 				66CBEEA0165B26E20068122E /* AddLayoutViewController.m */,
 				6361642E1665353C00129A36 /* layout.xml */,
+				66D754011666CF8200F13902 /* defaultConfig.plist */,
 			);
 			name = Housekeeping;
 			path = ..;
@@ -281,7 +284,6 @@
 		A11ED9E91587B960007422EC = {
 			isa = PBXGroup;
 			children = (
-				66B214A316643C60005ACF9E /* CoreText.framework */,
 				A11ED9FE1587B960007422EC /* Baton */,
 				A11EDA1F1587B960007422EC /* BatonTests */,
 				A11ED9F71587B960007422EC /* Frameworks */,
@@ -301,6 +303,7 @@
 		A11ED9F71587B960007422EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				66B214A316643C60005ACF9E /* CoreText.framework */,
 				63FAECC31652FBBB00DD3873 /* CoreMotion.framework */,
 				63FAECC11652FBB000DD3873 /* Security.framework */,
 				63FAECBF1652FBA400DD3873 /* CFNetwork.framework */,
@@ -455,6 +458,7 @@
 				63213FFE1652FB0800760C4B /* MainStoryboard_iPad.storyboard in Resources */,
 				63213FFF1652FB0800760C4B /* MainStoryboard_iPhone.storyboard in Resources */,
 				6361642F1665353C00129A36 /* layout.xml in Resources */,
+				66D754021666CF8200F13902 /* defaultConfig.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
