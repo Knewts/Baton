@@ -7,12 +7,17 @@
 //
 
 #import "AddLayoutViewController.h"
-#import "XMLParser.h"
-
 
 @implementation AddLayoutViewController
 @synthesize layoutURL;
+@synthesize errorHandler;
 
+
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    errorHandler = [[AppDelegate sharedAppdelegate] error];
+}
 
 -(IBAction)userHitCancelButton:(id)sender {
     [self dismissModalViewControllerAnimated:YES];
@@ -23,22 +28,23 @@
     
     //make sure valid url (regex for http:// .com
     
-    NSString *xmlPath = [[NSBundle mainBundle] pathForResource:@"layout" ofType:@"xml"];
-    NSData *xmlData = [NSData dataWithContentsOfFile:xmlPath];
-    
-    //NSData *xmlData = [NSData dataWithContentsOfURL:candidateURL];
-    NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithData:xmlData];
-    
-    XMLParser *parser = [[XMLParser alloc] initXMLParser];
-    [xmlParser setDelegate:parser];
-    
-    //NSURL *candidateURL = [NSURL URLWithString:layoutURL.text];
-    //if (candidateURL && candidateURL.scheme && candidateURL.host) {
-        // candidate is a well-formed url with:
-        //  - a scheme (like http://)
-        //  - a host (like stackoverflow.com)
-    [xmlParser parse];
+    NSURL * xmlURL = [[NSURL alloc] initWithString:layoutURL.text];
+    NSError * error;
+    if ([xmlURL checkResourceIsReachableAndReturnError:&error]) {
+        [errorHandler reportError:error];
+    }
+    else {
         
+        NSData *xmlData = [NSData dataWithContentsOfURL:xmlURL];
+    
+        NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithData:xmlData];
+    
+        XMLParser *parser = [[XMLParser alloc] initXMLParser];
+        
+        [xmlParser setDelegate:parser];
+    
+        [xmlParser parse];
+    }
         
         
     //}  
@@ -57,3 +63,8 @@
 
 
 @end
+/*
+NSString *xmlPath = [[NSBundle mainBundle] pathForResource:@"layout" ofType:@"xml"];
+NSData *xmlData = [NSData dataWithContentsOfFile:xmlPath];
+
+NSXMLParser *xmlParser = [[NSXMLParser alloc] initWithData:xmlData];*/

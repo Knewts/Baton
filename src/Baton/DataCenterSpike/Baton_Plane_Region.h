@@ -11,7 +11,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Baton_Plane_Region:NSObject
+@protocol Baton_Plane_Region <NSObject>
+@required
 - (id)init;
 - (id)initFromDictionary:(NSDictionary*) params;
 - (void)drawContext:(CGContextRef)context ScaleX:(float) scaleX ScaleY:(float)scaleY Frame:(CGRect)rect;

@@ -34,6 +34,8 @@
 
 @implementation BatonEventHandler
 
+@synthesize sock;
+@synthesize config;
 
 // Set the size of the view on initialization.
 - (id)initWithFrame:(CGRect)frame
@@ -41,23 +43,16 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        sock = [[AppDelegate sharedAppdelegate] sock];
+        config = [[AppDelegate sharedAppdelegate] config];
     }
     
     return self;	
 }
 
-// Adds Variables
--(bool)addVariable:(NSString*)key:
-    (NSString*)withValue:
-    (NSString*)dataType
-{
-    //TODO: Add NSDictionary objects
-    // add key/value pairs here.
-    return true;    
-}
 
 // Adds an element to the screen
--(void)addUIElement:(Baton_UI_Element*) batonUI
+-(void)addUIElement:(UIView <Baton_UI_Element> *) batonUI
 {
     // Set this as the delegate to handle the commands
     [batonUI setDelegate:self];
@@ -65,15 +60,20 @@
     [self addSubview:batonUI];
 }
 
-#pragma mark -
-#pragma mark DelegateFunctions
-
--(void)executeCommand:(NSString *) command withArguments: (NSString *) arguments
+-(void)executeCommand: (UIView <Baton_UI_Element> *) sender
 {
-    if ([command isEqualToString:@"LOG"])
-    {
-        NSLog(arguments);
+    if ([sender.commandString isEqualToString:@"LOG"]) {
+        NSLog(@"%@",sender.commandArguments);
     }
+    else if ([sender.commandString isEqualToString:@"SENDOSC"])
+    {
+        OSCMessage * message = [[OSCMessage alloc] initWithAddress:[NSString stringWithFormat:@"/Baton/%@",sender.commandArguments]];
+        [message addObject:[OSCString oscStringfromString:sender.commandArguments]];
+        NSString * host = [config getObjectForKey:@"hostIP"];
+        NSNumber * port = [config getObjectForKey:@"hostPort"];
+        [sock sendMessage:message toHost:host onPort:[port intValue]];
+    }
+    
 }
 
 @end

@@ -67,11 +67,11 @@
 }
 
 // This is our primary mode of creating objects
-- (Baton_UI_Element *)CreateObjectFrom:(NSArray *) array
+- (UIView <Baton_UI_Element> *)CreateObjectFrom:(NSArray *) array
 {
     // READ array[0] and send the remainder of the array's to the init.
     NSString *type = [array objectAtIndex:0];
-    Baton_UI_Element *retVal = nil;
+    UIView <Baton_UI_Element> *retVal = nil;
     
     if ([type isEqualToString:@"PLANE"]) {
         //TODO: Create Plane and return it.

@@ -7,15 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
 #import "Baton_UI_Element.h"
+#import "BatonConfiguration.h"
+#import "OSClib.h"
 
 @interface BatonEventHandler : UIView <BatonUIElementDelegate>
 
+@property (nonatomic, assign) GCDUDPSocketController * sock;
+@property (nonatomic, assign) BatonConfiguration * config;
+
 - (id)initWithFrame:(CGRect)frame;
 
--(bool)addVariable:(NSString*)key;
--(void)addUIElement:(Baton_UI_Element*) batonUI;
--(void)executeCommand:(NSString *) command withArguments: (NSString *) arguments;
+-(void)addUIElement:(UIView <Baton_UI_Element> *) batonUI;
+-(void)executeCommand:(UIView <Baton_UI_Element> *) sender;
 
 //-(void)executeCommand:(BatonCommand) command;
 

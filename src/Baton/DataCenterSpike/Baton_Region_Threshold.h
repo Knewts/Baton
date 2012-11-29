@@ -30,7 +30,7 @@
 
 #import "Baton_Plane_Region.h"
 
-@interface Baton_Region_Threshold : Baton_Plane_Region
+@interface Baton_Region_Threshold : NSObject <Baton_Plane_Region>
 {
     NSString * command;
     NSString * parameters;

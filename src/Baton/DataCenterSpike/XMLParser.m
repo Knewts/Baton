@@ -34,6 +34,7 @@
     
     if ([self isStartUIElement:elementName] == YES) { //if elementName is a UIElement
         
+        
         currentUIElementBeingParsed = [[NSString alloc] initWithString:elementName];
     }
     else if ([self isStartSubElement:elementName] == YES) { //IF elementName is a Sub-element
@@ -80,31 +81,13 @@
     ///
     if ([elementName isEqualToString:@"LAYOUT"]) {
         
-        if (waitingForThreshold) { //a plane needs to be added to array and will not encounter another threshold to add
+        if (waitingForThreshold) //a plane needs to be added to array and will not encounter another threshold to add
             [self addPlaneToLayout];
-        }//end waiting for threshold
         
-        //array ready to be sent  
-        
-#pragma mark Knewts Changes        
-        /*
-         These functions are for creating the elements.  We don't want to do that until the user asks for the layout.
-         
-        BatonEventHandler *BEH = [BatonEventHandler new];
-        BatonUICreator *BUIC = [BatonUICreator new];
-        
-        [BEH addUIElement:[BUIC CreateObjectFrom:[NSArray arrayWithArray:layout]]];
-        */
-        
-        //simply add the tree to the layout list
         // TODO: pass the title to the parser so it can put the title here.
         
         [layouts addLayoutsObject:[[Layout alloc]initWithTitle:@"title" layoutTree:layout]];
         
-        //the LayoutTableView and BaseViewController will handle the rest.
-        
-        //NSLog(@"EndElement - reached layout, end of document");
-        // We reached the end of the XML document
         return;
     }
     
@@ -156,7 +139,6 @@
         
         ret = YES;
         button = [[NSMutableDictionary alloc] init];
-        
         
     } //end if element==button
     
@@ -249,6 +231,11 @@
             ret = YES;
             
         }//end if subelement being parsed is a valid button sub-element
+        
+        else{
+            //sub element found is not a valid parameter of this UIelement
+        }
+        
     } //end if currentuielement is a button
     
     else if ([currentUIElementBeingParsed isEqualToString:@"PLANE"]) { //only check for plane subelements
@@ -268,6 +255,10 @@
             ret = YES;
             
         }//end if sub-element being parsed is a valid plane sub-element
+        else{
+            //sub element found is not a valid parameter of this UIelement
+        }
+        
     } //end if uielement is a plane
     
     else if ([currentUIElementBeingParsed isEqualToString:@"THRESHOLD"]) { //only check for threshold subelements
@@ -283,10 +274,20 @@
             ret = YES;
             
         }//end if sub element being parsed is a valid threshold sub-element
+        else{
+            //sub element found is not a valid parameter of this UIelement
+        }
+        
     } //end if uielement is a threshold
+    else if ([elementName isEqualToString:@"LAYOUT"]) {
+        //this is okay
+    }
     
     else {
         NSLog(@"UNHANDLED: %@", elementName);
+        
+        //destroy
+        
     }//end if 
     
     return ret;
@@ -297,8 +298,6 @@
 - (BOOL)isEndSubElement:(NSString *)elementName {
     
     BOOL ret = NO;
-    
-    //NSLog(@"end of sub element cUIEBP: %@ \teN: %@ \tcSEBP: %@ \tcSEV: %@", currentUIElementBeingParsed, elementName, currentSubElementBeingParsed, currentSubElementValue);
     
     if ([currentUIElementBeingParsed isEqualToString:@"BUTTON"] && [elementName isEqualToString:currentSubElementBeingParsed]) { //only check for known button subelements
         
@@ -323,6 +322,9 @@
     
     else {
         NSLog(@"UNHANDLED: %@", elementName);
+        
+        //destroy
+        
     }//end if 
     
     return ret;
@@ -355,12 +357,6 @@
     return data;
     
 }//end resolveExternalEntityName
-
-- (void)parser:(NSXMLParser *)parser validationErrorOccurred:(NSError *)validationError {
-    
-    NSLog(@"entered validationErrorOccurred");
-    
-} //end validation error occurred
 
 // end of XMLParser.m file
 @end

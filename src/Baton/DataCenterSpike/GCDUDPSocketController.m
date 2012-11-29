@@ -41,7 +41,8 @@
 
 - (void)sendMessage:(OSCMessage *)message toHost:(NSString *)host onPort:(uint16_t)port
 {   
-    //short timeout in case we get lots of messages
+    //short timeout in case we get lots of messages]
+    NSLog(@"Sending message %@ to host %@ on port %d",[message address],host,port);
     [sock sendData:[message writeToData] toHost:host port:port withTimeout:2.0 tag:0];
 }
 @end

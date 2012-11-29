@@ -32,7 +32,7 @@
 #import <UIKit/UIKit.h>
 #import "Baton_UI_Element.h"
 
-@interface Baton_UIButton : Baton_UI_Element
+@interface Baton_UIButton : UIView <Baton_UI_Element>
 {
     int BORDER;
     Boolean Active; // True when pressed

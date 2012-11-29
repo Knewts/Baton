@@ -7,14 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XMLParser.h"
+#import "ErrorHandler.h"
+#import "AppDelegate.h"
 
 @interface AddLayoutViewController : UITableViewController
-
 {
     IBOutlet UITextField* layoutURL;
 }
 
 @property (nonatomic, retain) IBOutlet UITextField* layoutURL;
+@property (nonatomic, assign) ErrorHandler * errorHandler;
 
 -(IBAction)userHitCancelButton:(id)sender;
 -(IBAction)userHitDoneButton:(id)sender;

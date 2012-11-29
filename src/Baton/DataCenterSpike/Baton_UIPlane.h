@@ -26,7 +26,7 @@
 #import "Baton_UI_Element.h"
 #import "Baton_Plane_Region.h"
 
-@interface Baton_UIPlane : Baton_UI_Element
+@interface Baton_UIPlane : UIView <Baton_UI_Element>
 {
     bool AccelOn;
     bool intOnly;
@@ -62,7 +62,7 @@
 -(void)activateAccelerometer;
 -(void)UpdateAccel;	
 
--(void)AddRegion:(Baton_Plane_Region*)region;
+-(void)AddRegion:(NSObject <Baton_Plane_Region>*)region;
 
 
 @end

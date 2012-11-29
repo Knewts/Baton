@@ -9,7 +9,7 @@
         <WIDTH>200</WIDTH>
         <HEIGHT>100</HEIGHT>
         <TOGGLE>0</TOGGLE>
-        <COMMAND>LOG</COMMAND>
+        <COMMAND>SENDOSC</COMMAND>
         <PARAMETERS>Button Down Works</PARAMETERS>
         <TEXT>Button</TEXT>
     </BUTTON>

@@ -24,12 +24,12 @@
 }
 
 @property (nonatomic, retain) GCDUDPSocketController * sock;
-@property (strong, nonatomic) BatonConfiguration * config;
-@property (strong, nonatomic) ErrorHandler * error;
-@property (strong, nonatomic) LayoutList * layouts;
+@property (retain, nonatomic) BatonConfiguration * config;
+@property (retain, nonatomic) ErrorHandler * error;
+@property (retain, nonatomic) LayoutList * layouts;
 
-@property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) UIStoryboard *storyboard;
+@property (retain, nonatomic) UIWindow *window;
+@property (retain, nonatomic) UIStoryboard *storyboard;
 
 +(AppDelegate*)sharedAppdelegate;
 @end

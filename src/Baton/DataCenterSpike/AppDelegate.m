@@ -32,8 +32,14 @@
     
     config = [[BatonConfiguration alloc] initDefaults];
     
+    NSArray * keys = [[config currentConf] allKeys];
+    
+    for (NSString * key in keys) {
+        NSLog(@"key: %@ object:%@",key,[[config getObjectForKey:key] description]);
+    }
     
     error = [[ErrorHandler alloc] initWithConfiguration:config];
+    
     
     
     sock = [[GCDUDPSocketController alloc] init];

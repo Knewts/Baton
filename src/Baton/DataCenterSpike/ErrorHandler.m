@@ -59,6 +59,14 @@
         
         [sock sendMessage:errorMessage toHost:host onPort:[port intValue]];
     }
+    else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" 
+                                                        message:error
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK" 
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
     NSLog(@"%@",error);
     return true;
 }

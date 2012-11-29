@@ -11,7 +11,9 @@
 
 @implementation Baton_UIPlane
 
-
+@synthesize commandString;
+@synthesize commandArguments;
+@synthesize delegate;
 /*
  *Init
  */
@@ -87,9 +89,11 @@
         
         temp = [params valueForKey:@"YMAX"];
         yMax = ([temp intValue] == 0)? yScale :[temp intValue];
+        
+        if (AccelOn) { [self activateAccelerometer]; }
     }
     
-    if (AccelOn) { [self activateAccelerometer]; }
+    
     return self;
 }
 
@@ -113,7 +117,8 @@
         
     //Set the stroke width and change the color to blue.	
     CGFloat components[] = {0.3, 0.4, 1.0, 1.0};
-    CGColorRef color = CGColorCreate(CGColorSpaceCreateDeviceRGB(), components);
+    CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceRGB();
+    CGColorRef color = CGColorCreate(colorspace, components);
     CGContextSetStrokeColorWithColor(context, color);
     CGContextSetLineWidth(context, 2.0);
     
@@ -135,7 +140,7 @@
     int regionCount = [regions count];
     for (int i=0; i<regionCount; i++)
     {
-        Baton_Plane_Region * element = [regions objectAtIndex:i];
+        NSObject <Baton_Plane_Region> * element = [regions objectAtIndex:i];
 
         [element drawContext:context ScaleX:xScale ScaleY:yScale Frame:rect];
     }
@@ -156,6 +161,9 @@
     int yPos = yCenter - (yData*((self.frame.size.height/2))) - dataRadius;
     CGContextStrokeEllipseInRect(context, CGRectMake(xPos, yPos, dataRadius*2, dataRadius*2));
     
+    //releasing
+    CGColorRelease(color);
+    CGColorSpaceRelease(colorspace);
 }
 
 
@@ -226,17 +234,21 @@
     int regionCount = [regions count];
     for (int i=0; i<regionCount; i++)
     {
-        Baton_Plane_Region * element = [regions objectAtIndex:i];
+        NSObject <Baton_Plane_Region> * element = [regions objectAtIndex:i];
         
         if ([element checkPointX:xData Y:yData ScaleX:xScale ScaleY:yScale])
-            [delegate executeCommand:[element getCommand] withArguments:[element getParams]];
+        {
+            self.commandString = [element getCommand];
+            self.commandArguments = [element getParams];
+            [delegate executeCommand:self];
+        }
     }
     
 }
 
 
 // Add a region to the array
--(void)AddRegion:(Baton_Plane_Region*)region
+-(void)AddRegion:(NSObject <Baton_Plane_Region>*)region
 {
     [regions addObject:(id)region];
     NSLog(@"Added Region %d", [regions count]);

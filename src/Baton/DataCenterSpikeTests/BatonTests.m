@@ -13,7 +13,7 @@
 - (void)setUp
 {
     [super setUp];
-    
+    testConfig = [[BatonConfiguration alloc] initDefaults];
     // Set-up code here.
 }
 
@@ -24,9 +24,10 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testConfig
 {
-    STFail(@"Unit tests are not implemented yet in DataCenterSpikeTests");
+    if ([testConfig getObjectForKey:@"hostIP"] == nil) {
+    }
 }
 
 @end

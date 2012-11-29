@@ -20,35 +20,31 @@
 #import <UIKit/UIKit.h>
 
 
-//Define the protocol that must be used by the SuperView
-@protocol BatonUIElementDelegate <NSObject>
-
-@required
-    /*
-     * This function takes the arguments and passes them to an appropriate function for processing based on the command selected. Commands outside of the BatonCommand enum are not supported. Any new command should be listed there and handled in the BatonUIElementDelegate object.
- 
-        Functions for handling commands could/should be added to the @required/@optional sections here???
-     */
-
-    -(void)executeCommand:(NSString *) command withArguments: (NSString *) arguments;
-//    -(void)executeCommand:(BatonCommand) command withArguments: (NSString *) arguments;
-
-//END @REQUIRED
-
-@end
 
 
 
-@interface Baton_UI_Element : UIView {
-    // Holds the reference to the delegate 
-    __weak id <BatonUIElementDelegate> delegate;
-   // BatonCommand command;
-    NSString* commandArguments;
-}
+
+@protocol Baton_UI_Element
 
 @property(nonatomic,weak)id delegate;
 @property(nonatomic)NSString* commandArguments;
 @property(nonatomic)NSString* commandString;
 
+@end
 
+//Define the protocol that must be used by the SuperView
+@protocol BatonUIElementDelegate <NSObject>
+
+@required
+/*
+ * This function takes the arguments and passes them to an appropriate function for processing based on the command selected. Commands outside of the BatonCommand enum are not supported. Any new command should be listed there and handled in the BatonUIElementDelegate object.
+ 
+ Functions for handling commands could/should be added to the @required/@optional sections here???
+ */
+
+-(void)executeCommand:(UIView <Baton_UI_Element> *) sender;
+    //    -(void)executeCommand:(BatonCommand) command withArguments: (NSString *) arguments;
+                       
+    //END @REQUIRED
+                       
 @end

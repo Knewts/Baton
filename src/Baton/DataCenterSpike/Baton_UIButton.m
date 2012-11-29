@@ -13,6 +13,9 @@
 
 @implementation Baton_UIButton
 
+@synthesize commandString;
+@synthesize commandArguments;
+@synthesize delegate;
 
 -(id)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame])
@@ -132,8 +135,8 @@
     
     
     // ******************* Fill the Shadow ****************************
-    
-    CGContextAddPath(context, createRoundedRectForRect(rect, radius));
+    CGPathRef tempPath = createRoundedRectForRect(rect, radius);
+    CGContextAddPath(context, tempPath);
     CGContextClip(context);
     CGPoint topCenter = CGPointMake(rect.size.width/2, 0);
     CGPoint bottomCenter = CGPointMake(topCenter.x, rect.size.height);
@@ -170,7 +173,7 @@
         
     
         int fontSize = 24;
-        float border = radius*1.15;
+        //float border = radius*1.15;
                
                      
         CGSize fontBox = [text sizeWithFont:buttonFont];
@@ -188,6 +191,13 @@
         [text drawAtPoint:textPoint withFont:buttonFont];
     }
     // ********************* END DRAW TEXT ************************
+    
+    CGColorSpaceRelease(colorspace);
+    CGPathRelease(innerPath);
+    CGPathRelease(highlightArea);
+    CGGradientRelease(highlightFill);
+    CGGradientRelease(shadowFill);
+    CGPathRelease(tempPath);
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event 
@@ -195,7 +205,9 @@
     if (!toggleType)
     {
         //Only act on mouse down with non-toggle types
-        [delegate executeCommand:primaryCommand withArguments:primaryParameters];
+        self.commandArguments = primaryParameters;
+        self.commandString = primaryCommand;
+        [delegate executeCommand:self];
         Active = true;
         [self setNeedsDisplay];
     }
@@ -205,13 +217,17 @@
 {
     if (toggleType)
     {
-        [delegate executeCommand:primaryCommand withArguments:primaryParameters];
+        self.commandArguments = primaryParameters;
+        self.commandString = primaryCommand;
+        [delegate executeCommand:self];
         Active = !Active;
     } 
     else
     {   
-        // This is NOT a toggle button
-        [delegate executeCommand:@"LOG" withArguments:@"THIS WORKS"];
+        // This is NOT a toggle button        
+        self.commandArguments = secondaryParameters;
+        self.commandString = secondaryCommand;
+        [delegate executeCommand:self];
         Active = false;
     }
     [self setNeedsDisplay];

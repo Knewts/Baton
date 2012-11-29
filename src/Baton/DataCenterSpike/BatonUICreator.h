@@ -12,6 +12,6 @@
 @interface BatonUICreator : NSObject
 
 -(id)init;
--(Baton_UI_Element *)CreateObjectFrom:(NSArray *) array;
+-(UIView <Baton_UI_Element> *)CreateObjectFrom:(NSArray *) array;
 
 @end

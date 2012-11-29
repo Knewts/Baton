@@ -60,7 +60,6 @@
 
 - (void)addPlaneToLayout;
 
-- (NSData *)parser:(NSXMLParser *)parser resolveExternalEntityName:(NSString *)name systemID:(NSString *)systemID;
-- (void)parser:(NSXMLParser *)parser validationErrorOccurred:(NSError *)validationError;
+- (void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError;
 
 @end

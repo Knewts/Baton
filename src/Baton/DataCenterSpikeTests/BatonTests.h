@@ -7,7 +7,11 @@
 //
 
 #import <SenTestingKit/SenTestingKit.h>
+#import "BatonConfiguration.h"
 
 @interface BatonTests : SenTestCase
+{
+    BatonConfiguration * testConfig;
+}
 
 @end

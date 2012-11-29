@@ -8,8 +8,8 @@
 //  NOTE: OSCMessages should never be autoreleased. If they're in the autorelease pool after being sent to the GCD asynchronous socket, we'll encounter segfault errors.
 
 #import <Foundation/Foundation.h>
-#import "OSClib.h"
-#import "OSCObject.h"
+#import "OSCTypes.h"
+
 @interface OSCMessage : NSObject
 {
     OSCString * address;
