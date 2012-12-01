@@ -263,7 +263,8 @@
     
     else if ([currentUIElementBeingParsed isEqualToString:@"THRESHOLD"]) { //only check for threshold subelements
         
-        if ([elementName isEqualToString:@"HAXIS"] || 
+        if ([elementName isEqualToString:@"TYPE"] ||
+            [elementName isEqualToString:@"HAXIS"] || 
             [elementName isEqualToString:@"VALUE"] || 
             [elementName isEqualToString:@"COMMAND"] || 
             [elementName isEqualToString:@"PARAMETERS"] || 

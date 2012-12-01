@@ -45,11 +45,19 @@
         // Initialization code
         sock = [[AppDelegate sharedAppdelegate] sock];
         config = [[AppDelegate sharedAppdelegate] config];
+       [self setBackgroundColor:[UIColor blackColor]];
     }
     
     return self;	
 }
 
+/*-(void)drawRect:(CGRect)rect
+{
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, [UIColor blackColor].CGColor);
+    CGContextFillRect(context, rect);
+    CGContextRelease(context);
+}*/
 
 // Adds an element to the screen
 -(void)addUIElement:(UIView <Baton_UI_Element> *) batonUI
