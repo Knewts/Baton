@@ -31,7 +31,7 @@
 
 - (UIView *) getView
 {
-    BatonEventHandler *BEH = [BatonEventHandler new];
+    BatonEventHandler *BEH = [[BatonEventHandler alloc] initWithFrame:screenFrame];
     BatonUICreator *BUIC = [BatonUICreator new];
     /*
      *      DICTIONARY REQUIRED PARAMETERS:

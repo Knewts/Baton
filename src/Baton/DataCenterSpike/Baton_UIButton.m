@@ -101,6 +101,8 @@
         
         color = [params valueForKey:@"PARAMETERS"];
         primaryParameters = color;
+        
+        [self setBackgroundColor:[UIColor clearColor]];
     }
     
     return self;

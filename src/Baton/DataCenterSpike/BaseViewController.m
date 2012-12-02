@@ -19,16 +19,17 @@
     [super viewDidLoad];
     
     navbar.topItem.title = layout.title;
+    CGRect frame = self.parentViewController.view.frame;
     
     if([layout.title isEqualToString:@"Default"])
     {
-        mockXMLParser * mockXML = [[mockXMLParser alloc]  initWithScreenFrame:self.view.frame];
+        mockXMLParser * mockXML = [[mockXMLParser alloc] initWithScreenFrame:frame];
         
         [self.view addSubview:[mockXML getView]];
     }
     else 
     {
-        BatonEventHandler * beh = [[BatonEventHandler alloc] initWithFrame:self.view.frame];
+        BatonEventHandler * beh = [[BatonEventHandler alloc] initWithFrame:frame];
         BatonUICreator * creator = [[BatonUICreator alloc] init];
         
         for (id UIItem in layout.tree) {

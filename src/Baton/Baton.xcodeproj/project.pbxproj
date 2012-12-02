@@ -683,7 +683,7 @@
 		A11EDA2B1587B960007422EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Matthew Knewtson (7K74P45729)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DataCenterSpike/Baton-Prefix.pch";
 				INFOPLIST_FILE = "DataCenterSpike/Baton-Info.plist";
@@ -696,7 +696,7 @@
 		A11EDA2C1587B960007422EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer: Matthew Knewtson (7K74P45729)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DataCenterSpike/Baton-Prefix.pch";
 				INFOPLIST_FILE = "DataCenterSpike/Baton-Info.plist";
