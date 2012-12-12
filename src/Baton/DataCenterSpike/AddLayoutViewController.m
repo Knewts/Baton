@@ -61,6 +61,11 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+-(BOOL)textFieldShouldReturn:(id)sender
+{
+    [sender resignFirstResponder];
+    return YES;
+}
 
 @end
 /*

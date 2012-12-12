@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6319FBAA166D57C400F4E762 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6319FBA9166D57C400F4E762 /* Default-568h@2x.png */; };
 		63213FE11652F9CF00760C4B /* BatonConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 63213FC51652F9CF00760C4B /* BatonConfiguration.m */; };
 		63213FE31652F9CF00760C4B /* ErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 63213FC91652F9CF00760C4B /* ErrorHandler.m */; };
 		63213FE41652F9CF00760C4B /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 63213FCB1652F9CF00760C4B /* GCDAsyncSocket.m */; };
@@ -99,6 +100,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6319FBA9166D57C400F4E762 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		63213FC41652F9CF00760C4B /* BatonConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BatonConfiguration.h; path = DataCenterSpike/BatonConfiguration.h; sourceTree = "<group>"; };
 		63213FC51652F9CF00760C4B /* BatonConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BatonConfiguration.m; path = DataCenterSpike/BatonConfiguration.m; sourceTree = "<group>"; };
 		63213FC81652F9CF00760C4B /* ErrorHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorHandler.h; path = DataCenterSpike/ErrorHandler.h; sourceTree = "<group>"; };
@@ -313,6 +315,7 @@
 		A11ED9E91587B960007422EC = {
 			isa = PBXGroup;
 			children = (
+				6319FBA9166D57C400F4E762 /* Default-568h@2x.png */,
 				A11ED9FE1587B960007422EC /* Baton */,
 				A11EDA1F1587B960007422EC /* BatonTests */,
 				A11ED9F71587B960007422EC /* Frameworks */,
@@ -487,6 +490,7 @@
 				63213FFF1652FB0800760C4B /* MainStoryboard_iPhone.storyboard in Resources */,
 				6361642F1665353C00129A36 /* layout.xml in Resources */,
 				66D754021666CF8200F13902 /* defaultConfig.plist in Resources */,
+				6319FBAA166D57C400F4E762 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -683,12 +687,14 @@
 		A11EDA2B1587B960007422EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Matthew Knewtson (7K74P45729)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Matthew Knewtson (7K74P45729)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DataCenterSpike/Baton-Prefix.pch";
 				INFOPLIST_FILE = "DataCenterSpike/Baton-Info.plist";
 				PRODUCT_NAME = Baton;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "88E0025F-840E-445A-96B4-E07C3E0DF07F";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "88E0025F-840E-445A-96B4-E07C3E0DF07F";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -696,12 +702,14 @@
 		A11EDA2C1587B960007422EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Matthew Knewtson (7K74P45729)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Matthew Knewtson (7K74P45729)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DataCenterSpike/Baton-Prefix.pch";
 				INFOPLIST_FILE = "DataCenterSpike/Baton-Info.plist";
 				PRODUCT_NAME = Baton;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "88E0025F-840E-445A-96B4-E07C3E0DF07F";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "88E0025F-840E-445A-96B4-E07C3E0DF07F";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

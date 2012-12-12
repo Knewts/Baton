@@ -46,9 +46,9 @@
     
     
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        self.storyboard = [UIStoryboard storyboardWithName:@"MainStoryBoard_iPhone" bundle:nil];
+        self.storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle:nil];
     } else {
-        self.storyboard = [UIStoryboard storyboardWithName:@"MainStoryBoard_iPad" bundle:nil];
+        self.storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPad" bundle:nil];
     }
     
     self.window.rootViewController = [storyboard instantiateInitialViewController];

@@ -353,7 +353,8 @@
     NSLog(@"entered resolveExternalEntityName");
     
     //NSLog(name);
-    NSString *string = [[NSString alloc] initWithString:@" "];
+    //the hell is this?
+    NSString *string = @" ";
     NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
     return data;
     
