@@ -2,7 +2,7 @@
 //  XMLParser.h
 //  DataCenterSpike
 //
-//  Created by Andy Stratton on 7/15/12.
+//  Created by Tim Weidner on 7/15/12.
 //  Copyright (c) 2012 Western Michigan University. All rights reserved.
 //
 
@@ -41,9 +41,6 @@
 
 //This soft property will let us grab a reference to the list of layouts stored in the appdelegate
 @property (nonatomic, assign) LayoutList * layouts;
-
-
-
 
 
 #pragma mark XMLParserHeader
