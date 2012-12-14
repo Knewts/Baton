@@ -69,6 +69,7 @@
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     
     [config writeDefaults];
+    [layouts saveLayoutsToDefaultFile];
 
 }
 
@@ -88,6 +89,7 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     
     [config writeDefaults];
+    [layouts saveLayoutsToDefaultFile];
     
 }
 
